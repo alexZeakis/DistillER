@@ -14,8 +14,8 @@ def downsample_majority(data, ratio_N=2, seed=42):
     random.seed(seed)
 
     # Separate data by class
-    majority = [item for item in data if item[2] == 0]
-    minority = [item for item in data if item[2] == 1]
+    majority = [item for item in data if item[4] == 0]
+    minority = [item for item in data if item[4] == 1]
 
     # Compute how many majority samples we need
     target_majority_count = ratio_N * len(minority)
@@ -150,8 +150,7 @@ def prepare_pairs(row1, df2, serialization='DITTO'):
     
     for index, row in df2.iterrows():
         candidate_description = serialize(row, serialization)
-        pairs.append((entity_description, candidate_description))
-        #TODO Add Label, add indices?
+        pairs.append((entity_description, candidate_description, index))
     
     return pairs
 
@@ -220,14 +219,14 @@ if __name__ == '__main__':
         
         for no, pair in enumerate(pairs):
             label = (answer-1==no) * 1
-            x = (pair[0], pair[1], label)
+            x = (key, pair[2], pair[0], pair[1], label)
             total_pairs.append(x)
 
     if args.mode == 'train':
         if args.downsampling is not None:
             total_pairs = downsample_majority(total_pairs, ratio_N=args.downsampling)
         
-        labels = [label for _, _, label in total_pairs]
+        labels = [label for _, _,_, _, label in total_pairs]
         train_data, valid_data = train_test_split(
             total_pairs,
             test_size=1-args.percentage,
@@ -237,15 +236,15 @@ if __name__ == '__main__':
         
         path2 = args.out_dir+"train.csv"
         os.makedirs(os.path.dirname(path2), exist_ok=True)
-        train = pd.DataFrame(train_data, columns=['Left', 'Right', 'Label'])
+        train = pd.DataFrame(train_data, columns=['Left_ID', 'Right_ID', 'Left_Text', 'Right_Text', 'Label'])
         train.to_csv(path2, header=True, index=False)
         
         path2 = args.out_dir+"valid.csv"
         os.makedirs(os.path.dirname(path2), exist_ok=True)
-        valid = pd.DataFrame(valid_data, columns=['Left', 'Right', 'Label'])
+        valid = pd.DataFrame(valid_data, columns=['Left_ID', 'Right_ID', 'Left_Text', 'Right_Text', 'Label'])
         valid.to_csv(path2, header=True, index=False)
     else:
         path2 = args.out_dir+"test.csv"
         os.makedirs(os.path.dirname(path2), exist_ok=True)
-        test = pd.DataFrame(total_pairs, columns=['Left', 'Right', 'Label'])
+        test = pd.DataFrame(total_pairs, columns=['Left_ID', 'Right_ID', 'Left_Text', 'Right_Text', 'Label'])
         test.to_csv(path2, header=True, index=False)

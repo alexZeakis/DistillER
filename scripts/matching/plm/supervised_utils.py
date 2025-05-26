@@ -86,7 +86,12 @@ def load_data(examples, label_list, tokenizer,
     all_input_mask = torch.tensor([f.input_mask for f in features], dtype=torch.long)
     all_segment_ids = torch.tensor([f.segment_ids for f in features], dtype=torch.long)
     all_label_ids = torch.tensor([f.label_id for f in features], dtype=torch.long)
-    data = TensorDataset(all_input_ids, all_input_mask, all_segment_ids, all_label_ids)
+    # all_guids = torch.tensor([f.guid for f in features], dtype=str)
+    # all_guids = [f.guid for f in features]
+    all_left_ids = torch.tensor([f.left_id for f in features], dtype=torch.long)
+    all_right_ids = torch.tensor([f.right_id for f in features], dtype=torch.long)
+    # data = TensorDataset(all_input_ids, all_input_mask, all_segment_ids, all_label_ids)
+    data = TensorDataset(all_input_ids, all_input_mask, all_segment_ids, all_label_ids, all_left_ids, all_right_ids)
 
     if data_type == DataType.TRAINING:
         sampler = RandomSampler(data)
@@ -96,21 +101,10 @@ def load_data(examples, label_list, tokenizer,
     return DataLoader(data, sampler=sampler, batch_size=batch_size)
 
 class InputExample(object):
-    """A single training/test example for simple sequence classification."""
-
-    def __init__(self, guid, text_a, text_b=None, label: int = None):
-        """Constructs a InputExample.
-
-        Args:
-            guid: Unique id for the example.
-            text_a: string. The untokenized text of the first sequence. For single
-            sequence tasks, only this sequence must be specified.
-            text_b: (Optional) string. The untokenized text of the second sequence.
-            Only must be specified for sequence pair tasks.
-            label: (Optional) [string]. The label of the example. This should be
-            specified for train and dev examples, but not for test examples.
-        """
+    def __init__(self, guid, left_id, right_id, text_a, text_b, label):
         self.guid = guid
+        self.id_a = left_id
+        self.id_b = right_id
         self.text_a = text_a
         self.text_b = text_b
         self.label = label
@@ -119,11 +113,13 @@ class InputExample(object):
 class InputFeatures(object):
     """A single set of features of data."""
 
-    def __init__(self, input_ids, input_mask, segment_ids, label_id):
+    def __init__(self, input_ids, input_mask, segment_ids, label_id, left_id=None, right_id=None):
         self.input_ids = input_ids
         self.input_mask = input_mask
         self.segment_ids = segment_ids
         self.label_id = label_id
+        self.left_id = left_id
+        self.right_id = right_id
 
 
 class DeepMatcherProcessor(object):
@@ -155,18 +151,11 @@ class DeepMatcherProcessor(object):
         """Creates examples for the training and dev sets."""
         
         examples = []
-        # for (i, line) in enumerate(lines):
         for index, row in df.iterrows():
-            #guid = "%s-%s" % (set_type, line[0])
             guid = "%s-%s" % (set_type, index)
-            # try:
-            #     #text_a, text_b, label = line[1:]
-            #     text_a, text_b, label = line
-            # except IndexError:
-            #     continue
             examples.append(
-                InputExample(guid=guid, text_a=row['Left'], text_b=row['Right'], 
-                             label=str(row['Label'])))
+                InputExample(guid, row['Left_ID'], row['Right_ID'],
+                             row['Left_Text'], row['Right_Text'], label=str(row['Label'])))
                 
         return examples
     
@@ -225,19 +214,69 @@ def train(device, train_dataloader, model, optimizer, scheduler, evaluation,
     tb_writer.close()
    
     
+# def predict(model, device, test_data_loader, include_token_type_ids=False):
+#     nb_prediction_steps = 0
+#     predictions = None
+#     labels = None
+
+#     for batch in tqdm(test_data_loader, desc="Test"):
+#         model.eval()
+#         batch = tuple(t.to(device) for t in batch)
+
+#         with torch.no_grad():
+#             inputs = {'input_ids': batch[0],
+#                       'attention_mask': batch[1],
+#                       'labels': batch[3]}
+
+#             if include_token_type_ids:
+#                 inputs['token_type_ids'] = batch[2]
+
+#             outputs = model(**inputs)
+#             _, logits = outputs[:2]
+
+#         nb_prediction_steps += 1
+
+#         if predictions is None:
+#             predictions = logits.detach().cpu().numpy()
+#             labels = inputs['labels'].detach().cpu().numpy()
+#         else:
+#             predictions = np.append(predictions, logits.detach().cpu().numpy(), axis=0)
+#             labels = np.append(labels, inputs['labels'].detach().cpu().numpy(), axis=0)
+
+#     # remember, the logits are simply the output from the last layer, without applying an activation function (e.g. sigmoid).
+#     # for a simple classification this is also not necessary, we just take the index of the neuron with the maximal output.
+#     predicted_class = np.argmax(predictions, axis=1)
+
+#     simple_accuracy = (predicted_class == labels).mean()
+#     f1 = f1_score(y_true=labels, y_pred=predicted_class)
+#     scores = precision_recall_fscore_support(y_true=labels, y_pred=predicted_class)
+#     report = classification_report(labels, predicted_class)
+
+#     return simple_accuracy, f1, report, scores, pd.DataFrame({'predictions': predicted_class, 'labels': labels})
+
+
 def predict(model, device, test_data_loader, include_token_type_ids=False):
     nb_prediction_steps = 0
     predictions = None
     labels = None
-
+    all_left_ids = None
+    all_right_ids = None
+    
     for batch in tqdm(test_data_loader, desc="Test"):
         model.eval()
         batch = tuple(t.to(device) for t in batch)
 
         with torch.no_grad():
-            inputs = {'input_ids': batch[0],
-                      'attention_mask': batch[1],
-                      'labels': batch[3]}
+            inputs = {
+                'input_ids': batch[0],
+                'attention_mask': batch[1],
+                'labels': batch[3],
+            }
+            
+            ids = {
+                'left_ids': batch[4],
+                'right_ids': batch[5],
+                }
 
             if include_token_type_ids:
                 inputs['token_type_ids'] = batch[2]
@@ -247,15 +286,22 @@ def predict(model, device, test_data_loader, include_token_type_ids=False):
 
         nb_prediction_steps += 1
 
-        if predictions is None:
-            predictions = logits.detach().cpu().numpy()
-            labels = inputs['labels'].detach().cpu().numpy()
-        else:
-            predictions = np.append(predictions, logits.detach().cpu().numpy(), axis=0)
-            labels = np.append(labels, inputs['labels'].detach().cpu().numpy(), axis=0)
+        left_ids_cpu = ids['left_ids'].detach().cpu().numpy()
+        right_ids_cpu = ids['right_ids'].detach().cpu().numpy()
+        logits_cpu = logits.detach().cpu().numpy()
+        labels_cpu = inputs['labels'].detach().cpu().numpy()
 
-    # remember, the logits are simply the output from the last layer, without applying an activation function (e.g. sigmoid).
-    # for a simple classification this is also not necessary, we just take the index of the neuron with the maximal output.
+        if predictions is None:
+            predictions = logits_cpu
+            labels = labels_cpu
+            all_left_ids = left_ids_cpu
+            all_right_ids = right_ids_cpu
+        else:
+            predictions = np.append(predictions, logits_cpu, axis=0)
+            labels = np.append(labels, labels_cpu, axis=0)
+            all_left_ids = np.append(all_left_ids, left_ids_cpu, axis=0)
+            all_right_ids = np.append(all_right_ids, right_ids_cpu, axis=0)
+
     predicted_class = np.argmax(predictions, axis=1)
 
     simple_accuracy = (predicted_class == labels).mean()
@@ -263,7 +309,17 @@ def predict(model, device, test_data_loader, include_token_type_ids=False):
     scores = precision_recall_fscore_support(y_true=labels, y_pred=predicted_class)
     report = classification_report(labels, predicted_class)
 
-    return simple_accuracy, f1, report, scores, pd.DataFrame({'predictions': predicted_class, 'labels': labels})
+    # Convert input_ids arrays to lists of ints for readability
+    # input_ids_list = [list(seq) for seq in all_input_ids]
+
+    return simple_accuracy, f1, report, scores, pd.DataFrame({
+        'predictions': predicted_class,
+        'labels': labels,
+        'left_ID': all_left_ids,
+        'right_ID': all_right_ids
+    })
+
+
     
 def _truncate_seq_pair(id, tokens_a, tokens_b, max_length):
     """Truncates a sequence pair in place to the maximum length."""
@@ -415,21 +471,23 @@ def convert_examples_to_features(examples, label_list,
         else:
             raise KeyError(output_mode)
 
-        if ex_index < 5:
-            logging.info("*** Example ***")
-            logging.info("guid: %s" % (example.guid))
-            logging.info("tokens: %s" % " ".join(
-                [str(x) for x in tokens]))
-            logging.info("input_ids: %s" % " ".join([str(x) for x in input_ids]))
-            logging.info("input_mask: %s" % " ".join([str(x) for x in input_mask]))
-            logging.info("segment_ids: %s" % " ".join([str(x) for x in segment_ids]))
-            logging.info("label: %s (id = %d)" % (example.label, label_id))
+        # if ex_index < 5:
+        #     logging.info("*** Example ***")
+        #     logging.info("guid: %s" % (example.guid))
+        #     logging.info("tokens: %s" % " ".join(
+        #         [str(x) for x in tokens]))
+        #     logging.info("input_ids: %s" % " ".join([str(x) for x in input_ids]))
+        #     logging.info("input_mask: %s" % " ".join([str(x) for x in input_mask]))
+        #     logging.info("segment_ids: %s" % " ".join([str(x) for x in segment_ids]))
+        #     logging.info("label: %s (id = %d)" % (example.label, label_id))
 
         features.append(
             InputFeatures(input_ids=input_ids,
                           input_mask=input_mask,
                           segment_ids=segment_ids,
-                          label_id=label_id))
+                          label_id=label_id,
+                          left_id = example.id_a, right_id = example.id_b
+                          ))
     return features
 
 class Evaluation:
@@ -547,10 +605,10 @@ def read_arguments_train():
     args.data_path = os.path.join(args.data_dir, args.data_name)
     args.model_output_dir = args.exp_dir
 
-    logging.info("*** parsed configuration from command line and combine with constants ***")
+    # logging.info("*** parsed configuration from command line and combine with constants ***")
 
-    for argument in vars(args):
-        logging.info("argument: {}={}".format(argument, getattr(args, argument)))
+    # for argument in vars(args):
+    #     logging.info("argument: {}={}".format(argument, getattr(args, argument)))
 
     return args
 

@@ -43,4 +43,10 @@ for dir in "${directories[@]}"; do
      --seed 1924 \
      --device "cuda:0"
 
+    python umc.py \
+      --predictions_file "../../../log/matching/plm/ground/log/${dir}_predictions.csv" \
+      --input_file "../../../data/ccer/cleaned/fine_tuning/test/$dir.csv" \
+      --out_file "../../../log/matching/plm/ground/umc/${dir}.csv"
+
+     
 done

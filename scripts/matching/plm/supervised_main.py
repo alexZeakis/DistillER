@@ -125,7 +125,10 @@ if __name__ == "__main__":
 
     logging.info(classification_report)
 
-    #logging.info(predictions)         
+    #logging.info(predictions)
+    path2= args.log_dir + args.data_name + '_predictions.csv'
+    os.makedirs(os.path.dirname(path2), exist_ok=True)
+    predictions.to_csv(path2)
     
     keys = ['precision', 'recall', 'fbeta_score', 'support']
     prfs = {f'class_{no}': {key: float(prfs[nok][no]) for nok, key in enumerate(keys)} for no in range(2)}

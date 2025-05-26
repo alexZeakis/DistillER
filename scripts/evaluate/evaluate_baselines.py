@@ -137,131 +137,169 @@ def prepare_ft_file(path):
         dataset, f1 = get_scores_from_ft_json(path+file)
         temp_scores[dataset] = f1
     return pd.Series(temp_scores)
+
+def prepare_umc_file(path):
+    temp_scores = {}
+    for file in os.listdir(path):
+        df = pd.read_csv(path+file)
+        temp_scores[file.split('.')[0]] = df.iloc[-1]['F1']
+    total_df_test['UMC'] = pd.Series(temp_scores)
+    return pd.Series(temp_scores)
+
+def create_plot_comparison(total_df_test):
+    colors = {
+        "UMC": "blue",
+        "Pretrained": "orange",
+        "GT": "green",
+        "Llama3.1:70b": "red",
+        "Llama3.1:8b": "purple",
+        "Qwen2.5:32b": "brown"
+    }
+
+    df_reset = total_df_test.reset_index().rename(columns={'index': 'Dataset'})
+    ax = None
+    for column in colors.keys():
+        ax = df_reset.plot.scatter(
+            x='Dataset',
+            y=column,
+            label=column,
+            ax=ax,
+            color=colors.get(column, 'gray'),
+            s=60  # marker size
+        )
+    ax.set_title("Scatter Plot of Methods per Dataset")
+    ax.set_xlabel("Dataset")
+    ax.set_ylabel("F1")
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
     
 
 order = [f'D{no}' for no in range(2,10)]
 
-total_df = pd.DataFrame()
 
-temp_scores = {}
-path = '../../log/matching/baselines/umc/'
-for file in os.listdir(path):
-    df = pd.read_csv(path+file)
-    temp_scores[file.split('.')[0]] = df.iloc[-1]['F1']
-total_df['UMC'] = pd.Series(temp_scores)
 
+################### COMPARING LLMS ON TEST DATA #########################
+
+total_df_test = pd.DataFrame()
+
+total_df_test['UMC'] = prepare_umc_file('../../log/matching/baselines/umc/')
 path = '../../log/matching/'
-total_df['Pretrained'] = prepare_pt_file(path+'baselines/pretrained/')    
-total_df['GT'] = prepare_ft_file(path+'finetuning/ground/test_responses/')
+total_df_test['Pretrained'] = prepare_pt_file(path+'baselines/pretrained/')    
+total_df_test['GT'] = prepare_ft_file(path+'finetuning/ground/test_responses/')
 # total_df['Llama3:70b'] = prepare_ft_file(path+'finetuning/noisy/test_responses/')
-total_df['Llama3.1:8b'] = prepare_ft_file(path+'finetuning/noisy_3/test_responses/')
-total_df['Qwen2.5:32b'] = prepare_ft_file(path+'finetuning/noisy_4/test_responses/')
-total_df['Llama3.1:70b'] = prepare_ft_file(path+'finetuning/noisy_6/test_responses/')
+total_df_test['Llama3.1:8b'] = prepare_ft_file(path+'finetuning/noisy_3/test_responses/')
+total_df_test['Llama3.1:70b'] = prepare_ft_file(path+'finetuning/noisy_6/test_responses/')
+total_df_test['Qwen2.5:7b'] = prepare_ft_file(path+'finetuning/noisy_7/test_responses/')
+total_df_test['Qwen2.5:32b'] = prepare_ft_file(path+'finetuning/noisy_4/test_responses/')
 
-total_df = total_df.loc[order]
+total_df_test = total_df_test.loc[order]
 
 # total_df[['UMC', 'Pretrained', 'GT', 'Llama3.1:8b', 'Qwen2.5:32b']].plot.line()
+create_plot_comparison(total_df_test)
 
-colors = {
-    "UMC": "blue",
-    "Pretrained": "orange",
-    "GT": "green",
-    "Llama3.1:70b": "red",
-    "Llama3.1:8b": "purple",
-    "Qwen2.5:32b": "brown"
-}
-
-df_reset = total_df.reset_index().rename(columns={'index': 'Dataset'})
-ax = None
-for column in colors.keys():
-    ax = df_reset.plot.scatter(
-        x='Dataset',
-        y=column,
-        label=column,
-        ax=ax,
-        color=colors.get(column, 'gray'),
-        s=60  # marker size
-    )
-ax.set_title("Scatter Plot of Methods per Dataset")
-ax.set_xlabel("Dataset")
-ax.set_ylabel("F1")
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.show()
-
-
-total_df.loc['Mean', :] = total_df.mean()
-total_df = total_df.round(2)
+total_df_test.loc['Mean', :] = total_df_test.mean()
+total_df_test = total_df_test.round(2)
 
 
 
 
-
+################### COMPARING LLMS ON TRAIN DATA #########################
 
 path = '../../log/matching/finetuning/'
-total_df_2 = pd.DataFrame()
+total_df_train = pd.DataFrame()
 # total_df_2['Llama3:70b'] = prepare_pt_file(path+'noisy/partial_responses/')
 # total_df_2['Llama3.3:70b'] = prepare_pt_file(path+'noisy_2/partial_responses/')
-total_df_2['Llama3.1:8b'] = prepare_pt_file(path+'noisy_3/partial_responses/')
 # total_df_2['Llama3.1:8b(Groq)'] = prepare_pt_file(path+'noisy_5/partial_responses/')
-total_df_2['Qwen2.5:32b'] = prepare_pt_file(path+'noisy_4/partial_responses/')
-total_df_2['Llama3.1:70b'] = prepare_pt_file(path+'noisy_6/partial_responses/')
+total_df_train['Llama3.1:8b'] = prepare_pt_file(path+'noisy_3/partial_responses/')
+total_df_train['Llama3.1:70b'] = prepare_pt_file(path+'noisy_6/partial_responses/')
+total_df_train['Qwen2.5:7b'] = prepare_pt_file(path+'noisy_7/partial_responses/')
+total_df_train['Qwen2.5:32b'] = prepare_pt_file(path+'noisy_4/partial_responses/')
 
-total_df_2 = total_df_2.loc[order]
-total_df_2.loc['Mean', :] = total_df_2.mean()
-total_df_2 = total_df_2.round(2)
+total_df_train = total_df_train.loc[order]
+total_df_train.loc['Mean', :] = total_df_train.mean()
+total_df_train = total_df_train.round(2)
+
+
+
+
+################### COMPARING PLMS ON TEST DATA ###################
 
 
 path = '../../log/matching/plm/'
-total_df_3 = pd.DataFrame()
-total_df_3['GT'] = prepare_plm_file(path+'ground/')
-total_df_3['Llama3.1:8b'] = prepare_plm_file(path+'noisy_3/')
-total_df_3['Qwen2.5:32b'] = prepare_plm_file(path+'noisy_4/')
-total_df_3['Llama3.1:70b'] = prepare_plm_file(path+'noisy_6/')
-total_df_3['GT_DS2:1'] = prepare_plm_file(path+'ground_ds/')
-total_df_3['Llama3.1:70b_DS2:1'] = prepare_plm_file(path+'noisy_6_ds/')
+total_df_plm = pd.DataFrame()
+total_df_plm['GT'] = prepare_plm_file(path+'ground/')
+total_df_plm['Llama3.1:8b'] = prepare_plm_file(path+'noisy_3/')
+total_df_plm['Llama3.1:70b'] = prepare_plm_file(path+'noisy_6/')
+total_df_plm['Qwen2.5:7b'] = prepare_plm_file(path+'noisy_7/')
+total_df_plm['Qwen2.5:32b'] = prepare_plm_file(path+'noisy_4/')
+# total_df_plm['GT_DS2:1'] = prepare_plm_file(path+'ground_ds/')
+# total_df_plm['Llama3.1:70b_DS2:1'] = prepare_plm_file(path+'noisy_6_ds/')
 
-total_df_3 = total_df_3.loc[order]
-total_df_3.loc['Mean', :] = total_df_3.mean()
-total_df_3 = total_df_3.round(2)
+total_df_plm = total_df_plm.loc[order]
+total_df_plm.loc['Mean', :] = total_df_plm.mean()
+total_df_plm = total_df_plm.round(2)
+
+
+
+
+
+################### COMPARING DOWNSAMPLING ON PLMS ON TEST DATA ###############
+
+path = '../../log/matching/plm/'
+total_df_plm_ds = pd.DataFrame()
+total_df_plm_ds['GT'] = prepare_plm_file(path+'ground/')
+total_df_plm_ds['Llama3.1:70b'] = prepare_plm_file(path+'noisy_6/')
+total_df_plm_ds['GT_DS2:1'] = prepare_plm_file(path+'ground_ds/')
+total_df_plm_ds['Llama3.1:70b_DS2:1'] = prepare_plm_file(path+'noisy_6_ds/')
+
+total_df_plm_ds = total_df_plm_ds.loc[order]
+total_df_plm_ds.loc['Mean', :] = total_df_plm_ds.mean()
+total_df_plm_ds = total_df_plm_ds.round(2)
+
+
+################### COMPARING UMC ON PLMS ON TEST DATA ###############
+
+
+path = '../../log/matching/plm/'
+total_df_plm_umc = pd.DataFrame()
+total_df_plm_umc['GT - wo/ UMC'] = prepare_plm_file(path+'ground/')
+total_df_plm_umc['GT - w/ UMC'] = prepare_umc_file(path+'ground/umc/')
+total_df_plm_umc['Llama3.1:70b - wo/ UMC'] = prepare_plm_file(path+'noisy_6/')
+total_df_plm_umc['Llama3.1:70b - w/ UMC'] = prepare_umc_file(path+'noisy_6/umc/')
+
+total_df_plm_umc = total_df_plm_umc.loc[order]
+total_df_plm_umc.loc['Mean', :] = total_df_plm_umc.mean()
+total_df_plm_umc = total_df_plm_umc.round(2)
+
+
+
+
+
+################### COMPARING LABEL REFINEMENT ON TEST DATA ###################
 
 
 path = '../../log/matching/'
-total_df_4 = pd.DataFrame()
-total_df_4['Llama3.1:8b'] = prepare_ft_file(path+'finetuning/noisy_3/test_responses/')
-total_df_4['Llama3.1:8b - LR_θ=0.9'] = prepare_ft_file(path+'confidence/noisy/test_responses/')
+total_df_conf_test = pd.DataFrame()
+total_df_conf_test['Llama3.1:8b'] = prepare_ft_file(path+'finetuning/noisy_3/test_responses/')
+total_df_conf_test['Llama3.1:8b - LR_θ=0.9'] = prepare_ft_file(path+'confidence/noisy/test_responses/')
 
-total_df_4 = total_df_4.loc[order]
-total_df_4.loc['Mean', :] = total_df_4.mean()
-total_df_4 = total_df_4.round(2)
-
-
+total_df_conf_test = total_df_conf_test.loc[order]
+total_df_conf_test.loc['Mean', :] = total_df_conf_test.mean()
+total_df_conf_test = total_df_conf_test.round(2)
 
 
 
 
 
 
-     
+################### COMPARING LABEL REFINEMENT ON TRAIN DATA ###################
 
-# temp_scores = {}
-# path = '../../log/matching/finetuning/noisy/partial_responses/'
-# for file in os.listdir(path):
-#     if 'responses' not in file:
-#         continue
-    
-#     if 'D4' not in file:
-#         continue
-#     ground_results, predictions = get_scores_from_json(path+file)
-    
-#     # ground_results = {k:v for (k,v) in ground_results}
-#     # predictions = {k:v for (k,v) in predictions}
-#     # for k, v in predictions.items():
-#     #     v2 = ground_results[k]
-#     #     if v == v2:
-#     #         continue
-#     #     print('For {}, prediction: {}, true: {}'.format(k, v, v2))
-    
-#     # dataset, f1 = get_scores_from_json(path+file)
-# #     temp_scores[dataset] = f1
-# # total_df['Noisy-Train'] = pd.Series(temp_scores)
+path = '../../log/matching/'
+total_df_conf_train = pd.DataFrame()
+total_df_conf_train['Llama3.1:8b'] = prepare_pt_file(path+'finetuning/noisy_3/partial_responses/')
+total_df_conf_train['Llama3.1:8b - LR_θ=0.9'] = prepare_pt_file(path+'confidence/noisy/partial_responses/')
+
+total_df_conf_train = total_df_conf_train.loc[order]
+total_df_conf_train.loc['Mean', :] = total_df_conf_train.mean()
+total_df_conf_train = total_df_conf_train.round(2)
