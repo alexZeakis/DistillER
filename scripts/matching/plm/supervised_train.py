@@ -102,42 +102,4 @@ if __name__ == "__main__":
     t2 = time()
     training_time = t2-t1
 
-    #Testing
-    test_examples = processor.get_test_examples(args.data_path)
-
-    logging.info("loaded {} test examples".format(len(test_examples)))
-    test_data_loader = load_data(test_examples,
-                                 label_list,
-                                 tokenizer,
-                                 # args.max_seq_length,
-                                 args.eval_batch_size,
-                                 DataType.TEST, args.model_type)
-
-    include_token_type_ids = False
-    if args.model_type == 'bert':
-       include_token_type_ids = True
-       
-    t1 = time()
-    simple_accuracy, f1, classification_report, prfs, predictions = predict(model, device, test_data_loader, include_token_type_ids)
-    t2 = time()
-    testing_time = t2-t1
-    logging.info("Prediction done for {} examples.F1: {}, Simple Accuracy: {}".format(len(test_data_loader), f1, simple_accuracy))
-
-    logging.info(classification_report)
-
-    #logging.info(predictions)
-    path2= args.log_dir + args.data_name + '_predictions.csv'
-    os.makedirs(os.path.dirname(path2), exist_ok=True)
-    predictions.to_csv(path2)
-    
-    keys = ['precision', 'recall', 'fbeta_score', 'support']
-    prfs = {f'class_{no}': {key: float(prfs[nok][no]) for nok, key in enumerate(keys)} for no in range(2)}
-    
-    log_file = args.log_dir + 'matching_supervised_dynamic.txt'
-    os.makedirs(os.path.dirname(log_file), exist_ok=True)
-    with open(log_file, 'a') as fout:
-        scores = {'simple_accuracy': simple_accuracy, 'f1': f1, 'model_type': args.model_type,
-         'data_name': args.data_name, 'training_time': training_time, 'testing_time': testing_time, 'prfs': prfs}
-        fout.write(json.dumps(scores)+"\n")
-    
-    # save_model(model, args.model_output_dir, exp_name, tokenizer=tokenizer)
+    save_model(model, args.model_output_dir, tokenizer=tokenizer)

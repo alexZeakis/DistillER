@@ -258,6 +258,24 @@ total_df_plm_ds.loc['Mean', :] = total_df_plm_ds.mean()
 total_df_plm_ds = total_df_plm_ds.round(2)
 
 
+
+################### COMPARING PLMS - GENERALIZED ON TEST DATA #################
+
+
+path = '../../log/matching/plm_generalized/'
+total_df_plm_gen = pd.DataFrame()
+total_df_plm_gen['GT'] = prepare_plm_file(path+'ground/')
+total_df_plm_gen['Llama3.1:8b'] = prepare_plm_file(path+'noisy_3/')
+total_df_plm_gen['Llama3.1:70b'] = prepare_plm_file(path+'noisy_6/')
+total_df_plm_gen['Qwen2.5:7b'] = prepare_plm_file(path+'noisy_7/')
+total_df_plm_gen['Qwen2.5:32b'] = prepare_plm_file(path+'noisy_4/')
+
+total_df_plm_gen = total_df_plm_gen.loc[order]
+total_df_plm_gen.loc['Mean', :] = total_df_plm_gen.mean()
+total_df_plm_gen = total_df_plm_gen.round(2)
+
+
+
 ################### COMPARING UMC ON PLMS ON TEST DATA ###############
 
 

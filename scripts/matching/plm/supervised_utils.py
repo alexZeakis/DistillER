@@ -209,7 +209,7 @@ def train(device, train_dataloader, model, optimizer, scheduler, evaluation,
             tb_writer.add_scalar('eval_{}'.format(key), value, global_step)
 
         if save_model_after_epoch:
-            save_model(model, experiment_name, output_dir, epoch=epoch)
+            save_model(model, output_dir, experiment_name, epoch=epoch)
 
     tb_writer.close()
    
@@ -597,6 +597,8 @@ def read_arguments_train():
     parser.add_argument('--warmup_steps', default=0, type=int)
     parser.add_argument('--max_grad_norm', default=1.0, type=float)
     parser.add_argument('--weight_decay', default=0.0, type=float)
+    # parser.add_argument('--model_output_dir', default=None, type=str)
+
 
     parser.add_argument('--seed', default=42, type=int)
 
@@ -623,11 +625,14 @@ def setup_logging():
 
     logging.getLogger('bert-classifier-entity-matching')
     
-def save_model(model, experiment_name, model_output_dir, epoch=None, tokenizer=None):
-    if epoch:
-        output_sub_dir = os.path.join(model_output_dir, experiment_name, "epoch_{}".format(epoch))
+def save_model(model, model_output_dir, experiment_name=None, epoch=None, tokenizer=None):
+    if experiment_name is not None:
+        if epoch:
+            output_sub_dir = os.path.join(model_output_dir, experiment_name, "epoch_{}".format(epoch))
+        else:
+            output_sub_dir = os.path.join(model_output_dir, experiment_name)
     else:
-        output_sub_dir = os.path.join(model_output_dir, experiment_name)
+        output_sub_dir = os.path.join(model_output_dir)
 
     os.makedirs(output_sub_dir, exist_ok=True)
 
@@ -640,8 +645,8 @@ def save_model(model, experiment_name, model_output_dir, epoch=None, tokenizer=N
     return output_sub_dir
 
 
-# def load_model(model_dir, do_lower_case):
-#     model = BertForSequenceClassification.from_pretrained(model_dir)
-#     tokenizer = BertTokenizer.from_pretrained(model_dir, do_lower_case=do_lower_case)
-
-#     return model, tokenizer    
+def load_model(model_dir, device):
+    tokenizer = AutoTokenizer.from_pretrained(model_dir)
+    model = AutoModelForSequenceClassification.from_pretrained(model_dir)
+    model.to(device)
+    return model, tokenizer
