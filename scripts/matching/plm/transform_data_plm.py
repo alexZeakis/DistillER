@@ -222,6 +222,9 @@ if __name__ == '__main__':
             x = (key, pair[2], pair[0], pair[1], label)
             total_pairs.append(x)
 
+
+    columns = ['Left_ID', 'Right_ID', 'Left_Text', 'Right_Text', 'Label']
+
     if args.mode == 'train':
         if args.downsampling is not None:
             total_pairs = downsample_majority(total_pairs, ratio_N=args.downsampling)
@@ -236,15 +239,18 @@ if __name__ == '__main__':
         
         path2 = args.out_dir+"train.csv"
         os.makedirs(os.path.dirname(path2), exist_ok=True)
-        train = pd.DataFrame(train_data, columns=['Left_ID', 'Right_ID', 'Left_Text', 'Right_Text', 'Label'])
+        train = pd.DataFrame(train_data, columns=columns)
+        train['Dataset'] = dataset
         train.to_csv(path2, header=True, index=False)
         
         path2 = args.out_dir+"valid.csv"
         os.makedirs(os.path.dirname(path2), exist_ok=True)
-        valid = pd.DataFrame(valid_data, columns=['Left_ID', 'Right_ID', 'Left_Text', 'Right_Text', 'Label'])
+        valid = pd.DataFrame(valid_data, columns=columns)
+        valid['Dataset'] = dataset
         valid.to_csv(path2, header=True, index=False)
     else:
         path2 = args.out_dir+"test.csv"
         os.makedirs(os.path.dirname(path2), exist_ok=True)
-        test = pd.DataFrame(total_pairs, columns=['Left_ID', 'Right_ID', 'Left_Text', 'Right_Text', 'Label'])
+        test = pd.DataFrame(total_pairs, columns=columns)
+        test['Dataset'] = dataset
         test.to_csv(path2, header=True, index=False)

@@ -90,8 +90,10 @@ def load_data(examples, label_list, tokenizer,
     # all_guids = [f.guid for f in features]
     all_left_ids = torch.tensor([f.left_id for f in features], dtype=torch.long)
     all_right_ids = torch.tensor([f.right_id for f in features], dtype=torch.long)
+    all_datasets = torch.tensor([f.dataset for f in features], dtype=torch.long)
     # data = TensorDataset(all_input_ids, all_input_mask, all_segment_ids, all_label_ids)
-    data = TensorDataset(all_input_ids, all_input_mask, all_segment_ids, all_label_ids, all_left_ids, all_right_ids)
+    data = TensorDataset(all_input_ids, all_input_mask, all_segment_ids, all_label_ids,
+                         all_left_ids, all_right_ids, all_datasets)
 
     if data_type == DataType.TRAINING:
         sampler = RandomSampler(data)
@@ -101,25 +103,27 @@ def load_data(examples, label_list, tokenizer,
     return DataLoader(data, sampler=sampler, batch_size=batch_size)
 
 class InputExample(object):
-    def __init__(self, guid, left_id, right_id, text_a, text_b, label):
+    def __init__(self, guid, left_id, right_id, text_a, text_b, label, dataset):
         self.guid = guid
         self.id_a = left_id
         self.id_b = right_id
         self.text_a = text_a
         self.text_b = text_b
         self.label = label
+        self.dataset = dataset
 
 
 class InputFeatures(object):
     """A single set of features of data."""
 
-    def __init__(self, input_ids, input_mask, segment_ids, label_id, left_id=None, right_id=None):
+    def __init__(self, input_ids, input_mask, segment_ids, label_id, left_id=None, right_id=None, dataset=None):
         self.input_ids = input_ids
         self.input_mask = input_mask
         self.segment_ids = segment_ids
         self.label_id = label_id
         self.left_id = left_id
         self.right_id = right_id
+        self.dataset = dataset
 
 
 class DeepMatcherProcessor(object):
@@ -155,7 +159,9 @@ class DeepMatcherProcessor(object):
             guid = "%s-%s" % (set_type, index)
             examples.append(
                 InputExample(guid, row['Left_ID'], row['Right_ID'],
-                             row['Left_Text'], row['Right_Text'], label=str(row['Label'])))
+                             row['Left_Text'], row['Right_Text'], 
+                             label=str(row['Label']),
+                             dataset=int(row['Dataset'][-1])))
                 
         return examples
     
@@ -276,6 +282,7 @@ def predict(model, device, test_data_loader, include_token_type_ids=False):
             ids = {
                 'left_ids': batch[4],
                 'right_ids': batch[5],
+                'datasets': batch[6],
                 }
 
             if include_token_type_ids:
@@ -288,6 +295,7 @@ def predict(model, device, test_data_loader, include_token_type_ids=False):
 
         left_ids_cpu = ids['left_ids'].detach().cpu().numpy()
         right_ids_cpu = ids['right_ids'].detach().cpu().numpy()
+        datasets_cpu = ids['datasets'].detach().cpu().numpy()
         logits_cpu = logits.detach().cpu().numpy()
         labels_cpu = inputs['labels'].detach().cpu().numpy()
 
@@ -296,11 +304,13 @@ def predict(model, device, test_data_loader, include_token_type_ids=False):
             labels = labels_cpu
             all_left_ids = left_ids_cpu
             all_right_ids = right_ids_cpu
+            all_datasets = datasets_cpu
         else:
             predictions = np.append(predictions, logits_cpu, axis=0)
             labels = np.append(labels, labels_cpu, axis=0)
             all_left_ids = np.append(all_left_ids, left_ids_cpu, axis=0)
             all_right_ids = np.append(all_right_ids, right_ids_cpu, axis=0)
+            all_datasets = np.append(all_datasets, datasets_cpu, axis=0)
 
     predicted_class = np.argmax(predictions, axis=1)
 
@@ -316,7 +326,8 @@ def predict(model, device, test_data_loader, include_token_type_ids=False):
         'predictions': predicted_class,
         'labels': labels,
         'left_ID': all_left_ids,
-        'right_ID': all_right_ids
+        'right_ID': all_right_ids,
+        'datasets': all_datasets
     })
 
 
@@ -486,7 +497,9 @@ def convert_examples_to_features(examples, label_list,
                           input_mask=input_mask,
                           segment_ids=segment_ids,
                           label_id=label_id,
-                          left_id = example.id_a, right_id = example.id_b
+                          left_id = example.id_a, 
+                          right_id = example.id_b,
+                          dataset = example.dataset
                           ))
     return features
 

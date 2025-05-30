@@ -2,6 +2,7 @@ import os
 import argparse
 import json
 import re
+import pandas as pd
 
 def find_json(text):
     
@@ -106,18 +107,53 @@ if __name__ == '__main__':
     with open(args.prompts) as f:
         prompts = json.load(f)
         
-    with open(args.labels) as f:
-        labels = json.load(f)
+    if args.labels.endswith('.json'): #LLM Noisy
+        with open(args.labels) as f:
+            labels = json.load(f)
+            
+        labels, confidence = clean_labels(labels['responses'], args.confidence, args.confidence_threshold)
         
-    labels, confidence = clean_labels(labels['responses'], args.confidence, args.confidence_threshold)
+        for prompt in prompts['prompts']:
+            prompt['noise_answer'] = labels[prompt['query_id']]
+            if args.confidence:
+                prompt['confidence'] = confidence[prompt['query_id']]
+    
+        # if not confidence_flag, then conf = 1.0 and thres = 0.0, so condition=True
+        if args.confidence:
+            prompts['prompts'] = [prompt for prompt in prompts['prompts']
+                              if abs(prompt['confidence'] - thres) >= 0.000001]        
+        
+        
+    elif args.labels.endswith('.csv'): # PLM Noisy
+        labels_csv = pd.read_csv(args.labels)
+        dataset = int(prompts['settings']['dataset'][-1])
+        labels_csv = labels_csv.loc[labels_csv.datasets == dataset] # keep only current dataset
+        labels2 = labels_csv.loc[labels_csv.predictions == 1] # keep only those that are predicted as YES
+        
+        labels = labels2.groupby('left_ID')['right_ID'].apply(list).to_dict()
+        for lab in labels_csv.left_ID.unique():
+            lab = int(lab)
+            if lab not in labels:
+                labels[lab] = [-1]
+        # labels = {x['left_ID']: x['predictions'] for index, x in labels.iterrows()}
+        
+        final_prompts = []
+        for prompt in prompts['prompts']:
+            qid = prompt['query_id']
+            if qid in labels: # to be kept
+                for nol, lab in enumerate(labels[qid]):  # if more than one labels, keep a separate prompt
+                
+                    prompt2 = {k:v for k,v in prompt.items()}
+                    prompt2['query_id'] = '{}_{}'.format(qid, nol)
+                    
+                    if lab != -1:
+                        prompt2['noise_answer'] = prompt2['options'].index(lab) +1
+                    else:
+                        prompt2['noise_answer'] = 0
+                    final_prompts.append(prompt2)
+            
+        prompts['prompts'] = final_prompts
 
-    for prompt in prompts['prompts']:
-        prompt['noise_answer'] = labels[prompt['query_id']]
-        prompt['confidence'] = confidence[prompt['query_id']]
-
-    # if not confidence_flag, then conf = 1.0 and thres = 0.0, so condition=True
-    prompts['prompts'] = [prompt for prompt in prompts['prompts']
-                          if abs(prompt['confidence'] - thres) >= 0.000001]
         
     path2 = args.out_file
     os.makedirs(os.path.dirname(path2), exist_ok=True)
