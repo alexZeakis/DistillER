@@ -12,6 +12,7 @@ seeds=(1924)
 #--endpoint "http://localhost:11435/v1"
 #--endpoint "http://gaia-gpu-2.imsi.athenarc.gr:11434/v1"
 
+<<xom
 for dir in "${directories[@]}"; do
     for seed in "${seeds[@]}"; do
         echo "Processing directory: $dir with seed: $seed"
@@ -40,6 +41,8 @@ for dir in "${directories[@]}"; do
         --out_file "../../../log/matching/finetuning/noisy_qwen_14/partial_noisy/${dir}_${seed}.json" 
     done
 done
+
+xom
 
 input_files=(../../../log/matching/finetuning/noisy_qwen_14/partial_noisy/*.json)
 python ../fine_tuning_data.py \
