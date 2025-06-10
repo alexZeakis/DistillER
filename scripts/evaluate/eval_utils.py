@@ -1,235 +1,183 @@
-import re
-import os
 import json
 import pandas as pd
+import re
+import os
+import matplotlib.pyplot as plt
 
-def evaluate(true, preds):
-    recall = len(true & preds) / len(true) if len(preds) != 0 else 0
-    precision = len(true & preds) / len(preds) if len(preds) != 0 else 0
-    f1 = 2 * (precision * recall) / (precision + recall) if precision + recall != 0 else 0
-    return recall, precision, f1
-
-def find_integers(input_string):
-    integers = re.findall(r'-?\b\d+\b', input_string)
-    integers = [int(num) for num in integers]
-    return integers
-
-def find_integers_in_brackets(text):
-    integers = re.findall(r'\[(\d+)\]', text)
-    integers = [int(num) for num in integers]
-    if len(integers) == 0:
-        integers = re.findall(r'#.*?(\d)', text)
-        integers = [int(num) for num in integers]
-    return integers
-
-def find_integers_in_brackets_orca(text):
-    pattern = r'### Final answer:\s*(?:\{[^}]+\}\s*)?\[(\d+)\]'
-    integers = re.findall(pattern, text)
-    integers = [int(num) for num in integers]
-    if len(integers) == 0: #Most likely answered None or paraphrased this one.
-        integers = [0]
-    return integers
-
-def find_integer(response, path):
-    if 'llama' in path:
-        t_preds = find_integers_in_brackets(response)
-    elif 'mistral' in path:
-        t_preds = find_integers_in_brackets(response)
-        if len(t_preds)==0:
-            t_preds = find_integers(response) 
-    elif 'orca' in path:
-        # t_preds = find_integers_in_brackets_orca(response)
-        t_preds = find_integers_in_brackets(response)
-    else:
-        t_preds = find_integers_in_brackets(response)
-        if len(t_preds)==0:
-            t_preds = find_integers(response)
-            
-    # if len(t_preds) == 0:
-        # print(response)
-    return t_preds
-
-def find_json_files(directory):
-    json_files = []
-    for root, _, files in os.walk(directory):
-        for file in files:
-            if file.endswith('.json'):
-                json_files.append(os.path.join(root, file))
-    return json_files
-
-def find_preds_file(response_file, weights=None):
-    true, preds = [], []
-    total_time = 0
-    total_size = 0
+def prepare_plm_file(path):
+    scores = {}
+    with open(path+'log/matching_supervised_dynamic.txt') as f:
+        for line in f:
+            j = json.loads(line)
+            scores[j['data_name']] = j['f1']
+    return pd.Series(scores)
+        
+def get_scores_from_ft_json(path):
+    j = json.load(open(path))
+    dataset = j['settings']['dataset']
     
-    counter_good, counter_bad = 0, 0
-    with open(response_file) as f:
-        j = json.load(f)
+    ground_results = set()
+    predictions = set()
+    for res in j['responses']:
+        # print(res)
+
+        answer = find_integer(res['response'])
+        if len(answer) > 0:
+            answer = answer['answer']
         
-        m = j['settings']['model']
-        for line in j['responses']:
-            qid = line['query_id']
+        ground_results.add((res['query_id'], res['answer']))
+        if len(answer) > 0:
+            try:
+                answer = int(answer[1:-1])
+            except:
+                    answer = 0
+            predictions.add((res['query_id'], answer))
+        # if answer != res['answer']:
+        #     print("Response: {}\nShortResponse: {}\nAnswer: {}\n".format(res['response'], answer, res['answer']))
             
-            t_preds = find_integer(line['response'], m)
-                
-            
-            if len(t_preds)==0:
-                # pred = -1 # llm gave no prediction
-                pred = 0 #TODO: Merged N3 to N1
-            elif len(t_preds) == 1:
-                pred = t_preds[0] # only one prediction, desired behavior
-            else:
-                pred = t_preds[-1] # probably the last number is the predicted one
-                # pred = t_preds[0] # only one prediction, desired behavior
-            
-            true_val = None
-            if line['ground_truth'] != -1: #M1 & M2
-                true.append((qid, line['answer']))
-                true_val = line['answer']
-            else: #TODO M3
-                # true.append((qid, -1))
-                true.append((qid, 0)) # Merged M3 to M1
-                true_val = 0
-                
-            # print(qid, pred, t_preds)
-
-            # if pred > 0: # N1 only
-            if pred >= 0: # N1 & N2
-                if weights is not None:
-                    if type(weights)==dict:
-                        w = weights[m]
-                    else: # constant, i.e. w=1
-                        w = weights
-                else:
-                    w = 0
-                # w = weights[m] if weights is not None else 0
-                preds.append((qid, pred, w))
-                
-            if pred == true_val:    
-                counter_good += 1
-            else:
-                counter_bad += 1
-                print(qid, pred, true_val)
-                print(line['response'])
-            total_time += line['time']
-            total_size += len(line['response'])
-        total_size /= len(j['responses'])
-
-    print("Good: {}, Bad: {}".format(counter_good, counter_bad))
-    return {'seed': j['settings'].get('seed'),
-            'dataset': j['settings']['dataset'],
-            'model': j['settings']['model'],
-            'preds': preds, 'true': true,
-            'time': total_time, 'size': total_size}
+    f1 = calc_f1(ground_results, predictions)
     
+    # return ground_results, predictions
+    return dataset, f1
 
-
-def calc_scores_weighted_vote(dir_path, weights=None):
+def get_scores_from_json(path):
+    j = json.load(open(path))
+    dataset = j['settings']['dataset']
     
-    # out = open('temp_2.txt', 'w')
-    scores = []
-    total_logs = {}     
-    files = find_json_files(dir_path)
-    total_size = {}
-    for file in files:
-        log = find_preds_file(file, weights=weights)
-        if log['dataset'] not in total_logs:
-            total_logs[log['dataset']] = []
-            total_size[log['dataset']] = 0
-        total_logs[log['dataset']].append(log)
-        total_size[log['dataset']] += log['size']
-    for k in total_size.keys():
-        total_size[k] = total_size[k] / len(total_logs[k])
-        
-    for dataset, log_list in total_logs.items():
-        total_preds = {}
-        for log in log_list:
-            temp_true = log['true']
-            for k, v, w in log['preds']:
-                if k not in total_preds:
-                    total_preds[k] = []
-                total_preds[k].append((v, w))
-                
-        preds = []
-        for k, weighted_votes in total_preds.items():
-            if weights is None:
-                for pred, weight in weighted_votes:
-                    preds.append((k, pred))
-            else:
-                # out.write('{},{},{}\n'.format(dataset, k, weighted_votes))
-                vote_count = {}
-                for pred, weight in weighted_votes:
-                    if pred not in vote_count:
-                        vote_count[pred] = 0
-                    vote_count[pred] += weight
-                
-                # Find predictions with the highest weighted sum
-                max_weight = max(vote_count.values())
-                tied_preds = [pred for pred, weight in vote_count.items() if weight == max_weight]
+    ground_results = set()
+    predictions = set()
+    for res in j['responses']:
+        # print(res)
+        # if res['query_id'] == 2054:
+        #     # print(res['answer'], res['explanation'])
+        #     print(res)
 
-                if len(tied_preds) == 1: #no ties
-                    preds.append((k, tied_preds[0]))
-        
-        temp_true = set(temp_true)
-        
-        # print(len(true))
-        preds = set(preds)
-        recall, precision, f1 = evaluate(temp_true, preds)
-        
-        log = {}
-        log['dataset'] = dataset
-        log['recall'] = recall
-        log['precision'] = precision
-        log['f1'] = f1
-        log['size'] = total_size[dataset]
-        # log['time'] = total_time
-        scores.append(log)
-        
-    scores = pd.DataFrame(scores)
-    return scores
-
-def transform_series(scores, cols=None):
-    scores = scores[['dataset', 'f1']].set_index('dataset')
-    if cols is None:
-        scores = scores.T.values[0]
-    else:
-        # valid_cols = [col for col in cols if col in scores.index]
-        # scores = scores.loc[valid_cols].T.values[0]
-        scores = scores.reindex(cols, fill_value=0).T.values[0]
-    return scores
-
-# Function to apply styles
-def highlight_values(series):
-    # Get indices of the highest and second-highest values
-    sorted_vals = series.drop_duplicates().sort_values(ascending=False)
-    first_val = sorted_vals.iloc[0]
-    if sorted_vals.shape[0] > 1:
-        second_val = sorted_vals.iloc[1]
-    
-    res = []
-    for index, row in series.items():
-        if row == first_val:
-            res += [fr'\textbf{{{row}}}']
-        elif second_val is not None and row == second_val:
-            res += [fr'\underline{{{row}}}']
+        if res['explanation'] is None: #error
+            if res['answer'] is None: #timeout
+                answer = {}
+            else: #error in Structured output
+                answer = find_json(res['answer'])
+                if len(answer) > 0:
+                    answer = answer['answer']
         else:
-            res += [fr'{row}']
-    return res
+            answer = res['answer']
+        # if res['ground_answer'] == -1: #TODO: Check for certainty
+        #     ground_answer = 0
+        
+        ground_results.add((res['query_id'], res['ground_answer']))
+        if len(answer) > 0:
+            try:
+                answer = int(answer[1:-1])
+            except:
+                    answer = 0
+            predictions.add((res['query_id'], answer))
+            
+    f1 = calc_f1(ground_results, predictions)
+    
+    # return ground_results, predictions
+    return dataset, f1
 
-# Apply the styling for LaTeX
-def latex_style(df):
-    columns_to_style = ['D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'Mean']
-    styled_df = df.copy()
-    for col in columns_to_style:
-        if col in df.columns:
-            styled_df[col] = highlight_values(df[col])
-    return styled_df
+def find_integer(text):
+    pattern = r'\[\d+\]'
+    matches = re.findall(pattern, text, re.DOTALL)
+    last_match = matches[0] if matches else None
+    if last_match is not None: #successful structured output
+        return {'answer': last_match, 'explanation': ''}
+    return {}
 
-def transform_series_2(scores, extras={}):
-    x = scores[['dataset', 'f1']].set_index('dataset')
-    x.loc['Mean', :] = x.mean()
-    x.loc['Rsp. Size', :] = scores['size'].mean()
-    x = x.to_dict()['f1']
-    for k,v in extras.items():
-        x[k] = v
-    return x
+def find_json(text):
+    # print(text)
+    
+    # pattern = r'({"answer":.*?"explanation".*?})'
+    pattern = '\{\s*"answer"\s*:\s*".*?"\s*,\s*"explanation"\s*:\s*".*?"\s*\}'
+    matches = re.findall(pattern, text, re.DOTALL)
+    last_match = matches[-1] if matches else None
+    if last_match is not None: #successful structured output
+        try:
+            return json.loads(last_match)
+        except:
+            pattern = '\"answer"\s*:\s*".*?"\s*,'
+            matches = re.findall(pattern, text, re.DOTALL)
+            last_match = matches[-1] if matches else None
+            if last_match is not None: #successful structured output
+                return {'answer': last_match, 'explanation': ''}
+            
+    pattern = r'\[\d+\]'
+    matches = re.findall(pattern, text, re.DOTALL)
+    last_match = matches[-1] if matches else None
+    if last_match is not None: #successful structured output
+        return {'answer': last_match, 'explanation': ''}
+    return {}
+
+
+def calc_f1(true, preds):
+    if len(true) > 0:
+        recall = len(true & preds) / len(true)
+    if len(preds) > 0:
+        precision = len(true & preds) / len(preds)
+    if len(true) > 0:
+        if precision == recall == 0:
+            return 0
+        return 2 * precision * recall / (precision+recall)
+    
+    
+def prepare_pt_file(path):
+    temp_scores = {}
+    for file in os.listdir(path):
+        if 'responses' not in file:
+            continue
+        dataset, f1 = get_scores_from_json(path+file)
+        temp_scores[dataset] = f1
+    return pd.Series(temp_scores)
+
+def prepare_ft_file(path):
+    temp_scores = {}
+    for file in os.listdir(path):
+        if 'responses' not in file:
+            continue
+        dataset, f1 = get_scores_from_ft_json(path+file)
+        temp_scores[dataset] = f1
+    return pd.Series(temp_scores)
+
+def prepare_umc_file(path):
+    temp_scores = {}
+    for file in os.listdir(path):
+        df = pd.read_csv(path+file)
+        temp_scores[file.split('.')[0]] = df.iloc[-1]['F1']
+    # total_df_test['UMC'] = pd.Series(temp_scores)
+    return pd.Series(temp_scores)
+
+def create_plot_comparison(total_df_test):
+    colors = {
+        "UMC": "blue",
+        "Pretrained": "orange",
+        "GT": "green",
+        "Llama3.1:70b": "red",
+        "Llama3.1:8b": "purple",
+        "Qwen2.5:32b": "brown"
+    }
+
+    df_reset = total_df_test.reset_index().rename(columns={'index': 'Dataset'})
+    ax = None
+    for column in colors.keys():
+        ax = df_reset.plot.scatter(
+            x='Dataset',
+            y=column,
+            label=column,
+            ax=ax,
+            color=colors.get(column, 'gray'),
+            s=60  # marker size
+        )
+    ax.set_title("Scatter Plot of Methods per Dataset")
+    ax.set_xlabel("Dataset")
+    ax.set_ylabel("F1")
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+    
+def prepare_df(df):
+    order = [f'D{no}' for no in range(2,10)]
+    df = df.loc[order]
+    df.loc['Mean', :] = df.mean()
+    df = df.round(2)
+    return df

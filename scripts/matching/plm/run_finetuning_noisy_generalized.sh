@@ -5,7 +5,8 @@ directories=("D2" "D3" "D4" "D5" "D6" "D7" "D8" "D9")
 seeds=(1924)
 
 # Noisy levels
-noisy_levels=("noisy_3" "noisy_4" "noisy_6" "noisy_7")
+#noisy_levels=("noisy_llama_8" "noisy_llama_70" "noisy_qwen_14" "noisy_qwen_32")
+noisy_levels=("noisy_qwen_14")
 
 # Loop over each noisy level
 for noisy in "${noisy_levels[@]}"; do
