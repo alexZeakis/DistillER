@@ -11,6 +11,19 @@ def prepare_plm_file(path):
             j = json.loads(line)
             scores[j['data_name']] = j['f1']
     return pd.Series(scores)
+
+def prepare_plm_train_file(path):
+    df = pd.read_csv(path + 'log/total_predictions.csv')
+    scores = {f'D{i}': {'preds': [], 'true': []} for i in range(2,10)}
+    for index, row in df.iterrows():
+        case = 'D{}'.format(row['datasets'])
+        scores[case]['preds'].append(row['predictions'])
+        scores[case]['true'].append(row['labels'])
+
+    results = {}
+    for key, val in scores.items():
+        results[key] = float(compute_f1_score(val['true'], val['preds']))
+    return pd.Series(results)
         
 def get_scores_from_ft_json(path):
     j = json.load(open(path))
@@ -109,6 +122,35 @@ def find_json(text):
         return {'answer': last_match, 'explanation': ''}
     return {}
 
+def compute_f1_score(y_true, y_pred):
+    """
+    Compute the F1 score for binary classification without using sklearn.
+
+    Parameters:
+        y_true (list of int): Ground truth labels (0 or 1).
+        y_pred (list of int): Predicted labels (0 or 1).
+
+    Returns:
+        float: F1 score.
+    """
+    assert len(y_true) == len(y_pred), "Length of true and predicted labels must match"
+
+    tp = sum((yt == 1 and yp == 1) for yt, yp in zip(y_true, y_pred))
+    fp = sum((yt == 0 and yp == 1) for yt, yp in zip(y_true, y_pred))
+    fn = sum((yt == 1 and yp == 0) for yt, yp in zip(y_true, y_pred))
+
+    if tp + fp == 0 or tp + fn == 0:
+        return 0.0  # Avoid division by zero
+
+    precision = tp / (tp + fp)
+    recall = tp / (tp + fn)
+
+    if precision + recall == 0:
+        return 0.0
+
+    f1 = 2 * (precision * recall) / (precision + recall)
+    return f1
+
 
 def calc_f1(true, preds):
     if len(true) > 0:
@@ -120,6 +162,35 @@ def calc_f1(true, preds):
             return 0
         return 2 * precision * recall / (precision+recall)
     
+    
+def get_inference_time(path):    
+    times = {}
+    for file in os.listdir(path):
+        if 'responses' not in file:
+            continue
+        with open(path+file) as f:
+            j = json.load(f)
+            case = j['settings']['dataset']
+            times[case] = 0
+            for res in j['responses']:
+                times[case] += res['time']
+    return pd.Series(times)
+
+def get_plm_training_time(path):
+    times = 0
+    with open(path+'log/matching_supervised_dynamic.txt') as f:
+        for line in f:
+            j = json.loads(line)
+            times += j['training_time']
+    return times
+
+def get_plm_testing_time(path):
+    times = 0
+    with open(path+'log/matching_supervised_dynamic.txt') as f:
+        for line in f:
+            j = json.loads(line)
+            times += j['testing_time']
+    return times
     
 def prepare_pt_file(path):
     temp_scores = {}
