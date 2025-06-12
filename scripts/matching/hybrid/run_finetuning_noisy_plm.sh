@@ -5,6 +5,7 @@ directories=("D2" "D3" "D4" "D5" "D6" "D7" "D8" "D9")
 seeds=(1924)
 noisy=noisy_llama_70
 
+<<xom
 for dir in "${directories[@]}"; do
     for seed in "${seeds[@]}"; do
         echo "Processing directory: $dir with seed: $seed"
@@ -59,8 +60,8 @@ for dir in "${directories[@]}"; do
     --labels "../../../log/matching/hybrid/${noisy}/log/total_predictions.csv" \
     --out_file "../../../log/matching/hybrid/${noisy}/partial_noisy/${dir}_1924.json" 
 done    
+xom
 
-<<xom
 input_files=(../../../log/matching/hybrid/${noisy}/partial_noisy/*.json)
 python ../fine_tuning_data.py \
    --input_files "${input_files[@]}" \
@@ -98,4 +99,3 @@ for dir in "${directories[@]}"; do
        --input_file "../../../log/matching/hybrid/${noisy}/test/${dir}_total.json" \
        --out_file "../../../log/matching/hybrid/${noisy}/test_responses/${dir}_responses.json"
 done
-xom
