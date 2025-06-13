@@ -6,18 +6,18 @@ from eval_utils import prepare_umc_file, prepare_pt_file, prepare_ft_file, prepa
 
 total_df_test = pd.DataFrame()
 
+path = '../../log/matching/llm/'
 total_df_test['UMC'] = prepare_umc_file('../../log/matching/baselines/umc/')
-path = '../../log/matching/'
-total_df_test['Pretrained'] = prepare_pt_file(path+'baselines/pretrained/')    
-total_df_test['GT'] = prepare_ft_file(path+'llm/ground/test_responses/')
-total_df_test['Llama3.1:8b'] = prepare_ft_file(path+'llm/noisy_llama_8/test_responses/')
-total_df_test['Llama3.1:70b'] = prepare_ft_file(path+'llm/noisy_llama_70/test_responses/')
+total_df_test['Pretrained'] = prepare_pt_file('../../log/matching/baselines/pretrained/')    
+total_df_test['GT'] = prepare_ft_file(path+'ground/test_responses/')
+total_df_test['Llama3.1:8b'] = prepare_ft_file(path+'noisy_llama_8/test_responses/')
+total_df_test['Llama3.1:70b'] = prepare_ft_file(path+'noisy_llama_70/test_responses/')
 # total_df_test['Qwen2.5:7b'] = prepare_ft_file(path+'llm/noisy_qwen_7/test_responses/')
-total_df_test['Qwen2.5:14b'] = prepare_ft_file(path+'llm/noisy_qwen_14/test_responses/')
-total_df_test['Qwen2.5:32b'] = prepare_ft_file(path+'llm/noisy_qwen_32/test_responses/')
+total_df_test['Qwen2.5:14b'] = prepare_ft_file(path+'noisy_qwen_14/test_responses/')
+total_df_test['Qwen2.5:32b'] = prepare_ft_file(path+'noisy_qwen_32/test_responses/')
 
-total_df_test['Hybrid-GT'] = prepare_ft_file(path+'hybrid/ground/test_responses/')
-total_df_test['Hybrid-70b'] = prepare_ft_file(path+'hybrid/noisy_llama_70/test_responses/')
+total_df_test['H-SMiniLM'] = prepare_ft_file(path+'sminilm/noisy_llama_70/test_responses/')
+total_df_test['H-RoBERTa'] = prepare_ft_file(path+'roberta/noisy_llama_70/test_responses/')
 
 total_df_test = prepare_df(total_df_test)
 

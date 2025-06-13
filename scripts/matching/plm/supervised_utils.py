@@ -8,7 +8,8 @@ from tqdm import tqdm, trange
 from tensorboardX import SummaryWriter
 # from pytorch_transformers import BertForSequenceClassification, BertTokenizer
 from pytorch_transformers import AdamW, WarmupLinearSchedule    
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, \
+                        RobertaConfig, RobertaForSequenceClassification, RobertaTokenizer
 import pandas as pd
 
 
@@ -577,6 +578,7 @@ class Config():
     # EXPERIMENT_PREFIX = "../logs/supervised_experiments"
 
     MODEL_CLASSES = {
+        'roberta': (RobertaConfig, RobertaForSequenceClassification, RobertaTokenizer),
         'sminilm': (None, AutoModelForSequenceClassification, AutoTokenizer),
     }
 

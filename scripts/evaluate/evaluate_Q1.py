@@ -11,18 +11,22 @@ total_df_train['Llama3.1:70b'] = prepare_pt_file(path+'llama_70/partial_response
 # total_df_train['Qwen2.5:7b'] = prepare_pt_file(path+'qwen_7/partial_responses/')
 total_df_train['Qwen2.5:14b'] = prepare_pt_file(path+'qwen_14/partial_responses/')
 total_df_train['Qwen2.5:32b'] = prepare_pt_file(path+'qwen_32/partial_responses/')
+total_df_train['Hybrid-SMiniLM-70b'] = prepare_plm_train_file(path+'sminilm/llama_70/')
+total_df_train['Hybrid-RoBERTa-70b'] = prepare_plm_train_file(path+'roberta/llama_70/')
 
-# total_df_train['Qwen2.5:7b'] = prepare_ft_file(path+'/qwen_7/partial_responses/')
+total_df_train = prepare_df(total_df_train)
+latex_code = total_df_train.to_latex(index=True, escape=False, multirow=False)
+
+
+path = '../../log/matching/annotate/'
+total_df_train = pd.DataFrame()
 total_df_train['Hybrid-SMiniLM-Ground'] = prepare_plm_train_file(path+'sminilm/ground/')
 total_df_train['Hybrid-SMiniLM-70b'] = prepare_plm_train_file(path+'sminilm/llama_70/')
 total_df_train['Hybrid-RoBERTa-Ground'] = prepare_plm_train_file(path+'roberta/ground/')
 total_df_train['Hybrid-RoBERTa-70b'] = prepare_plm_train_file(path+'roberta/llama_70/')
 
-
 total_df_train = prepare_df(total_df_train)
-
-latex_code = total_df_train.to_latex(index=True, escape=False, multirow=False)
-
+latex_code_2 = total_df_train.to_latex(index=True, escape=False, multirow=False)
 
 total_df_time = {}
 total_df_time['Llama3.1:8b'] = get_inference_time(path+'llama_8/partial_responses/').sum()
@@ -39,4 +43,4 @@ total_df_time['Hybrid-RoBERTa-Testing'] = get_plm_testing_time(path+'roberta/lla
 total_df_time['Hybrid-RoBERTa-Sum'] = total_df_time['Hybrid-RoBERTa-Inference'] + total_df_time['Hybrid-RoBERTa-Training'] + total_df_time['Hybrid-RoBERTa-Testing']
 total_df_time = pd.Series(total_df_time).to_frame()
 
-latex_code = total_df_time.to_latex(index=True, escape=False, multirow=False)
+latex_code_time = total_df_time.to_latex(index=True, escape=False, multirow=False)

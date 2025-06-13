@@ -39,7 +39,6 @@ if __name__ == "__main__":
     logging.info("training with {} labels: {}".format(len(label_list), label_list))
 
 
-
     config_class, model_class, tokenizer_class = Config.MODEL_CLASSES[args.model_type]
     if config_class is not None:
        config = config_class.from_pretrained(args.model_name_or_path)
