@@ -1,0 +1,46 @@
+{
+    "settings": {
+        "dataset": "D5",
+        "out_file": "../../../log/matching/disambiguation/select/roberta/ground/select/D5.json",
+        "in_dir": "../../../data/ccer/cleaned/original/",
+        "sample_file": "../../../log/matching/disambiguation/cleaned_edges/roberta/ground/D5.csv",
+        "seed": 1924,
+        "serialization": "DITTO",
+        "task_description": "EXPLAIN",
+        "skip": true,
+        "len_q99": 1488.46,
+        "len_q50": 1119.0
+    },
+    "responses": [
+        {
+            "dataset": "D5",
+            "query_id": 1552,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[2]",
+            "explanation": "The record [2] refers to the same real-world entity as the given record because it has a similar name, Lee Hye-young.",
+            "confidence": 1.0,
+            "time": 1.0803847312927246
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2102,
+            "ground_truth": 3776,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching title 'Upstairs Inferno' and release_year '2015-01-01', which matches the given entity record's startYear '2015-01-01'. Additionally, both records have a runtime of 96 minutes, further confirming their match.",
+            "confidence": 1.0,
+            "time": 1.1870148181915283
+        },
+        {
+            "dataset": "D5",
+            "query_id": 5001,
+            "ground_truth": 1473,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has a matching name 'Julie Martin' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.6545143127441406
+        }
+    ]
+}

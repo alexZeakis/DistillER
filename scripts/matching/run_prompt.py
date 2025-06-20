@@ -20,6 +20,8 @@ if __name__ == '__main__':
     parser.add_argument('--out_file', type=str, required=True, help='Out file')
     parser.add_argument('--endpoint', type=str, required=True, help='Endpoint for LLM')
     parser.add_argument('--token', type=str, required=False, default="ollama", help='Token for endpoint')
+    parser.add_argument('--skip', action='store_true', help='Skip processing if flag is set')
+
     
     # Parse the arguments
     args = parser.parse_args()
@@ -61,40 +63,48 @@ if __name__ == '__main__':
             logs['responses'] = responses
             with open(path2, 'w') as f:
                 f.write(json.dumps(logs, indent=4))
-
+                
         if prompt['query_id'] in examined_ids:
             continue
-            
-        query_time = time()
-        
-        messages = [("system", "You are a helpful assistant trained in Entity Matching."),
-                    ("human", prompt['prompt'])]
 
-        try:
-            llm = ChatOpenAI(model_name=args.model, openai_api_base=args.endpoint,
-                             openai_api_key=args.token, temperature=0.0, 
-                             timeout=120)
-            response = llm.invoke(messages)
-            
-            result = response_parser.parse(response.content)
-            answer = result.answer
-            explanation = result.explanation
-            confidence = getattr(result, 'confidence', 1.0)
-            
-        except httpx.TimeoutException:
-            answer = None
-            explanation = None
-            confidence = None
-            
-        except Exception:
-            # print(response.content)
-            # traceback.print_exc() 
-            answer = response.content
+        if args.skip and len(prompt['options'])==1:
+            query_time = time()
+            answer = prompt['options'][0]
             explanation = None
             confidence = 1.0
-            # exit(0)
+            query_time = time() - query_time
+        
+        else:
+            query_time = time()
             
-        query_time = time() - query_time
+            messages = [("system", "You are a helpful assistant trained in Entity Matching."),
+                        ("human", prompt['prompt'])]
+    
+            try:
+                llm = ChatOpenAI(model_name=args.model, openai_api_base=args.endpoint,
+                                 openai_api_key=args.token, temperature=0.0, 
+                                 timeout=120)
+                response = llm.invoke(messages)
+                
+                result = response_parser.parse(response.content)
+                answer = result.answer
+                explanation = result.explanation
+                confidence = getattr(result, 'confidence', 1.0)
+                
+            except httpx.TimeoutException:
+                answer = None
+                explanation = None
+                confidence = None
+                
+            except Exception:
+                # print(response.content)
+                # traceback.print_exc() 
+                answer = response.content
+                explanation = None
+                confidence = 1.0
+                # exit(0)
+                
+            query_time = time() - query_time
         
         log = {'dataset': args.dataset, 'query_id': prompt['query_id'], 
                'ground_truth': prompt['ground_truth'], 

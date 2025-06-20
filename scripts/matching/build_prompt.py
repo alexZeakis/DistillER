@@ -91,6 +91,7 @@ if __name__ == '__main__':
                         required=True, help='Serialization Strategy')
     parser.add_argument('--task_description', type=str, choices=['SELECT', 'EXPLAIN', 'CONFIDENCE'],
                         required=True, help='Task Description Strategy')
+    parser.add_argument('--skip', action='store_true', help='Skip processing if flag is set')
     
     # Parse the arguments
     args = parser.parse_args()
@@ -124,6 +125,9 @@ if __name__ == '__main__':
     for no, (key, cands) in enumerate(total_cands.items()):
         if no % 50 == 0:
             print('Query {}/{}\r'.format(no, len(total_cands)), end='')
+            
+        if args.skip and len(cands)==1: #do not add trivial prompts
+            continue
         
         temp_df1 = pd.DataFrame(df1.loc[key]).T
         temp_df2 = df2.loc[cands]

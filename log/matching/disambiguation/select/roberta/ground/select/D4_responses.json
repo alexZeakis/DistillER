@@ -1,0 +1,36 @@
+{
+    "settings": {
+        "dataset": "D4",
+        "out_file": "../../../log/matching/disambiguation/select/roberta/ground/select/D4.json",
+        "in_dir": "../../../data/ccer/cleaned/original/",
+        "sample_file": "../../../log/matching/disambiguation/cleaned_edges/roberta/ground/D4.csv",
+        "seed": 1924,
+        "serialization": "DITTO",
+        "task_description": "EXPLAIN",
+        "skip": true,
+        "len_q99": 1586.19,
+        "len_q50": 1546.5
+    },
+    "responses": [
+        {
+            "dataset": "D4",
+            "query_id": 1409,
+            "ground_truth": 19,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same title, authors, and year as the given entity record. The only difference is in the venue name (VLDB vs VLDB J.), which might be a minor variation or an abbreviation.",
+            "confidence": 1.0,
+            "time": 1.320007562637329
+        },
+        {
+            "dataset": "D4",
+            "query_id": 1641,
+            "ground_truth": 1234,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same title, authors (with minor variations in formatting), venue, and year. The only difference is that the first author's middle initial is included in the candidate record, but not in the given record.",
+            "confidence": 1.0,
+            "time": 1.2049438953399658
+        }
+    ]
+}

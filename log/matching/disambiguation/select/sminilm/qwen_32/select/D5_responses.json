@@ -1,0 +1,56 @@
+{
+    "settings": {
+        "dataset": "D5",
+        "out_file": "../../../log/matching/disambiguation/select/sminilm/qwen_32/select/D5.json",
+        "in_dir": "../../../data/ccer/cleaned/original/",
+        "sample_file": "../../../log/matching/disambiguation/cleaned_edges/sminilm/qwen_32/D5.csv",
+        "seed": 1924,
+        "serialization": "DITTO",
+        "task_description": "EXPLAIN",
+        "skip": true,
+        "len_q99": 1494.44,
+        "len_q50": 1285.5
+    },
+    "responses": [
+        {
+            "dataset": "D5",
+            "query_id": 1552,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given entity record refers to Lee Hae-Young, which is not present in the candidate records. However, one of the candidates has a similar name structure (Lee + surname), so we select the first candidate as it's more likely to refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.4019062519073486
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2030,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity because they have the same seasonNumber (1.0) and startYear/release_year (1972-01-01), which is a strong indication that they are part of the same series.",
+            "confidence": 1.0,
+            "time": 1.119187355041504
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2102,
+            "ground_truth": 3776,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching title 'Upstairs Inferno' and release_year '2015-01-01', which matches the given entity record's startYear '2015-01-01'. Additionally, both records have a runtime of 96 minutes, further confirming their match.",
+            "confidence": 1.0,
+            "time": 1.1910927295684814
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2389,
+            "ground_truth": 6041,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same name as the given entity record, which is a strong indication that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.7781188488006592
+        }
+    ]
+}

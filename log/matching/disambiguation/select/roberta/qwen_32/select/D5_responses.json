@@ -1,0 +1,36 @@
+{
+    "settings": {
+        "dataset": "D5",
+        "out_file": "../../../log/matching/disambiguation/select/roberta/qwen_32/select/D5.json",
+        "in_dir": "../../../data/ccer/cleaned/original/",
+        "sample_file": "../../../log/matching/disambiguation/cleaned_edges/roberta/qwen_32/D5.csv",
+        "seed": 1924,
+        "serialization": "DITTO",
+        "task_description": "EXPLAIN",
+        "skip": true,
+        "len_q99": 1492.23,
+        "len_q50": 1307.5
+    },
+    "responses": [
+        {
+            "dataset": "D5",
+            "query_id": 2102,
+            "ground_truth": 3776,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching title 'Upstairs Inferno' and release_year '2015-01-01', which matches the given entity record's startYear '2015-01-01'. Additionally, both records have a runtime of 96 minutes, further confirming their match.",
+            "confidence": 1.0,
+            "time": 1.4734764099121094
+        },
+        {
+            "dataset": "D5",
+            "query_id": 5001,
+            "ground_truth": 1473,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has a matching name 'Julie Martin' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.6550126075744629
+        }
+    ]
+}

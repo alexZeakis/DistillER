@@ -1,0 +1,46 @@
+{
+    "settings": {
+        "dataset": "D5",
+        "out_file": "../../../log/matching/disambiguation/select/roberta/qwen_14/select/D5.json",
+        "in_dir": "../../../data/ccer/cleaned/original/",
+        "sample_file": "../../../log/matching/disambiguation/cleaned_edges/roberta/qwen_14/D5.csv",
+        "seed": 1924,
+        "serialization": "DITTO",
+        "task_description": "EXPLAIN",
+        "skip": true,
+        "len_q99": 1488.68,
+        "len_q50": 1130.0
+    },
+    "responses": [
+        {
+            "dataset": "D5",
+            "query_id": 2102,
+            "ground_truth": 3776,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching title 'Upstairs Inferno' and release_year '2015-01-01', which matches the given entity record's startYear '2015-01-01'. Additionally, both records have a runtime of 96 minutes, further confirming their match.",
+            "confidence": 1.0,
+            "time": 1.497413158416748
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2617,
+            "ground_truth": 5907,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same name as the given entity record, which is a strong match. Although there are other differences in professions, the names exactly match.",
+            "confidence": 1.0,
+            "time": 0.824784517288208
+        },
+        {
+            "dataset": "D5",
+            "query_id": 5001,
+            "ground_truth": 1473,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The record [2] has a name matching the given entity's name, Julie Martin.",
+            "confidence": 1.0,
+            "time": 0.6189272403717041
+        }
+    ]
+}

@@ -1,0 +1,266 @@
+{
+    "settings": {
+        "dataset": "D9",
+        "out_file": "../../../log/matching/disambiguation/select/sminilm/llama_70/select/D9.json",
+        "in_dir": "../../../data/ccer/cleaned/original/",
+        "sample_file": "../../../log/matching/disambiguation/cleaned_edges/sminilm/llama_70/D9.csv",
+        "seed": 1924,
+        "serialization": "DITTO",
+        "task_description": "EXPLAIN",
+        "skip": true,
+        "len_q99": 1924.1599999999999,
+        "len_q50": 1526.0
+    },
+    "responses": [
+        {
+            "dataset": "D9",
+            "query_id": 293,
+            "ground_truth": 4743,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same title and year as the given entity record, and also includes authors J Kiernan and J Shanmugasundaram who are present in the given entity record.",
+            "confidence": 1.0,
+            "time": 1.284977912902832
+        },
+        {
+            "dataset": "D9",
+            "query_id": 462,
+            "ground_truth": 9450,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same authors, title (with a slight variation), and year.",
+            "confidence": 1.0,
+            "time": 0.8515548706054688
+        },
+        {
+            "dataset": "D9",
+            "query_id": 467,
+            "ground_truth": 2970,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it contains the name 'M. Tamer zsu' which is mentioned in the authors of the given record, and also mentions ACM Transactions on Database Systems which matches the venue of the given record.",
+            "confidence": 1.0,
+            "time": 1.1506438255310059
+        },
+        {
+            "dataset": "D9",
+            "query_id": 624,
+            "ground_truth": 50095,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same title, authors (although in a different order), and year. The venue is slightly different, but it's still an ACM SIGMOD conference.",
+            "confidence": 1.0,
+            "time": 1.1168546676635742
+        },
+        {
+            "dataset": "D9",
+            "query_id": 631,
+            "ground_truth": 23632,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The title, authors, and year in both records match.",
+            "confidence": 1.0,
+            "time": 0.8165459632873535
+        },
+        {
+            "dataset": "D9",
+            "query_id": 697,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has a matching title, authors (KA Ross is equivalent to Kenneth A. Ross), and year.",
+            "confidence": 1.0,
+            "time": 0.9242715835571289
+        },
+        {
+            "dataset": "D9",
+            "query_id": 766,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same title, authors (RT Snodgrass), venue (ACM SIGMOD Record), and year (1994). The only difference is in the title formatting, but it's still referring to the TSQL2 language definition announcement.",
+            "confidence": 1.0,
+            "time": 1.2777268886566162
+        },
+        {
+            "dataset": "D9",
+            "query_id": 955,
+            "ground_truth": 414,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The authors listed in both records are identical, and the venue and year also match.",
+            "confidence": 1.0,
+            "time": 0.8977007865905762
+        },
+        {
+            "dataset": "D9",
+            "query_id": 958,
+            "ground_truth": 7736,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has a similar title, and the authors 'J Gehrke', 'R Ramakrishnan', and 'V Ganti' match the authors in the given record. Although the year is different (2000 instead of 1998), this could be due to various reasons such as conference or journal publication, and it's not uncommon for papers to be published multiple times with slight variations.",
+            "confidence": 1.0,
+            "time": 1.6378343105316162
+        },
+        {
+            "dataset": "D9",
+            "query_id": 971,
+            "ground_truth": 12992,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same authors, title, and year as the given entity record. Although there are some minor differences in formatting (e.g., comma-separated authors vs. semicolon-separated), the core information matches.",
+            "confidence": 1.0,
+            "time": 1.0541341304779053
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1010,
+            "ground_truth": 16245,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "Candidate record [1] has similar title, authors, and venue information as the given entity record.",
+            "confidence": 1.0,
+            "time": 1.0425176620483398
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1233,
+            "ground_truth": 14757,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has a similar title and authors, with only minor variations in formatting.",
+            "confidence": 1.0,
+            "time": 0.8418059349060059
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1448,
+            "ground_truth": 1360,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The candidate record [3] refers to the same real-world entity as the given record because it has the exact title, authors (with slight variations in order and initials), venue, and year.",
+            "confidence": 1.0,
+            "time": 0.985159158706665
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1534,
+            "ground_truth": 57520,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The title, authors, and year in both records match exactly.",
+            "confidence": 1.0,
+            "time": 0.8412942886352539
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1538,
+            "ground_truth": 11239,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has a similar title ('Database Techniques for the WWW: a Survey' vs 'Database Techniques for the World-Wide Web: A Survey') and authors (D Florescu, A Levy, A Mendelzon vs Daniela Florescu, Alberto O. Mendelzon, Alon Y. Levy).",
+            "confidence": 1.0,
+            "time": 1.4356846809387207
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1622,
+            "ground_truth": 34960,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same title, authors (with slight variations in formatting), and year. The venue is slightly different, but this does not affect the match.",
+            "confidence": 1.0,
+            "time": 1.0534944534301758
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1724,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has a similar title and the same author, U Ogbuji.",
+            "confidence": 1.0,
+            "time": 0.8253896236419678
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1787,
+            "ground_truth": 2588,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The title, authors, and venue in both records match.",
+            "confidence": 1.0,
+            "time": 0.8167393207550049
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1924,
+            "ground_truth": 841,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The title 'Lazy Aggregation' is a variant of the given record's title 'Eager Aggregation and Lazy Aggregation'. The authors 'WP YAN, PAEA LARSON' are variants of the given record's authors 'Weipeng P. Yan, Per-?ke Larson', and the venue 'INTERNATIONAL CONFERENCE ON VERY LARGE DATA BASES (VLDB???95' is a variant of the given record's venue 'VLDB'.",
+            "confidence": 1.0,
+            "time": 1.824958086013794
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1965,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it contains the author 'SM Stonebraker' which is likely a shortened version of Michael Stonebraker, and the venue 'SIGMOD' matches the given record.",
+            "confidence": 1.0,
+            "time": 1.0792779922485352
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2218,
+            "ground_truth": 18143,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has a matching title, authors (Mengchi Liu and Gillian Dobbie are referred to by their initials M and G respectively), venue (ACM Transactions on Database Systems), and year (2002).",
+            "confidence": 1.0,
+            "time": 1.2468838691711426
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2236,
+            "ground_truth": 55263,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching title, author (first name and last name), and year with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.7742986679077148
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2281,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same title 'Jim Gray Speaks Out' which is likely an alternative name for 'Interview with Jim Gray', and the same authors 'M Winslett' which is a shortened version of 'Marianne Winslett'. The venue and year also match.",
+            "confidence": 1.0,
+            "time": 1.3293709754943848
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2292,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has the same authors, venue and year.",
+            "confidence": 1.0,
+            "time": 0.7842142581939697
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2318,
+            "ground_truth": 6558,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it contains the exact title, authors (although in a slightly different format), venue, and year.",
+            "confidence": 1.0,
+            "time": 0.9478027820587158
+        }
+    ]
+}

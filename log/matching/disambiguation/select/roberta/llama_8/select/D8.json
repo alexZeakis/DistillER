@@ -1,0 +1,518 @@
+{
+    "settings": {
+        "dataset": "D8",
+        "out_file": "../../../log/matching/disambiguation/select/roberta/llama_8/select/D8.json",
+        "in_dir": "../../../data/ccer/cleaned/original/",
+        "sample_file": "../../../log/matching/disambiguation/cleaned_edges/roberta/llama_8/D8.csv",
+        "seed": 1924,
+        "serialization": "DITTO",
+        "task_description": "EXPLAIN",
+        "skip": true,
+        "len_q99": 2111.0,
+        "len_q50": 1656.0
+    },
+    "prompts": [
+        {
+            "query_id": 144,
+            "ground_truth": 7970,
+            "ground_answer": 3,
+            "options": [
+                21639,
+                7976,
+                7970,
+                12589
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Case Logic 16  Value Laptop Briefcase Black [COL] modelno [VAL] VNCI116BLACK [COL] price [VAL] 22.0 [COL] shipweight [VAL] 1.8 [COL] brand [VAL] Case Logic [COL] dimensions [VAL] 17.7 x 13.1 x 4.0 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Case Logic 16-Inch Security-Friendly Laptop Backpack CLBS-116 [COL] modelno [VAL] CLBS-116Black [COL] price [VAL] 61.6 [COL] shipweight [VAL] 3 [COL] brand [VAL] Case Logic [COL] dimensions [VAL] 18.0 x 13.5 x 6.0 inches\n[2]  [COL] title [VAL] Case Logic GBP-116 16-Inch Laptop Backpack Black [COL] modelno [VAL] GBP-116Black [COL] price [VAL] 21.47 [COL] shipweight [VAL] 2 [COL] brand [VAL] Case Logic [COL] dimensions [VAL] 19.0 x 13.3 x 7.5 inches\n[3]  [COL] title [VAL] Case Logic VNCi-116 Value 16-Inch Laptop Backpack Black [COL] modelno [VAL] VNCI-116 [COL] price [VAL] 22.0 [COL] shipweight [VAL] 2 [COL] brand [VAL] Case Logic [COL] dimensions [VAL] 17.1 x 14.6 x 3.2 inches\n[4]  [COL] title [VAL] Case Logic VLS-116 16-Inch Laptop Sleeve Black [COL] modelno [VAL] VLS-116Black [COL] price [VAL] 15.65 [COL] shipweight [VAL] 1 [COL] brand [VAL] Case Logic [COL] dimensions [VAL] 17.2 x 12.0 x 2.0 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 191,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "options": [
+                11197,
+                1243
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] D-Link DKVM-8E 8- Port KVM Switch [COL] modelno [VAL] DKVM-8E [COL] price [VAL] 179.82 [COL] shipweight [VAL] 10.05 [COL] brand [VAL] D-Link [COL] dimensions [VAL] 16.14 x 6.5 x 1.85 inches\n \nCandidate records:\n [1]  [COL] title [VAL] D-Link DKVM 8E - KVM switch - PS 2 - 8 x KVM port s - 1 local user - desktop [COL] modelno [VAL] DKVM-8E [COL] price [VAL] 207.82 [COL] shipweight [VAL] 12 [COL] brand [VAL] D-Link [COL] dimensions [VAL] 215.4 x 106.7 x 60.6 inches\n[2]  [COL] title [VAL] D-Link DKVM-8E 8-Port Rack Mount KVM Switch [COL] modelno [VAL] DKVM-8E [COL] price [VAL] 162.99 [COL] shipweight [VAL] 12 [COL] brand [VAL] D-Link [COL] dimensions [VAL] 21.2 x 10.8 x 5.8 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 192,
+            "ground_truth": 11131,
+            "ground_answer": 2,
+            "options": [
+                16315,
+                11131
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Epson S041595 Photographic Papers [COL] modelno [VAL] S041595 [COL] price [VAL] 69.88 [COL] shipweight [VAL] 9.84 [COL] brand [VAL] Epson [COL] dimensions [VAL] 23.18 x 5.4 x 5.4 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Epson 24IN X 100FT GLOSSY PHOTO PAPER S041638 [COL] modelno [VAL] S041638 [COL] price [VAL] 71.97 [COL] shipweight [VAL] 17.3 [COL] brand [VAL] Epson [COL] dimensions [VAL] 27.0 x 7.0 x 6.8 inches\n[2]  [COL] title [VAL] Epson S041595 24inX100ft Enhanced Matte Paper [COL] modelno [VAL] S041595 [COL] price [VAL] 59.26 [COL] shipweight [VAL] 16 [COL] brand [VAL] Epson [COL] dimensions [VAL] 25.5 x 6.0 x 6.0 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 211,
+            "ground_truth": 400,
+            "ground_answer": 2,
+            "options": [
+                10306,
+                400
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Avery Laser Inkjet Mailing Labels Mini-Sheet 1 x 2-5 8 White 200 Pack [COL] modelno [VAL] 2160 [COL] price [VAL] 7.62 [COL] shipweight [VAL] 0.327 [COL] brand [VAL] Avery\n \nCandidate records:\n [1]  [COL] title [VAL] Avery Easy Peel White Mailing Labels for Laser Printers 1 x 2.62 Inch Box of 3000 Labels 5160 [COL] modelno [VAL] 5160 [COL] price [VAL] 20.87 [COL] shipweight [VAL] 2 [COL] brand [VAL] Avery [COL] dimensions [VAL] 11.3 x 9.0 x 0.8 inches\n[2]  [COL] title [VAL] Avery Mini-Sheets Laser Ink Jet Labels 1 x 2.625 Inches White 200 per Pack 2160 [COL] modelno [VAL] 2160 [COL] price [VAL] 5.22 [COL] shipweight [VAL] 4.8 [COL] brand [VAL] Avery [COL] dimensions [VAL] 10.9 x 4.7 x 0.3 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 297,
+            "ground_truth": 15653,
+            "ground_answer": 1,
+            "options": [
+                15653,
+                1733
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Plantronics GameCom 367 Closed-Ear Gaming Headset [COL] modelno [VAL] GAMECOM 367 [COL] price [VAL] 24.84 [COL] shipweight [VAL] 1.13 [COL] brand [VAL] Plantronics [COL] dimensions [VAL] 12.0 x 9.625 x 4.813 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Plantronics GameCom 367 Closed-Ear Gaming Headset [COL] modelno [VAL] Gamecom367 [COL] price [VAL] 24.84 [COL] shipweight [VAL] 2 [COL] brand [VAL] Plantronics [COL] dimensions [VAL] 12.0 x 8.8 x 4.2 inches\n[2]  [COL] title [VAL] Plantronics GameCom777 Gaming Headset [COL] modelno [VAL] Plantronics GameCom777 [COL] price [VAL] 58.24 [COL] shipweight [VAL] 2 [COL] brand [VAL] Plantronics [COL] dimensions [VAL] 9.9 x 9.0 x 4.3 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 336,
+            "ground_truth": 20174,
+            "ground_answer": 1,
+            "options": [
+                20174,
+                7237
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Xerox 108R00657 Extended-Capacity Maintenance Kit For Work Centre C2424 [COL] modelno [VAL] 108R00657 [COL] price [VAL] 154.84 [COL] shipweight [VAL] 1.64 [COL] brand [VAL] XEROX [COL] dimensions [VAL] 14.5 x 3.25 x 3.0 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Extended Capacity Maintenance Kit Workcentre C2424 [COL] modelno [VAL] 108R00657 [COL] price [VAL] 154.84 [COL] shipweight [VAL] 2 [COL] brand [VAL] Tektronix [COL] dimensions [VAL] 15.5 x 4.5 x 4.0 inches\n[2]  [COL] title [VAL] LD Xerox WorkCentre C2424 Remanufactured 108R00657 Extended-Capacity Maintenance Kit [COL] price [VAL] 129.99 [COL] shipweight [VAL] 2.5 [COL] brand [VAL] 4inkjets\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 482,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "options": [
+                9166,
+                5141,
+                21966
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] EDGE 8GB 4X2GB PC38500 ECC UNBUFFERED 240 PIN DDR3 KIT APPLE [COL] modelno [VAL] PE22177504 [COL] price [VAL] 139.82 [COL] shipweight [VAL] 0.6 [COL] brand [VAL] EDGE [COL] dimensions [VAL] 9.0 x 6.0 x 3.0 inches\n \nCandidate records:\n [1]  [COL] title [VAL] EDGE - Memory - 8 GB 2 x 4 GB - DIMM 240-pin - DDR2 - 667 MHz PC2-5300 - registered - ECC [COL] modelno [VAL] PEIBM41Y2768-PE [COL] price [VAL] 238.57 [COL] shipweight [VAL] 1.9 [COL] brand [VAL] Edge\n[2]  [COL] title [VAL] EDGE - Memory - 8 GB - DIMM 240-pin - DDR3 - 1333 MHz PC3-10600 - registered - ECC [COL] modelno [VAL] FX622AA-PE [COL] price [VAL] 129.18 [COL] shipweight [VAL] 0.5 [COL] brand [VAL] Edge [COL] dimensions [VAL] 7.5 x 3.8 x 0.8 inches\n[3]  [COL] title [VAL] EDGE - Memory - 8 GB 2 x 4 GB - DIMM 240-pin - DDR3 - 1066 MHz PC3-8500 - unbuffered - ECC [COL] modelno [VAL] K5240-226138-PE [COL] price [VAL] 83.79 [COL] shipweight [VAL] 1 [COL] brand [VAL] Edge\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 540,
+            "ground_truth": 9383,
+            "ground_answer": 1,
+            "options": [
+                9383,
+                5333
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] TP-Link TL-WA500G 54Mbps eXtended Range Wireless Access Point [COL] modelno [VAL] TL-WA500G [COL] price [VAL] 32.88 [COL] shipweight [VAL] 1.39 [COL] brand [VAL] TP Link [COL] dimensions [VAL] 10.36 x 6.62 x 2.88 inches\n \nCandidate records:\n [1]  [COL] title [VAL] TP-Link TL-WA500G 54Mbps eXtended Range Wireless Access Point [COL] modelno [VAL] TL-WA500G [COL] price [VAL] 29.99 [COL] shipweight [VAL] 2 [COL] brand [VAL] TP-Link [COL] dimensions [VAL] 5.9 x 3.9 x 1.1 inches\n[2]  [COL] title [VAL] TP-LINK TL-WR543G 54Mbps Wireless 4-port Switch AP Client Router Wireless LAN Router Adopts 2x to 3x eXtended RangeTM technology Supports Time-based Access Control. [COL] modelno [VAL] TL-WR543G [COL] price [VAL] 26.9 [COL] shipweight [VAL] 1.2 [COL] brand [VAL] TP-Link\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 541,
+            "ground_truth": 9189,
+            "ground_answer": 1,
+            "options": [
+                9189,
+                1231
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] iGo BN00281-0002 Dual USB Wall Auto Charger [COL] modelno [VAL] BN00281-0002 [COL] price [VAL] 36.16 [COL] shipweight [VAL] 0.64 [COL] brand [VAL] Igo [COL] dimensions [VAL] 9.5 x 5.75 x 1.5 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Dual USB Wall auto Charger-micr Mini USB-includes Igo Tip A32 A97 [COL] modelno [VAL] BN00281-0002 [COL] price [VAL] 25.22 [COL] shipweight [VAL] 10.2 [COL] brand [VAL] iGo\n[2]  [COL] title [VAL] Dual USB Wall auto Charger-ipod Iphone-includes Igo Tip A133 [COL] modelno [VAL] BN00281-0001 [COL] price [VAL] 22.94 [COL] shipweight [VAL] 4 [COL] brand [VAL] iGo [COL] dimensions [VAL] 10.5 x 6.0 x 2.0 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 592,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "options": [
+                4421,
+                2521
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Corsair Vengeance 6GB 3 x 2GB DDR3 1600MHz PC3-12800 DIMM Memory Module CMZ6GX3M3A1600C8 [COL] modelno [VAL] CMZ6GX3M3A1600C [COL] price [VAL] 99.82 [COL] shipweight [VAL] 0.45 [COL] brand [VAL] Corsair [COL] dimensions [VAL] 7.8 x 5.9 x 0.7 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Corsair Vengeance Low Profile 8 GB PC3-12800 1600mhz 240-Pin DDR3 Dual Channel Memory Kit SDRAM CML8GX3M2A1600C9 [COL] modelno [VAL] CML8GX3M2A1600C9 [COL] price [VAL] 52.99 [COL] shipweight [VAL] 1 [COL] brand [VAL] Corsair [COL] dimensions [VAL] 5.9 x 5.4 x 0.7 inches\n[2]  [COL] title [VAL] Corsair Memory Vengeance 8 Dual Channel Kit DDR3 1600 MHz PC3 12800 240-Pin DDR3 SDRAM CMZ8GX3M2A1600C8 [COL] modelno [VAL] CMZ8GX3M2A1600C8 [COL] price [VAL] 74.99 [COL] shipweight [VAL] 1 [COL] brand [VAL] Corsair [COL] dimensions [VAL] 7.8 x 5.9 x 0.6 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 598,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "options": [
+                7630,
+                3626,
+                9658
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] rooCASE Executive Portfolio Leather Case for Asus EEE Pad Transformer TF101 10.1-Inch [COL] modelno [VAL] 222056 [COL] price [VAL] 43.99 [COL] shipweight [VAL] 2.0 [COL] brand [VAL] rooCASE [COL] dimensions [VAL] 11.8 x 8.0 x 1.4 inches\n \nCandidate records:\n [1]  [COL] title [VAL] rooCASE Executive Portfolio Magenta Leather Case Cover with Landscape Portrait View for Asus Eee Pad Transformer 10.1-Inch TF101 Android Tablet Wi-Fi [COL] price [VAL] 43.64 [COL] shipweight [VAL] 2 [COL] brand [VAL] rooCASE [COL] dimensions [VAL] 11.8 x 8.0 x 1.4 inches\n[2]  [COL] title [VAL] rooCASE Executive Portfolio Red Leather Case Cover with Landscape Portrait View for Asus Eee Pad Transformer 10.1-Inch TF101 Android Tablet Wi-Fi [COL] price [VAL] 43.64 [COL] shipweight [VAL] 2 [COL] brand [VAL] rooCASE [COL] dimensions [VAL] 11.8 x 8.0 x 1.4 inches\n[3]  [COL] title [VAL] rooCASE Executive Portfolio Black Leather Case Cover with Landscape Portrait View for Asus Eee Pad Transformer 10.1-Inch TF101 Android Tablet Wi-Fi [COL] price [VAL] 43.64 [COL] shipweight [VAL] 2 [COL] brand [VAL] rooCASE [COL] dimensions [VAL] 11.8 x 8.0 x 1.4 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 624,
+            "ground_truth": 4039,
+            "ground_answer": 2,
+            "options": [
+                15986,
+                4039
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] ViewSonic VG2236WM-LED 22  1080P Widescreen LED Monitor [COL] modelno [VAL] VG2236WM-LED [COL] price [VAL] 209.0 [COL] shipweight [VAL] 15.4 [COL] brand [VAL] ViewSonic [COL] dimensions [VAL] 23.5 x 19.0 x 6.8 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Viewsonic VG2436WM-LED 24-Inch 23.6-Inch Vis Ergonomic LED Backlit Monitor with 1920x1080 Resolution - Black [COL] modelno [VAL] VG2436WM-LED [COL] price [VAL] 259.99 [COL] shipweight [VAL] 17.3 [COL] brand [VAL] ViewSonic [COL] dimensions [VAL] 22.3 x 17.1 x 9.4 inches\n[2]  [COL] title [VAL] Viewsonic VG2236WM-LED 22-Inch 21.5-Inch Vis Ergonomic LED Backlit Monitor with 1920x1080 Resolution - Black [COL] modelno [VAL] VG2236WM-LED [COL] price [VAL] 224.49 [COL] shipweight [VAL] 13 [COL] brand [VAL] ViewSonic [COL] dimensions [VAL] 20.5 x 16.5 x 9.4 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 625,
+            "ground_truth": 18443,
+            "ground_answer": 1,
+            "options": [
+                18443,
+                8786,
+                19011
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Da-Lite Da-Glas Standard Rear Projection Screen 72 x 96 Video Format [COL] modelno [VAL] 27639 [COL] price [VAL] 4448.99 [COL] shipweight [VAL] 796.0 [COL] brand [VAL] Da-Lite\n \nCandidate records:\n [1]  [COL] title [VAL] Da-Lite 27639 Da-Glas Standard Rear Projection Screen 72 x 96 Video Format [COL] shipweight [VAL] 796 [COL] brand [VAL] Da-Lite\n[2]  [COL] title [VAL] Da-Lite Da-Glas Thru-the-Wall Rear Projection Screen - 90 x 120 Video Format [COL] modelno [VAL] 23056 [COL] price [VAL] 8729.48 [COL] shipweight [VAL] 1 696  [COL] brand [VAL] Da-Lite\n[3]  [COL] title [VAL] Da-Lite Da-Glas Thru-the-Wall Rear Projection Screen - 72 x 96 Video Format [COL] modelno [VAL] 23050 [COL] price [VAL] 8968.99 [COL] shipweight [VAL] 1 340  [COL] brand [VAL] Da-Lite\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 765,
+            "ground_truth": 15415,
+            "ground_answer": 1,
+            "options": [
+                15415,
+                5410
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Startech 2 Port PCI Express SuperSpeed USB 3.0 Card Adapter [COL] modelno [VAL] PEXUSB3S2 [COL] price [VAL] 39.98 [COL] shipweight [VAL] 0.3 [COL] brand [VAL] StarTech [COL] dimensions [VAL] 6.75 x 5.5 x 1.0 inches\n \nCandidate records:\n [1]  [COL] title [VAL] StarTech.com 2 Port PCI Express SuperSpeed USB 3.0 Card Adapter PEXUSB3S2 [COL] modelno [VAL] PEXUSB3S2 [COL] price [VAL] 29.99 [COL] shipweight [VAL] 1 [COL] brand [VAL] StarTech [COL] dimensions [VAL] 6.8 x 5.6 x 1.1 inches\n[2]  [COL] title [VAL] StarTech.com 2 Port PCI SuperSpeed USB 3.0 Card Adapter PCIUSB3S2 [COL] modelno [VAL] PCIUSB3S2 [COL] price [VAL] 51.0 [COL] shipweight [VAL] 1 [COL] brand [VAL] StarTech\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 925,
+            "ground_truth": 21757,
+            "ground_answer": 1,
+            "options": [
+                21757,
+                21114
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Oki 43502001 Type 9 Black Toner Cartridge [COL] modelno [VAL] 43502001 [COL] price [VAL] 98.0 [COL] shipweight [VAL] 0.762 [COL] brand [VAL] OKI\n \nCandidate records:\n [1]  [COL] title [VAL] Oki 43502001 Type 9 Black Toner Cartridge [COL] modelno [VAL] 43502001 [COL] price [VAL] 68.11 [COL] shipweight [VAL] 0.2 [COL] brand [VAL] Oki Data [COL] dimensions [VAL] 10.2 x 2.8 x 2.1 inches\n[2]  [COL] title [VAL] Oki Data Black Toner Cartridge for B4500 B4550 B4600 Series Printers High Yield 43502001 [COL] price [VAL] 26.95 [COL] shipweight [VAL] 3.6 [COL] brand [VAL] Oki Data\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1124,
+            "ground_truth": 15647,
+            "ground_answer": 1,
+            "options": [
+                15647,
+                3169
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] PNY GeForce GT 520 1024MB PCIe Graphics Card [COL] modelno [VAL] VCGGT5201XPB [COL] price [VAL] 59.99 [COL] shipweight [VAL] 0.9 [COL] brand [VAL] PNY [COL] dimensions [VAL] 11.2 x 6.4 x 2.8 inches\n \nCandidate records:\n [1]  [COL] title [VAL] PNY nVidia GeForce GT520 1 GB DDR3 VGA DVI HDMI PCI-Express Video Card VCGGT5201XPB [COL] modelno [VAL] VCGGT5201XPB [COL] price [VAL] 61.31 [COL] shipweight [VAL] 1 [COL] brand [VAL] PNY [COL] dimensions [VAL] 11.0 x 6.5 x 2.8 inches\n[2]  [COL] title [VAL] EVGA GeForce GT 520 1024 MB DDR3 PCI-Express 2.0 Graphics Card 01G-P3-1521-KR [COL] modelno [VAL] 01G-P3-1521-KR [COL] price [VAL] 55.17 [COL] shipweight [VAL] 1 [COL] brand [VAL] EVGA [COL] dimensions [VAL] 10.8 x 7.5 x 1.5 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1136,
+            "ground_truth": 17383,
+            "ground_answer": 1,
+            "options": [
+                17383,
+                16963
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Elite Screens CineGray Prime Vision Series Fixed Frame Screen - 135 Diagonal [COL] modelno [VAL] PVR135H1 [COL] price [VAL] 1069.0 [COL] shipweight [VAL] 32.0 [COL] brand [VAL] Elite Screens [COL] dimensions [VAL] 124.0 x 73.0 x 1.5 inches\n \nCandidate records:\n [1]  [COL] title [VAL] CineGray Prime Vision Series Fixed Frame Screen - 135 Diagonal [COL] price [VAL] 1069.0 [COL] shipweight [VAL] 32 [COL] brand [VAL] Elite [COL] dimensions [VAL] 124.0 x 73.0 x 1.5 inches\n[2]  [COL] title [VAL] PowerGain Prime Vision Series Fixed Frame Screen - 135 Diagonal [COL] price [VAL] 1069.0 [COL] shipweight [VAL] 47 [COL] brand [VAL] Elite [COL] dimensions [VAL] 124.0 x 73.0 x 1.5 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1149,
+            "ground_truth": 9481,
+            "ground_answer": 1,
+            "options": [
+                9481,
+                2693
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Sony VF67CPAM Circular Polarizing Filter for 67mm  DSLR Camera Lens [COL] modelno [VAL] VF67CPAM [COL] price [VAL] 116.0 [COL] shipweight [VAL] 0.3 [COL] brand [VAL] Sony [COL] dimensions [VAL] 7.6 x 4.32 x 1.0 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Sony Alpha VF67CPAM Circular Polarizing Filter Black [COL] modelno [VAL] VF67CPAM [COL] price [VAL] 110.1 [COL] shipweight [VAL] 1 [COL] brand [VAL] Sony [COL] dimensions [VAL] 7.1 x 4.9 x 1.6 inches\n[2]  [COL] title [VAL] High Grade Multi-Coated Multi-Threaded Circular Polarizing Filter 67mm  Nwv Direct Microfiber Cleaning Cloth. Alternative For Sony VF-67CPAM [COL] price [VAL] 39.0 [COL] shipweight [VAL] 5 [COL] brand [VAL] Vivitar\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1194,
+            "ground_truth": 14916,
+            "ground_answer": 1,
+            "options": [
+                14916,
+                10954
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] HP 75 Tri-color Inkjet Cartridge CB337WN [COL] modelno [VAL] HP CB337WN140 [COL] price [VAL] 19.47 [COL] shipweight [VAL] 0.15 [COL] brand [VAL] HP [COL] dimensions [VAL] 5.53 x 4.57 x 1.43 inches\n \nCandidate records:\n [1]  [COL] title [VAL] HP 75 Tri-Color Inkjet Print Cartridge CB337WN [COL] modelno [VAL] CB337WN#140 [COL] shipweight [VAL] 1 [COL] brand [VAL] HP [COL] dimensions [VAL] 4.5 x 4.0 x 1.5 inches\n[2]  [COL] title [VAL] HP 75XL Tri-color Ink Cartridge in Retail Packaging CB338WN 140 [COL] modelno [VAL] CB338WN#140 [COL] shipweight [VAL] 1 [COL] brand [VAL] HP [COL] dimensions [VAL] 4.5 x 4.4 x 1.5 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1291,
+            "ground_truth": 17829,
+            "ground_answer": 2,
+            "options": [
+                19085,
+                17829
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Peerless Slimline Universal Ultra Slim Tilt Mount for 22 to 40 Ultra Thin Screens Weighing Up to 60 lb [COL] price [VAL] 143.99 [COL] shipweight [VAL] 4.0 [COL] brand [VAL] Peerless [COL] dimensions [VAL] 9.35 x 8.75 x 0.68 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Ultra-Slim Universal Tilt Mount for 37 to 60 Ultra-Thin Screens Only Weighing Up to 100 lb [COL] modelno [VAL] SUT660P [COL] price [VAL] 127.36 [COL] shipweight [VAL] 15 [COL] brand [VAL] Peerless [COL] dimensions [VAL] 37.2 x 8.0 x 2.5 inches\n[2]  [COL] title [VAL] Ultra-Slim Universal Tilt Mount for 22 to 40 Ultra-Thin Only Screens Weighing Up to 60 lb [COL] modelno [VAL] SUT632P [COL] price [VAL] 83.11 [COL] shipweight [VAL] 5 [COL] brand [VAL] Peerless [COL] dimensions [VAL] 11.2 x 10.0 x 1.8 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1305,
+            "ground_truth": 2558,
+            "ground_answer": 2,
+            "options": [
+                19775,
+                2558
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Allsop Clingo Universal Hands Free Mount [COL] modelno [VAL] 30272 [COL] price [VAL] 34.99 [COL] shipweight [VAL] 0.45 [COL] brand [VAL] Allsop [COL] dimensions [VAL] 8.2 x 4.9 x 3.3 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Clingo Universal Hands-Free Car Vent Mount for iPhone 4 3G 3GS and All Cell Phones and Mobile Devices [COL] modelno [VAL] 30329 [COL] price [VAL] 15.37 [COL] shipweight [VAL] 4 [COL] brand [VAL] Allsop [COL] dimensions [VAL] 6.0 x 5.0 x 2.2 inches\n[2]  [COL] title [VAL] Clingo Universal Hands-Free Car Mount for iPhone 4 3G 3GS and All Cell Phones and Mobile Devices [COL] modelno [VAL] 30272 [COL] price [VAL] 20.07 [COL] shipweight [VAL] 7.2 [COL] brand [VAL] Allsop [COL] dimensions [VAL] 8.0 x 4.8 x 3.2 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1340,
+            "ground_truth": 8496,
+            "ground_answer": 1,
+            "options": [
+                8496,
+                4182,
+                14150
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] CTA Mini Battery Chargers for Nikon EN-EL9 Digital Cameras [COL] modelno [VAL] MR-ENEL9 [COL] price [VAL] 15.98 [COL] shipweight [VAL] 0.3063 [COL] brand [VAL] CTA [COL] dimensions [VAL] 8.5 x 3.5 x 2.75 inches\n \nCandidate records:\n [1]  [COL] title [VAL] CTA MR-ENEL9 Mini Battery Charger Kit for Nikon EN-EL9 Battery [COL] modelno [VAL] MR-ENEL9 [COL] price [VAL] 8.32 [COL] shipweight [VAL] 1 [COL] brand [VAL] CTA Digital [COL] dimensions [VAL] 8.5 x 3.5 x 2.8 inches\n[2]  [COL] title [VAL] Nikon EN-EL10 Compatible Battery Battery Charger with Car Adapter for Nikon CoolPix S200 S210 S220 S230 S3000 S4000 S500 S510 S520 S570 S60 S600 S660 S700 Camera [COL] modelno [VAL] EN-EL10 [COL] price [VAL] 6.4 [COL] shipweight [VAL] 3 [COL] brand [VAL] Nikon\n[3]  [COL] title [VAL] Nikon EN-EL10 AC DC Replacement Battery Charger Set for Nikon CoolPix S200 S210 S220 S230 S3000 S4000 S500 S510 S520 S570 S60 S600 S660 S700 Digital SLR Camera [COL] modelno [VAL] EN-EL10 [COL] price [VAL] 3.96 [COL] shipweight [VAL] 3 [COL] brand [VAL] Nikon\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1356,
+            "ground_truth": 11269,
+            "ground_answer": 1,
+            "options": [
+                11269,
+                9287
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] ViewSonic PJD7383 DLP Projector [COL] modelno [VAL] PJD7383 [COL] price [VAL] 729.0 [COL] shipweight [VAL] 12.1 [COL] brand [VAL] ViewSonic [COL] dimensions [VAL] 15.4 x 15.0 x 8.3 inches\n \nCandidate records:\n [1]  [COL] title [VAL] ViewSonic PJD7383 XGA 1024x768 Ultra Short Throw DLP Projector - 3000 Lumens 3000 1 DCR 120Hz 3D Ready 10W Speakers [COL] modelno [VAL] PJD7383 [COL] price [VAL] 764.99 [COL] shipweight [VAL] 11 [COL] brand [VAL] ViewSonic [COL] dimensions [VAL] 11.4 x 10.0 x 5.0 inches\n[2]  [COL] title [VAL] ViewSonic PJD7383i Interactive XGA Short Throw DLP Projector 3000 Lumens 3000 1 DCR 120Hz 3D Ready 10W Speaker [COL] modelno [VAL] PJD7383i [COL] price [VAL] 960.03 [COL] shipweight [VAL] 12 [COL] brand [VAL] ViewSonic [COL] dimensions [VAL] 11.4 x 10.0 x 5.0 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1424,
+            "ground_truth": 8192,
+            "ground_answer": 2,
+            "options": [
+                11809,
+                8192
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] NZXT Phantom Crafted Series ATX Full Tower Steel Chassis Black [COL] modelno [VAL] NZXT Phantom [COL] price [VAL] 139.82 [COL] shipweight [VAL] 29.0 [COL] brand [VAL] NZXT [COL] dimensions [VAL] 24.53 x 21.26 x 8.75 inches\n \nCandidate records:\n [1]  [COL] title [VAL] NZXT Crafted Series ATX Full Tower Steel Chassis - Phantom White with Red Trim Computer Case CS-NT-PHAN-WNR White Red [COL] modelno [VAL] CS-NT-PHAN-WNR [COL] price [VAL] 139.99 [COL] shipweight [VAL] 22 [COL] brand [VAL] Nzxt [COL] dimensions [VAL] 24.6 x 21.3 x 8.8 inches\n[2]  [COL] title [VAL] NZXT Crafted Series ATX Full Tower Steel Chassis - Phantom Black [COL] modelno [VAL] Phantom Black [COL] price [VAL] 119.99 [COL] shipweight [VAL] 28 [COL] brand [VAL] Nzxt [COL] dimensions [VAL] 24.6 x 21.3 x 8.8 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1426,
+            "ground_truth": 10692,
+            "ground_answer": 1,
+            "options": [
+                10692,
+                6690,
+                14635
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Elite Screens MaxWhite VMAX2 Plus2 Series 82 Overall Height ezElectric Motorized Screen - 92 Diagonal [COL] modelno [VAL] VMAX92XWV2 [COL] price [VAL] 379.0 [COL] shipweight [VAL] 22.0 [COL] brand [VAL] Elite Screens [COL] dimensions [VAL] 85.6 x 82.0 x 3.15 inches\n \nCandidate records:\n [1]  [COL] title [VAL] MaxWhite VMAX2 Plus2 Series 82 Overall Height ezElectric Motorized Screen - 92 Diagonal [COL] price [VAL] 379.0 [COL] shipweight [VAL] 22 [COL] brand [VAL] Elite [COL] dimensions [VAL] 85.6 x 82.0 x 3.2 inches\n[2]  [COL] title [VAL] MaxWhite VMAX2 Plus2 Series ezElectric Motorized Screen - 92 Diagonal [COL] price [VAL] 379.0 [COL] shipweight [VAL] 26 [COL] brand [VAL] Elite [COL] dimensions [VAL] 85.6 x 82.0 x 3.2 inches\n[3]  [COL] title [VAL] MaxWhite VMAX2 Plus2 Series ezElectric Motorized Screen - 92 Diagonal in White Case [COL] price [VAL] 399.0 [COL] shipweight [VAL] 26 [COL] brand [VAL] Elite [COL] dimensions [VAL] 84.0 x 58.5 x 3.2 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1522,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "options": [
+                21029,
+                1025
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] HP Q1413A Universal Heavyweight Coated Paper [COL] modelno [VAL] Q1413A [COL] price [VAL] 58.78 [COL] shipweight [VAL] 10.0 [COL] brand [VAL] HP [COL] dimensions [VAL] 34.65 x 4.05 x 3.6 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Hewlett Packard HP Universal Heavyweight Coated Paper 32 95 Bright 36 x 100 Roll Part Number Q1413A [COL] price [VAL] 49.64 [COL] shipweight [VAL] 8.4 [COL] brand [VAL] HP\n[2]  [COL] title [VAL] HP Universal Heavyweight Coated Paper 36 Inches x 100 Feet Roll [COL] modelno [VAL] Q1413A [COL] price [VAL] 31.24 [COL] shipweight [VAL] 11.9 [COL] brand [VAL] HP [COL] dimensions [VAL] 38.5 x 4.5 x 4.5 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1563,
+            "ground_truth": 430,
+            "ground_answer": 2,
+            "options": [
+                2374,
+                430,
+                8362
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Asus F1A75-M Pro AMD A75 Micro ATX Motherboard [COL] modelno [VAL] F1A75-M PRO [COL] price [VAL] 112.0 [COL] shipweight [VAL] 2.4 [COL] brand [VAL] Asus [COL] dimensions [VAL] 11.0 x 10.0 x 2.5 inches\n \nCandidate records:\n [1]  [COL] title [VAL] ASUS F1A75-V Pro - F1 Socket - A75 - SATA 6Gbps and USB 3.0 - ATX AMD Hudson D3 ATX DDR3 1800 AMD - FM1 Motherboards [COL] modelno [VAL] F1A75-V Pro [COL] price [VAL] 122.99 [COL] shipweight [VAL] 4 [COL] brand [VAL] Asus [COL] dimensions [VAL] 13.9 x 11.8 x 2.9 inches\n[2]  [COL] title [VAL] ASUS F1A75-M Pro -F1 Socket - A75 - SATA 6Gbps and USB 3.0 - mATX AMD Hudson D3 Micro ATX DDR3 1800 AMD - FM1 Motherboards [COL] modelno [VAL] F1A75-M Pro [COL] price [VAL] 109.99 [COL] shipweight [VAL] 3 [COL] brand [VAL] Asus [COL] dimensions [VAL] 11.7 x 11.3 x 2.2 inches\n[3]  [COL] title [VAL] ASUS F1A75-M - F1 Socket - A75 - SATA 6Gbps and TPM Support Hudson D3 Micro ATX DDR3 1800 Motherboards [COL] modelno [VAL] F1A75-M [COL] price [VAL] 98.99 [COL] shipweight [VAL] 3 [COL] brand [VAL] Asus [COL] dimensions [VAL] 11.7 x 11.3 x 2.2 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1686,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "options": [
+                20038,
+                19462
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Boise ASPEN 30 Office Paper 92 Brightness 20lb 8-1 2 x 14 5000 Sheets Carton [COL] modelno [VAL] 54901 [COL] price [VAL] 52.54 [COL] shipweight [VAL] 50.0\n \nCandidate records:\n [1]  [COL] title [VAL] ASPEN 30 Office Paper 92 Brightness 20lb 8-1 2 x 11 White 5000 Carton [COL] shipweight [VAL] 55 [COL] brand [VAL] BOISE CASCADE\n[2]  [COL] title [VAL] New-Boise 054904 - ASPEN 30 Recycled Office Paper 92 Bright 20lb 8-1 2 x 14 5000 Carton - CAS054904 [COL] price [VAL] 113.87 [COL] shipweight [VAL] 140.2 [COL] brand [VAL] Boise\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1860,
+            "ground_truth": 5560,
+            "ground_answer": 2,
+            "options": [
+                13088,
+                5560
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Chicago White Sox Pink iPhone 4 Hard Case [COL] modelno [VAL] FVA4556 [COL] price [VAL] 29.99 [COL] brand [VAL] Tribeca\n \nCandidate records:\n [1]  [COL] title [VAL] Chicago Blackhawks iPod Touch 4G Hard Case [COL] price [VAL] 29.99 [COL] brand [VAL] Tribeca\n[2]  [COL] title [VAL] Chicago White Sox Pink iPhone 4 Hard Case [COL] price [VAL] 23.99 [COL] shipweight [VAL] 4 [COL] brand [VAL] Tribeca\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1891,
+            "ground_truth": 15304,
+            "ground_answer": 1,
+            "options": [
+                15304,
+                3329
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Cables Unlimited 2.4GHz Wireless Indoor Outdoor Stereo Speaker with Remote and Dual Power Transmitter Black [COL] modelno [VAL] SPK-24GX [COL] price [VAL] 148.0 [COL] shipweight [VAL] 9.77 [COL] brand [VAL] Cables Unlimited [COL] dimensions [VAL] 14.96 x 13.98 x 7.09 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Audio Unlimited SPK-24GX 2.4 GHz Wireless Indoor Outdoor Stereo Speaker with Remote and Dual Power Transmitter Black [COL] modelno [VAL] SPK-24GX [COL] price [VAL] 152.1 [COL] shipweight [VAL] 10 [COL] brand [VAL] Cables Unlimited [COL] dimensions [VAL] 14.0 x 14.0 x 7.5 inches\n[2]  [COL] title [VAL] Audio Unlimited SPK-24GX-DUO 2.4 GHz Wireless Indoor Outdoor Stereo Speaker System with Remote and Dual Power Transmitter 2 Pack Black [COL] modelno [VAL] SPK-24GX-DUO [COL] price [VAL] 248.0 [COL] shipweight [VAL] 19 [COL] brand [VAL] Cables To Go [COL] dimensions [VAL] 28.0 x 15.0 x 14.0 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1893,
+            "ground_truth": 11120,
+            "ground_answer": 1,
+            "options": [
+                11120,
+                4600,
+                12665
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] EVGA GeForce 8400 GS 1GB DDR3 PCI Express 2.0 Graphics Card [COL] modelno [VAL] 01G-P3-1302-LR [COL] price [VAL] 44.99 [COL] shipweight [VAL] 0.65 [COL] brand [VAL] EVGA [COL] dimensions [VAL] 11.3 x 7.7 x 2.0 inches\n \nCandidate records:\n [1]  [COL] title [VAL] EVGA GeForce 8400 GS 1 GB DDR3 PCI-Express 2.0 Graphics Card 01G-P3-1302-LR [COL] modelno [VAL] 01G-P3-1302-LR [COL] price [VAL] 38.99 [COL] shipweight [VAL] 1 [COL] brand [VAL] EVGA [COL] dimensions [VAL] 11.0 x 7.5 x 1.5 inches\n[2]  [COL] title [VAL] MSI nVidia GeForce 8400GS 1 GB DDR3 VGA DVI HDMI Low Profile PCI-Express Video Card N8400GS-MD1GD3H LP [COL] modelno [VAL] N8400GS-MD1GD3H/LP [COL] price [VAL] 37.99 [COL] shipweight [VAL] 1 [COL] brand [VAL] MSI [COL] dimensions [VAL] 5.8 x 2.4 x 1.2 inches\n[3]  [COL] title [VAL] MSI GeForce 8400 GS 1 GB 64-bit DDR3 PCI Express 2.0 x16 HDCP Ready Low Profile Video Card N8400GS-D1GD3H LP [COL] modelno [VAL] N8400GS-D1GD3H/LP [COL] price [VAL] 39.99 [COL] shipweight [VAL] 1 [COL] brand [VAL] MSI [COL] dimensions [VAL] 9.2 x 6.3 x 1.9 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1907,
+            "ground_truth": 10481,
+            "ground_answer": 2,
+            "options": [
+                12500,
+                10481
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Corsair CMX4GX3M2A1600C8 XMS3 4 GB PC3-12800 Core i5 Memory Kit [COL] modelno [VAL] CMX4GX3M2A1600C8 [COL] price [VAL] 69.82 [COL] shipweight [VAL] 0.24 [COL] brand [VAL] Corsair [COL] dimensions [VAL] 6.5 x 5.25 x 0.25 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Corsair CMX8GX3M4A1600C9 XMS3 8 GB PC3-12800 Core i5 Memory Kit [COL] modelno [VAL] CMX8GX3M4A1600C9 [COL] price [VAL] 79.99 [COL] shipweight [VAL] 1 [COL] brand [VAL] Corsair [COL] dimensions [VAL] 7.4 x 4.8 x 0.3 inches\n[2]  [COL] title [VAL] Corsair CMX4GX3M2A1600C8 XMS3 4 GB PC3-12800 Core i5 Memory Kit [COL] modelno [VAL] CMX4GX3M2A1600C8 [COL] price [VAL] 39.97 [COL] shipweight [VAL] 1 [COL] brand [VAL] Corsair [COL] dimensions [VAL] 7.4 x 4.8 x 0.3 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1908,
+            "ground_truth": 20111,
+            "ground_answer": 1,
+            "options": [
+                20111,
+                8694
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Middle Atlantic Designer Inspired Ultra Quiet Fan Panel [COL] modelno [VAL] UQFP-4DRA [COL] price [VAL] 525.0 [COL] shipweight [VAL] 5.0 [COL] brand [VAL] Middle Atlantic\n \nCandidate records:\n [1]  [COL] title [VAL] Middle Atlantic Designer Inspired Ultra Quiet Fan Panel UQFP-4DRA - Rack fan kit - black [COL] modelno [VAL] UQFP-4DRA [COL] price [VAL] 372.42 [COL] shipweight [VAL] 5 [COL] brand [VAL] Middle Atlantic\n[2]  [COL] title [VAL] Middle Atlantic Designer Inspired Ultra Quiet Fan Panel UQFP-4RA - Rack fan tray 110 V with 4 fans - anodized brushed black - 2U [COL] modelno [VAL] UQFP-4RA [COL] price [VAL] 319.68 [COL] shipweight [VAL] 5 [COL] brand [VAL] Middle Atlantic\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1992,
+            "ground_truth": 1274,
+            "ground_answer": 2,
+            "options": [
+                20486,
+                1274
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Wintec FileMate 4GB SDHC Secure Digital Flash Memory Card [COL] modelno [VAL] 3FMSD4GB-R [COL] price [VAL] 7.99 [COL] shipweight [VAL] 0.14 [COL] brand [VAL] Wintec [COL] dimensions [VAL] 5.25 x 4.13 x 0.63 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Wintec Filemate 16 GB Class 4 Secure Digital SDHC Card [COL] modelno [VAL] 3FMSD16GB-R [COL] price [VAL] 25.99 [COL] shipweight [VAL] 1 [COL] brand [VAL] Wintec [COL] dimensions [VAL] 5.2 x 4.1 x 0.6 inches\n[2]  [COL] title [VAL] Wintec Filemate 4 GB Class 4 Secure Digital SDHC Card [COL] modelno [VAL] 3FMSD4GB-R [COL] price [VAL] 6.77 [COL] shipweight [VAL] 1 [COL] brand [VAL] Wintec [COL] dimensions [VAL] 5.2 x 4.1 x 0.6 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2033,
+            "ground_truth": 18679,
+            "ground_answer": 2,
+            "options": [
+                19398,
+                18679
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Canon CLI-221 Magenta Ink Cartridge 2948B001 [COL] modelno [VAL] CLI221MAG [COL] price [VAL] 16.84 [COL] shipweight [VAL] 0.1 [COL] brand [VAL] Canon [COL] dimensions [VAL] 3.5 x 1.0 x 1.0 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Premium Compatible Canon CLI-221 Magenta Ink Cartridge Canon 2948B001 [COL] price [VAL] 3.7 [COL] shipweight [VAL] 1.4 [COL] brand [VAL] Compatible\n[2]  [COL] title [VAL] Canon CLI-221 Ink Tank Magenta [COL] modelno [VAL] 2948B001 [COL] price [VAL] 12.99 [COL] shipweight [VAL] 1 [COL] brand [VAL] Canon [COL] dimensions [VAL] 4.4 x 3.5 x 0.9 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2054,
+            "ground_truth": 7601,
+            "ground_answer": 1,
+            "options": [
+                7601,
+                7600
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Samsung HT-D5300 3D Wi-Fi Ready Home Theater System [COL] modelno [VAL] HT-D5300 [COL] price [VAL] 298.0 [COL] shipweight [VAL] 29.4 [COL] brand [VAL] Samsung [COL] dimensions [VAL] 22.09 x 16.38 x 13.54 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Samsung Electronics HT-D5300 Home Theater System [COL] modelno [VAL] HTD5300 [COL] shipweight [VAL] 29 [COL] brand [VAL] Samsung [COL] dimensions [VAL] 16.9 x 13.3 x 2.4 inches\n[2]  [COL] title [VAL] Samsung Electronics HT-D5500 Home Theater System [COL] modelno [VAL] HT-D5500 [COL] shipweight [VAL] 29 [COL] brand [VAL] Samsung [COL] dimensions [VAL] 16.9 x 13.1 x 2.4 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2063,
+            "ground_truth": 6308,
+            "ground_answer": 2,
+            "options": [
+                10593,
+                6308
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Gear Head MP2300BLK 3 Button Wireless Optical Wheel Mouse - Black Silver [COL] modelno [VAL] MP2300BLK [COL] price [VAL] 13.82 [COL] shipweight [VAL] 0.4 [COL] brand [VAL] Gear Head [COL] dimensions [VAL] 8.4 x 5.9 x 1.9 inches\n \nCandidate records:\n [1]  [COL] title [VAL] 3 Button Optical Uni-Retractable Mouse Black  USB [COL] modelno [VAL] MP1300BLK [COL] price [VAL] 10.53 [COL] shipweight [VAL] 1 [COL] brand [VAL] Gear Head [COL] dimensions [VAL] 8.1 x 5.8 x 3.0 inches\n[2]  [COL] title [VAL] Gear Head 3 Button Wireless Optical Wheel Mouse Blk slvr USB [COL] modelno [VAL] MP2300BLK [COL] price [VAL] 18.99 [COL] shipweight [VAL] 1 [COL] brand [VAL] Gear Head\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2116,
+            "ground_truth": 14495,
+            "ground_answer": 1,
+            "options": [
+                14495,
+                13910
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Case Logic 12.1  Laptop Sleeve [COL] modelno [VAL] 147731 [COL] price [VAL] 19.99 [COL] shipweight [VAL] 0.64 [COL] brand [VAL] Case Logic [COL] dimensions [VAL] 12.4 x 9.4 x 1.5 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Case Logic LNEO-12 12.1-Inch Neoprene Netbook Sleeve Black [COL] modelno [VAL] LNEO-12Black [COL] price [VAL] 14.42 [COL] shipweight [VAL] 1 [COL] brand [VAL] Case Logic [COL] dimensions [VAL] 12.4 x 9.4 x 1.5 inches\n[2]  [COL] title [VAL] Case Logic PLS-14 14.1-Inch Neoprene Laptop Sleeve Black [COL] modelno [VAL] PLS-14 BLACK [COL] price [VAL] 18.16 [COL] shipweight [VAL] 1 [COL] brand [VAL] Case Logic [COL] dimensions [VAL] 14.5 x 11.2 x 1.8 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2118,
+            "ground_truth": 20621,
+            "ground_answer": 1,
+            "options": [
+                20621,
+                14307
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Antec TriCool 92mm Double Ball Bearing Case Fan [COL] modelno [VAL] TRICOOL 92MM DBB [COL] price [VAL] 8.25 [COL] shipweight [VAL] 0.35 [COL] brand [VAL] ANTEC [COL] dimensions [VAL] 8.9 x 7.25 x 2.0 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Antec TriCool 92mm DBB Case Fan with 3-Spd Switch 3 4-Pin 3-Pin Monitoring [COL] modelno [VAL] TriCool 92mm DBB [COL] price [VAL] 8.25 [COL] shipweight [VAL] 1 [COL] brand [VAL] Antec [COL] dimensions [VAL] 8.4 x 1.1 x 0.4 inches\n[2]  [COL] title [VAL] Antec TriCool fan unit TRICOOL 92MM [COL] modelno [VAL] TriCool 92mm [COL] price [VAL] 3.5 [COL] shipweight [VAL] 1 [COL] brand [VAL] Antec [COL] dimensions [VAL] 8.8 x 6.7 x 1.3 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2123,
+            "ground_truth": 1794,
+            "ground_answer": 2,
+            "options": [
+                9800,
+                1794
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Panasonic Lumix DMC-TS3S Silver 12.1MP Digital Camera w 4.6x Optical Zoom 2.7  LCD HD Movie Recording [COL] modelno [VAL] Panasonic DMC-TS3S [COL] price [VAL] 333.54 [COL] shipweight [VAL] 1.12 [COL] brand [VAL] Panasonic [COL] dimensions [VAL] 4.07 x 2.52 x 1.04 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Panasonic Lumix DMC-TS3 DMC-TS3S 12.1 MP Rugged Waterproof Digital Camera Silver BigVALUEInc Accessory Saver 16GB HD Bundle [COL] modelno [VAL] DMC-TS1G [COL] price [VAL] 369.95 [COL] shipweight [VAL] 3 [COL] brand [VAL] Panasonic [COL] dimensions [VAL] 4.1 x 2.5 x 1.0 inches\n[2]  [COL] title [VAL] Panasonic Lumix DMC-TS3 12.1 MP Rugged Waterproof Digital Camera with 4.6x Wide Angle Optical Image Stabilized Zoom and 2.7-Inch LCD Silver [COL] modelno [VAL] DMC-TS3S [COL] shipweight [VAL] 2 [COL] brand [VAL] Panasonic [COL] dimensions [VAL] 7.0 x 6.0 x 2.0 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2139,
+            "ground_truth": 101,
+            "ground_answer": 2,
+            "options": [
+                13830,
+                101
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] AGF BlackBerry Torch 9800 9810 Endo GRT Case Black Black [COL] modelno [VAL] HA0435-M005 [COL] price [VAL] 25.88 [COL] shipweight [VAL] 0.35 [COL] brand [VAL] AGF [COL] dimensions [VAL] 6.7 x 4.25 x 2.4 inches\n \nCandidate records:\n [1]  [COL] title [VAL] AGF GRT Shell Case for Blackberry Torch 9800 [COL] modelno [VAL] G003776R00 [COL] price [VAL] 19.99 [COL] shipweight [VAL] 2.4 [COL] brand [VAL] GRT\n[2]  [COL] title [VAL] AGF HA0435-M005 Case for BlackBerry Torch 9800 and 9810 Endo GRT - 1 Pack - Retail Packaging - Black [COL] modelno [VAL] HA0435-M005 [COL] price [VAL] 23.93 [COL] shipweight [VAL] 3.2 [COL] brand [VAL] AGF [COL] dimensions [VAL] 7.4 x 4.2 x 2.4 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2191,
+            "ground_truth": 16173,
+            "ground_answer": 1,
+            "options": [
+                16173,
+                13088
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Chicago Bears iPod Touch 4G Hard Case [COL] modelno [VAL] FVA4587 [COL] price [VAL] 29.99 [COL] brand [VAL] Tribeca\n \nCandidate records:\n [1]  [COL] title [VAL] Chicago Bears iPod Touch 4G Hard Case [COL] price [VAL] 29.99 [COL] brand [VAL] Tribeca\n[2]  [COL] title [VAL] Chicago Blackhawks iPod Touch 4G Hard Case [COL] price [VAL] 29.99 [COL] brand [VAL] Tribeca\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2217,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "options": [
+                19467,
+                11965
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Brother TZB41 P-Touch TZ [COL] modelno [VAL] TZB41 [COL] price [VAL] 24.88 [COL] shipweight [VAL] 0.2 [COL] brand [VAL] Brother [COL] dimensions [VAL] 6.75 x 4.95 x 0.68 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Brother TZB41 Black on Fluorescent Orange Labeling Tape for P-Touch 3 4 Inch x 16.4 Feet [COL] modelno [VAL] TZB41 [COL] price [VAL] 18.08 [COL] shipweight [VAL] 2.2 [COL] brand [VAL] Brother [COL] dimensions [VAL] 7.2 x 5.5 x 1.2 inches\n[2]  [COL] title [VAL] Brother TZ541 Tape 3 4 Inch x 26.2 Feet Black on Blue for P-Touch [COL] modelno [VAL] TZ541 [COL] shipweight [VAL] 2.2 [COL] brand [VAL] Brother\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2264,
+            "ground_truth": 19007,
+            "ground_answer": 2,
+            "options": [
+                19564,
+                19007
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Lumiere LA 100W 3200K Tungsten Halogen Video Light Kit [COL] modelno [VAL] VL100 [COL] price [VAL] 86.0 [COL] shipweight [VAL] 6.3 [COL] brand [VAL] Lumiere L.A. [COL] dimensions [VAL] 9.3 x 7.4 x 4.8 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Lumiere L.A. 100W 3200K Tungsten Halogen Video Light Kit with Dimmer [COL] modelno [VAL] VL100D [COL] price [VAL] 99.99 [COL] shipweight [VAL] 1 [COL] brand [VAL] Lumiere LA [COL] dimensions [VAL] 9.4 x 7.5 x 4.7 inches\n[2]  [COL] title [VAL] Lumiere L.A. 100W 3200K Tungsten Halogen Video Light Kit [COL] modelno [VAL] VL100 [COL] price [VAL] 79.88 [COL] shipweight [VAL] 1 [COL] brand [VAL] Lumiere LA [COL] dimensions [VAL] 9.3 x 7.4 x 4.8 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2267,
+            "ground_truth": 2527,
+            "ground_answer": 2,
+            "options": [
+                8533,
+                2527
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Cooler Master Storm 17  SF-19 Laptop Cooler [COL] modelno [VAL] SGA-6000-KKYF1 [COL] price [VAL] 83.75 [COL] shipweight [VAL] 8.0 [COL] brand [VAL] Coolermaster [COL] dimensions [VAL] 21.25 x 15.25 x 4.25 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Cooler Master Storm SF 19 17 Laptop Cooler with USB 2.0 SGA-4000-KKNF1 [COL] modelno [VAL] SGA-4000-KKNF1 [COL] price [VAL] 50.0 [COL] shipweight [VAL] 8 [COL] brand [VAL] CoolerMaster\n[2]  [COL] title [VAL] Cooler Master Storm SF 19 17 Laptop Cooler with USB 3.0 SGA-6000-KKYF1 [COL] modelno [VAL] SGA-6000-KKYF1 [COL] price [VAL] 79.99 [COL] shipweight [VAL] 8 [COL] brand [VAL] Cooler Master\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2297,
+            "ground_truth": 10869,
+            "ground_answer": 1,
+            "options": [
+                10869,
+                4739
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Da-Lite Medium Oak Veneer Model B Manual Screen with Matte White Fabric - 60 x 60 diagonal Video Format [COL] modelno [VAL] 73171 [COL] price [VAL] 167.99 [COL] shipweight [VAL] 16.0 [COL] brand [VAL] Da-Lite\n \nCandidate records:\n [1]  [COL] title [VAL] Medium Oak Veneer Model B Manual Screen with Matte White Fabric - diagonal Video Format Size 60 x 60 diagonal [COL] shipweight [VAL] 25 [COL] brand [VAL] Da-Lite\n[2]  [COL] title [VAL] Light Oak Veneer Model B Manual Screen with Matte White Fabric - diagonal Video Format Size 60 x 60 diagonal [COL] shipweight [VAL] 25 [COL] brand [VAL] Da-Lite\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2328,
+            "ground_truth": 16352,
+            "ground_answer": 4,
+            "options": [
+                13241,
+                11450,
+                3254,
+                16352,
+                17215
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Xantech 282D Designer Emitter Single [COL] modelno [VAL] 282D [COL] price [VAL] 15.88 [COL] shipweight [VAL] 0.075 [COL] brand [VAL] Xantech [COL] dimensions [VAL] 5.0 x 5.0 x 1.0 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Designr Blink Emittr 1Pk [COL] modelno [VAL] 283D [COL] price [VAL] 12.6 [COL] shipweight [VAL] 1.1 [COL] brand [VAL] Xantech [COL] dimensions [VAL] 5.0 x 4.0 x 0.8 inches\n[2]  [COL] title [VAL] Designr Dual Emittr 1Pk [COL] modelno [VAL] 284D [COL] price [VAL] 9.08 [COL] shipweight [VAL] 1.2 [COL] brand [VAL] Xantech [COL] dimensions [VAL] 5.0 x 5.0 x 1.0 inches\n[3]  [COL] title [VAL] XANTECH 283DMW DESIGNER BLINK EMITTER SINGLE MINI WIRE [COL] modelno [VAL] 283DMW [COL] price [VAL] 13.09 [COL] shipweight [VAL] 1 [COL] brand [VAL] Xantech [COL] dimensions [VAL] 5.0 x 3.0 x 0.2 inches\n[4]  [COL] title [VAL] XANTECH 282D DESIGNER EMITTER SINGLE [COL] shipweight [VAL] 5.3 [COL] brand [VAL] Xantech\n[5]  [COL] title [VAL] XANTECH 283D DESIGNER BLINK EMITTER SINGLE [COL] shipweight [VAL] 3.5 [COL] brand [VAL] Xantech\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2394,
+            "ground_truth": 13251,
+            "ground_answer": 1,
+            "options": [
+                13251,
+                7261
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Western Digital 750GB My Passport Essential SE USB 3.0 Silver Portable Hard Drive [COL] modelno [VAL] WDBACX7500ASL-NESN [COL] price [VAL] 96.98 [COL] shipweight [VAL] 0.73 [COL] brand [VAL] Western Digital [COL] dimensions [VAL] 7.0 x 6.06 x 2.0 inches\n \nCandidate records:\n [1]  [COL] title [VAL] Western Digital My Passport Essential SE 750 GB USB 3.0 2.0 Ultra Portable External Hard Drive Silver [COL] modelno [VAL] WDBACX7500ASL-NESN [COL] price [VAL] 79.0 [COL] shipweight [VAL] 1 [COL] brand [VAL] Western Digital [COL] dimensions [VAL] 4.3 x 3.3 x 0.7 inches\n[2]  [COL] title [VAL] Western Digital My Passport Essential SE 750 GB Portable External Hard Drive USB 2.0 Drive Cool Silver [COL] modelno [VAL] WDBABM7500ASL-NESN [COL] shipweight [VAL] 1 [COL] brand [VAL] Western Digital [COL] dimensions [VAL] 4.3 x 3.2 x 0.1 inches\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2471,
+            "ground_truth": 19283,
+            "ground_answer": 1,
+            "options": [
+                19283,
+                4728
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Da-Lite Da-Plex Thru-the-Wall Rear Projection Screen - 78 x 139 HDTV Format [COL] modelno [VAL] 23077 [COL] price [VAL] 11385.99 [COL] shipweight [VAL] 1246.0 [COL] brand [VAL] Da-Lite\n \nCandidate records:\n [1]  [COL] title [VAL] Da-Lite Da-Plex Thru-the-Wall Rear Projection Screen - 78 x 139 HDTV Format [COL] modelno [VAL] 23077 [COL] price [VAL] 9258.99 [COL] shipweight [VAL] 1 246  [COL] brand [VAL] Da-Lite\n[2]  [COL] title [VAL] Da-Lite Da-Glas Thru-the-Wall Rear Projection Screen - 78 x 139 HDTV Format [COL] modelno [VAL] 23078 [COL] price [VAL] 9044.23 [COL] shipweight [VAL] 1 773  [COL] brand [VAL] Da-Lite\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        }
+    ]
+}

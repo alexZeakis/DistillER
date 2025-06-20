@@ -1,0 +1,46 @@
+{
+    "settings": {
+        "dataset": "D4",
+        "out_file": "../../../log/matching/disambiguation/select/roberta/qwen_14/select/D4.json",
+        "in_dir": "../../../data/ccer/cleaned/original/",
+        "sample_file": "../../../log/matching/disambiguation/cleaned_edges/roberta/qwen_14/D4.csv",
+        "seed": 1924,
+        "serialization": "DITTO",
+        "task_description": "EXPLAIN",
+        "skip": true,
+        "len_q99": 1871.44,
+        "len_q50": 1599.0
+    },
+    "responses": [
+        {
+            "dataset": "D4",
+            "query_id": 246,
+            "ground_truth": 206,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, with a match of 9 out of 11 authors.",
+            "confidence": 1.0,
+            "time": 1.2156805992126465
+        },
+        {
+            "dataset": "D4",
+            "query_id": 474,
+            "ground_truth": 894,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same authors, title (with minor case differences), venue and year.",
+            "confidence": 1.0,
+            "time": 0.8755970001220703
+        },
+        {
+            "dataset": "D4",
+            "query_id": 749,
+            "ground_truth": 188,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same authors in a different order, and the title is 'Clustering Validity Checking Methods: Part II' which is likely a continuation of 'Cluster validity methods: part I'. The venue and year are also consistent.",
+            "confidence": 1.0,
+            "time": 1.2265760898590088
+        }
+    ]
+}

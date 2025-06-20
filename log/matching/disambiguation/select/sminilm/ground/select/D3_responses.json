@@ -1,0 +1,786 @@
+{
+    "settings": {
+        "dataset": "D3",
+        "out_file": "../../../log/matching/disambiguation/select/sminilm/ground/select/D3.json",
+        "in_dir": "../../../data/ccer/cleaned/original/",
+        "sample_file": "../../../log/matching/disambiguation/cleaned_edges/sminilm/ground/D3.csv",
+        "seed": 1924,
+        "serialization": "DITTO",
+        "task_description": "EXPLAIN",
+        "skip": true,
+        "len_q99": 9101.039999999985,
+        "len_q50": 2517.0
+    },
+    "responses": [
+        {
+            "dataset": "D3",
+            "query_id": 5,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they both mention 'EMC Retrospect' with version 7.5 and are related to disk-to-disk Windows solutions.",
+            "confidence": 1.0,
+            "time": 1.3584344387054443
+        },
+        {
+            "dataset": "D3",
+            "query_id": 107,
+            "ground_truth": 1652,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Adobe Premiere Elements 3 and Photoshop Elements 5 software bundle.",
+            "confidence": 1.0,
+            "time": 0.9613993167877197
+        },
+        {
+            "dataset": "D3",
+            "query_id": 118,
+            "ground_truth": 1726,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both records mention Crystal Reports XI and Business Objects.",
+            "confidence": 1.0,
+            "time": 0.8053140640258789
+        },
+        {
+            "dataset": "D3",
+            "query_id": 123,
+            "ground_truth": 1695,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a title that matches the given entity record, indicating they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.7617313861846924
+        },
+        {
+            "dataset": "D3",
+            "query_id": 148,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as both mention 'CA Server Protection R3.1' and have a similar description.",
+            "confidence": 1.0,
+            "time": 0.9844832420349121
+        },
+        {
+            "dataset": "D3",
+            "query_id": 171,
+            "ground_truth": 1439,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, which is Microsoft Word for Mac OS X.",
+            "confidence": 1.0,
+            "time": 0.926814079284668
+        },
+        {
+            "dataset": "D3",
+            "query_id": 181,
+            "ground_truth": 1500,
+            "ground_answer": 3,
+            "answer": "Based on the given entity record and candidate records, I have selected a record that refers to the same real-world entity as the given record.\n\nThe given entity record is:\n```\n[COL] title [VAL] emedia rock guitar method\n[COL] description [VAL] rock guitar method shows you how to rock out by teaching you the classics. pick up an ax and start covering your favorite rock blues country and folk songs with the roar and energy that only an electric guitar has. follow along with 165 different step-by-step lessons covering the basics like holding & stringing your guitar -- then move on to reading notation and fingerpicking styles. on-screen lessons from a noted guitar expert provide clear and user-friendly instruction. start playing the guitar more easily than you ever thought possible! the digital metronome is for setting your own tempo to work on your picking speed rhythm and timing use the digital recorder to play yourself back and hear how you're doing\n[COL] manufacturer [VAL] emedia\n[COL] price [VAL] 39.99\n```\n\nThe candidate record that refers to the same real-world entity is:\n```\n[3]  [COL] title [VAL] emedia rock guitar method (win 95 98 me nt 2000 xp/mac 8.0)\n[COL] description [VAL] the emedia rock guitar method cd-rom makes learning fun and easy with over 100 audio and video-enhanced guitar lessons. the innovative teaching style presents rocksongs chords riffs and gear tips in an excitingfast-paced learning format that ...\n[COL] price [VAL] 39.15\n```\n\nHere is the output in the correct format:\n```\n{\n  \"answer\": \"[3]\",\n  \"explanation\": \"The candidate record [3] refers to the same real-world entity as the given record, with a similar title and description.\"\n}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 5.24675726890564
+        },
+        {
+            "dataset": "D3",
+            "query_id": 194,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as both are related to HP ProCurve Manager Plus and have similar descriptions.",
+            "confidence": 1.0,
+            "time": 0.8572192192077637
+        },
+        {
+            "dataset": "D3",
+            "query_id": 208,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a wasp bar code labeler - complete package, which matches the given entity record's title. Additionally, both records mention 'wasp' as the manufacturer and have similar product descriptions.",
+            "confidence": 1.0,
+            "time": 1.0036184787750244
+        },
+        {
+            "dataset": "D3",
+            "query_id": 243,
+            "ground_truth": 141,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, Microsoft Money Premium 2007 CD Mini Box.",
+            "confidence": 1.0,
+            "time": 0.9140579700469971
+        },
+        {
+            "dataset": "D3",
+            "query_id": 246,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity, Microsoft ISA Server License/Software Assurance Pack.",
+            "confidence": 1.0,
+            "time": 0.8396036624908447
+        },
+        {
+            "dataset": "D3",
+            "query_id": 270,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar title and description.",
+            "confidence": 1.0,
+            "time": 0.8012359142303467
+        },
+        {
+            "dataset": "D3",
+            "query_id": 308,
+            "ground_truth": 2915,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. Both records have the title 'virusbarrier x4 10.4 for mac-10 users', and the manufacturer is 'Intego'. The price difference can be attributed to different variants or versions of the product.",
+            "confidence": 1.0,
+            "time": 1.2352375984191895
+        },
+        {
+            "dataset": "D3",
+            "query_id": 309,
+            "ground_truth": 2918,
+            "ground_answer": 0,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, as they have identical descriptions.",
+            "confidence": 1.0,
+            "time": 0.9169931411743164
+        },
+        {
+            "dataset": "D3",
+            "query_id": 316,
+            "ground_truth": 2913,
+            "ground_answer": 3,
+            "answer": "The output should be formatted as a JSON instance that conforms to the schema below.\n\nHere is the output:\n\n{\n  \"properties\": {\n    \"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"},\n    \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}\n  },\n  \"required\": [\"answer\", \"explanation\"]\n}\n\nThe output should be a JSON object with two properties: \"answer\" and \"explanation\". The \"answer\" property is a string that contains the corresponding record number surrounded by \"[\" or \"[0]\" if there is none. The \"explanation\" property is also a string that provides a brief explanation of the answer.\n\nHere is an example output:\n\n{\n  \"answer\": \"[1]\",\n  \"explanation\": \"The best security software for home users is ZoneAlarm Wireless Security 2005.\"\n}",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 3.7283778190612793
+        },
+        {
+            "dataset": "D3",
+            "query_id": 333,
+            "ground_truth": 2118,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching title and description that describe Adobe After Effects Professional 7.0 software.",
+            "confidence": 1.0,
+            "time": 0.9197630882263184
+        },
+        {
+            "dataset": "D3",
+            "query_id": 334,
+            "ground_truth": 2852,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has a title 'transfer my dvd avanquest usa' which matches the given entity's manufacturer 'Avanquest'. Additionally, both records have a price of $29.95.",
+            "confidence": 1.0,
+            "time": 0.9575366973876953
+        },
+        {
+            "dataset": "D3",
+            "query_id": 362,
+            "ground_truth": 2698,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity, which is Sony's Media Manager for PSP.",
+            "confidence": 1.0,
+            "time": 0.8704800605773926
+        },
+        {
+            "dataset": "D3",
+            "query_id": 387,
+            "ground_truth": 2834,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with similar title and description.",
+            "confidence": 1.0,
+            "time": 0.759972333908081
+        },
+        {
+            "dataset": "D3",
+            "query_id": 428,
+            "ground_truth": 2190,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Webroot Software Inc's Child Safe product.",
+            "confidence": 1.0,
+            "time": 0.8529312610626221
+        },
+        {
+            "dataset": "D3",
+            "query_id": 434,
+            "ground_truth": 2151,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity as they have identical titles, descriptions, and manufacturers.",
+            "confidence": 1.0,
+            "time": 0.8224906921386719
+        },
+        {
+            "dataset": "D3",
+            "query_id": 479,
+            "ground_truth": 2334,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching title and manufacturer.",
+            "confidence": 1.0,
+            "time": 0.7561984062194824
+        },
+        {
+            "dataset": "D3",
+            "query_id": 480,
+            "ground_truth": 2336,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Webroot Software's Child Safe product.",
+            "confidence": 1.0,
+            "time": 0.8336951732635498
+        },
+        {
+            "dataset": "D3",
+            "query_id": 539,
+            "ground_truth": 285,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar title and features listed in the description.",
+            "confidence": 1.0,
+            "time": 0.8734009265899658
+        },
+        {
+            "dataset": "D3",
+            "query_id": 550,
+            "ground_truth": 2841,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity as they both mention 'instant immersion italian' with a version number of '2.0', indicating that they are related products.",
+            "confidence": 1.0,
+            "time": 1.032698154449463
+        },
+        {
+            "dataset": "D3",
+            "query_id": 565,
+            "ground_truth": 2848,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar title and description.",
+            "confidence": 1.0,
+            "time": 1.137916088104248
+        },
+        {
+            "dataset": "D3",
+            "query_id": 579,
+            "ground_truth": 2408,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching title and manufacturer.",
+            "confidence": 1.0,
+            "time": 0.8321192264556885
+        },
+        {
+            "dataset": "D3",
+            "query_id": 603,
+            "ground_truth": 1976,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar title and description.",
+            "confidence": 1.0,
+            "time": 0.7843191623687744
+        },
+        {
+            "dataset": "D3",
+            "query_id": 640,
+            "ground_truth": 310,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar title and manufacturer (iris inc.), but for PC instead of Mac.",
+            "confidence": 1.0,
+            "time": 0.887972354888916
+        },
+        {
+            "dataset": "D3",
+            "query_id": 647,
+            "ground_truth": 313,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Adobe Acrobat Professional 7.",
+            "confidence": 1.0,
+            "time": 0.8560619354248047
+        },
+        {
+            "dataset": "D3",
+            "query_id": 700,
+            "ground_truth": 2643,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar title and description that mentions sudoku puzzle addict.",
+            "confidence": 1.0,
+            "time": 0.8908669948577881
+        },
+        {
+            "dataset": "D3",
+            "query_id": 726,
+            "ground_truth": 2764,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has a matching title, manufacturer, and description.",
+            "confidence": 1.0,
+            "time": 0.804157018661499
+        },
+        {
+            "dataset": "D3",
+            "query_id": 735,
+            "ground_truth": 355,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The record at index [1] refers to the same real-world entity as the given record, with a title of 'Aspyr Star Wars Empire at War' and a price of $47.99.",
+            "confidence": 1.0,
+            "time": 1.0858006477355957
+        },
+        {
+            "dataset": "D3",
+            "query_id": 743,
+            "ground_truth": 341,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The title, description, and price of both records are similar, indicating that they refer to the same product.",
+            "confidence": 1.0,
+            "time": 0.9379832744598389
+        },
+        {
+            "dataset": "D3",
+            "query_id": 801,
+            "ground_truth": 532,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, with both records mentioning '3D Home Architect' and 'Version 8.0', indicating they are the same software product.",
+            "confidence": 1.0,
+            "time": 0.9993839263916016
+        },
+        {
+            "dataset": "D3",
+            "query_id": 823,
+            "ground_truth": 2629,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has a similar title and is based on the same bestselling children's book by Marcus Pfister.",
+            "confidence": 1.0,
+            "time": 0.9663705825805664
+        },
+        {
+            "dataset": "D3",
+            "query_id": 843,
+            "ground_truth": 2348,
+            "ground_answer": 3,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, Punch! Professional Home Design Suite Platinum V10, as they have similar titles and descriptions.",
+            "confidence": 1.0,
+            "time": 0.9881980419158936
+        },
+        {
+            "dataset": "D3",
+            "query_id": 858,
+            "ground_truth": 202,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has the exact title 'Avanquest USA LLC System Care Professional', which matches the manufacturer in the given record.",
+            "confidence": 1.0,
+            "time": 0.9652016162872314
+        },
+        {
+            "dataset": "D3",
+            "query_id": 867,
+            "ground_truth": 2372,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both records mention Century Software and TinyTerm Plus v.4.0.",
+            "confidence": 1.0,
+            "time": 0.925311803817749
+        },
+        {
+            "dataset": "D3",
+            "query_id": 939,
+            "ground_truth": 2208,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they have identical titles, descriptions, and manufacturer information.",
+            "confidence": 1.0,
+            "time": 0.8739650249481201
+        },
+        {
+            "dataset": "D3",
+            "query_id": 952,
+            "ground_truth": 9,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, with a matching title and manufacturer.",
+            "confidence": 1.0,
+            "time": 0.8652281761169434
+        },
+        {
+            "dataset": "D3",
+            "query_id": 953,
+            "ground_truth": 859,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching title and price.",
+            "confidence": 1.0,
+            "time": 0.7533719539642334
+        },
+        {
+            "dataset": "D3",
+            "query_id": 956,
+            "ground_truth": 2237,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, Pinnacle's Mobile Media Organizer software for Windows.",
+            "confidence": 1.0,
+            "time": 0.8636951446533203
+        },
+        {
+            "dataset": "D3",
+            "query_id": 965,
+            "ground_truth": 831,
+            "ground_answer": 1,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, with a manufacturer of 'sony creative software' matching the given record's manufacturer 'sony media'.",
+            "confidence": 1.0,
+            "time": 1.1399407386779785
+        },
+        {
+            "dataset": "D3",
+            "query_id": 968,
+            "ground_truth": 834,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, with a matching title and description that describe the software product 'Safekeeper Plus' developed by Bling Software Limited.",
+            "confidence": 1.0,
+            "time": 0.9533851146697998
+        },
+        {
+            "dataset": "D3",
+            "query_id": 977,
+            "ground_truth": 2169,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given entity record refers to Cubase 4 competitive crossgrade, which is also mentioned in candidate record [1]. The titles and descriptions of both records match closely, indicating that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.1156790256500244
+        },
+        {
+            "dataset": "D3",
+            "query_id": 979,
+            "ground_truth": 2170,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar title and description that matches the features of Carrara 4 Pro software.",
+            "confidence": 1.0,
+            "time": 0.944040060043335
+        },
+        {
+            "dataset": "D3",
+            "query_id": 981,
+            "ground_truth": 2174,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, Power Production Storyboard Artist.",
+            "confidence": 1.0,
+            "time": 0.8286926746368408
+        },
+        {
+            "dataset": "D3",
+            "query_id": 983,
+            "ground_truth": 2178,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given entity record refers to Final Draft, and candidate record [1] also refers to Final Draft. Although the version numbers are different (7 in the entity record vs 2.5 in candidate record [1]), they both refer to the same software.",
+            "confidence": 1.0,
+            "time": 1.2309925556182861
+        },
+        {
+            "dataset": "D3",
+            "query_id": 996,
+            "ground_truth": 2281,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Sibelius software. The titles, descriptions, and prices of both records match closely, indicating that they are referring to the same product.",
+            "confidence": 1.0,
+            "time": 1.116877794265747
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1017,
+            "ground_truth": 2249,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] refer to the same real-world entity, Final Draft Scriptwriter's Suite.",
+            "confidence": 1.0,
+            "time": 0.9268100261688232
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1026,
+            "ground_truth": 2262,
+            "ground_answer": 3,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, which is SpongeBob SquarePants typing fun. The title and description of both records match, indicating that they are related to the same product.",
+            "confidence": 1.0,
+            "time": 1.0900652408599854
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1045,
+            "ground_truth": 2274,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they both mention 'Professor Fuji's Sudoku' and are from Encore Software.",
+            "confidence": 1.0,
+            "time": 0.9603235721588135
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1063,
+            "ground_truth": 1995,
+            "ground_answer": 2,
+            "answer": "[4]",
+            "explanation": "The given record and candidate record [4] refer to the same real-world entity as they have the same title, description, manufacturer, and price.",
+            "confidence": 1.0,
+            "time": 0.9436631202697754
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1065,
+            "ground_truth": 2044,
+            "ground_answer": 0,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity, Family Tree Maker Version 16 Collectors Edition, as they have similar titles and descriptions.",
+            "confidence": 1.0,
+            "time": 0.9683327674865723
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1066,
+            "ground_truth": 975,
+            "ground_answer": 1,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, with a matching manufacturer (CSDC) and similar product description.",
+            "confidence": 1.0,
+            "time": 0.830092191696167
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1067,
+            "ground_truth": 2042,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both mention 'the print shop' and 'encore software'.",
+            "confidence": 1.0,
+            "time": 0.885455846786499
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1072,
+            "ground_truth": 964,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar title and description, but a lower price.",
+            "confidence": 1.0,
+            "time": 0.9054324626922607
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1076,
+            "ground_truth": 969,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Burning Monkey Solitaire 4.0, as they have the same title and price.",
+            "confidence": 1.0,
+            "time": 0.9480504989624023
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1088,
+            "ground_truth": 1335,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity as they have matching title, manufacturer, and description.",
+            "confidence": 1.0,
+            "time": 0.856135368347168
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1113,
+            "ground_truth": 2126,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both mention 'apple xsan' and describe it as a data storage consolidation and file sharing software from Apple.",
+            "confidence": 1.0,
+            "time": 0.956507682800293
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1122,
+            "ground_truth": 2114,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, Storyboard Quick software from Power Production.",
+            "confidence": 1.0,
+            "time": 0.8627173900604248
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1138,
+            "ground_truth": 918,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar title 'Zoo Tycoon' and a description that mentions building a zoo and managing animals.",
+            "confidence": 1.0,
+            "time": 0.9945411682128906
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1151,
+            "ground_truth": 440,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The record with title 'apple mac os x v10.4 tiger software - single user apple & mac software' refers to the same real-world entity as the given record, which is Apple Mac OS X Tiger.",
+            "confidence": 1.0,
+            "time": 1.5730218887329102
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1197,
+            "ground_truth": 534,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, Intego's ContentBarrier X4 for Mac OS X 10.4.",
+            "confidence": 1.0,
+            "time": 0.9329969882965088
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1220,
+            "ground_truth": 1060,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has the same title and description, and is also a product of Software Cinema.",
+            "confidence": 1.0,
+            "time": 0.9560115337371826
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1223,
+            "ground_truth": 1062,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, Sound Forge 9.0 from Sony Media Software.",
+            "confidence": 1.0,
+            "time": 0.9546940326690674
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1227,
+            "ground_truth": 1322,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar title and description.",
+            "confidence": 1.0,
+            "time": 0.9056868553161621
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1255,
+            "ground_truth": 1022,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Punch! Software.",
+            "confidence": 1.0,
+            "time": 0.7171742916107178
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1257,
+            "ground_truth": 1040,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] refer to the same real-world entity, Sound Forge Audio Studio 8 software from Sony Media Software.",
+            "confidence": 1.0,
+            "time": 1.0306169986724854
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1259,
+            "ground_truth": 1039,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they have similar descriptions and both mention Acid Music Studio software.",
+            "confidence": 1.0,
+            "time": 0.9756197929382324
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1262,
+            "ground_truth": 465,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record with title 'Allume Anime Studio 5' refers to the same real-world entity as the given record, which is also titled 'Anime Studio 5'.",
+            "confidence": 1.0,
+            "time": 1.1269609928131104
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1275,
+            "ground_truth": 1021,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching title and manufacturer, and similar description. The price is slightly different, but it's likely that the software is sold at different prices in different regions or formats.",
+            "confidence": 1.0,
+            "time": 1.13527512550354
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1283,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Microsoft Windows Small Business Server 2003 with 20 user CALs, as indicated by the similar titles and descriptions.",
+            "confidence": 1.0,
+            "time": 0.9753215312957764
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1301,
+            "ground_truth": 658,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, CA Anti-Spyware 2007, which is a product from Computer Associates. Although the titles are different (CA Antivirus 2007 vs CA Anti-Spyware 2007), they both seem to be related to antivirus protection for PCs.",
+            "confidence": 1.0,
+            "time": 1.2920253276824951
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1311,
+            "ground_truth": 680,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity because they both mention 'Kakuro' as a game, with similar system requirements (Windows 98/ME/2000 XP) and price ($4.99 in the given record vs $7.69 in candidate record [1]).",
+            "confidence": 1.0,
+            "time": 1.3277740478515625
+        },
+        {
+            "dataset": "D3",
+            "query_id": 1324,
+            "ground_truth": 624,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a title of 'Destineer Inc Age of Empires III: The Warchiefs Expansion Pack', which matches the manufacturer and title in the given record.",
+            "confidence": 1.0,
+            "time": 1.2028529644012451
+        }
+    ]
+}

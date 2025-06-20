@@ -1,0 +1,26 @@
+{
+    "settings": {
+        "dataset": "D4",
+        "out_file": "../../../log/matching/disambiguation/select/roberta/llama_70/select/D4.json",
+        "in_dir": "../../../data/ccer/cleaned/original/",
+        "sample_file": "../../../log/matching/disambiguation/cleaned_edges/roberta/llama_70/D4.csv",
+        "seed": 1924,
+        "serialization": "DITTO",
+        "task_description": "EXPLAIN",
+        "skip": true,
+        "len_q99": 1587.0,
+        "len_q50": 1587.0
+    },
+    "responses": [
+        {
+            "dataset": "D4",
+            "query_id": 1641,
+            "ground_truth": 1234,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same title, authors (with minor variations in formatting), venue, and year. The only difference is that the first author's middle initial is included in the candidate record, but not in the given record.",
+            "confidence": 1.0,
+            "time": 1.5313241481781006
+        }
+    ]
+}
