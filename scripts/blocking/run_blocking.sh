@@ -3,6 +3,9 @@
 # List of directories
 directories=("D2" "D3" "D4" "D5" "D6" "D7" "D8" "D9" )
 
+#methods=("random" "blocking" "sampled")
+methods=("sampled")
+
 # Loop over each directory and run the Python script
 for dir in "${directories[@]}"; do
     echo "Processing directory: $dir"
@@ -24,21 +27,14 @@ for dir in "${directories[@]}"; do
     --k 10
 xom
 
-    python sample_datasets.py \
-    --dataset "$dir" \
-    --in_dir "../../log/blocking/" \
-    --out_dir "../../data/ccer/cleaned/fine_tuning/train/" \
-    --blocking_option "intersection"  \
-    --pos_number 300 \
-    --neg_number 100
+    for method in "${methods[@]}"; do
+        python split_dataset.py \
+        --dataset "$dir" \
+        --in_dir "../../log/blocking/" \
+        --out_dir "../../data/ccer/cleaned/fine_tuning/$method/" \
+        --blocking_option "intersection"  \
+        --split_percent 0.1 \
+        --method "$method" \
+        --positive_ratio 0.75
 
-    python sample_datasets.py \
-    --dataset "$dir" \
-    --in_dir "../../log/blocking/" \
-    --out_dir "../../data/ccer/cleaned/fine_tuning/test/" \
-    --existing_file "../../data/ccer/cleaned/fine_tuning/train/$dir.csv" \
-    --blocking_option "intersection"  \
-    --pos_number 300 \
-    --neg_number 100
-    
 done

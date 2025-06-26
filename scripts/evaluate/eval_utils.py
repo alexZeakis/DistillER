@@ -27,6 +27,8 @@ def compute_f1_score(y_true, y_pred):
 
     precision = tp / (tp + fp)
     recall = tp / (tp + fn)
+    
+    print(precision, recall)
 
     if precision + recall == 0:
         return 0.0

@@ -1,46 +1,47 @@
 import pandas as pd
-from eval_utils import prepare_pt_file, prepare_plm_train_file, get_inference_time, \
-     get_plm_training_time, get_plm_testing_time, prepare_df
+import os
+from eval_utils import prepare_pt_file, prepare_df
 
-################### COMPARING LLMS ON TRAIN DATA #########################
+def prepare_distr(path, label):
+    scores = {}
+    for file in os.listdir(path):
+        if not file.endswith('csv'):
+            continue
+        df = pd.read_csv(path+file)
+        df['Label'] = df.D2 == df['True']
+        df2 = df.groupby('D1')['Label'].sum()
+        
+        if label == 'positive':
+            scores[file[:2]] = (df2 > 0).sum()
+        else:
+            scores[file[:2]] = (df2 == 0).sum()
+    return pd.Series(scores)
+
+################### COMPARING LLMS ON TRAIN DATA AND METHOD OF SAMPLING #########################
 
 path = '../../log/matching/annotate/'
 df = pd.DataFrame()
-df['Llama3.1:8b'] = prepare_pt_file(path+'llama_8/partial_responses/')
-df['Llama3.1:70b'] = prepare_pt_file(path+'llama_70/partial_responses/')
-# df['Qwen2.5:7b'] = prepare_pt_file(path+'qwen_7/partial_responses/')
-df['Qwen2.5:14b'] = prepare_pt_file(path+'qwen_14/partial_responses/')
-df['Qwen2.5:32b'] = prepare_pt_file(path+'qwen_32/partial_responses/')
-df['Hybrid-SMiniLM-70b'] = prepare_plm_train_file(path+'sminilm/llama_70/')
-df['Hybrid-RoBERTa-70b'] = prepare_plm_train_file(path+'roberta/llama_70/')
+df['Random-Llama3.1:8b'] = prepare_pt_file(path+'random/llama_8/partial_responses/')
+df['Random-Qwen2.5:14b'] = prepare_pt_file(path+'random/qwen_14/partial_responses/')
+
+df['Blocking-Llama3.1:8b'] = prepare_pt_file(path+'blocking/llama_8/partial_responses/')
+df['Blocking-Qwen2.5:14b'] = prepare_pt_file(path+'blocking/qwen_14/partial_responses/')
+
+df['Sampled-Llama3.1:8b'] = prepare_pt_file(path+'sampled/llama_8/partial_responses/')
+df['Sampled-Qwen2.5:14b'] = prepare_pt_file(path+'sampled/qwen_14/partial_responses/')
 
 df = prepare_df(df)
 latex_code = df.to_latex(index=True, escape=False, multirow=False)
 
 
-path = '../../log/matching/annotate/'
-df = pd.DataFrame()
-df['Hybrid-SMiniLM-Ground'] = prepare_plm_train_file(path+'sminilm/ground/')
-df['Hybrid-SMiniLM-70b'] = prepare_plm_train_file(path+'sminilm/llama_70/')
-df['Hybrid-RoBERTa-Ground'] = prepare_plm_train_file(path+'roberta/ground/')
-df['Hybrid-RoBERTa-70b'] = prepare_plm_train_file(path+'roberta/llama_70/')
+################### DISTRIBUTION OF CLASSES PER METHOD OF SAMPLING #########################
 
-df = prepare_df(df)
-latex_code_2 = df.to_latex(index=True, escape=False, multirow=False)
+path = '../../data/ccer/cleaned/'
 
-df = {}
-df['Llama3.1:8b'] = get_inference_time(path+'llama_8/partial_responses/').sum()
-df['Llama3.1:70b'] = get_inference_time(path+'llama_70/partial_responses/').sum()
-df['Qwen2.5:14b'] = get_inference_time(path+'qwen_14/partial_responses/').sum()
-df['Qwen2.5:32b'] = get_inference_time(path+'qwen_32/partial_responses/').sum()
-df['Hybrid-SMiniLM-Inference'] = df['Llama3.1:70b'] * 0.2
-df['Hybrid-SMiniLM-Training'] = get_plm_training_time(path+'sminilm/llama_70/')
-df['Hybrid-SMiniLM-Testing'] = get_plm_testing_time(path+'sminilm/llama_70/')
-df['Hybrid-SMiniLM-Sum'] = df['Hybrid-SMiniLM-Inference'] + df['Hybrid-SMiniLM-Training'] + df['Hybrid-SMiniLM-Testing']
-df['Hybrid-RoBERTa-Inference'] = df['Llama3.1:70b'] * 0.2
-df['Hybrid-RoBERTa-Training'] = get_plm_training_time(path+'roberta/llama_70/')
-df['Hybrid-RoBERTa-Testing'] = get_plm_testing_time(path+'roberta/llama_70/')
-df['Hybrid-RoBERTa-Sum'] = df['Hybrid-RoBERTa-Inference'] + df['Hybrid-RoBERTa-Training'] + df['Hybrid-RoBERTa-Testing']
-df = pd.Series(df).to_frame()
-
-latex_code_time = df.to_latex(index=True, escape=False, multirow=False)
+scores = pd.DataFrame()
+scores['Positive-Random'] = prepare_distr(path+'fine_tuning_random/train/', 'positive')
+scores['Negative-Random'] = prepare_distr(path+'fine_tuning_random/train/', 'negative')
+scores['Positive-Blocking'] = prepare_distr(path+'fine_tuning/train/', 'positive')
+scores['Negative-Blocking'] = prepare_distr(path+'fine_tuning/train/', 'negative')
+scores['Positive-Sampled'] = prepare_distr(path+'fine_tuning_sample/train/', 'positive')
+scores['Negative-Sampled'] = prepare_distr(path+'fine_tuning_sample/train/', 'negative')
