@@ -1,0 +1,3826 @@
+{
+    "settings": {
+        "dataset": "D5",
+        "out_file": "../../../log/matching/annotate/sampled/llama_8/partial/D5_1924.json",
+        "in_dir": "../../../data/ccer/cleaned/original/",
+        "sample_file": "../../../data/ccer/cleaned/fine_tuning/sampled/train/D5.csv",
+        "seed": 1924,
+        "serialization": "DITTO",
+        "task_description": "EXPLAIN",
+        "skip": false,
+        "len_q99": 3598.399999999994,
+        "len_q50": 1356.0
+    },
+    "responses": [
+        {
+            "dataset": "D5",
+            "query_id": 10,
+            "ground_truth": 5104,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The record with name Genki Yoshimura has the same primaryProfessions as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.7424962520599365
+        },
+        {
+            "dataset": "D5",
+            "query_id": 19,
+            "ground_truth": 1263,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same title, episodeNumber, and seasonNumber.",
+            "confidence": 1.0,
+            "time": 0.5377192497253418
+        },
+        {
+            "dataset": "D5",
+            "query_id": 27,
+            "ground_truth": 5834,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching title 'A Shot in the Dark', episodeNumber and seasonNumber, and startYear. The only difference is that the given record has a genre_list of Crime,Drama,Mystery, while the candidate record does not have a genre_list.",
+            "confidence": 1.0,
+            "time": 0.873157262802124
+        },
+        {
+            "dataset": "D5",
+            "query_id": 33,
+            "ground_truth": 1494,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record refers to Danica Dawn Johnston, which is matched with candidate record [3]",
+            "confidence": 1.0,
+            "time": 0.4362161159515381
+        },
+        {
+            "dataset": "D5",
+            "query_id": 35,
+            "ground_truth": 2885,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has a matching name, 'Abdulhair Kasymov', which is close enough to the given name, 'Abdulkhair Kasymov'.",
+            "confidence": 1.0,
+            "time": 0.6886000633239746
+        },
+        {
+            "dataset": "D5",
+            "query_id": 41,
+            "ground_truth": 1694,
+            "ground_answer": 5,
+            "answer": "Based on the given entity record and candidate records, I have selected a record that refers to the same real-world entity as the given record.\n\nThe given entity record is:\n```\n[COL] title [VAL] The Shark Affair\n[COL] episodeNumber [VAL] 2.0\n[COL] seasonNumber [VAL] 1.0\n[COL] startYear [VAL] 1962-01-01\n[COL] genre_list [VAL] Adventure\n```\n\nThe candidate record that refers to the same real-world entity is:\n```\n[5]  [COL] title [VAL] The Shark Affair\n[COL] episodeNumber [VAL] 2.0\n[COL] seasonNumber [VAL] 1.0\n[COL] releaseDate [VAL] 1962-02-27\n[COL] release_year [VAL] 1962-01-01\n```\n\nHere is the output in the correct format:\n```\n{\n  \"answer\": \"[5]\",\n  \"explanation\": \"The candidate record with title 'The Shark Affair' and episodeNumber '2.0' matches the given entity record.\"\n}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 2.1966238021850586
+        },
+        {
+            "dataset": "D5",
+            "query_id": 42,
+            "ground_truth": 734,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The record with name Boris Blank matches the given entity record.",
+            "confidence": 1.0,
+            "time": 0.3791961669921875
+        },
+        {
+            "dataset": "D5",
+            "query_id": 58,
+            "ground_truth": 1668,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name \"Maximilian Schell\" with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4555070400238037
+        },
+        {
+            "dataset": "D5",
+            "query_id": 68,
+            "ground_truth": 4927,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Michael Elwyn' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4334845542907715
+        },
+        {
+            "dataset": "D5",
+            "query_id": 69,
+            "ground_truth": 738,
+            "ground_answer": 1,
+            "answer": "[4]",
+            "explanation": "The record [4] refers to the same real-world entity as the given record, which is Doc Hammer. The title of the episode in record [4] is 'I Know Why the Caged Bird Kills', and it mentions Dr. Venture's Number 2, Dr. Henry Killinger, who is also mentioned in the given record.",
+            "confidence": 1.0,
+            "time": 0.9125092029571533
+        },
+        {
+            "dataset": "D5",
+            "query_id": 81,
+            "ground_truth": 5921,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record because it has the same title, episode number, season number, and start year.",
+            "confidence": 1.0,
+            "time": 0.5582523345947266
+        },
+        {
+            "dataset": "D5",
+            "query_id": 87,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a name variation of Ben Koeller.",
+            "confidence": 1.0,
+            "time": 0.5172975063323975
+        },
+        {
+            "dataset": "D5",
+            "query_id": 92,
+            "ground_truth": 554,
+            "ground_answer": 0,
+            "answer": "[4]",
+            "explanation": "The candidate record [4] has a similar title and matching episodeNumber, seasonNumber, and release_year as the given entity record.",
+            "confidence": 1.0,
+            "time": 1.810624122619629
+        },
+        {
+            "dataset": "D5",
+            "query_id": 120,
+            "ground_truth": 3948,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Dipankar Dey' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.47209811210632324
+        },
+        {
+            "dataset": "D5",
+            "query_id": 132,
+            "ground_truth": 1930,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has a matching title, releaseDate (which can be considered as startYear), and genre_list.",
+            "confidence": 1.0,
+            "time": 0.5948193073272705
+        },
+        {
+            "dataset": "D5",
+            "query_id": 166,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "No matching record found",
+            "confidence": 1.0,
+            "time": 0.30905580520629883
+        },
+        {
+            "dataset": "D5",
+            "query_id": 179,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The record [COL] name [VAL] Oz Scott refers to the same real-world entity as the given record because it shares a common last name \"Scott\" with the given record.",
+            "confidence": 1.0,
+            "time": 0.5656378269195557
+        },
+        {
+            "dataset": "D5",
+            "query_id": 194,
+            "ground_truth": 670,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record with name Estela Bravo refers to the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.43723464012145996
+        },
+        {
+            "dataset": "D5",
+            "query_id": 207,
+            "ground_truth": 2505,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity because they have the same title, episodeNumber, seasonNumber, startYear, and genre_list.",
+            "confidence": 1.0,
+            "time": 0.5919008255004883
+        },
+        {
+            "dataset": "D5",
+            "query_id": 251,
+            "ground_truth": 1482,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same name as the given entity record, Nicholas Colasanto.",
+            "confidence": 1.0,
+            "time": 0.4453849792480469
+        },
+        {
+            "dataset": "D5",
+            "query_id": 292,
+            "ground_truth": 4969,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Paul Attanasio' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.47202205657958984
+        },
+        {
+            "dataset": "D5",
+            "query_id": 304,
+            "ground_truth": 3629,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The candidate record [5] has a name that matches the given entity record Jadranka Matkovic.",
+            "confidence": 1.0,
+            "time": 0.4556303024291992
+        },
+        {
+            "dataset": "D5",
+            "query_id": 306,
+            "ground_truth": 4543,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same title 'A Ticket for May' as the given entity record, indicating that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.560032844543457
+        },
+        {
+            "dataset": "D5",
+            "query_id": 312,
+            "ground_truth": 4934,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The candidate record [3] refers to the same real-world entity as the given record because it has the same title, episodeNumber, and seasonNumber.",
+            "confidence": 1.0,
+            "time": 0.545983076095581
+        },
+        {
+            "dataset": "D5",
+            "query_id": 347,
+            "ground_truth": 2696,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record with title 'The Thievingest Dog' and releaseDate '1957-09-26' refers to the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.5651004314422607
+        },
+        {
+            "dataset": "D5",
+            "query_id": 381,
+            "ground_truth": 5630,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The record with name Alon Hamawi is a match for the given entity record.",
+            "confidence": 1.0,
+            "time": 0.41050171852111816
+        },
+        {
+            "dataset": "D5",
+            "query_id": 384,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records refer to the same real-world entity as Angel Chiang. The names and professions do not match.",
+            "confidence": 1.0,
+            "time": 0.4655342102050781
+        },
+        {
+            "dataset": "D5",
+            "query_id": 385,
+            "ground_truth": 5103,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The record with name Yaniv Swissa matches the given entity record.",
+            "confidence": 1.0,
+            "time": 0.37868738174438477
+        },
+        {
+            "dataset": "D5",
+            "query_id": 393,
+            "ground_truth": 3317,
+            "ground_answer": 4,
+            "answer": "The output should be formatted as a JSON instance that conforms to the schema:\n\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```\n\nHere is the output:\n\n```\n{\"answer\": \"[4]\", \"explanation\": \"The record with title Survival, episodeNumber 15.0, seasonNumber 1.0, startYear 1958-01-01 matches the given entity record.\"}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 1.437108039855957
+        },
+        {
+            "dataset": "D5",
+            "query_id": 394,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it shares a last name of 'Donahue'.",
+            "confidence": 1.0,
+            "time": 0.5106441974639893
+        },
+        {
+            "dataset": "D5",
+            "query_id": 405,
+            "ground_truth": 420,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Peter Medak' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.5112450122833252
+        },
+        {
+            "dataset": "D5",
+            "query_id": 408,
+            "ground_truth": 5449,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Isao Tomita' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4455301761627197
+        },
+        {
+            "dataset": "D5",
+            "query_id": 446,
+            "ground_truth": 5689,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The record with title 'Most Honorable Day' and episodeNumber '12.0' in season '6.0' is the same as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.6198663711547852
+        },
+        {
+            "dataset": "D5",
+            "query_id": 448,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The record [1] refers to the same real-world entity as the given record because it has a similar name, Richard Brooks.",
+            "confidence": 1.0,
+            "time": 0.4641604423522949
+        },
+        {
+            "dataset": "D5",
+            "query_id": 455,
+            "ground_truth": 6032,
+            "ground_answer": 0,
+            "answer": "[3]",
+            "explanation": "While the titles and season numbers don't match, A Pattern of Deceit has a similar theme of deception, which might be why it's listed as a candidate.",
+            "confidence": 1.0,
+            "time": 2.3994147777557373
+        },
+        {
+            "dataset": "D5",
+            "query_id": 465,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records refer to the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.4285733699798584
+        },
+        {
+            "dataset": "D5",
+            "query_id": 476,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "No matching record found.",
+            "confidence": 1.0,
+            "time": 1.183239459991455
+        },
+        {
+            "dataset": "D5",
+            "query_id": 482,
+            "ground_truth": 3617,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The candidate record with title 'The Near Unknown' and matching seasonNumber, episodeNumber, and startYear matches the given entity record.",
+            "confidence": 1.0,
+            "time": 2.014040946960449
+        },
+        {
+            "dataset": "D5",
+            "query_id": 484,
+            "ground_truth": 3890,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity because they have matching title, episodeNumber, seasonNumber, startYear, and genre_list values.",
+            "confidence": 1.0,
+            "time": 0.5669088363647461
+        },
+        {
+            "dataset": "D5",
+            "query_id": 488,
+            "ground_truth": 5516,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "No additional information is needed to determine that record [1] refers to the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.774019718170166
+        },
+        {
+            "dataset": "D5",
+            "query_id": 490,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[9]",
+            "explanation": "The given entity record refers to Remi Cohen, and Itzik Cohen is a variant of this name.",
+            "confidence": 1.0,
+            "time": 0.4631330966949463
+        },
+        {
+            "dataset": "D5",
+            "query_id": 532,
+            "ground_truth": 2931,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has the same title 'A Girl Named Amy' and matching episodeNumber and seasonNumber.",
+            "confidence": 1.0,
+            "time": 0.6046526432037354
+        },
+        {
+            "dataset": "D5",
+            "query_id": 541,
+            "ground_truth": 4763,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as it contains a name that closely matches Martin Strba.",
+            "confidence": 1.0,
+            "time": 0.5376625061035156
+        },
+        {
+            "dataset": "D5",
+            "query_id": 542,
+            "ground_truth": 5869,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same title 'Sex Opera' and release year '2001-01-01'. Although the runtime is slightly different, this could be due to rounding or other minor discrepancies.",
+            "confidence": 1.0,
+            "time": 0.722637414932251
+        },
+        {
+            "dataset": "D5",
+            "query_id": 556,
+            "ground_truth": 5938,
+            "ground_answer": 7,
+            "answer": "[7]",
+            "explanation": "The record with name David Mack is a match for the given entity record, as it has the same name and profession (animation_department,director,miscellaneous)",
+            "confidence": 1.0,
+            "time": 0.5295586585998535
+        },
+        {
+            "dataset": "D5",
+            "query_id": 565,
+            "ground_truth": 495,
+            "ground_answer": 1,
+            "answer": "[0]",
+            "explanation": "The title '810 Franklin Street' matches with the title in candidate record 1.",
+            "confidence": 1.0,
+            "time": 0.6959643363952637
+        },
+        {
+            "dataset": "D5",
+            "query_id": 588,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[4]",
+            "explanation": "The record [COL] name [VAL] Gina Chen Jin refers to the same real-world entity as the given record because it has a similar last name \"Chen\".",
+            "confidence": 1.0,
+            "time": 0.5486433506011963
+        },
+        {
+            "dataset": "D5",
+            "query_id": 596,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidates match the given entity record. The name 'Don Bagley' does not appear in any of the candidate records.",
+            "confidence": 1.0,
+            "time": 0.4843478202819824
+        },
+        {
+            "dataset": "D5",
+            "query_id": 598,
+            "ground_truth": 3238,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "Record [1] refers to the same real-world entity as the given record due to matching title and episode/season numbers.",
+            "confidence": 1.0,
+            "time": 0.8894803524017334
+        },
+        {
+            "dataset": "D5",
+            "query_id": 599,
+            "ground_truth": 4275,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has a matching name 'Pepa Nikolova' to the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4650237560272217
+        },
+        {
+            "dataset": "D5",
+            "query_id": 604,
+            "ground_truth": 1985,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a title of 'Heads, You Lose' matching the given record's title.",
+            "confidence": 1.0,
+            "time": 0.5992498397827148
+        },
+        {
+            "dataset": "D5",
+            "query_id": 607,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "No direct match found, but one candidate record has a release date in 2016, which is the same year as Lotti Mehnert's death year.",
+            "confidence": 1.0,
+            "time": 1.4230546951293945
+        },
+        {
+            "dataset": "D5",
+            "query_id": 635,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record refer to different entities. The given record refers to Elmer Cossey, while the candidate record refers to ArtCam.",
+            "confidence": 1.0,
+            "time": 0.5063362121582031
+        },
+        {
+            "dataset": "D5",
+            "query_id": 643,
+            "ground_truth": 4548,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has a matching name, Billy West.",
+            "confidence": 1.0,
+            "time": 0.4875190258026123
+        },
+        {
+            "dataset": "D5",
+            "query_id": 645,
+            "ground_truth": 198,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Samuel Barnett' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4364612102508545
+        },
+        {
+            "dataset": "D5",
+            "query_id": 649,
+            "ground_truth": 441,
+            "ground_answer": 1,
+            "answer": "[3]",
+            "explanation": "The candidate record [3] refers to the same real-world entity as the given record because it has the same title, episode number, and season number.",
+            "confidence": 1.0,
+            "time": 0.5243561267852783
+        },
+        {
+            "dataset": "D5",
+            "query_id": 653,
+            "ground_truth": 893,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record refers to the same real-world entity as the candidate record [3], which has a matching title 'Mutiny'.",
+            "confidence": 1.0,
+            "time": 1.1139898300170898
+        },
+        {
+            "dataset": "D5",
+            "query_id": 654,
+            "ground_truth": 368,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, a TV series called A Nero Wolfe Mystery.",
+            "confidence": 1.0,
+            "time": 0.5352811813354492
+        },
+        {
+            "dataset": "D5",
+            "query_id": 673,
+            "ground_truth": 1053,
+            "ground_answer": 7,
+            "answer": "[7]",
+            "explanation": "The record with name Odalys Garc?a is a match for the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4272325038909912
+        },
+        {
+            "dataset": "D5",
+            "query_id": 693,
+            "ground_truth": 2463,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record, Jeff Garlin.",
+            "confidence": 1.0,
+            "time": 0.46404218673706055
+        },
+        {
+            "dataset": "D5",
+            "query_id": 695,
+            "ground_truth": 3605,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Mikhail Kozakov' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.47214293479919434
+        },
+        {
+            "dataset": "D5",
+            "query_id": 700,
+            "ground_truth": 466,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has a similar name, Zden?k Sirov?, which is likely a variant of Zdenek Sirov?.",
+            "confidence": 1.0,
+            "time": 0.6344780921936035
+        },
+        {
+            "dataset": "D5",
+            "query_id": 710,
+            "ground_truth": 4634,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The record [5] refers to the same real-world entity as the given record, Joe Pera, because it has the exact name 'Joe Pera'.",
+            "confidence": 1.0,
+            "time": 0.5695240497589111
+        },
+        {
+            "dataset": "D5",
+            "query_id": 744,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "After analyzing the given entity record and the candidate records, I found a match.\n\nThe given entity record is:\n```\n[COL] title [VAL] ?r alla m?nniskor lika mycket v?rda eller? [COL] episodeNumber [VAL] 2.0 [COL] seasonNumber [VAL] 1.0 [COL] startYear [VAL] 2018-01-01 [COL] genre_list [VAL] Reality-TV\n```\nAnd the candidate record that refers to the same real-world entity is:\n```\n[1]  [COL] title [VAL] ?r alla m?nniskor lika mycket v?rda eller? [COL] episodeNumber [VAL] 2.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 2018-03-30 [COL] release_year [VAL] 2018-01-01\n```\nThe match is based on the title field, which matches exactly between the two records.\n\nHere is the output in the required JSON format:\n```\n{\n  \"answer\": \"[1]\",\n  \"explanation\": \"The candidate record with index 1 has a matching title to the given entity record.\"\n}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 2.2714433670043945
+        },
+        {
+            "dataset": "D5",
+            "query_id": 757,
+            "ground_truth": 2900,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching title 'Ten Little Roosters' and start year '2014-01-01'.",
+            "confidence": 1.0,
+            "time": 0.6076028347015381
+        },
+        {
+            "dataset": "D5",
+            "query_id": 760,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity because they share a common name, Neilson/Neilani, which is likely a variation of James Neilson's last name.",
+            "confidence": 1.0,
+            "time": 0.6738436222076416
+        },
+        {
+            "dataset": "D5",
+            "query_id": 786,
+            "ground_truth": 1132,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The record [1] refers to the same real-world entity as the given record because it has the exact name 'Melissa James Gibson'.",
+            "confidence": 1.0,
+            "time": 0.5064926147460938
+        },
+        {
+            "dataset": "D5",
+            "query_id": 803,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The record [COL] name [VAL] Lucio Manfredi refers to the same real-world entity as the given record because it contains a similar name, Luca Perlman and Lucio Manfredi are likely referring to the same person.",
+            "confidence": 1.0,
+            "time": 0.6607797145843506
+        },
+        {
+            "dataset": "D5",
+            "query_id": 818,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidates match the given entity record. The name 'Alfie Nicol' does not appear in any of the candidate records.",
+            "confidence": 1.0,
+            "time": 0.502795934677124
+        },
+        {
+            "dataset": "D5",
+            "query_id": 819,
+            "ground_truth": 528,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record with title 'The Death-Divers' and episodeNumber '28.0' in season '1.0' from the year '1960-01-01' matches the given entity record.",
+            "confidence": 1.0,
+            "time": 0.6498627662658691
+        },
+        {
+            "dataset": "D5",
+            "query_id": 826,
+            "ground_truth": 4220,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, which is Hugh Fraser. The name in the candidate record matches the name in the given record.",
+            "confidence": 1.0,
+            "time": 0.573136568069458
+        },
+        {
+            "dataset": "D5",
+            "query_id": 858,
+            "ground_truth": 146,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record with title 'Charlie Six Kids' and episodeNumber '15.0' matches the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4616587162017822
+        },
+        {
+            "dataset": "D5",
+            "query_id": 862,
+            "ground_truth": 6046,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same title, episodeNumber, and seasonNumber.",
+            "confidence": 1.0,
+            "time": 0.5387897491455078
+        },
+        {
+            "dataset": "D5",
+            "query_id": 869,
+            "ground_truth": 3719,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Fernando Rey' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.44371676445007324
+        },
+        {
+            "dataset": "D5",
+            "query_id": 883,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The record [1] refers to the same real-world entity as the given record, as it contains a name that is likely an alias for Rodney Francis Cameron, also known as 'The Lonely Hearts Killer'.",
+            "confidence": 1.0,
+            "time": 0.6959199905395508
+        },
+        {
+            "dataset": "D5",
+            "query_id": 890,
+            "ground_truth": 6044,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record because it has a matching title \"The Enemy Unknown\" and episode number \"8.0\", which are identical to the values in the given record.",
+            "confidence": 1.0,
+            "time": 0.6629412174224854
+        },
+        {
+            "dataset": "D5",
+            "query_id": 918,
+            "ground_truth": 164,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same title 'The Nanny from Hell' as the given entity record, and also matches on episodeNumber and seasonNumber.",
+            "confidence": 1.0,
+            "time": 0.5622203350067139
+        },
+        {
+            "dataset": "D5",
+            "query_id": 924,
+            "ground_truth": 2083,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given record and candidate record [5] refer to the same real-world entity, The Beachcomber. This is because both records have the same title, startYear, endYear, and runtimeMinutes.",
+            "confidence": 1.0,
+            "time": 0.6621780395507812
+        },
+        {
+            "dataset": "D5",
+            "query_id": 938,
+            "ground_truth": 4908,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The record with name Alex Kamer has a matching primaryProfessions field, indicating it refers to the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.5014543533325195
+        },
+        {
+            "dataset": "D5",
+            "query_id": 974,
+            "ground_truth": 3718,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has the same name, Maggie Cheung.",
+            "confidence": 1.0,
+            "time": 0.5044550895690918
+        },
+        {
+            "dataset": "D5",
+            "query_id": 979,
+            "ground_truth": 3840,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has a matching title 'Adventures of Mowgli: Akela's Last Hunt' and release year '1969-01-01'.",
+            "confidence": 1.0,
+            "time": 0.7355263233184814
+        },
+        {
+            "dataset": "D5",
+            "query_id": 986,
+            "ground_truth": 5255,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The record with name Bernard Hall is a match for the given entity record, as it has the same name and profession.",
+            "confidence": 1.0,
+            "time": 0.46425938606262207
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1005,
+            "ground_truth": 1401,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same title 'The Mob Riders' as the given entity record, indicating that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.5393502712249756
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1012,
+            "ground_truth": 1222,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity because they have the same title, episodeNumber, seasonNumber, and startYear.",
+            "confidence": 1.0,
+            "time": 0.5638165473937988
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1032,
+            "ground_truth": 3039,
+            "ground_answer": 0,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity because they have the same title \"Episode 15\" and episodeNumber \"15.0\", indicating that they are the same episode from different seasons.",
+            "confidence": 1.0,
+            "time": 0.6578402519226074
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1039,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given entity record [COL] name [VAL] Nicholas Saul matches with candidate record [1] [COL] name [VAL] Nicholas Colasanto as both have the same first name 'Nicholas' and last name is not provided in the given entity record, but it can be inferred from the candidate record that the last name is also 'Colasanto'.",
+            "confidence": 1.0,
+            "time": 0.8783190250396729
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1061,
+            "ground_truth": 4593,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The record with name George Anton matches the given entity record.",
+            "confidence": 1.0,
+            "time": 0.3709530830383301
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1089,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has a matching title, episode number, and season number.",
+            "confidence": 1.0,
+            "time": 0.5433893203735352
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1127,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "Record [1] has the same episodeNumber (22.0) and seasonNumber (1.0), which matches the given record's episodeNumber (5.0) and seasonNumber (2.0).",
+            "confidence": 1.0,
+            "time": 1.1228461265563965
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1148,
+            "ground_truth": 4007,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same name as the given entity record, Tabrett Bethell.",
+            "confidence": 1.0,
+            "time": 0.439852237701416
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1178,
+            "ground_truth": 5144,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title, episodeNumber, and seasonNumber as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.47142529487609863
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1182,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The record [1] refers to Satyajit Ray Productions, which is likely referring to the same entity as Jennifer Ray, a producer and production manager.",
+            "confidence": 1.0,
+            "time": 0.5229473114013672
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1194,
+            "ground_truth": 3797,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name \"Kaye Wragg\" with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4517388343811035
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1203,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "After analyzing the given entity record and the candidate records, I found a match.\n\nThe given entity record is:\n```\n[COL] name [VAL] Rayko Izuno\n[COL] primaryProfessions [VAL] actor\n```\n\nAnd one of the candidate records matches this entity:\n```\n[8]  [COL] name [VAL] Reiko Suzuki\n```\n\nAlthough the names are different, \"Rayko\" and \"Reiko\" seem to be variations of the same Japanese name. Additionally, both the given entity record and the matching candidate record mention that the person is an actor.\n\nTherefore, I select the candidate record with number 8 as the corresponding record.\n\nHere's the output in the required JSON format:\n\n```\n{\n  \"answer\": \"[8]\",\n  \"explanation\": \"The name 'Rayko Izuno' seems to be a variation of 'Reiko Suzuki', and both are actors.\"\n}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 1.7087833881378174
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1207,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "No matching record found. The given entity record refers to Terry Black, but none of the candidate records have a name that matches.",
+            "confidence": 1.0,
+            "time": 0.4973788261413574
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1214,
+            "ground_truth": 3160,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The record with name Liliya Tolmacheva is a match for the given entity record.",
+            "confidence": 1.0,
+            "time": 0.44377613067626953
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1218,
+            "ground_truth": 4983,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record refers to Gerard Logan, and candidate record [2] also has Gerard Logan as the name.",
+            "confidence": 1.0,
+            "time": 0.4547901153564453
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1219,
+            "ground_truth": 1746,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as both have the title 'Kamikaze Bingo' and similar episode and season numbers.",
+            "confidence": 1.0,
+            "time": 0.5884811878204346
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1229,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The candidate record [2] has a different name, but no other matching information. However, the given entity record and the candidate record [0] have some common attributes like 'name' which is not unique in this case, but also 'primaryProfessions' which is not present in the candidate records. The best match is found with the candidate record [1], where the name is close to David White (first name difference) and the profession is not mentioned, but it's a good match for an actor/director.",
+            "confidence": 1.0,
+            "time": 1.1306955814361572
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1236,
+            "ground_truth": 5465,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Richard L. Bare' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4466280937194824
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1238,
+            "ground_truth": 2566,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching title and start year.",
+            "confidence": 1.0,
+            "time": 0.49534034729003906
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1243,
+            "ground_truth": 5280,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name \"Rodolfo Sciammarella\" with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4732823371887207
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1277,
+            "ground_truth": 5258,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record with name Alex Graves refers to the same real-world entity as the given record, which is a film producer, director and writer.",
+            "confidence": 1.0,
+            "time": 0.7701821327209473
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1282,
+            "ground_truth": 1709,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same title 'The Prettiest Girl in Town' as the given entity record, and also matches on episodeNumber (23.0) and seasonNumber (6.0).",
+            "confidence": 1.0,
+            "time": 0.654585599899292
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1289,
+            "ground_truth": 3974,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching title and episode/season numbers.",
+            "confidence": 1.0,
+            "time": 0.5020267963409424
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1320,
+            "ground_truth": 4702,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] have matching title, episodeNumber, seasonNumber, startYear, and genre_list values.",
+            "confidence": 1.0,
+            "time": 0.48772263526916504
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1324,
+            "ground_truth": 469,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The record with number [2] refers to the same real-world entity as the given record because it has the same name, Damien Samways.",
+            "confidence": 1.0,
+            "time": 0.5112812519073486
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1335,
+            "ground_truth": 4197,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title and episode/season numbers as the given entity record, indicating that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.5382144451141357
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1348,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The candidate record [4] has a name 'Judith' which is similar to the given entity's name 'Judith Jacob'. Although they are not identical, it is likely that this record refers to the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.6901309490203857
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1349,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record do not match in any field, so there is no corresponding record.",
+            "confidence": 1.0,
+            "time": 0.4496800899505615
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1351,
+            "ground_truth": 5008,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The candidate record [3] has a matching name, Fernando Fern?n G?mez, which is the same as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.5069105625152588
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1362,
+            "ground_truth": 1128,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title, episodeNumber, and seasonNumber as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.46069788932800293
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1363,
+            "ground_truth": 271,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record because it has the exact name 'Lynn Stone'.",
+            "confidence": 1.0,
+            "time": 0.49428582191467285
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1364,
+            "ground_truth": 5688,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to Charles R. Rondeau, which matches the name in the given entity record.",
+            "confidence": 1.0,
+            "time": 0.6397275924682617
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1372,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given entity record refers to Gerd Haag, a producer, director, and miscellaneous professional. The candidate records do not contain any information about a person named Gerd Haag or related professions. However, the name 'Gerd' appears in candidate record [2] as 'Gerd Mayen', which is likely a different person. Therefore, there is no corresponding record for the given entity.",
+            "confidence": 1.0,
+            "time": 0.9910478591918945
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1383,
+            "ground_truth": 4942,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The record with name Robert Butler matches the given entity record, which has a name of Robert Butler.",
+            "confidence": 1.0,
+            "time": 0.43955326080322266
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1387,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record refers to Vladim?r Mens?k, and none of the candidate records have a name that matches this exactly. However, one of the candidates has a similar-sounding last name (Mens?k vs Chorvatovi?). This is likely due to a typo or variation in spelling.",
+            "confidence": 1.0,
+            "time": 0.7774550914764404
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1423,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it contains a name that is similar to Beth Chalmers, and Tabrett Bethell is an actress, which matches one of the primary professions listed in the given record.",
+            "confidence": 1.0,
+            "time": 0.700221061706543
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1432,
+            "ground_truth": 5687,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The candidate record [5] refers to the same real-world entity as the given record, as both have the name 'Hiroshi Kamiya'.",
+            "confidence": 1.0,
+            "time": 0.5278487205505371
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1438,
+            "ground_truth": 3692,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record with name Tara Strong matches the given entity record.",
+            "confidence": 1.0,
+            "time": 0.3681671619415283
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1439,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[5]",
+            "explanation": "The record [5] refers to the same real-world entity as the given record because it contains a name that is similar to Grace Leonard, which is Laneya Grace.",
+            "confidence": 1.0,
+            "time": 0.5504415035247803
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1446,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title 'Tempest at Teapot Bay' as the given entity record, and also shares the same season number '1.0'. Although the episode numbers are different (22.0 vs 23.0), this difference is likely due to a minor discrepancy in the data.",
+            "confidence": 1.0,
+            "time": 0.7977218627929688
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1461,
+            "ground_truth": 5460,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record with title 'My Two Hands', episodeNumber '14.0', seasonNumber '5.0', startYear '1958-01-01', and genre_list 'Drama' matches the given entity record.",
+            "confidence": 1.0,
+            "time": 1.4091341495513916
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1477,
+            "ground_truth": 5934,
+            "ground_answer": 7,
+            "answer": "[7]",
+            "explanation": "The given record and candidate record [7] refer to the same real-world entity because they have matching title, episodeNumber, seasonNumber, startYear, and genre_list values.",
+            "confidence": 1.0,
+            "time": 0.6107797622680664
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1479,
+            "ground_truth": 1714,
+            "ground_answer": 1,
+            "answer": "After analyzing the given entity record and the candidate records, I found a match.\n\nThe entity record is:\n```\n[COL] name [VAL] Dimko Minov\n[COL] birthYear [VAL] 1938-01-01\n[COL] primaryProfessions [VAL] cinematographer,camera_department,actor\n```\n\nAnd one of the candidate records matches this entity:\n```\n[1]  [COL] name [VAL] Dimko Minov\n```\n\nTherefore, the output is:\n\n```json\n{\"answer\": \"[1]\", \"explanation\": \"The record with index [1] refers to the same real-world entity as the given record.\"}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 1.3190858364105225
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1500,
+            "ground_truth": 5342,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity, Mr. Wilson's Wife: Part 1.",
+            "confidence": 1.0,
+            "time": 0.504164457321167
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1506,
+            "ground_truth": 1743,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The record with name Megan Montaner has a matching entity to the given record.",
+            "confidence": 1.0,
+            "time": 0.4176514148712158
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1510,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has a title that matches the given entity's 'Trial Run' and also shares the same start year (1953-01-01) as the given entity.",
+            "confidence": 1.0,
+            "time": 0.5983667373657227
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1523,
+            "ground_truth": 958,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title, releaseDate/release_year, runtime/runtimeMinutes, and genre_list as the given entity record. This suggests that it refers to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.6081418991088867
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1536,
+            "ground_truth": 2486,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Michel Piccoli' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4358792304992676
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1543,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a name of Lee Evans which is likely a variant of Joe Evans.",
+            "confidence": 1.0,
+            "time": 0.5512042045593262
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1544,
+            "ground_truth": 4926,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title, episodeNumber, and seasonNumber as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4702169895172119
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1560,
+            "ground_truth": 1789,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title, episodeNumber, and seasonNumber as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.46405577659606934
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1607,
+            "ground_truth": 5,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'John Clive' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.43329834938049316
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1625,
+            "ground_truth": 1201,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Lon Chaney' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.43790626525878906
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1636,
+            "ground_truth": 507,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has the same name, Tito Valverde.",
+            "confidence": 1.0,
+            "time": 0.5087766647338867
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1637,
+            "ground_truth": 1969,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title, episodeNumber, seasonNumber, and startYear as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.48507237434387207
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1655,
+            "ground_truth": 3965,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same title and episode/season numbers as the given record.",
+            "confidence": 1.0,
+            "time": 3.4654390811920166
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1661,
+            "ground_truth": 1253,
+            "ground_answer": 2,
+            "answer": "[0]",
+            "explanation": "The candidate record [0] refers to the same real-world entity as the given record because it has the same title 'Finding Farideh' and release year '2018-01-01'.",
+            "confidence": 1.0,
+            "time": 0.6243269443511963
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1662,
+            "ground_truth": 45,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a name matching the given entity record, which is Barbara Kopple.",
+            "confidence": 1.0,
+            "time": 0.43857479095458984
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1677,
+            "ground_truth": 1687,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Cyril Hume' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4711418151855469
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1697,
+            "ground_truth": 5097,
+            "ground_answer": 7,
+            "answer": "[7]",
+            "explanation": "The given entity record refers to Jaume Valls, an actor. Candidate record [7] also refers to Jaume Valls.",
+            "confidence": 1.0,
+            "time": 1.1222939491271973
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1714,
+            "ground_truth": 27,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The record with name \"Edward Tang\" in candidate records matches the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4249274730682373
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1720,
+            "ground_truth": 5297,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Phil Harris' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.42769813537597656
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1724,
+            "ground_truth": 635,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The record [2] refers to the same real-world entity as the given record because it has the same name, Tony Mooney.",
+            "confidence": 1.0,
+            "time": 0.4834599494934082
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1731,
+            "ground_truth": 5050,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a name that matches the given entity record, John Tucker Battle.",
+            "confidence": 1.0,
+            "time": 0.4275021553039551
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1732,
+            "ground_truth": 4515,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching title, releaseDate, and runtime.",
+            "confidence": 1.0,
+            "time": 0.5188794136047363
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1735,
+            "ground_truth": 4148,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same title 'The Smoking Jacket' as the given entity record, indicating that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.5403056144714355
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1736,
+            "ground_truth": 5604,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it contains a name that matches Zdenek Miler.",
+            "confidence": 1.0,
+            "time": 0.5134186744689941
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1785,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given record refers to Melissa Kramper, and candidate record [1] has a name that matches this entity.",
+            "confidence": 1.0,
+            "time": 0.47086310386657715
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1787,
+            "ground_truth": 3707,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record refers to the same real-world entity as the second candidate record.",
+            "confidence": 1.0,
+            "time": 1.0268137454986572
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1807,
+            "ground_truth": 4975,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title and episode/season numbers as the given entity record, indicating that it refers to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.5421924591064453
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1809,
+            "ground_truth": 651,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as both have the name 'Suzanne Pleshette'.",
+            "confidence": 1.0,
+            "time": 0.532646894454956
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1856,
+            "ground_truth": 1321,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record because it has the same last name \"Campbell\" and first name \"Scott\", which matches the given record.",
+            "confidence": 1.0,
+            "time": 0.5810589790344238
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1867,
+            "ground_truth": 3756,
+            "ground_answer": 10,
+            "answer": "[10]",
+            "explanation": "The record with number [10] refers to the same real-world entity as the given record, which is Youssef Assad.",
+            "confidence": 1.0,
+            "time": 0.5058152675628662
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1876,
+            "ground_truth": 3799,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Michael Haley' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.42262697219848633
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1882,
+            "ground_truth": 2940,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record [4] refers to the same real-world entity as the given record, Sharpe's Enemy (1994), because it has the same title and release year.",
+            "confidence": 1.0,
+            "time": 0.6255342960357666
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1888,
+            "ground_truth": 1702,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record with name Ilse Radtke is a match for the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4228076934814453
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1890,
+            "ground_truth": 3286,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record with title 'The Happy Widow' and episodeNumber '10.0' in season '6.0' from year '1958-01-01' is the same entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.6480355262756348
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1910,
+            "ground_truth": 3989,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it contains the name Stefan Pejchev, which matches the name in the given record.",
+            "confidence": 1.0,
+            "time": 0.5727558135986328
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1913,
+            "ground_truth": 5129,
+            "ground_answer": 7,
+            "answer": "[7]",
+            "explanation": "The record with name Maria Shopova is a match for the given entity record, which also has name Maria Shopova.",
+            "confidence": 1.0,
+            "time": 0.4767122268676758
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1920,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity as they both have a name of Tracy Droz Tragos, which is likely an alias for the actress Tracy Ryan.",
+            "confidence": 1.0,
+            "time": 0.6241633892059326
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1921,
+            "ground_truth": 1519,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'John McNaughton' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4352703094482422
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1928,
+            "ground_truth": 3915,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record because it has the exact name 'Deborah Makepeace'.",
+            "confidence": 1.0,
+            "time": 0.5144338607788086
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1929,
+            "ground_truth": 3980,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The record [1] refers to the same real-world entity as the given record because it has the same name, Isabella Hofmann.",
+            "confidence": 1.0,
+            "time": 0.5040147304534912
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1945,
+            "ground_truth": 1984,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The record with name Jasna Spaic is found in candidate records, which refers to the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.49410510063171387
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1979,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a name difference of 'Monika Peitsch' and 'Monica Petit', which is likely due to a minor spelling variation.",
+            "confidence": 1.0,
+            "time": 0.6298658847808838
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2003,
+            "ground_truth": 4217,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a name that matches the given entity record's name, which is a strong indication of referring to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.5331001281738281
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2007,
+            "ground_truth": 4437,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has the exact name 'Wolfgang Reitherman'.",
+            "confidence": 1.0,
+            "time": 0.5112552642822266
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2016,
+            "ground_truth": 605,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has a matching title 'Landscape with a Woman' and start year '1989-01-01', which matches the given entity record.",
+            "confidence": 1.0,
+            "time": 0.5891509056091309
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2020,
+            "ground_truth": 3034,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title, episodeNumber, seasonNumber, and startYear as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4921104907989502
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2024,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match Karen Archer, but [0] is returned as per the instructions.",
+            "confidence": 1.0,
+            "time": 0.4334273338317871
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2036,
+            "ground_truth": 4509,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a title that matches exactly and episodeNumber, seasonNumber, releaseDate, and release_year all matching.",
+            "confidence": 1.0,
+            "time": 0.597905158996582
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2073,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "No match found, as the given entity record refers to David Blair and none of the candidate records have a name that matches.",
+            "confidence": 1.0,
+            "time": 0.4683225154876709
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2117,
+            "ground_truth": 1511,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same name as the given entity record, Matti Ij?s.",
+            "confidence": 1.0,
+            "time": 0.44617342948913574
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2139,
+            "ground_truth": 3904,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record with title 'The Accused' and episodeNumber '29.0' in seasonNumber '6.0' from the year '1959-01-01' is matched with another record with the same details.",
+            "confidence": 1.0,
+            "time": 0.6767721176147461
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2147,
+            "ground_truth": 2319,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given record refers to 'Prisoner in Paradise', which is an episode of the TV series 'Adventures in Paradise'. The candidate record [1] matches this, as it has a title of 'Adventures in Paradise' and mentions the character Adam Troy, who is also mentioned in the given record.",
+            "confidence": 1.0,
+            "time": 0.8501102924346924
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2158,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The name 'Jamie Thomas' is a common variant of 'Jimmy Thomson', and both records mention professions that could be related.",
+            "confidence": 1.0,
+            "time": 0.7188236713409424
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2171,
+            "ground_truth": 5697,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] have matching title, episodeNumber, seasonNumber, and startYear values.",
+            "confidence": 1.0,
+            "time": 0.48035550117492676
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2172,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record do not match because they have different titles, genres, and release dates.",
+            "confidence": 1.0,
+            "time": 0.4443330764770508
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2175,
+            "ground_truth": 5272,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has a matching title (F. L. V?k vs F.L. Vek), start year (1971-01-01), and genre (Drama).",
+            "confidence": 1.0,
+            "time": 0.7255716323852539
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2177,
+            "ground_truth": 3577,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record with title 'Ten Men and a Girl' in episodeNumber 8.0 and seasonNumber 7.0 matches the given entity record.",
+            "confidence": 1.0,
+            "time": 1.0937440395355225
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2185,
+            "ground_truth": 2685,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching title, episodeNumber, seasonNumber, and startYear.",
+            "confidence": 1.0,
+            "time": 0.5302934646606445
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2227,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[10]",
+            "explanation": "The record with name Armando Ferrer refers to the same real-world entity as the given record, which is Pep Ferrer.",
+            "confidence": 1.0,
+            "time": 0.5070319175720215
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2236,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidates match the given entity record. The name 'Luci Natteford' does not match any of the candidate names.",
+            "confidence": 1.0,
+            "time": 0.8256733417510986
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2267,
+            "ground_truth": 4109,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Whit Stillman' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.442462682723999
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2273,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record do not refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.39524006843566895
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2275,
+            "ground_truth": 4606,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The record with name Jacques Tourneur is a match because it has the same name as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4577200412750244
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2284,
+            "ground_truth": 4483,
+            "ground_answer": 1,
+            "answer": "[0]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, Taylor Kitsch.",
+            "confidence": 1.0,
+            "time": 0.4505488872528076
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2286,
+            "ground_truth": 1170,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The title 'The Question' in the given entity record matches with the title in candidate record [3]",
+            "confidence": 1.0,
+            "time": 1.0316417217254639
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2294,
+            "ground_truth": 1951,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Jeffrey Hayden' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4915955066680908
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2313,
+            "ground_truth": 4161,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'John McGreevey' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.473036527633667
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2330,
+            "ground_truth": 975,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity because they have matching title, episodeNumber, seasonNumber, startYear, and genre_list values.",
+            "confidence": 1.0,
+            "time": 0.5998208522796631
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2336,
+            "ground_truth": 49,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record with title 'Father Hoppe' and episodeNumber '26.0' in seasonNumber '3.0' from the year '1956-01-01' is a match for the given entity record.",
+            "confidence": 1.0,
+            "time": 0.6993732452392578
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2337,
+            "ground_truth": 644,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'David Fincher' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4316267967224121
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2350,
+            "ground_truth": 5937,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The record [1] refers to the same real-world entity as the given record because it has the same name, Christie Lee.",
+            "confidence": 1.0,
+            "time": 0.4799497127532959
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2365,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The candidate record does not match the given entity record because it has a different name, Constance Zimmer instead of Constance Ford.",
+            "confidence": 1.0,
+            "time": 0.47448015213012695
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2368,
+            "ground_truth": 261,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record 'Paradise Lost' matches with the title of candidate record [3]",
+            "confidence": 1.0,
+            "time": 1.070401668548584
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2371,
+            "ground_truth": 5349,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching title and episode/season numbers.",
+            "confidence": 1.0,
+            "time": 0.508073091506958
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2391,
+            "ground_truth": 480,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has the same title, 'The Brooch', and similar release year.",
+            "confidence": 1.0,
+            "time": 0.5584301948547363
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2450,
+            "ground_truth": 3165,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity because they have matching seasonNumber (2.0) and different episodeNumbers (12.0 in the given record, 24.0 in candidate record [1]), which suggests that they are from the same season but different episodes.",
+            "confidence": 1.0,
+            "time": 0.7810525894165039
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2471,
+            "ground_truth": 5723,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title, episodeNumber, seasonNumber, and startYear as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.48470330238342285
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2483,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[5]",
+            "explanation": "The record with name Anders Jansson is a match for Kristoffer Andersen because they both have a similar first name and last name structure, which suggests that they are the same person.",
+            "confidence": 1.0,
+            "time": 0.5639588832855225
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2513,
+            "ground_truth": 5458,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Andrea Morricone' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4530453681945801
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2521,
+            "ground_truth": 449,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, Mr. Wilson's Wife: Part 2, as they have matching title, episodeNumber, seasonNumber, startYear, and genre_list values.",
+            "confidence": 1.0,
+            "time": 0.6640949249267578
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2544,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "No matching record found",
+            "confidence": 1.0,
+            "time": 0.3067469596862793
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2547,
+            "ground_truth": 2609,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name, Michael Donovan.",
+            "confidence": 1.0,
+            "time": 0.3935580253601074
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2564,
+            "ground_truth": 2959,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, Rolf Beuckert.",
+            "confidence": 1.0,
+            "time": 0.44815564155578613
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2573,
+            "ground_truth": 5310,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The record with name Derek Simmons has the same primaryProfessions as the given entity record, which refers to the same real-world entity as Derek Simmons.",
+            "confidence": 1.0,
+            "time": 0.5098474025726318
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2609,
+            "ground_truth": 4115,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given record and candidate record [4] refer to the same real-world entity, Each Man's Island, as they have matching title, episodeNumber, seasonNumber, and startYear.",
+            "confidence": 1.0,
+            "time": 0.6280219554901123
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2614,
+            "ground_truth": 4778,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Burnie Burns' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.43839335441589355
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2628,
+            "ground_truth": 2144,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title, episodeNumber, and seasonNumber as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4417884349822998
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2638,
+            "ground_truth": 5972,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has a similar title, 'The Eternal Vow: Part 1', and matching episodeNumber and seasonNumber.",
+            "confidence": 1.0,
+            "time": 0.6177763938903809
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2648,
+            "ground_truth": 5588,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title, episodeNumber, and seasonNumber as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.47304677963256836
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2662,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records refer to Daniel Mainwaring.",
+            "confidence": 1.0,
+            "time": 0.3714456558227539
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2669,
+            "ground_truth": 5792,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching title and episode/season numbers.",
+            "confidence": 1.0,
+            "time": 0.49843263626098633
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2692,
+            "ground_truth": 4442,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has the same title 'The Weatherman' and episode/season numbers (4.0).",
+            "confidence": 1.0,
+            "time": 0.606278657913208
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2693,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The name 'Frank Zweers' is not a match, but it's close to Fritz Wepper. However, the names 'Fritz Muliar' and 'Fritz Nydegger' are exact matches with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.6540889739990234
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2706,
+            "ground_truth": 384,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Rob Paulsen' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4366919994354248
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2730,
+            "ground_truth": 4535,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it shares the name 'Bridget Regan'.",
+            "confidence": 1.0,
+            "time": 0.506089448928833
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2744,
+            "ground_truth": 1868,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record with name Mimi Freedman in candidate [3] refers to the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.5131528377532959
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2748,
+            "ground_truth": 3676,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching title and episode/season numbers.",
+            "confidence": 1.0,
+            "time": 0.5113420486450195
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2752,
+            "ground_truth": 3103,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The record at index [6] has a matching name and abstract that confirms it's the same person as Daniel Minahan, an American director and writer for film and television.",
+            "confidence": 1.0,
+            "time": 0.5673351287841797
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2774,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given entity record refers to Stuart Stone, and the candidate records do not contain any information about a person named Stuart Stone. However, one of the candidates is Stoney Burke, which seems to be related to Stuart Stone. The names are similar, but they refer to different entities. Unfortunately, there is no direct match between the given entity record and any of the candidate records.",
+            "confidence": 1.0,
+            "time": 0.8905959129333496
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2783,
+            "ground_truth": 2528,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has the exact name \"Fran?ois Sagat\".",
+            "confidence": 1.0,
+            "time": 0.5235559940338135
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2803,
+            "ground_truth": 5199,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name \"Stuart Rosenberg\" with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4353814125061035
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2817,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record do not refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.38931751251220703
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2830,
+            "ground_truth": 874,
+            "ground_answer": 2,
+            "answer": "{\n  \"properties\": {\n    \"answer\": {\n      \"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\",\n      \"title\": \"Answer\",\n      \"type\": \"string\"\n    },\n    \"explanation\": {\n      \"description\": \"A brief explanation of the answer.\",\n      \"title\": \"Explanation\",\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"answer\",\n    \"explanation\"\n  ]\n}\n\n{\n  \"answer\": \"[2]\",\n  \"explanation\": \"The record with title 'Balangiga: Howling Wilderness' and startYear '2017-01-01' is the same real-world entity as the given record.\"\n}",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 1.43807053565979
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2831,
+            "ground_truth": 4086,
+            "ground_answer": 1,
+            "answer": "[5]",
+            "explanation": "The given record refers to Elizabeth Marvel, an actress, director, and writer. The candidate record [5] is about a different person named Elizabeth, but it's a documentary series about Queen Elizabeth I of England. However, the name 'Elizabeth' is not unique among the candidates, so we need to look for other attributes that might match. In this case, the given record has a birth year and primary professions, which are not present in any of the candidate records except [5] does have a release year which could be considered as a birth year, but it's not a direct match. However, upon closer inspection, we can see that the given record is about an actress, director, and writer, while the candidate record [5] is about a documentary series. The only attribute that matches is the name 'Elizabeth', but it's not a strong enough match to consider them the same person. Therefore, I'm going to select the record with the most similar attributes, which is [5].",
+            "confidence": 1.0,
+            "time": 1.9335813522338867
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2846,
+            "ground_truth": 4962,
+            "ground_answer": 5,
+            "answer": "{\n  \"properties\": {\n    \"answer\": \"[5]\",\n    \"explanation\": \"The record with name Mikey Anderson is a match for the given entity record, as it shares the same real-world entity.\"\n  },\n  \"required\": [\n    \"answer\",\n    \"explanation\"\n  ]\n}",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 0.6936566829681396
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2848,
+            "ground_truth": 4047,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Snake Researcher, as they have matching title, episodeNumber, seasonNumber, and startYear values.",
+            "confidence": 1.0,
+            "time": 0.6054127216339111
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2874,
+            "ground_truth": 4235,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The record with name Kiefer Slaton is a match for the given entity record because it has the same name and primaryProfessions of actor.",
+            "confidence": 1.0,
+            "time": 0.5366306304931641
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2887,
+            "ground_truth": 2592,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Mary Harron' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4525008201599121
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2908,
+            "ground_truth": 347,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record with name Anna Chancellor refers to the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.7931463718414307
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2911,
+            "ground_truth": 652,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same name as the given entity record, F. Murray Abraham.",
+            "confidence": 1.0,
+            "time": 0.43619322776794434
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2929,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a name that is likely a variant of Jessie Thomson.",
+            "confidence": 1.0,
+            "time": 0.514150857925415
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2938,
+            "ground_truth": 3028,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Gerald Mayer' to the given entity record.",
+            "confidence": 1.0,
+            "time": 0.43760228157043457
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2967,
+            "ground_truth": 1277,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same title 'Steam Ship Cleaner' as the given entity record, and also matches on episodeNumber and seasonNumber.",
+            "confidence": 1.0,
+            "time": 0.5197110176086426
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2975,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record [1] both refer to a TV episode, but there is no information in the candidate records that matches the name \"David Duncan\". However, since the question asks for a match based on the entity being referred to, we can infer that the given record refers to an individual (David Duncan), and one of the candidate records also refers to an individual (although it's not explicitly stated). Therefore, we can select the first candidate record as the answer.",
+            "confidence": 1.0,
+            "time": 1.0662572383880615
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2988,
+            "ground_truth": 2338,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same title 'Out of Control' as the given entity record, and also shares the same start year '1958-01-01'.",
+            "confidence": 1.0,
+            "time": 0.5982487201690674
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2989,
+            "ground_truth": 892,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Tony Fucile' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4654676914215088
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2992,
+            "ground_truth": 3952,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same title, episode number, and season number.",
+            "confidence": 1.0,
+            "time": 0.5289804935455322
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2999,
+            "ground_truth": 5573,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Roger Miller' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4308760166168213
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3016,
+            "ground_truth": 4126,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Jean Bouise' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4453575611114502
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3021,
+            "ground_truth": 4184,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Richard Belzer' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4348940849304199
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3030,
+            "ground_truth": 1858,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record with name David Perry has a matching primaryProfessions field, which is actor,director,producer. This matches the given entity's primaryProfessions field.",
+            "confidence": 1.0,
+            "time": 0.5353155136108398
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3060,
+            "ground_truth": 4895,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The candidate record with the matching title, episode number, and season number is [4].",
+            "confidence": 1.0,
+            "time": 1.5306189060211182
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3061,
+            "ground_truth": 577,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching title and episodeNumber.",
+            "confidence": 1.0,
+            "time": 0.4989051818847656
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3071,
+            "ground_truth": 3155,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same title 'The Two-Sided Triangle' as the given entity record, indicating that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.5563602447509766
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3072,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given entity record [COL] name [VAL] Johnny Pool does not match any candidate records. The closest matches are John Pospisil, Jonathan Null, and other individuals with different names.",
+            "confidence": 1.0,
+            "time": 0.6719636917114258
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3086,
+            "ground_truth": 3272,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record with name Ric Mills is a match for the given entity record.",
+            "confidence": 1.0,
+            "time": 0.45026731491088867
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3096,
+            "ground_truth": 4496,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given record and candidate record [4] refer to the same real-world entity, 'Tales from the Cryptkeeper', as they share similar titles and release years.",
+            "confidence": 1.0,
+            "time": 0.5847678184509277
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3111,
+            "ground_truth": 3706,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same title 'Mister Softee' and episode/season numbers as the given entity record, making it a match.",
+            "confidence": 1.0,
+            "time": 0.5425598621368408
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3114,
+            "ground_truth": 1129,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same title 'Faking Miracles' as the given entity record, and also matches on episodeNumber, seasonNumber, releaseDate, and release_year.",
+            "confidence": 1.0,
+            "time": 0.5965650081634521
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3133,
+            "ground_truth": 1516,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "Record [1] refers to the same real-world entity as the given record because it has the same title \"The Baby Sitters\".",
+            "confidence": 1.0,
+            "time": 1.0081415176391602
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3156,
+            "ground_truth": 186,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has the exact name 'David H. Brooks'.",
+            "confidence": 1.0,
+            "time": 0.5119013786315918
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3157,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[9]",
+            "explanation": "The record with name 'David Simon' is a match for the given entity record because it has a similar first name and last name, suggesting that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.5828492641448975
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3163,
+            "ground_truth": 3590,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same name as the given entity record, Francisca Dores.",
+            "confidence": 1.0,
+            "time": 0.46931028366088867
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3178,
+            "ground_truth": 5950,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record because it has the same name, Robert Harmon.",
+            "confidence": 1.0,
+            "time": 0.48775577545166016
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3193,
+            "ground_truth": 4743,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching title, episodeNumber, and seasonNumber.",
+            "confidence": 1.0,
+            "time": 0.5295228958129883
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3214,
+            "ground_truth": 1931,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The record with name \"Oscar Bucher\" is a match because it has the same name as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.49220824241638184
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3217,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The candidate record [0] does not contain any information about Irene Tedrow, but it is a TV episode and Irene Tedrow was an actress. However, upon closer inspection, I found that the given entity record has a profession of 'actress' which matches with the primaryProfessions in another record. Unfortunately, there isn't enough information to confirm if this is indeed the correct match.",
+            "confidence": 1.0,
+            "time": 0.9176630973815918
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3274,
+            "ground_truth": 5984,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given record and candidate record [5] refer to the same real-world entity because they have matching title, episodeNumber, seasonNumber, startYear, and genre_list values.",
+            "confidence": 1.0,
+            "time": 0.5888886451721191
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3300,
+            "ground_truth": 2706,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a title 'Cerni baroni' and genre_list 'Comedy', matching the given record's title 'Cern? baroni' and genre_list 'Comedy'.",
+            "confidence": 1.0,
+            "time": 0.7314286231994629
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3305,
+            "ground_truth": 4452,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record with name David Steinberg matches the given entity record.",
+            "confidence": 1.0,
+            "time": 0.39814019203186035
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3342,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it contains a name that is likely a variant of \"Judy Burns\".",
+            "confidence": 1.0,
+            "time": 0.5466203689575195
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3345,
+            "ground_truth": 5591,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record [1] do not match because they have different genres (Comedy vs. Drama) and release years (2017-01-01 vs. 1955-01-01). However, the titles 'Never Wait for Seconds!' and 'The Waiting Game' are similar in meaning, suggesting that they might refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.9017133712768555
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3347,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "No matching record found",
+            "confidence": 1.0,
+            "time": 0.7203447818756104
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3374,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[7]",
+            "explanation": "The given entity record refers to Steve Rothermel, and candidate record [7] also has the name Steve Crest which is a possible match.",
+            "confidence": 1.0,
+            "time": 0.5192499160766602
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3376,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[6]",
+            "explanation": "The record [6] refers to Shannon McCormick, which is likely a variant of the given entity's name, Shannon Barrett Prynoski.",
+            "confidence": 1.0,
+            "time": 0.5095975399017334
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3397,
+            "ground_truth": 4986,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The Forbidden Guests has the same title, episodeNumber, seasonNumber, startYear (which is equivalent to release_year), genre_list, and runtimeMinutes as the given entity record.",
+            "confidence": 1.0,
+            "time": 1.1978294849395752
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3412,
+            "ground_truth": 381,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Jerry Lacy' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4330296516418457
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3441,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[6]",
+            "explanation": "The record [6] refers to the same real-world entity as the given record because it has a name that matches \"Sarah Niles\".",
+            "confidence": 1.0,
+            "time": 0.5446679592132568
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3467,
+            "ground_truth": 2182,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record with name Aleksei Smirnov in candidate records refers to the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.4952385425567627
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3468,
+            "ground_truth": 498,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The record with name Vincent Gallo matches the given entity record.",
+            "confidence": 1.0,
+            "time": 0.37819528579711914
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3503,
+            "ground_truth": 5610,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The record with name David Billings matches the given entity record.",
+            "confidence": 1.0,
+            "time": 0.37975049018859863
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3521,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[4]",
+            "explanation": "The record with name [VAL] Adelaide Clemens matches the given entity record because it has the same name and birth year, and the primary profession is also an actress.",
+            "confidence": 1.0,
+            "time": 0.5557587146759033
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3558,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching title 'The Mirror', episodeNumber '2.0', seasonNumber '1.0', and startYear '1953-01-01'.",
+            "confidence": 1.0,
+            "time": 0.6840641498565674
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3559,
+            "ground_truth": 5262,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title and episode/season numbers as the given entity record, indicating that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.5340404510498047
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3563,
+            "ground_truth": 957,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record because it has the same name, Rajeev Ravi.",
+            "confidence": 1.0,
+            "time": 0.5085599422454834
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3579,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidates match the given entity record.",
+            "confidence": 1.0,
+            "time": 0.7216424942016602
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3580,
+            "ground_truth": 2868,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has a title 'Denise Handicapped' which is very similar to the given entity record's title 'Denise Handicap'. Additionally, both records have the same episodeNumber and seasonNumber. This suggests that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.7543504238128662
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3591,
+            "ground_truth": 5411,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The candidate record [4] has the same title, episodeNumber, and seasonNumber as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.48154664039611816
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3601,
+            "ground_truth": 5444,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The record [1] refers to the same real-world entity as the given record because it has the same name, Reggie Choyce.",
+            "confidence": 1.0,
+            "time": 0.5087354183197021
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3609,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[7]",
+            "explanation": "The selected record has matching title, episodeNumber, and seasonNumber with the given entity record.",
+            "confidence": 1.0,
+            "time": 1.7127490043640137
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3628,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has a similar name, Wolfgang Dohnberg.",
+            "confidence": 1.0,
+            "time": 0.5061180591583252
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3635,
+            "ground_truth": 421,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record, with a matching name \"Ana Bel?n\".",
+            "confidence": 1.0,
+            "time": 0.514578104019165
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3644,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record because it contains a name that is similar to Wilhelm Zeno Diemer's, with 'William' being a common alternative spelling of 'Wilhelm'.",
+            "confidence": 1.0,
+            "time": 0.6653335094451904
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3651,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "No matching record found.",
+            "confidence": 1.0,
+            "time": 1.5853073596954346
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3654,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "The output should be formatted as a JSON instance that conforms to the given schema.\n\n{\n  \"answer\": \"[4]\",\n  \"explanation\": \"Kathleen McGlaughlin has the same last name and is likely referring to the same real-world entity as Kathleen O'Malley.\"\n}",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 0.633690357208252
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3691,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[4]",
+            "explanation": "The record [COL] name [VAL] Sigfrit Steiner refers to the same real-world entity as the given record because it shares a common last name \"Steiner\" with the given record.",
+            "confidence": 1.0,
+            "time": 0.6101250648498535
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3694,
+            "ground_truth": 3045,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name \"Roy Webb\" with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4300079345703125
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3697,
+            "ground_truth": 4183,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given record and candidate record [5] refer to the same real-world entity, Flamin' Lady, as they have matching title, episodeNumber, seasonNumber, and startYear.",
+            "confidence": 1.0,
+            "time": 0.6243085861206055
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3721,
+            "ground_truth": 2050,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has the same title 'Requiem for Adena', episodeNumber and seasonNumber.",
+            "confidence": 1.0,
+            "time": 0.5827805995941162
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3725,
+            "ground_truth": 1965,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching title and episode/season numbers.",
+            "confidence": 1.0,
+            "time": 0.49984073638916016
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3727,
+            "ground_truth": 5116,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity, 'Rummage Sale', as they have matching title, episodeNumber, seasonNumber, and startYear values.",
+            "confidence": 1.0,
+            "time": 0.6131629943847656
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3765,
+            "ground_truth": 3444,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The record with name Gilles Adrien has the same primaryProfessions as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.5188660621643066
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3795,
+            "ground_truth": 202,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a title of 'Sin Identidad' which is Spanish for 'Identity Crisis'.",
+            "confidence": 1.0,
+            "time": 0.5887670516967773
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3799,
+            "ground_truth": 1875,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The title, episodeNumber, seasonNumber, and startYear match between the given entity record and candidate record 1.",
+            "confidence": 1.0,
+            "time": 1.602992057800293
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3860,
+            "ground_truth": 4552,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record [1] do not refer to the same real-world entity. The given record is a movie, while candidate record [1] is a TV episode.",
+            "confidence": 1.0,
+            "time": 0.5714232921600342
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3861,
+            "ground_truth": 858,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record because it has the same title, episodeNumber, and seasonNumber.",
+            "confidence": 1.0,
+            "time": 0.5505917072296143
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3876,
+            "ground_truth": 2460,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a name matching the given entity record, which refers to Mick Jones.",
+            "confidence": 1.0,
+            "time": 0.43896055221557617
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3880,
+            "ground_truth": 1235,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Doris Petrie' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.453960657119751
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3882,
+            "ground_truth": 5657,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Mary Carrillo' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4380922317504883
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3915,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The record [1] refers to the same real-world entity as the given record because it has a similar name, Karen Miyama.",
+            "confidence": 1.0,
+            "time": 0.49070239067077637
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3944,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "No matching record found in the candidate list.",
+            "confidence": 1.0,
+            "time": 1.020221471786499
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3949,
+            "ground_truth": 5556,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record with name Tadanobu Asano matches the given entity record.",
+            "confidence": 1.0,
+            "time": 0.39999985694885254
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3958,
+            "ground_truth": 3906,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Sally Wainwright' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.45394110679626465
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3969,
+            "ground_truth": 556,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Craig Ferguson' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4220235347747803
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3982,
+            "ground_truth": 1739,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title, episodeNumber, and seasonNumber as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.47862935066223145
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3987,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "No matching record found",
+            "confidence": 1.0,
+            "time": 0.3180232048034668
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3995,
+            "ground_truth": 2272,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'John Crowley' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.42585253715515137
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3997,
+            "ground_truth": 1250,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The record with name Franco Nero matches the given entity record.",
+            "confidence": 1.0,
+            "time": 0.3653721809387207
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4009,
+            "ground_truth": 4212,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The record [6] refers to the same real-world entity as the given record, The Larry David Sandwich, because it has the same title and is also an episode of Curb Your Enthusiasm.",
+            "confidence": 1.0,
+            "time": 0.7163219451904297
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4019,
+            "ground_truth": 965,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'John Meredyth Lucas' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.45537400245666504
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4059,
+            "ground_truth": 1814,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record refers to an episode of 'Stakeout' from season 1, episode 4.0, released in 1973. The corresponding record number is [5], which matches with this information.",
+            "confidence": 1.0,
+            "time": 2.38987135887146
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4068,
+            "ground_truth": 2830,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record with title 'Mi's Girl' in candidate [4] matches the given entity record.",
+            "confidence": 1.0,
+            "time": 0.45931410789489746
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4069,
+            "ground_truth": 5295,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching name \"Radoslav Brzobohat?\".",
+            "confidence": 1.0,
+            "time": 0.5549666881561279
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4093,
+            "ground_truth": 89,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same title 'A Party for Tarzan' as the given entity record, indicating that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.5456171035766602
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4096,
+            "ground_truth": 3873,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The record with name Kate Spencer matches the given entity record, which has primaryProfessions as producer, production_manager, and miscellaneous.",
+            "confidence": 1.0,
+            "time": 0.5764248371124268
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4109,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The candidate record [1] name [VAL] Pippa Haywood does not match the given entity record because it has a different last name (Haywood vs Scott).",
+            "confidence": 1.0,
+            "time": 0.5548715591430664
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4116,
+            "ground_truth": 3450,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same title, start year (release_year), and genre_list.",
+            "confidence": 1.0,
+            "time": 0.5621380805969238
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4120,
+            "ground_truth": 4180,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record with name Pavel Hispler matches the given entity record because it has the same name and primaryProfessions is not present in this record, but we can infer that it's likely a cinematographer or camera_department based on the context.",
+            "confidence": 1.0,
+            "time": 0.6627824306488037
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4121,
+            "ground_truth": 3414,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Alison Maclean' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4252469539642334
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4157,
+            "ground_truth": 3295,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Leonard Ho' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.44577980041503906
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4164,
+            "ground_truth": 175,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record at index [3] refers to the same real-world entity as the given record, which is Larry David.",
+            "confidence": 1.0,
+            "time": 0.49062466621398926
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4175,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[7]",
+            "explanation": "Lemora Mattingly Weber and Mitchell Leisen are both writers.",
+            "confidence": 1.0,
+            "time": 0.7350687980651855
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4189,
+            "ground_truth": 2990,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The record [1] refers to the same real-world entity as the given record because it has the same name, Mathieu Blanc.",
+            "confidence": 1.0,
+            "time": 0.49028968811035156
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4191,
+            "ground_truth": 604,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has a matching name, Jerry Gracio.",
+            "confidence": 1.0,
+            "time": 0.3877074718475342
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4193,
+            "ground_truth": 2374,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The record [6] refers to the same real-world entity as the given record, Cl?udio Vidal, as it has the exact name.",
+            "confidence": 1.0,
+            "time": 0.5178651809692383
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4222,
+            "ground_truth": 328,
+            "ground_answer": 0,
+            "answer": "After analyzing the given entity record and the candidate records, I found a match.\n\nThe given entity record is:\n```\n[COL] title [VAL] The City That Bleeds\n[COL] episodeNumber [VAL] 12.0\n[COL] seasonNumber [VAL] 3.0\n[COL] startYear [VAL] 1995-01-01\n[COL] genre_list [VAL] Crime,Drama,Mystery\n```\nAnd the matching candidate record is:\n```\n[2]  [COL] title [VAL] Homicide: Life on the Street\n...\n[COL] genre_list [VAL] Crime\n```\nThe explanation for this match is that both records refer to a crime drama TV series, and while they have different titles, the given entity record's start year (1995) matches with one of the awards won by Homicide: Life on the Street in 1995.\n\nHere is the output in the required format:\n```\n{\n  \"answer\": \"[2]\",\n  \"explanation\": \"The given entity record refers to a crime drama TV series, and while it has a different title, its start year (1995) matches with one of the awards won by Homicide: Life on the Street in 1995.\"\n}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 2.3985373973846436
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4266,
+            "ground_truth": 4757,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The record [6] refers to the same real-world entity as the given record, Cressida Cowell.",
+            "confidence": 1.0,
+            "time": 0.4838907718658447
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4392,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both records have a name of Patricia.",
+            "confidence": 1.0,
+            "time": 0.4909060001373291
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4420,
+            "ground_truth": 20,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record with title 'One Little Pearl' and episodeNumber '8.0' in season '2.0' is the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.5805981159210205
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4439,
+            "ground_truth": 2296,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "Record [3] has the same title 'Rongorongo Man' and episodeNumber '21.0', seasonNumber '1.0' as the given record.",
+            "confidence": 1.0,
+            "time": 0.9690704345703125
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4443,
+            "ground_truth": 5093,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Gary Nelson' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4244840145111084
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4446,
+            "ground_truth": 2857,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The record with name Edong Canlas is a match because it refers to the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.4743809700012207
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4512,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record [1] do not refer to the same real-world entity. The given record refers to Penny Santon, an actress who died in 1999, while the candidate record refers to a TV episode titled 'A Penny a Day'.",
+            "confidence": 1.0,
+            "time": 0.714118242263794
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4529,
+            "ground_truth": 4750,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record with name David Manson has the same primaryProfessions as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.40704798698425293
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4545,
+            "ground_truth": 1028,
+            "ground_answer": 0,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record, 'The cricket', because it has a similar title.",
+            "confidence": 1.0,
+            "time": 0.5204033851623535
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4554,
+            "ground_truth": 639,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Christopher Hinton' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.45451998710632324
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4599,
+            "ground_truth": 4892,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record with the same title, episodeNumber, and seasonNumber as the given record.",
+            "confidence": 1.0,
+            "time": 1.4367330074310303
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4613,
+            "ground_truth": 2759,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'John Mankiewicz' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.45489954948425293
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4614,
+            "ground_truth": 5450,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title, episodeNumber, and seasonNumber as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.454451322555542
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4619,
+            "ground_truth": 2586,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record with name Samantha Seager matches the given entity record.",
+            "confidence": 1.0,
+            "time": 0.37360382080078125
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4637,
+            "ground_truth": 2126,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title, episodeNumber, and seasonNumber as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.47607970237731934
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4638,
+            "ground_truth": 334,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The record with title [COL] name [VAL] Ariadna Gil refers to the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.4823181629180908
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4656,
+            "ground_truth": 3883,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] have matching title, episodeNumber, seasonNumber, startYear, and genre_list values.",
+            "confidence": 1.0,
+            "time": 0.5263092517852783
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4681,
+            "ground_truth": 5976,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record with title 'Neilani' and episodeNumber '19.0' in season '1.0' is the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.5584883689880371
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4744,
+            "ground_truth": 752,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record [1] do not refer to the same real-world entity. The given record is about a TV episode, while candidate record [1] is about a movie.",
+            "confidence": 1.0,
+            "time": 0.5897529125213623
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4755,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records refer to the same real-world entity as Rossana Fern?ndez Maldonado. The names and professions do not match.",
+            "confidence": 1.0,
+            "time": 0.5312414169311523
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4765,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity because they have matching episodeNumber, seasonNumber, and title values.",
+            "confidence": 1.0,
+            "time": 0.5225300788879395
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4787,
+            "ground_truth": 3403,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same name as the given entity record, Gerhard Rosenfeld.",
+            "confidence": 1.0,
+            "time": 0.4380497932434082
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4788,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record.",
+            "confidence": 1.0,
+            "time": 0.38175368309020996
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4794,
+            "ground_truth": 4175,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given record and candidate record [5] refer to the same real-world entity, Marriage Crisis, as they have matching title, episodeNumber, seasonNumber, startYear, and genre_list values.",
+            "confidence": 1.0,
+            "time": 0.6510734558105469
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4801,
+            "ground_truth": 6048,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same name as the given entity record, referring to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.4450874328613281
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4821,
+            "ground_truth": 5186,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record refers to the TV series 'Greensburg' which is also mentioned in candidate record [1].",
+            "confidence": 1.0,
+            "time": 0.5147027969360352
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4825,
+            "ground_truth": 1152,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Woody Allen' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.43590402603149414
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4830,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidates match the given entity record. The primaryProfessions column is not present in any of the candidate records.",
+            "confidence": 1.0,
+            "time": 0.4691786766052246
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4857,
+            "ground_truth": 2088,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity, The Years Between, as they have matching title, episodeNumber, seasonNumber, startYear, and genre_list values.",
+            "confidence": 1.0,
+            "time": 0.6445882320404053
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4862,
+            "ground_truth": 628,
+            "ground_answer": 4,
+            "answer": "After analyzing the given entity record and the candidate records, I have found a match.\n\nThe corresponding record number is: [4]\n\nHere's why:\n\n* The title of the given entity record is \"The Fortune Teller\" which matches with the title of candidate record 4.\n* The episodeNumber, seasonNumber, releaseDate, and release_year of the given entity record all match with those of candidate record 4.\n\nTherefore, the answer is: [4]\n\nAnd here's a brief explanation:\n\nThis record corresponds to the same real-world entity as the given record because it has the exact same title, episode number, season number, release date, and release year.",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 1.3083994388580322
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4868,
+            "ground_truth": 2078,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The record with name Julian Ras is a match for the given entity record, as both have the same name and primaryProfession of actor.",
+            "confidence": 1.0,
+            "time": 0.513538122177124
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4876,
+            "ground_truth": 2529,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record because it has the same name, Bob Miano.",
+            "confidence": 1.0,
+            "time": 0.4891362190246582
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4886,
+            "ground_truth": 4003,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record with title 'Decision', episodeNumber '20.0', and seasonNumber '2.0' matches the given entity record.",
+            "confidence": 1.0,
+            "time": 1.0923569202423096
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4892,
+            "ground_truth": 1275,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record with title 'The Fires of Kanua' and episodeNumber '8.0' in seasonNumber '3.0' is matched with the candidate record [4] which has the same values for these fields.",
+            "confidence": 1.0,
+            "time": 0.7061731815338135
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4899,
+            "ground_truth": 5974,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The title 'The Wanderer' matches with candidate record [5]",
+            "confidence": 1.0,
+            "time": 0.8309969902038574
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4903,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The candidate record [0] does not match the given entity record. The names 'Serge Bromberg' and 'Sergey Bondarchuk' are different, but they could be referring to the same person if 'Sergey' is a variant of 'Serge'. However, there is no clear indication that this is the case.",
+            "confidence": 1.0,
+            "time": 0.8257021903991699
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4904,
+            "ground_truth": 2704,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity, Jacques P?pin: Fast Food My Way.",
+            "confidence": 1.0,
+            "time": 0.5925083160400391
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4921,
+            "ground_truth": 1932,
+            "ground_answer": 1,
+            "answer": "[0]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record, as it contains information about a movie with a similar title and abstract that matches the profession of Mine Vargi as a producer.",
+            "confidence": 1.0,
+            "time": 0.6687161922454834
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4930,
+            "ground_truth": 1625,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record with name David Milch refers to the same real-world entity as the given record, which is also named David Milch.",
+            "confidence": 1.0,
+            "time": 0.5175862312316895
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4941,
+            "ground_truth": 2793,
+            "ground_answer": 10,
+            "answer": "[10]",
+            "explanation": "The record with name Nicolas Gruber is matched to itself, which confirms that it refers to the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.5015947818756104
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4947,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record do not refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.4043149948120117
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4949,
+            "ground_truth": 64,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record [4] refers to the same real-world entity as the given record, 'Die Abenteuer des braven Soldaten Schwejk', with a similar title and release year.",
+            "confidence": 1.0,
+            "time": 0.6564967632293701
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4980,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name 'Ken Ard' with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4305293560028076
+        },
+        {
+            "dataset": "D5",
+            "query_id": 4990,
+            "ground_truth": 1577,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record with number [3] has the same name, Eric M. Cuatico, as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4862661361694336
+        },
+        {
+            "dataset": "D5",
+            "query_id": 5000,
+            "ground_truth": 1223,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity, 'Dangerous Channel', as they have matching title, episodeNumber, seasonNumber, startYear, and genre_list values.",
+            "confidence": 1.0,
+            "time": 0.6404948234558105
+        },
+        {
+            "dataset": "D5",
+            "query_id": 5022,
+            "ground_truth": 4201,
+            "ground_answer": 9,
+            "answer": "[4]",
+            "explanation": "The record [COL] name [VAL] Gummaluri Sastry has a similar name to the given entity record [COL] name [VAL] Gummaluri Sastri, indicating they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.668419599533081
+        },
+        {
+            "dataset": "D5",
+            "query_id": 5053,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The record [0] refers to the same real-world entity as the given record because it has a name that is similar to Cynthia Hope, which is the primary profession of the given record.",
+            "confidence": 1.0,
+            "time": 0.577101469039917
+        },
+        {
+            "dataset": "D5",
+            "query_id": 5095,
+            "ground_truth": 122,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given record and candidate record [4] refer to the same real-world entity, as they have matching title, episodeNumber, seasonNumber, and startYear values.",
+            "confidence": 1.0,
+            "time": 0.6052389144897461
+        },
+        {
+            "dataset": "D5",
+            "query_id": 5098,
+            "ground_truth": 4953,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same name as the given entity record, which is a strong match for the real-world entity.",
+            "confidence": 1.0,
+            "time": 0.48528218269348145
+        },
+        {
+            "dataset": "D5",
+            "query_id": 5116,
+            "ground_truth": 5265,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name \"G?rard Lartigau\" with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.47533249855041504
+        }
+    ]
+}

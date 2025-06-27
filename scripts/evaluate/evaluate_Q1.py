@@ -39,9 +39,12 @@ latex_code = df.to_latex(index=True, escape=False, multirow=False)
 path = '../../data/ccer/cleaned/'
 
 scores = pd.DataFrame()
-scores['Positive-Random'] = prepare_distr(path+'fine_tuning_random/train/', 'positive')
-scores['Negative-Random'] = prepare_distr(path+'fine_tuning_random/train/', 'negative')
-scores['Positive-Blocking'] = prepare_distr(path+'fine_tuning/train/', 'positive')
-scores['Negative-Blocking'] = prepare_distr(path+'fine_tuning/train/', 'negative')
-scores['Positive-Sampled'] = prepare_distr(path+'fine_tuning_sample/train/', 'positive')
-scores['Negative-Sampled'] = prepare_distr(path+'fine_tuning_sample/train/', 'negative')
+scores['Positive-Random'] = prepare_distr(path+'fine_tuning/random/train/', 'positive')
+scores['Negative-Random'] = prepare_distr(path+'fine_tuning/random/train/', 'negative')
+scores['Positive-Blocking'] = prepare_distr(path+'fine_tuning/blocking/train/', 'positive')
+scores['Negative-Blocking'] = prepare_distr(path+'fine_tuning/blocking/train/', 'negative')
+scores['Positive-Sampled'] = prepare_distr(path+'fine_tuning/sampled/train/', 'positive')
+scores['Negative-Sampled'] = prepare_distr(path+'fine_tuning/sampled/train/', 'negative')
+
+scores = prepare_df(scores)
+latex_code_2 = scores.to_latex(index=True, escape=False, multirow=False)
