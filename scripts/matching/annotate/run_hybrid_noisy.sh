@@ -26,30 +26,30 @@ for i in "${!slm_models[@]}"; do
 
             python ../plm/transform_data_plm.py \
                 --dataset "$dir" \
-                --out_dir "../../../log/matching/annotate/$slm_model/${noisy}/data/$dir/"  \
+                --out_dir "../../../log/matching/annotate/blocking/$slm_model/${noisy}/data/$dir/"  \
                 --in_dir "../../../data/ccer/cleaned/original/" \
-                --sample_file "../../../data/ccer/cleaned/fine_tuning/train/$dir.csv" \
+                --sample_file "../../../data/ccer/cleaned/fine_tuning/blocking/train/$dir.csv" \
                 --seed $seed \
                 --serialization "DITTO" \
                 --percentage 0.8 \
                 --mode "train" \
-                --response_file "../../../log/matching/annotate/${noisy}/partial_responses/${dir}_${seed}_responses.json"
+                --response_file "../../../log/matching/annotate/blocking/${noisy}/partial_responses/${dir}_${seed}_responses.json"
         done
     done
 
     # Step 2: Merge transformed data
     python merge_data.py \
-        --in_dir "../../../log/matching/annotate/$slm_model/${noisy}/data" \
-        --out_dir "../../../log/matching/annotate/$slm_model/${noisy}/data/total/" \
+        --in_dir "../../../log/matching/annotate/blocking/$slm_model/${noisy}/data" \
+        --out_dir "../../../log/matching/annotate/blocking/$slm_model/${noisy}/data/total/" \
         --percentage 0.8
 
     # Step 3: Fine-tune the SLM model
     python ../plm/supervised_main.py \
         --model_type "$slm_model" \
         --model_name_or_path "$slm_path" \
-        --data_dir "../../../log/matching/annotate/$slm_model/${noisy}/data/" \
-        --log_dir "../../../log/matching/annotate/$slm_model/${noisy}/log/" \
-        --exp_dir "../../../log/matching/annotate/$slm_model/${noisy}/exp/" \
+        --data_dir "../../../log/matching/annotate/blocking/$slm_model/${noisy}/data/" \
+        --log_dir "../../../log/matching/annotate/blocking/$slm_model/${noisy}/log/" \
+        --exp_dir "../../../log/matching/annotate/blocking/$slm_model/${noisy}/exp/" \
         --data_name "total" \
         --train_batch_size 16 \
         --eval_batch_size 16 \
@@ -63,16 +63,16 @@ for i in "${!slm_models[@]}"; do
 
         python ../build_prompt.py \
             --dataset "$dir" \
-            --out_file "../../../log/matching/annotate/$slm_model/${noisy}/partial/${dir}_1924.json" \
+            --out_file "../../../log/matching/annotate/blocking/$slm_model/${noisy}/partial/${dir}_1924.json" \
             --in_dir "../../../data/ccer/cleaned/original/" \
-            --sample_file "../../../data/ccer/cleaned/fine_tuning/train/$dir.csv" \
+            --sample_file "../../../data/ccer/cleaned/fine_tuning/blocking/train/$dir.csv" \
             --seed 1924 \
             --serialization "DITTO" \
             --task_description "EXPLAIN"
 
         python ../embed_noisy.py \
-            --prompts "../../../log/matching/annotate/$slm_model/${noisy}/partial/${dir}_1924.json" \
-            --labels "../../../log/matching/annotate/$slm_model/${noisy}/log/total_predictions.csv" \
-            --out_file "../../../log/matching/annotate/$slm_model/${noisy}/partial_noisy/${dir}_1924.json"
+            --prompts "../../../log/matching/annotate/blocking/$slm_model/${noisy}/partial/${dir}_1924.json" \
+            --labels "../../../log/matching/annotate/blocking/$slm_model/${noisy}/log/total_predictions.csv" \
+            --out_file "../../../log/matching/annotate/blocking/$slm_model/${noisy}/partial_noisy/${dir}_1924.json"
     done
 done

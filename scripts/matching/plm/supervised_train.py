@@ -62,7 +62,7 @@ if __name__ == "__main__":
                                      tokenizer,
                                      # args.max_seq_length,
                                      args.train_batch_size,
-                                     DataType.TRAINING, args.model_type)
+                                     DataType.TRAINING, args.model_type, log_dir=args.log_dir)
     logging.info("loaded {} training examples".format(len(train_examples)))
 
     num_train_steps = len(training_data_loader) * args.num_epochs
@@ -81,7 +81,7 @@ if __name__ == "__main__":
                                        tokenizer,
                                        # args.max_seq_length,
                                        args.eval_batch_size,
-                                       DataType.EVALUATION, args.model_type)
+                                       DataType.EVALUATION, args.model_type, log_dir=args.log_dir)
 
     evaluation = Evaluation(evaluation_data_loader, exp_name, args.model_output_dir, len(label_list), args.model_type)
     logging.info("loaded and initialized evaluation examples {}".format(len(eval_examples)))

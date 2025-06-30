@@ -11,6 +11,131 @@ from pytorch_transformers import AdamW, WarmupLinearSchedule
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, \
                         RobertaConfig, RobertaForSequenceClassification, RobertaTokenizer
 import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+import joblib
+import re
+
+class SentenceTrimmer:
+    def __init__(self, background_corpus=None, fitted_vectorizer=None):
+        if fitted_vectorizer:
+            self.vectorizer = fitted_vectorizer
+        elif background_corpus:
+            self.vectorizer = TfidfVectorizer(lowercase=True, stop_words='english')
+            self.vectorizer.fit(background_corpus)
+        else:
+            raise ValueError("Either background_corpus or fitted_vectorizer must be provided.")
+        self.feature_names = self.vectorizer.get_feature_names_out()
+
+    def trim(self, sentence, keep_ratio=0.2):
+        sentence_lower = sentence.lower()
+        tfidf_vector = self.vectorizer.transform([sentence_lower]).toarray().flatten()
+        
+        word_scores = {word: score for word, score in zip(self.feature_names, tfidf_vector)}
+        analyze = self.vectorizer.build_analyzer()
+        words = analyze(sentence)
+
+        words_sorted = sorted(words, key=lambda w: word_scores.get(w, 0))
+        keep_count = max(1, int(len(words) * keep_ratio))
+        keep_words = set(words_sorted[-keep_count:])
+
+        trimmed = ' '.join([w for w in words if w in keep_words])
+        return trimmed
+    
+    def smart_trim_pair(self, text_a, text_b, max_tokens, tokenizer):
+        """
+        Trims the value parts of two [COL]...[VAL]... strings using TF-IDF.
+        Removes tokens from both sides until total tokens <= max_tokens.
+        Includes all tokens in token count but excludes [COL] labels and column names for TF-IDF scoring.
+        """
+    
+        def extract_col_text(text):
+            return [x for x in re.findall(r'\[COL\] (.*?)', text)]
+    
+        val_text_a = re.sub(r'\[COL\][^\[]*?\[VAL\]', '', text_a).strip()
+        val_text_b = re.sub(r'\[COL\][^\[]*?\[VAL\]', '', text_b).strip()
+    
+        full_tokens_a = tokenizer.tokenize(text_a)
+        full_tokens_b = tokenizer.tokenize(text_b)
+        
+        val_tokens_a = tokenizer.tokenize(val_text_a)
+        val_tokens_b = tokenizer.tokenize(val_text_b)
+        
+        if len(full_tokens_a) + len(full_tokens_b) <= max_tokens:
+            return full_tokens_a, full_tokens_b
+
+        # Step 1: Compute TF-IDF on clean value text only (excluding column names etc.)
+        all_docs = [' '.join(val_tokens_a), ' '.join(val_tokens_b)]
+        tfidf_matrix = self.vectorizer.transform(all_docs)
+        vocab = self.vectorizer.get_feature_names_out()
+
+        tfidf_scores = []
+        # Iterate over non-zero TF-IDF entries
+        for doc_no, doc_vector in enumerate(tfidf_matrix):
+            for token_idx in doc_vector.nonzero()[1]:  # get column indices of non-zero elements
+                tfidf_score = doc_vector[0, token_idx]
+                tfidf_scores.append((doc_no, vocab[token_idx], float(tfidf_score)))
+        tfidf_scores = sorted(tfidf_scores, key=lambda x: x[2], reverse=False)
+        
+        
+        for no, (doc_idx, token, score) in enumerate(tfidf_scores):
+            token = 'Ġ' + token[1:]
+            if len(full_tokens_a) + len(full_tokens_b) <= max_tokens:
+                break
+            if doc_idx == 0 and token in full_tokens_a:
+                full_tokens_a.remove(token)
+                # drop_tokens_a.add(token)
+            if doc_idx == 1 and token in full_tokens_b:
+                full_tokens_b.remove(token)
+                # drop_tokens_b.add(token)
+        
+        # In case not <= max_tokens and some tokens have no tf-idf scores, remove randomly
+        while True:
+            total_length = len(full_tokens_a) + len(full_tokens_b)
+            if total_length <= max_tokens:
+                break
+            if len(full_tokens_a) > len(full_tokens_b):
+                full_tokens_a.pop()
+            else:
+                full_tokens_b.pop()
+        
+        return full_tokens_a, full_tokens_b
+
+    def save(self, path):
+        joblib.dump(self.vectorizer, path)
+
+    @classmethod
+    def load(cls, path):
+        vectorizer = joblib.load(path)
+        return cls(fitted_vectorizer=vectorizer)
+
+
+
+def transform_val_fields(text, trimmer, keep_ratio):
+    pattern = r'(\[COL\] .*? \[VAL\]) (.*?)(?=\[COL\]|$)'
+
+    rebuilt = ''
+    last_end = 0
+
+    for match in re.finditer(pattern, text):
+        prefix = match.group(1)
+        value = match.group(2)
+
+        # Preserve text before the match
+        rebuilt += text[last_end:match.start()]
+
+        # Decide whether to transform or not
+        if len(value.split(' ')) < 4:
+            transformed_value = value
+        else:
+            transformed_value = trimmer.trim(value, keep_ratio=keep_ratio)
+
+        rebuilt += f"{prefix} {transformed_value}"
+        last_end = match.end()
+
+    # Add remaining tail
+    rebuilt += text[last_end:]
+
+    return rebuilt
 
 
 def build_optimizer(model, num_train_steps, learning_rate, adam_eps, warmup_steps, weight_decay):
@@ -60,9 +185,27 @@ class DataType(Enum):
 
 def load_data(examples, label_list, tokenizer, 
               # max_seq_length,
-              batch_size, data_type: DataType, model_type):
+              batch_size, data_type: DataType, model_type, log_dir):
     logging.info("***** Convert Data to Features (Word-Piece Tokenizing) [{}] *****".format(data_type))
     
+    if data_type == DataType.TRAINING:
+        background = []
+        
+        for (ex_index, example) in enumerate(examples):
+            background.append(' '.join(tokenizer.tokenize(example.text_a)))
+            background.append(' '.join(tokenizer.tokenize(example.text_b)))
+        
+        # reg = r'(?<=\[VAL\])(.*?)(?=\[COL\]|$)'
+        # for (ex_index, example) in enumerate(examples):
+            # background += re.findall(reg, example.text_a)
+            # background += re.findall(reg, example.text_b)
+            
+        trimmer = SentenceTrimmer(background)
+        os.makedirs(log_dir, exist_ok=True)
+        trimmer.save(log_dir+"tfidf_trimmer.pkl")
+    else:
+        trimmer = SentenceTrimmer.load(log_dir+"tfidf_trimmer.pkl")
+        
     features = convert_examples_to_features(examples,
                                             label_list,
                                             # max_seq_length,
@@ -77,7 +220,8 @@ def load_data(examples, label_list, tokenizer,
                                             # roberta uses an extra separator b/w pairs of sentences, cf. github.com/pytorch/fairseq/commit/1684e166e3da03f5b600dbb7855cb98ddfcd0805
                                             pad_on_left=bool(model_type in ['xlnet']),  # pad on the left for xlnet
                                             pad_token=tokenizer.convert_tokens_to_ids([tokenizer.pad_token])[0],
-                                            pad_token_segment_id=4 if model_type in ['xlnet'] else 0,)
+                                            pad_token_segment_id=4 if model_type in ['xlnet'] else 0,
+                                            trimmer=trimmer)
 
     logging.info("***** Build PyTorch DataLoader with extracted features [{}] *****".format(data_type))
     logging.info("  Num examples = %d", len(examples))
@@ -353,8 +497,7 @@ def _truncate_seq_pair(id, tokens_a, tokens_b, max_length):
             tokens_a.pop()
         else:
             tokens_b.pop()
-
-
+            
 def get_max_sequence_length_from_dataset(examples, tokenizer, sep_token_extra=False):
     lengths = []
     for example in examples:
@@ -384,7 +527,9 @@ def convert_examples_to_features(examples, label_list,
                                  pad_token_segment_id=0,
                                  sequence_a_segment_id=0,
                                  sequence_b_segment_id=1,
-                                 mask_padding_with_zero=True):
+                                 mask_padding_with_zero=True,
+                                 trimmer=None,
+                                 keep_ratio=0.8):
     """ Loads a data file into a list of `InputBatch`s
         `cls_token_at_end` define the location of the CLS token:
             - False (Default, BERT/XLM pattern): [CLS] + A + [SEP] + B + [SEP]
@@ -393,8 +538,7 @@ def convert_examples_to_features(examples, label_list,
     """
 
     max_seq_length = min(get_max_sequence_length_from_dataset(examples, tokenizer),
-                         tokenizer.model_max_length)
-
+                        tokenizer.model_max_length)
 
     label_map = {label: i for i, label in enumerate(label_list)}
 
@@ -412,7 +556,11 @@ def convert_examples_to_features(examples, label_list,
             # length is less than the specified length.
             # Account for [CLS], [SEP], [SEP] with "- 3". " -4" for RoBERTa.
             special_tokens_count = 4 if sep_token_extra else 3
-            _truncate_seq_pair(example.guid, tokens_a, tokens_b, max_seq_length - special_tokens_count)
+            
+            if trimmer is None:
+                _truncate_seq_pair(example.guid, tokens_a, tokens_b, max_seq_length - special_tokens_count)
+            else:
+                tokens_a, tokens_b = trimmer.smart_trim_pair(example.text_a, example.text_b, max_seq_length - special_tokens_count, tokenizer)
         else:
             # Account for [CLS] and [SEP] with "- 2" and with "- 3" for RoBERTa.
             special_tokens_count = 3 if sep_token_extra else 2
@@ -475,7 +623,7 @@ def convert_examples_to_features(examples, label_list,
         assert len(input_ids) == max_seq_length
         assert len(input_mask) == max_seq_length
         assert len(segment_ids) == max_seq_length
-
+              
         if output_mode == "classification":
             label_id = label_map[example.label]
         elif output_mode == "regression":

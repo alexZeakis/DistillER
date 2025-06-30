@@ -43,7 +43,7 @@ if __name__ == "__main__":
         tokenizer,
         args.eval_batch_size,
         DataType.TEST,
-        args.model_type
+        args.model_type, log_dir=args.log_dir
     )
 
     include_token_type_ids = args.model_type == 'bert'
