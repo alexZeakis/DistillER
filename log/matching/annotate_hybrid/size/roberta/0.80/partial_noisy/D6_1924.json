@@ -1,7 +1,7 @@
 {
     "settings": {
         "dataset": "D6",
-        "out_file": "../../../log/matching/annotate_hybrid_llm/roberta/0.80/partial/D6_1924.json",
+        "out_file": "../../../log/matching/annotate_hybrid/size/roberta/0.80/partial/D6_1924.json",
         "in_dir": "../../../data/ccer/cleaned/original/",
         "sample_file": "../../../data/ccer/cleaned/fine_tuning/blocking/train/D6.csv",
         "seed": 1924,
@@ -99,25 +99,6 @@
             "noise_answer": 7
         },
         {
-            "query_id": "82_1",
-            "ground_truth": -1,
-            "ground_answer": 0,
-            "options": [
-                1826,
-                407,
-                949,
-                801,
-                4361,
-                3955,
-                2011,
-                6772,
-                1652,
-                1719
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Tucker Gates [COL] primaryProfessions [VAL] director,producer,miscellaneous\n \nCandidate records:\n [1]  [COL] name [VAL] Tucker Gates [COL] job [VAL] directors\n[2]  [COL] name [VAL] Allen Coulter [COL] job [VAL] directors\n[3]  [COL] name [VAL] Ed Bye [COL] job [VAL] director\n[4]  [COL] name [VAL] Michael Fields [COL] job [VAL] director\n[5]  [COL] name [VAL] Charles McDougall [COL] job [VAL] director\n[6]  [COL] name [VAL] Allen Coulter [COL] job [VAL] director\n[7]  [COL] name [VAL] Tucker Gates [COL] job [VAL] director\n[8]  [COL] name [VAL] Keith Truesdell [COL] job [VAL] director\n[9]  [COL] name [VAL] Charles McDougall [COL] job [VAL] directors\n[10]  [COL] name [VAL] Michael Fields [COL] job [VAL] directors\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 1
-        },
-        {
             "query_id": "91_0",
             "ground_truth": 3404,
             "ground_answer": 1,
@@ -149,17 +130,6 @@
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] J?rgen Goslar [COL] birthYear [VAL] 1927-01-01 [COL] primaryProfessions [VAL] director,actor,writer\n \nCandidate records:\n [1]  [COL] name [VAL] J?rgen Goslar [COL] job [VAL] director\n[2]  [COL] name [VAL] J?rgen Goslar [COL] job [VAL] directors\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 1
-        },
-        {
-            "query_id": "106_1",
-            "ground_truth": -1,
-            "ground_answer": 0,
-            "options": [
-                1767,
-                387
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] J?rgen Goslar [COL] birthYear [VAL] 1927-01-01 [COL] primaryProfessions [VAL] director,actor,writer\n \nCandidate records:\n [1]  [COL] name [VAL] J?rgen Goslar [COL] job [VAL] director\n[2]  [COL] name [VAL] J?rgen Goslar [COL] job [VAL] directors\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 2
         },
         {
             "query_id": "114_0",
@@ -432,6 +402,25 @@
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Paul Boocock [COL] primaryProfessions [VAL] actor\n \nCandidate records:\n [1]  [COL] name [VAL] Richard Brooks [COL] job [VAL] actor\n[2]  [COL] name [VAL] Paul Boocock [COL] job [VAL] guestStars\n[3]  [COL] name [VAL] Patrick Warburton [COL] job [VAL] actor\n[4]  [COL] name [VAL] Paul Boocock [COL] job [VAL] actor\n[5]  [COL] name [VAL] Robert Bockstael [COL] job [VAL] actor\n[6]  [COL] name [VAL] Park Bo-gum [COL] job [VAL] actor\n[7]  [COL] name [VAL] Paul Sparks [COL] job [VAL] actor\n[8]  [COL] name [VAL] Paul Copley [COL] job [VAL] actor\n[9]  [COL] name [VAL] Rob Paulsen [COL] job [VAL] actor\n[10]  [COL] name [VAL] Patricia Clarkson [COL] job [VAL] actor\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 4
+        },
+        {
+            "query_id": "520_1",
+            "ground_truth": 1720,
+            "ground_answer": 4,
+            "options": [
+                5365,
+                164,
+                3056,
+                1720,
+                6304,
+                6033,
+                5737,
+                7049,
+                5002,
+                5156
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Paul Boocock [COL] primaryProfessions [VAL] actor\n \nCandidate records:\n [1]  [COL] name [VAL] Richard Brooks [COL] job [VAL] actor\n[2]  [COL] name [VAL] Paul Boocock [COL] job [VAL] guestStars\n[3]  [COL] name [VAL] Patrick Warburton [COL] job [VAL] actor\n[4]  [COL] name [VAL] Paul Boocock [COL] job [VAL] actor\n[5]  [COL] name [VAL] Robert Bockstael [COL] job [VAL] actor\n[6]  [COL] name [VAL] Park Bo-gum [COL] job [VAL] actor\n[7]  [COL] name [VAL] Paul Sparks [COL] job [VAL] actor\n[8]  [COL] name [VAL] Paul Copley [COL] job [VAL] actor\n[9]  [COL] name [VAL] Rob Paulsen [COL] job [VAL] actor\n[10]  [COL] name [VAL] Patricia Clarkson [COL] job [VAL] actor\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
+            "noise_answer": 2
         },
         {
             "query_id": "522_0",
@@ -1073,25 +1062,6 @@
             "noise_answer": 7
         },
         {
-            "query_id": "1223_1",
-            "ground_truth": -1,
-            "ground_answer": 0,
-            "options": [
-                2391,
-                143,
-                924,
-                554,
-                6201,
-                4456,
-                2786,
-                6326,
-                1368,
-                1500
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Whitney Ransick [COL] primaryProfessions [VAL] director,producer,writer\n \nCandidate records:\n [1]  [COL] name [VAL] Roxann Dawson [COL] job [VAL] directors\n[2]  [COL] name [VAL] Christine Gernon [COL] job [VAL] directors\n[3]  [COL] name [VAL] Robin Wright [COL] job [VAL] directors\n[4]  [COL] name [VAL] Whitney Ransick [COL] job [VAL] directors\n[5]  [COL] name [VAL] Whit Stillman [COL] job [VAL] directors\n[6]  [COL] name [VAL] Jesse Warn [COL] job [VAL] directors\n[7]  [COL] name [VAL] Whitney Ransick [COL] job [VAL] director\n[8]  [COL] name [VAL] Whit Stillman [COL] job [VAL] director\n[9]  [COL] name [VAL] Robin Wright [COL] job [VAL] director\n[10]  [COL] name [VAL] Roxann Dawson [COL] job [VAL] director\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 4
-        },
-        {
             "query_id": "1228_0",
             "ground_truth": 671,
             "ground_answer": 3,
@@ -1189,7 +1159,7 @@
                 4902
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] John David Coles [COL] primaryProfessions [VAL] producer,director,editorial_department\n \nCandidate records:\n [1]  [COL] name [VAL] John Crowley [COL] job [VAL] directors\n[2]  [COL] name [VAL] John David Coles [COL] job [VAL] director\n[3]  [COL] name [VAL] John Coles [COL] job [VAL] directors\n[4]  [COL] name [VAL] John Dahl [COL] job [VAL] directors\n[5]  [COL] name [VAL] John David Coles [COL] job [VAL] directors\n[6]  [COL] name [VAL] John Coles [COL] job [VAL] director\n[7]  [COL] name [VAL] John R. Pepper [COL] job [VAL] directors\n[8]  [COL] name [VAL] John Dahl [COL] job [VAL] director\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 2
+            "noise_answer": 0
         },
         {
             "query_id": "1351_0",
@@ -1418,23 +1388,6 @@
             "noise_answer": 8
         },
         {
-            "query_id": "1581_1",
-            "ground_truth": -1,
-            "ground_answer": 0,
-            "options": [
-                85,
-                3,
-                3381,
-                7067,
-                7358,
-                3716,
-                4402,
-                7209
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Dieter Lemmel [COL] birthYear [VAL] 1924-01-01 [COL] primaryProfessions [VAL] director,writer,producer\n \nCandidate records:\n [1]  [COL] name [VAL] Henry Bromell [COL] job [VAL] director\n[2]  [COL] name [VAL] Henry Bromell [COL] job [VAL] directors\n[3]  [COL] name [VAL] Theodor Gr?dler [COL] job [VAL] director\n[4]  [COL] name [VAL] Dieter Lemmel [COL] job [VAL] directors\n[5]  [COL] name [VAL] Lee Shallat-Chemel [COL] job [VAL] directors\n[6]  [COL] name [VAL] Gene Levitt [COL] job [VAL] directors\n[7]  [COL] name [VAL] Gene Levitt [COL] job [VAL] director\n[8]  [COL] name [VAL] Dieter Lemmel [COL] job [VAL] director\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 4
-        },
-        {
             "query_id": "1592_0",
             "ground_truth": 3947,
             "ground_answer": 7,
@@ -1653,25 +1606,6 @@
                 1589
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Jean de Segonzac [COL] primaryProfessions [VAL] director,cinematographer,camera_department\n \nCandidate records:\n [1]  [COL] name [VAL] Dean Parisot [COL] job [VAL] directors\n[2]  [COL] name [VAL] Jun Ki Sang [COL] job [VAL] directors\n[3]  [COL] name [VAL] Jorge Zamacona [COL] job [VAL] director\n[4]  [COL] name [VAL] Jean de Segonzac [COL] job [VAL] director\n[5]  [COL] name [VAL] Jacques Tourneur [COL] job [VAL] directors\n[6]  [COL] name [VAL] Jacques Tourneur [COL] job [VAL] director\n[7]  [COL] name [VAL] Simon Delaney [COL] job [VAL] directors\n[8]  [COL] name [VAL] Marie P?rennou [COL] job [VAL] directors\n[9]  [COL] name [VAL] Jorge Zamacona [COL] job [VAL] directors\n[10]  [COL] name [VAL] Jean de Segonzac [COL] job [VAL] directors\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 10
-        },
-        {
-            "query_id": "1783_1",
-            "ground_truth": -1,
-            "ground_answer": 0,
-            "options": [
-                2608,
-                569,
-                1277,
-                1201,
-                6205,
-                4621,
-                3539,
-                7489,
-                1548,
-                1589
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Jean de Segonzac [COL] primaryProfessions [VAL] director,cinematographer,camera_department\n \nCandidate records:\n [1]  [COL] name [VAL] Dean Parisot [COL] job [VAL] directors\n[2]  [COL] name [VAL] Jun Ki Sang [COL] job [VAL] directors\n[3]  [COL] name [VAL] Jorge Zamacona [COL] job [VAL] director\n[4]  [COL] name [VAL] Jean de Segonzac [COL] job [VAL] director\n[5]  [COL] name [VAL] Jacques Tourneur [COL] job [VAL] directors\n[6]  [COL] name [VAL] Jacques Tourneur [COL] job [VAL] director\n[7]  [COL] name [VAL] Simon Delaney [COL] job [VAL] directors\n[8]  [COL] name [VAL] Marie P?rennou [COL] job [VAL] directors\n[9]  [COL] name [VAL] Jorge Zamacona [COL] job [VAL] directors\n[10]  [COL] name [VAL] Jean de Segonzac [COL] job [VAL] directors\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 4
         },
         {
@@ -1701,7 +1635,7 @@
                 1188
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Daniel Sackheim [COL] primaryProfessions [VAL] producer,director,editorial_department\n \nCandidate records:\n [1]  [COL] name [VAL] David Steinberg [COL] job [VAL] director\n[2]  [COL] name [VAL] Daniel Kontur [COL] job [VAL] directors\n[3]  [COL] name [VAL] David Steinberg [COL] job [VAL] directors\n[4]  [COL] name [VAL] Daniel Minahan [COL] job [VAL] directors\n[5]  [COL] name [VAL] Daniel Sackheim [COL] job [VAL] director\n[6]  [COL] name [VAL] Daniel Sackheim [COL] job [VAL] directors\n[7]  [COL] name [VAL] Daniel Kontur [COL] job [VAL] director\n[8]  [COL] name [VAL] Daniel Junge [COL] job [VAL] directors\n[9]  [COL] name [VAL] Daniel Minahan [COL] job [VAL] director\n[10]  [COL] name [VAL] Daniel Junge [COL] job [VAL] director\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 5
+            "noise_answer": 0
         },
         {
             "query_id": "1856_0",
@@ -1802,7 +1736,7 @@
                 39
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Isabella Hofmann [COL] birthYear [VAL] 1958-01-01 [COL] primaryProfessions [VAL] actress\n \nCandidate records:\n [1]  [COL] name [VAL] Isabella Hofmann [COL] job [VAL] actor\n[2]  [COL] name [VAL] Isabella Hofmann [COL] job [VAL] guestStars\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 2
+            "noise_answer": 0
         },
         {
             "query_id": "1973_0",
@@ -1962,24 +1896,6 @@
                 1859
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Lee Bonner [COL] primaryProfessions [VAL] director,writer,editor\n \nCandidate records:\n [1]  [COL] name [VAL] Gerald Mayer [COL] job [VAL] director\n[2]  [COL] name [VAL] Lee Bonner [COL] job [VAL] director\n[3]  [COL] name [VAL] Ed Bye [COL] job [VAL] director\n[4]  [COL] name [VAL] James B. Clark [COL] job [VAL] director\n[5]  [COL] name [VAL] Gerald Mayer [COL] job [VAL] directors\n[6]  [COL] name [VAL] Bryan Spicer [COL] job [VAL] directors\n[7]  [COL] name [VAL] Lee Blessing [COL] job [VAL] writers\n[8]  [COL] name [VAL] Lee Bonner [COL] job [VAL] directors\n[9]  [COL] name [VAL] Lee Warburton [COL] job [VAL] writers\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 8
-        },
-        {
-            "query_id": "2162_1",
-            "ground_truth": -1,
-            "ground_answer": 0,
-            "options": [
-                2232,
-                761,
-                949,
-                838,
-                5269,
-                4257,
-                5915,
-                1728,
-                1859
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Lee Bonner [COL] primaryProfessions [VAL] director,writer,editor\n \nCandidate records:\n [1]  [COL] name [VAL] Gerald Mayer [COL] job [VAL] director\n[2]  [COL] name [VAL] Lee Bonner [COL] job [VAL] director\n[3]  [COL] name [VAL] Ed Bye [COL] job [VAL] director\n[4]  [COL] name [VAL] James B. Clark [COL] job [VAL] director\n[5]  [COL] name [VAL] Gerald Mayer [COL] job [VAL] directors\n[6]  [COL] name [VAL] Bryan Spicer [COL] job [VAL] directors\n[7]  [COL] name [VAL] Lee Blessing [COL] job [VAL] writers\n[8]  [COL] name [VAL] Lee Bonner [COL] job [VAL] directors\n[9]  [COL] name [VAL] Lee Warburton [COL] job [VAL] writers\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 2
         },
         {
@@ -2038,7 +1954,7 @@
                 985
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Erin O'Malley [COL] primaryProfessions [VAL] producer,production_manager,director\n \nCandidate records:\n [1]  [COL] name [VAL] Erin O'Malley [COL] job [VAL] directors\n[2]  [COL] name [VAL] Erin O'Malley [COL] job [VAL] director\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 2
+            "noise_answer": 0
         },
         {
             "query_id": "2249_0",
@@ -2158,24 +2074,6 @@
         },
         {
             "query_id": "2353_0",
-            "ground_truth": 167,
-            "ground_answer": 4,
-            "options": [
-                5258,
-                84,
-                206,
-                167,
-                6982,
-                6274,
-                7012,
-                2067,
-                3262
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Keith Gordon [COL] birthYear [VAL] 1961-01-01 [COL] primaryProfessions [VAL] director,actor,producer\n \nCandidate records:\n [1]  [COL] name [VAL] Gilbert L. Kay [COL] job [VAL] directors\n[2]  [COL] name [VAL] Keith Truesdell [COL] job [VAL] directors\n[3]  [COL] name [VAL] Bryan Gordon [COL] job [VAL] director\n[4]  [COL] name [VAL] Keith Gordon [COL] job [VAL] director\n[5]  [COL] name [VAL] Barry Gordon [COL] job [VAL] director\n[6]  [COL] name [VAL] Keith Gordon [COL] job [VAL] directors\n[7]  [COL] name [VAL] Eyal Gordin [COL] job [VAL] directors\n[8]  [COL] name [VAL] Barry Gordon [COL] job [VAL] directors\n[9]  [COL] name [VAL] Bryan Gordon [COL] job [VAL] directors\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 6
-        },
-        {
-            "query_id": "2353_1",
             "ground_truth": 167,
             "ground_answer": 4,
             "options": [
@@ -2340,25 +2238,6 @@
             "noise_answer": 8
         },
         {
-            "query_id": "2472_1",
-            "ground_truth": -1,
-            "ground_answer": 0,
-            "options": [
-                3384,
-                458,
-                2419,
-                1302,
-                4545,
-                4413,
-                3413,
-                4723,
-                3157,
-                3261
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Neill Fearnley [COL] primaryProfessions [VAL] director,producer,actor\n \nCandidate records:\n [1]  [COL] name [VAL] Gary Fleder [COL] job [VAL] directors\n[2]  [COL] name [VAL] James Neilson [COL] job [VAL] director\n[3]  [COL] name [VAL] Noreen Kershaw [COL] job [VAL] director\n[4]  [COL] name [VAL] Noreen Kershaw [COL] job [VAL] directors\n[5]  [COL] name [VAL] Felix E. Feist [COL] job [VAL] directors\n[6]  [COL] name [VAL] James Neilson [COL] job [VAL] directors\n[7]  [COL] name [VAL] James Nielson [COL] job [VAL] director\n[8]  [COL] name [VAL] Neill Fearnley [COL] job [VAL] director\n[9]  [COL] name [VAL] Neill Fearnley [COL] job [VAL] directors\n[10]  [COL] name [VAL] James Nielson [COL] job [VAL] directors\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 9
-        },
-        {
             "query_id": "2476_0",
             "ground_truth": -1,
             "ground_answer": 0,
@@ -2500,17 +2379,6 @@
         },
         {
             "query_id": "2645_0",
-            "ground_truth": 5901,
-            "ground_answer": 2,
-            "options": [
-                6992,
-                5901
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] David Orrick McDearmon [COL] deathYear [VAL] 1979-01-01 [COL] birthYear [VAL] 1914-01-01 [COL] primaryProfessions [VAL] director,actor\n \nCandidate records:\n [1]  [COL] name [VAL] David Orrick McDearmon [COL] job [VAL] directors\n[2]  [COL] name [VAL] David Orrick McDearmon [COL] job [VAL] director\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 1
-        },
-        {
-            "query_id": "2645_1",
             "ground_truth": 5901,
             "ground_answer": 2,
             "options": [
@@ -2782,25 +2650,10 @@
                 3269
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Helmuth Ashley [COL] birthYear [VAL] 1919-01-01 [COL] primaryProfessions [VAL] director,cinematographer,writer\n \nCandidate records:\n [1]  [COL] name [VAL] Helmuth Ashley [COL] job [VAL] directors\n[2]  [COL] name [VAL] Ashley Sabin [COL] job [VAL] director\n[3]  [COL] name [VAL] Ross Ashcroft [COL] job [VAL] directors\n[4]  [COL] name [VAL] Helmuth Ashley [COL] job [VAL] director\n[5]  [COL] name [VAL] Ashley Sabin [COL] job [VAL] directors\n[6]  [COL] name [VAL] Helmuth Ashley [COL] job [VAL] writers\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 1
-        },
-        {
-            "query_id": "2852_1",
-            "ground_truth": -1,
-            "ground_answer": 0,
-            "options": [
-                1343,
-                4898,
-                1397,
-                1217,
-                2548,
-                3269
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Helmuth Ashley [COL] birthYear [VAL] 1919-01-01 [COL] primaryProfessions [VAL] director,cinematographer,writer\n \nCandidate records:\n [1]  [COL] name [VAL] Helmuth Ashley [COL] job [VAL] directors\n[2]  [COL] name [VAL] Ashley Sabin [COL] job [VAL] director\n[3]  [COL] name [VAL] Ross Ashcroft [COL] job [VAL] directors\n[4]  [COL] name [VAL] Helmuth Ashley [COL] job [VAL] director\n[5]  [COL] name [VAL] Ashley Sabin [COL] job [VAL] directors\n[6]  [COL] name [VAL] Helmuth Ashley [COL] job [VAL] writers\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 4
         },
         {
-            "query_id": "2852_2",
+            "query_id": "2852_1",
             "ground_truth": -1,
             "ground_answer": 0,
             "options": [
@@ -2870,18 +2723,6 @@
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Kathryn Bigelow [COL] birthYear [VAL] 1951-01-01 [COL] primaryProfessions [VAL] director,producer,actress\n \nCandidate records:\n [1]  [COL] name [VAL] Kathy Bates [COL] job [VAL] directors\n[2]  [COL] name [VAL] Kathryn Bigelow [COL] job [VAL] director\n[3]  [COL] name [VAL] Kathryn Bigelow [COL] job [VAL] directors\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 2
-        },
-        {
-            "query_id": "2931_1",
-            "ground_truth": -1,
-            "ground_answer": 0,
-            "options": [
-                3051,
-                1876,
-                3572
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Kathryn Bigelow [COL] birthYear [VAL] 1951-01-01 [COL] primaryProfessions [VAL] director,producer,actress\n \nCandidate records:\n [1]  [COL] name [VAL] Kathy Bates [COL] job [VAL] directors\n[2]  [COL] name [VAL] Kathryn Bigelow [COL] job [VAL] director\n[3]  [COL] name [VAL] Kathryn Bigelow [COL] job [VAL] directors\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 3
         },
         {
             "query_id": "2942_0",
@@ -3037,7 +2878,7 @@
                 3810
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] The Secret [COL] episodeNumber [VAL] 22.0 [COL] seasonNumber [VAL] 3.0 [COL] startYear [VAL] 1956-01-01 [COL] genre_list [VAL] Drama [COL] runtimeMinutes [VAL] 30.0\n \nCandidate records:\n [1]  [COL] title [VAL] The Secret Place [COL] episodeNumber [VAL] 21.0 [COL] seasonNumber [VAL] 3.0 [COL] releaseDate [VAL] 1962-02-25\n[2]  [COL] title [VAL] The Velvet Trap [COL] episodeNumber [VAL] 16.0 [COL] seasonNumber [VAL] 3.0 [COL] releaseDate [VAL] 1962-01-21\n[3]  [COL] title [VAL] The Feather Cloak [COL] episodeNumber [VAL] 20.0 [COL] seasonNumber [VAL] 2.0 [COL] releaseDate [VAL] 1961-02-27\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 0
+            "noise_answer": 1
         },
         {
             "query_id": "3067_0",
@@ -3221,7 +3062,7 @@
                 4710
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Terike Haapoja\n \nCandidate records:\n [1]  [COL] title [VAL] Special Guest: Terike Haapoja [COL] episodeNumber [VAL] 18.0 [COL] seasonNumber [VAL] 0.0 [COL] releaseDate [VAL] 2013-10-02\n[2]  [COL] title [VAL] About Art with Terike Haapoja [COL] episodeNumber [VAL] 6.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 2013-10-02\n[3]  [COL] name [VAL] Heikki Patom?ki [COL] job [VAL] guestStars\n[4]  [COL] name [VAL] Terike Haapoja [COL] job [VAL] guestStars\n[5]  [COL] title [VAL] Tsubasa Tiger - Part 5 [COL] abstract [VAL] In her letter to the cat spirit, Tsubasa reveals that just like her, Kako is another apparition sired by her repressed feelings, this time of jealousy and asks her to return both to her heart, as she is finally determined to shoulder all of her negative feelings no matter how it will change herself. As Kako is about to burn Hitagi's apartment, Tsubasa appears to confront it. Despite having no chance to defeat Kako, Tsubasa manages to stall it long enough to Koyomi to appear and defeat it with Heartspan. Before absorbing both the cat and tiger spirit, Tsubasa finally confesses her love for Koyomi, and as expected, he rejects her, assuming that his love for Hitagi is stronger. After her family finally rents another house for them to live, it is revealed that Tsubasa's hair developed white stripes just like a tiger, that she hides by dying them black, and she had at last asked her parents for a room just for herself, as a sign that she finally had become a true member of her own family.  [COL] episodeNumber [VAL] 5.0 [COL] seasonNumber [VAL] 3.0 [COL] releaseDate [VAL] 2013-08-04\n[6]  [COL] name [VAL] Jaki Terry [COL] job [VAL] guestStars\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 0
+            "noise_answer": 4
         },
         {
             "query_id": "3212_0",
@@ -3297,17 +3138,6 @@
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Uli Edel [COL] birthYear [VAL] 1947-01-01 [COL] primaryProfessions [VAL] director,writer,producer\n \nCandidate records:\n [1]  [COL] name [VAL] Uli Edel [COL] job [VAL] directors\n[2]  [COL] name [VAL] Uli Edel [COL] job [VAL] director\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 2
-        },
-        {
-            "query_id": "3325_1",
-            "ground_truth": -1,
-            "ground_answer": 0,
-            "options": [
-                2215,
-                1027
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Uli Edel [COL] birthYear [VAL] 1947-01-01 [COL] primaryProfessions [VAL] director,writer,producer\n \nCandidate records:\n [1]  [COL] name [VAL] Uli Edel [COL] job [VAL] directors\n[2]  [COL] name [VAL] Uli Edel [COL] job [VAL] director\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 1
         },
         {
             "query_id": "3335_0",
@@ -3562,24 +3392,6 @@
             "noise_answer": 3
         },
         {
-            "query_id": "3622_1",
-            "ground_truth": -1,
-            "ground_answer": 0,
-            "options": [
-                621,
-                70,
-                230,
-                101,
-                4311,
-                739,
-                7355,
-                318,
-                380
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Tomoyuki Itamura [COL] primaryProfessions [VAL] director,art_department,animation_department\n \nCandidate records:\n [1]  [COL] name [VAL] James Yoshimura [COL] job [VAL] director\n[2]  [COL] name [VAL] Akiyuki Shimbou [COL] job [VAL] directors\n[3]  [COL] name [VAL] Tomoyuki Itamura [COL] job [VAL] director\n[4]  [COL] name [VAL] Akiyuki Shinbo [COL] job [VAL] directors\n[5]  [COL] name [VAL] Takeshi Koike [COL] job [VAL] director\n[6]  [COL] name [VAL] Akiyuki Shimbou [COL] job [VAL] director\n[7]  [COL] name [VAL] Director: Yoshio Takeuchi [COL] job [VAL] actor\n[8]  [COL] name [VAL] Tomoyuki Itamura [COL] job [VAL] directors\n[9]  [COL] name [VAL] Akiyuki Shinbo [COL] job [VAL] director\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 8
-        },
-        {
             "query_id": "3624_0",
             "ground_truth": -1,
             "ground_answer": 0,
@@ -3703,18 +3515,6 @@
                 3381
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Theodor Gr?dler [COL] birthYear [VAL] 1921-01-01 [COL] primaryProfessions [VAL] director,writer\n \nCandidate records:\n [1]  [COL] name [VAL] J?rgen Goslar [COL] job [VAL] director\n[2]  [COL] name [VAL] Theodor Gr?dler [COL] job [VAL] directors\n[3]  [COL] name [VAL] Theodor Gr?dler [COL] job [VAL] director\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 2
-        },
-        {
-            "query_id": "3757_1",
-            "ground_truth": -1,
-            "ground_answer": 0,
-            "options": [
-                1767,
-                190,
-                3381
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Theodor Gr?dler [COL] birthYear [VAL] 1921-01-01 [COL] primaryProfessions [VAL] director,writer\n \nCandidate records:\n [1]  [COL] name [VAL] J?rgen Goslar [COL] job [VAL] director\n[2]  [COL] name [VAL] Theodor Gr?dler [COL] job [VAL] directors\n[3]  [COL] name [VAL] Theodor Gr?dler [COL] job [VAL] director\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 3
         },
         {
@@ -3731,22 +3531,6 @@
         },
         {
             "query_id": "3764_0",
-            "ground_truth": -1,
-            "ground_answer": 0,
-            "options": [
-                124,
-                6673,
-                2953,
-                25,
-                3830,
-                5453,
-                7591
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Rick Marshall [COL] primaryProfessions [VAL] director,animation_department,art_department\n \nCandidate records:\n [1]  [COL] name [VAL] Rick Marshall [COL] job [VAL] directors\n[2]  [COL] name [VAL] Tom Kramer [COL] job [VAL] director\n[3]  [COL] name [VAL] Darnell Martin [COL] job [VAL] director\n[4]  [COL] name [VAL] Rick Marshall [COL] job [VAL] director\n[5]  [COL] name [VAL] Stuart Rosenberg [COL] job [VAL] director\n[6]  [COL] name [VAL] Michael Morris [COL] job [VAL] director\n[7]  [COL] name [VAL] Martyn Friend [COL] job [VAL] director\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 1
-        },
-        {
-            "query_id": "3764_1",
             "ground_truth": -1,
             "ground_answer": 0,
             "options": [
@@ -3921,25 +3705,6 @@
             "noise_answer": 8
         },
         {
-            "query_id": "3955_1",
-            "ground_truth": 6772,
-            "ground_answer": 8,
-            "options": [
-                2419,
-                84,
-                418,
-                167,
-                6274,
-                4387,
-                2953,
-                6772,
-                1302,
-                1826
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Keith Truesdell [COL] primaryProfessions [VAL] director,producer,editor\n \nCandidate records:\n [1]  [COL] name [VAL] Noreen Kershaw [COL] job [VAL] director\n[2]  [COL] name [VAL] Keith Truesdell [COL] job [VAL] directors\n[3]  [COL] name [VAL] Alan Taylor [COL] job [VAL] director\n[4]  [COL] name [VAL] Keith Gordon [COL] job [VAL] director\n[5]  [COL] name [VAL] Keith Gordon [COL] job [VAL] directors\n[6]  [COL] name [VAL] Darnell Martin [COL] job [VAL] directors\n[7]  [COL] name [VAL] Darnell Martin [COL] job [VAL] director\n[8]  [COL] name [VAL] Keith Truesdell [COL] job [VAL] director\n[9]  [COL] name [VAL] Noreen Kershaw [COL] job [VAL] directors\n[10]  [COL] name [VAL] Tucker Gates [COL] job [VAL] directors\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 2
-        },
-        {
             "query_id": "3971_0",
             "ground_truth": 7788,
             "ground_answer": 5,
@@ -3990,23 +3755,6 @@
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] John Crowley [COL] birthYear [VAL] 1969-01-01 [COL] primaryProfessions [VAL] director\n \nCandidate records:\n [1]  [COL] name [VAL] Clark Johnson [COL] job [VAL] directors\n[2]  [COL] name [VAL] John Crowley [COL] job [VAL] directors\n[3]  [COL] name [VAL] John McNaughton [COL] job [VAL] directors\n[4]  [COL] name [VAL] Christine Cynn [COL] job [VAL] director\n[5]  [COL] name [VAL] Barry Gordon [COL] job [VAL] director\n[6]  [COL] name [VAL] John McNaughton [COL] job [VAL] director\n[7]  [COL] name [VAL] John Crowley [COL] job [VAL] director\n[8]  [COL] name [VAL] Christine Cynn [COL] job [VAL] directors\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 7
-        },
-        {
-            "query_id": "3995_1",
-            "ground_truth": 3075,
-            "ground_answer": 7,
-            "options": [
-                545,
-                394,
-                1030,
-                4481,
-                6982,
-                2233,
-                3075,
-                6071
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] John Crowley [COL] birthYear [VAL] 1969-01-01 [COL] primaryProfessions [VAL] director\n \nCandidate records:\n [1]  [COL] name [VAL] Clark Johnson [COL] job [VAL] directors\n[2]  [COL] name [VAL] John Crowley [COL] job [VAL] directors\n[3]  [COL] name [VAL] John McNaughton [COL] job [VAL] directors\n[4]  [COL] name [VAL] Christine Cynn [COL] job [VAL] director\n[5]  [COL] name [VAL] Barry Gordon [COL] job [VAL] director\n[6]  [COL] name [VAL] John McNaughton [COL] job [VAL] director\n[7]  [COL] name [VAL] John Crowley [COL] job [VAL] director\n[8]  [COL] name [VAL] Christine Cynn [COL] job [VAL] directors\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 2
         },
         {
             "query_id": "4027_0",
@@ -4068,18 +3816,6 @@
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Jace Alexander [COL] birthYear [VAL] 1964-01-01 [COL] primaryProfessions [VAL] director,producer,actor\n \nCandidate records:\n [1]  [COL] name [VAL] Jace Alexander [COL] job [VAL] director\n[2]  [COL] name [VAL] Jackson Publick [COL] job [VAL] directors\n[3]  [COL] name [VAL] Jace Alexander [COL] job [VAL] directors\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 1
-        },
-        {
-            "query_id": "4132_1",
-            "ground_truth": 3527,
-            "ground_answer": 1,
-            "options": [
-                3527,
-                1271,
-                7619
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Jace Alexander [COL] birthYear [VAL] 1964-01-01 [COL] primaryProfessions [VAL] director,producer,actor\n \nCandidate records:\n [1]  [COL] name [VAL] Jace Alexander [COL] job [VAL] director\n[2]  [COL] name [VAL] Jackson Publick [COL] job [VAL] directors\n[3]  [COL] name [VAL] Jace Alexander [COL] job [VAL] directors\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 3
         },
         {
             "query_id": "4178_0",
@@ -4487,7 +4223,7 @@
                 2618
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] James C. Kelly [COL] primaryProfessions [VAL] actor\n \nCandidate records:\n [1]  [COL] name [VAL] Kelly Reilly [COL] job [VAL] actor\n[2]  [COL] name [VAL] James Holden [COL] job [VAL] actor\n[3]  [COL] name [VAL] Lee Oakes [COL] job [VAL] actor\n[4]  [COL] name [VAL] Kevin Spacey [COL] job [VAL] actor\n[5]  [COL] name [VAL] John Kassir [COL] job [VAL] actor\n[6]  [COL] name [VAL] Kyle Secor [COL] job [VAL] actor\n[7]  [COL] name [VAL] Michael Kelly [COL] job [VAL] actor\n[8]  [COL] name [VAL] Kevin Doyle [COL] job [VAL] actor\n[9]  [COL] name [VAL] James Martinez [COL] job [VAL] actor\n[10]  [COL] name [VAL] James Sutton [COL] job [VAL] actor\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 0
+            "noise_answer": 7
         },
         {
             "query_id": "4679_0",
@@ -4589,21 +4325,6 @@
         },
         {
             "query_id": "4840_0",
-            "ground_truth": -1,
-            "ground_answer": 0,
-            "options": [
-                101,
-                739,
-                245,
-                70,
-                318,
-                380
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] Akiyuki Shinbo [COL] birthYear [VAL] 1961-01-01 [COL] primaryProfessions [VAL] director,writer,animation_department\n \nCandidate records:\n [1]  [COL] name [VAL] Akiyuki Shinbo [COL] job [VAL] directors\n[2]  [COL] name [VAL] Akiyuki Shimbou [COL] job [VAL] director\n[3]  [COL] name [VAL] Akiyuki Shimbou [COL] job [VAL] writers\n[4]  [COL] name [VAL] Akiyuki Shimbou [COL] job [VAL] directors\n[5]  [COL] name [VAL] Tomoyuki Itamura [COL] job [VAL] directors\n[6]  [COL] name [VAL] Akiyuki Shinbo [COL] job [VAL] director\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 1
-        },
-        {
-            "query_id": "4840_1",
             "ground_truth": -1,
             "ground_answer": 0,
             "options": [

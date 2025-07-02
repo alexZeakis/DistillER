@@ -1,7 +1,7 @@
 {
     "settings": {
         "dataset": "D5",
-        "out_file": "../../../log/matching/annotate_hybrid_llm/sminilm/qwen_14/partial/D5_1924.json",
+        "out_file": "../../../log/matching/annotate_hybrid/llm/sminilm/qwen_14/partial/D5_1924.json",
         "in_dir": "../../../data/ccer/cleaned/original/",
         "sample_file": "../../../data/ccer/cleaned/fine_tuning/blocking/train/D5.csv",
         "seed": 1924,
@@ -2171,6 +2171,22 @@
                 4826
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] The Pretender [COL] episodeNumber [VAL] 7.0 [COL] seasonNumber [VAL] 3.0 [COL] startYear [VAL] 1961-01-01 [COL] genre_list [VAL] Adventure [COL] runtimeMinutes [VAL] 49.0\n \nCandidate records:\n [1]  [COL] title [VAL] The Seducer [COL] episodeNumber [VAL] 8.0 [COL] seasonNumber [VAL] 8.0 [COL] releaseDate [VAL] 1960-11-06 [COL] release_year [VAL] 1960-01-01\n[2]  [COL] title [VAL] The Pretender [COL] episodeNumber [VAL] 7.0 [COL] seasonNumber [VAL] 3.0 [COL] releaseDate [VAL] 1961-11-12 [COL] release_year [VAL] 1961-01-01\n[3]  [COL] title [VAL] The Tenderizer [COL] episodeNumber [VAL] 24.0 [COL] seasonNumber [VAL] 6.0 [COL] releaseDate [VAL] 1959-03-21 [COL] release_year [VAL] 1959-01-01\n[4]  [COL] title [VAL] The Fortune Teller [COL] episodeNumber [VAL] 7.0 [COL] seasonNumber [VAL] 2.0 [COL] releaseDate [VAL] 1961-10-30 [COL] release_year [VAL] 1961-01-01\n[5]  [COL] title [VAL] The Outsider [COL] episodeNumber [VAL] 9.0 [COL] seasonNumber [VAL] 2.0 [COL] releaseDate [VAL] 1961-11-13 [COL] release_year [VAL] 1961-01-01\n[6]  [COL] title [VAL] The Prodigal Pretender [COL] episodeNumber [VAL] 31.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 1962-09-18 [COL] release_year [VAL] 1962-01-01\n[7]  [COL] title [VAL] The Wreckers [COL] episodeNumber [VAL] 7.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 1957-11-07 [COL] release_year [VAL] 1957-01-01\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
+            "noise_answer": 7
+        },
+        {
+            "query_id": "2395_1",
+            "ground_truth": 4004,
+            "ground_answer": 2,
+            "options": [
+                756,
+                4004,
+                2927,
+                628,
+                3054,
+                3193,
+                4826
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] The Pretender [COL] episodeNumber [VAL] 7.0 [COL] seasonNumber [VAL] 3.0 [COL] startYear [VAL] 1961-01-01 [COL] genre_list [VAL] Adventure [COL] runtimeMinutes [VAL] 49.0\n \nCandidate records:\n [1]  [COL] title [VAL] The Seducer [COL] episodeNumber [VAL] 8.0 [COL] seasonNumber [VAL] 8.0 [COL] releaseDate [VAL] 1960-11-06 [COL] release_year [VAL] 1960-01-01\n[2]  [COL] title [VAL] The Pretender [COL] episodeNumber [VAL] 7.0 [COL] seasonNumber [VAL] 3.0 [COL] releaseDate [VAL] 1961-11-12 [COL] release_year [VAL] 1961-01-01\n[3]  [COL] title [VAL] The Tenderizer [COL] episodeNumber [VAL] 24.0 [COL] seasonNumber [VAL] 6.0 [COL] releaseDate [VAL] 1959-03-21 [COL] release_year [VAL] 1959-01-01\n[4]  [COL] title [VAL] The Fortune Teller [COL] episodeNumber [VAL] 7.0 [COL] seasonNumber [VAL] 2.0 [COL] releaseDate [VAL] 1961-10-30 [COL] release_year [VAL] 1961-01-01\n[5]  [COL] title [VAL] The Outsider [COL] episodeNumber [VAL] 9.0 [COL] seasonNumber [VAL] 2.0 [COL] releaseDate [VAL] 1961-11-13 [COL] release_year [VAL] 1961-01-01\n[6]  [COL] title [VAL] The Prodigal Pretender [COL] episodeNumber [VAL] 31.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 1962-09-18 [COL] release_year [VAL] 1962-01-01\n[7]  [COL] title [VAL] The Wreckers [COL] episodeNumber [VAL] 7.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 1957-11-07 [COL] release_year [VAL] 1957-01-01\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 2
         },
         {
@@ -2507,19 +2523,6 @@
             "noise_answer": 2
         },
         {
-            "query_id": "2738_1",
-            "ground_truth": 1191,
-            "ground_answer": 2,
-            "options": [
-                6043,
-                1191,
-                7,
-                5201
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Royal Partners: Part 2 [COL] episodeNumber [VAL] 34.0 [COL] seasonNumber [VAL] 4.0 [COL] startYear [VAL] 1957-01-01 [COL] genre_list [VAL] Drama [COL] runtimeMinutes [VAL] 30.0\n \nCandidate records:\n [1]  [COL] title [VAL] Double Partners [COL] episodeNumber [VAL] 1.0 [COL] seasonNumber [VAL] 4.0 [COL] releaseDate [VAL] 1956-08-26 [COL] release_year [VAL] 1956-01-01\n[2]  [COL] title [VAL] Royal Partners: Part 2 [COL] episodeNumber [VAL] 34.0 [COL] seasonNumber [VAL] 4.0 [COL] releaseDate [VAL] 1957-05-26 [COL] release_year [VAL] 1957-01-01\n[3]  [COL] title [VAL] Royal Partners: Part 1 [COL] episodeNumber [VAL] 33.0 [COL] seasonNumber [VAL] 4.0 [COL] releaseDate [VAL] 1957-05-19 [COL] release_year [VAL] 1957-01-01\n[4]  [COL] title [VAL] Stable Mates [COL] episodeNumber [VAL] 15.0 [COL] seasonNumber [VAL] 2.0 [COL] releaseDate [VAL] 1962-01-08 [COL] release_year [VAL] 1962-01-01\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 3
-        },
-        {
             "query_id": "2769_0",
             "ground_truth": 3148,
             "ground_answer": 1,
@@ -2849,7 +2852,7 @@
                 1669
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Spin a Golden Web [COL] episodeNumber [VAL] 9.0 [COL] seasonNumber [VAL] 1.0 [COL] startYear [VAL] 1962-01-01 [COL] genre_list [VAL] Drama,Sport,Western [COL] runtimeMinutes [VAL] 60.0\n \nCandidate records:\n [1]  [COL] title [VAL] Spin a Golden Web [COL] episodeNumber [VAL] 9.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 1962-11-26 [COL] release_year [VAL] 1962-01-01\n[2]  [COL] title [VAL] Reef Ball Maker [COL] episodeNumber [VAL] 21.0 [COL] seasonNumber [VAL] 3.0 [COL] releaseDate [VAL] 2007-11-06 [COL] release_year [VAL] 2007-01-01\n[3]  [COL] title [VAL] The Spear Gun [COL] episodeNumber [VAL] 3.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 1957-10-10 [COL] release_year [VAL] 1957-01-01\n[4]  [COL] title [VAL] The Golden Cord [COL] episodeNumber [VAL] 18.0 [COL] seasonNumber [VAL] 8.0 [COL] releaseDate [VAL] 1961-02-12 [COL] release_year [VAL] 1961-01-01\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 0
+            "noise_answer": 1
         },
         {
             "query_id": "3068_0",

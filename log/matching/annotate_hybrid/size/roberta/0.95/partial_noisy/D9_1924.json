@@ -1,7 +1,7 @@
 {
     "settings": {
         "dataset": "D9",
-        "out_file": "../../../log/matching/annotate_hybrid_llm/roberta/0.95/partial/D9_1924.json",
+        "out_file": "../../../log/matching/annotate_hybrid/size/roberta/0.95/partial/D9_1924.json",
         "in_dir": "../../../data/ccer/cleaned/original/",
         "sample_file": "../../../data/ccer/cleaned/fine_tuning/blocking/train/D9.csv",
         "seed": 1924,
@@ -671,7 +671,7 @@
                 29053
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Objectivity Industrial Exhibit [COL] authors [VAL] Objectivity [COL] venue [VAL] VLDB [COL] year [VAL] 1998\n \nCandidate records:\n [1]  [COL] title [VAL] Object-orientation as structural, functional and behavioral modeling: a comparison of six methods [COL] authors [VAL] J Iivari??\u00a6 [COL] venue [VAL] 1995\n[2]  [COL] title [VAL] Objectivity Industrial Exhibit. [COL] authors [VAL] ACMS DiSC, ACMS Anthology, P Edition\n[3]  [COL] title [VAL] Oracle Industrial Exhibit [COL] authors [VAL] A Pogue [COL] venue [VAL] VLDB, [COL] year [VAL] 1998.0\n[4]  [COL] title [VAL] Full Distribution in Objectivity/DB. [COL] authors [VAL] AE Wade\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 2
+            "noise_answer": 0
         },
         {
             "query_id": "392_0",
@@ -1114,25 +1114,6 @@
             "noise_answer": 3
         },
         {
-            "query_id": "715_3",
-            "ground_truth": 23718,
-            "ground_answer": 4,
-            "options": [
-                32934,
-                7635,
-                27405,
-                23718,
-                48477,
-                41461,
-                40613,
-                50196,
-                29986,
-                30732
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Algorithms for Materialized View Design in Data Warehousing Environment [COL] authors [VAL] Kamalakar Karlapalem, Jian Yang, Qing Li [COL] venue [VAL] VLDB [COL] year [VAL] 1997\n \nCandidate records:\n [1]  [COL] title [VAL] Tackling the Challenges of Materialized View Design in Data Warehousing Environment [COL] authors [VAL] J Yang, K Karlapalem, Q Li\n[2]  [COL] title [VAL] Fast computation of sparse databases algorithms for materialized view design in data warehousing [COL] authors [VAL] J Yang, KK Karlapalem, Q Li [COL] venue [VAL] Proc. 23rd VLDB Conf., Athens, Greece,\n[3]  [COL] title [VAL] A Framework for Designing Materialized Views in Data Warehousing Environment [COL] authors [VAL] J Yang, K Karlapalem, Q Li\n[4]  [COL] title [VAL] Algorithms for Materialized View Design in Data Warehousing Environment [COL] authors [VAL] J Yang [COL] venue [VAL] VLDB, [COL] year [VAL] 1997.0\n[5]  [COL] title [VAL] Materialized views in data warehouses [COL] authors [VAL] DW Quass [COL] venue [VAL] 1998\n[6]  [COL] title [VAL] Evaluation of Materialized View Indexing in Data Warehousing Environments [COL] authors [VAL] L Bellatreche, K Karlapalem, Q Li\n[7]  [COL] title [VAL] Genetic Algorithm for Materialized View Selection in Data Warehouse Environments [COL] authors [VAL] C Zhang, J Yang\n[8]  [COL] title [VAL] Designing view maintenance algorithm in data warehousing environment [COL] authors [VAL] MK Mohania, S Konomi, Y Kambayashi, MW Vincent [COL] venue [VAL] &hellip;  of the 9th International Conference on Management of Data ( &hellip;,\n[9]  [COL] title [VAL] Design and Selection of Materialized Views in a Data Warehousing Environment: A Case Study [COL] authors [VAL] GKY Chan, Q Li, L Feng\n[10]  [COL] title [VAL] View Relevance Driven Materialized View Selection in Data Warehousing Environment [COL] authors [VAL] S Vadapalli, K Karlapalem\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 2
-        },
-        {
             "query_id": "717_0",
             "ground_truth": 2137,
             "ground_answer": 3,
@@ -1461,24 +1442,6 @@
             "noise_answer": 8
         },
         {
-            "query_id": "881_1",
-            "ground_truth": 28913,
-            "ground_answer": 8,
-            "options": [
-                36924,
-                10905,
-                21025,
-                14172,
-                43457,
-                37142,
-                53489,
-                28913,
-                35676
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Design and Management of Data Warehouses: Report on the DMDW'99 Workshop [COL] authors [VAL] Martin Staudt, Yannis Vassiliou, Manfred A. Jeusfeld, Stella Gatziu [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1999\n \nCandidate records:\n [1]  [COL] title [VAL] Concept based design of data warehouses: The DWQ demonstrators. In 2000 ACM SIGMOD Intl [COL] authors [VAL] M Jarke, C Quix, D Calvanese, M Lenzerini, E [COL] venue [VAL] Conference on Management of Data,\n[2]  [COL] title [VAL] Data Warehouse Configuration [COL] authors [VAL] D Theodoratos, T Sellis [COL] venue [VAL] VLDB, [COL] year [VAL] 1997.0\n[3]  [COL] title [VAL] The Ins and Outs (and everything in between) of Data Warehousing [COL] authors [VAL] D Schneider, P Fernandez [COL] venue [VAL] SIGMOD RECORD, [COL] year [VAL] 1996.0\n[4]  [COL] title [VAL] Data Warehouse Configuration Algorithms [COL] authors [VAL] S Ligoudistianos, D Theodoratos, T Sellis [COL] venue [VAL] 1998\n[5]  [COL] title [VAL] Report on the 5 thInternational Workshop on the Design and Management of Data Warehouses (DMDW???03) [COL] authors [VAL] HJ Lenz, P Vassiliadis, M Jeusfeld, M Staudt [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 2003.0\n[6]  [COL] title [VAL] The Data Warehouse Toolkit: The Complete Guide to Dimensional Modeling (2nd edition) [COL] authors [VAL] R Kimball, M Ross [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 2003.0\n[7]  [COL] title [VAL] Decentralized Incremental Maintenance of Multi-View Data Warehouses [COL] authors [VAL] I Stanoi, D Agrawal, A El Abbadi [COL] venue [VAL] 1999\n[8]  [COL] title [VAL] Design and Management of Data Warehouses: Report on the DMDW'99 Workshop [COL] authors [VAL] S Gatziu, MA Jeusfeld, M Staudt, Y Vassiliou [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 1999.0\n[9]  [COL] title [VAL] DyDa: Data Warehouse Maintenance under Fully Concurrent Environments [COL] authors [VAL] J Chen, X Zhang, S Chen, K Andreas, EA [COL] venue [VAL] Proceedings of SIGMOD Demo Session, page,\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 5
-        },
-        {
             "query_id": "905_0",
             "ground_truth": 10825,
             "ground_answer": 3,
@@ -1636,17 +1599,6 @@
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Spotfire: An Information Exploration Environment [COL] authors [VAL] Christopher Ahlberg [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1996\n \nCandidate records:\n [1]  [COL] title [VAL] An Information Exploration Environment SIGMOD REPORT, 25 (4) [COL] authors [VAL] CA Spotfire [COL] venue [VAL] 1996\n[2]  [COL] title [VAL] Spotfire: An Information Exploration Environment [COL] authors [VAL] C Ahlberg [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 1996.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 2
-        },
-        {
-            "query_id": "975_1",
-            "ground_truth": 6940,
-            "ground_answer": 2,
-            "options": [
-                27779,
-                6940
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Spotfire: An Information Exploration Environment [COL] authors [VAL] Christopher Ahlberg [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1996\n \nCandidate records:\n [1]  [COL] title [VAL] An Information Exploration Environment SIGMOD REPORT, 25 (4) [COL] authors [VAL] CA Spotfire [COL] venue [VAL] 1996\n[2]  [COL] title [VAL] Spotfire: An Information Exploration Environment [COL] authors [VAL] C Ahlberg [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 1996.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 1
         },
         {
             "query_id": "988_0",
@@ -2067,25 +2019,6 @@
             "noise_answer": 2
         },
         {
-            "query_id": "1238_1",
-            "ground_truth": 13245,
-            "ground_answer": 2,
-            "options": [
-                32985,
-                13245,
-                20381,
-                17384,
-                48775,
-                39297,
-                36763,
-                58359,
-                21973,
-                29607
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Efficient Incremental Garbage Collection for Client-Server Object Database Systems [COL] authors [VAL] Laurent Amsaleg, Olivier Gruber, Michael J. Franklin [COL] venue [VAL] VLDB [COL] year [VAL] 1995\n \nCandidate records:\n [1]  [COL] title [VAL] Effectively Controlling Garbage Collection Rates in Object Databases [COL] authors [VAL] J Cook, A Klauser, A Wolf, B Zorn\n[2]  [COL] title [VAL] Efficient Incremental Garbage Collection for Client-Server Object Database Systems [COL] authors [VAL] L Amsaleg, M Franklin [COL] venue [VAL] VLDB, [COL] year [VAL] 1995.0\n[3]  [COL] title [VAL] Incremental view maintenance in extended relational databases [COL] authors [VAL] JV Harrison [COL] venue [VAL] Information and Software Technology, [COL] year [VAL] 1995.0\n[4]  [COL] title [VAL] Efficient incremental garbage collection for workstation/server database systems [COL] authors [VAL] L Amsaleg\n[5]  [COL] title [VAL] Incremental distribution of timestamp packets: a new approach to distributed garbage collection [COL] authors [VAL] M Schelvis [COL] venue [VAL] ACM SIGPLAN Notices, [COL] year [VAL] 1989.0\n[6]  [COL] title [VAL] Concurrent Garbage Collection in O2 [COL] authors [VAL] M Skubiszewski, P Valduriez [COL] venue [VAL] Proceedings of the 23rd International Conference on Very  &hellip;, [COL] year [VAL] 1997.0\n[7]  [COL] title [VAL] Semi-automatic, Self-adaptive Control of Garbage Collection Rates in Object Databases [COL] authors [VAL] JE Cook, AW Klauser, AL Wolf, BG Zorn [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 1996.0\n[8]  [COL] title [VAL] Atomic incremental garbage collection and recovery for a large stable heap [COL] authors [VAL] E Kolodner, W Weihl [COL] venue [VAL] Proceedings of the 1993 ACM SIGMOD international conference  &hellip;, [COL] year [VAL] 1993.0\n[9]  [COL] title [VAL] Efficient Garbage Collection for Large Object-Oriented Databases [COL] authors [VAL] BH Liskov [COL] venue [VAL] 1996\n[10]  [COL] title [VAL] Garbage collection for a client-server persistent object store [COL] authors [VAL] L Amsaleg, MJ Franklin, O Gruber [COL] venue [VAL] ACM Transactions on Computer Systems, [COL] year [VAL] 1999.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 4
-        },
-        {
             "query_id": "1254_0",
             "ground_truth": 51862,
             "ground_answer": 1,
@@ -2177,25 +2110,6 @@
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Efficient Algorithms for Mining Outliers from Large Data Sets [COL] authors [VAL] Kyuseok Shim, Sridhar Ramaswamy, Rajeev Rastogi [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2000\n \nCandidate records:\n [1]  [COL] title [VAL] Parallel Algorithm for Mining Outliers in Large Database [COL] authors [VAL] E Hung\n[2]  [COL] title [VAL] Algorithms for Mining Distance Based Outliers in Large Databases [COL] authors [VAL] E Knorr, R Ng [COL] venue [VAL] Proceedings of VLDB, New York,\n[3]  [COL] title [VAL] Efficient Algorithms for Mining Outliers from Large Data Sets [COL] authors [VAL] R Sridhar, R Rajeev, S Kyuseok [COL] venue [VAL] Proceedings of the ACM SIGMOD Conference,\n[4]  [COL] title [VAL] Efficient Algorithms for Discovering Frequent Sets in Incremental Databases [COL] authors [VAL] RFYAA Amir, H Mannila [COL] venue [VAL] i&gt; Proc. ACM SIGMOD Workshop Research Issues on Data Mining  &hellip;,\n[5]  [COL] title [VAL] andK. Shim, 2000.???Efficient Algorithms for MiningOutliers fromLarge DataSets??? [COL] authors [VAL] S Ramaswarny, R Rastogi [COL] venue [VAL] Proc. of theACM Sigmod 2000 Int. Conference on Management of\n[6]  [COL] title [VAL] Detecting graph-based spatial outliers: algorithms and applications (a summary of results) [COL] authors [VAL] S Shekhar, CT Lu, P Zhang\n[7]  [COL] title [VAL] An effective and efficient algorithm for high-dimensional outlier detection [COL] authors [VAL] CC Aggarwal, PS Yu [COL] venue [VAL] The VLDB Journal The International Journal on Very Large  &hellip;, [COL] year [VAL] 2005.0\n[8]  [COL] title [VAL] Efficient algorithms for minimizing tree pattern queries [COL] authors [VAL] S Amer-Yahia, S Cho, L Lakshmanan, D Srivastava [COL] venue [VAL] Proc. of the ACM SIGMOD Conf. on Management of Data,\n[9]  [COL] title [VAL] LOF: Identifying Outliers in Large Dataset [COL] authors [VAL] MM Breunig, HP Kriegel, RT Ng, J Sander [COL] venue [VAL] Proc. of ACM SIGMOD,\n[10]  [COL] title [VAL] Mining class outlier: concepts, algorithms and applications in CRM [COL] authors [VAL] Z He, X Xu, JZ Huang, S Deng\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 3
-        },
-        {
-            "query_id": "1269_2",
-            "ground_truth": 33510,
-            "ground_answer": 3,
-            "options": [
-                40839,
-                24856,
-                33510,
-                33403,
-                49439,
-                45363,
-                43225,
-                59629,
-                34681,
-                36442
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Efficient Algorithms for Mining Outliers from Large Data Sets [COL] authors [VAL] Kyuseok Shim, Sridhar Ramaswamy, Rajeev Rastogi [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2000\n \nCandidate records:\n [1]  [COL] title [VAL] Parallel Algorithm for Mining Outliers in Large Database [COL] authors [VAL] E Hung\n[2]  [COL] title [VAL] Algorithms for Mining Distance Based Outliers in Large Databases [COL] authors [VAL] E Knorr, R Ng [COL] venue [VAL] Proceedings of VLDB, New York,\n[3]  [COL] title [VAL] Efficient Algorithms for Mining Outliers from Large Data Sets [COL] authors [VAL] R Sridhar, R Rajeev, S Kyuseok [COL] venue [VAL] Proceedings of the ACM SIGMOD Conference,\n[4]  [COL] title [VAL] Efficient Algorithms for Discovering Frequent Sets in Incremental Databases [COL] authors [VAL] RFYAA Amir, H Mannila [COL] venue [VAL] i&gt; Proc. ACM SIGMOD Workshop Research Issues on Data Mining  &hellip;,\n[5]  [COL] title [VAL] andK. Shim, 2000.???Efficient Algorithms for MiningOutliers fromLarge DataSets??? [COL] authors [VAL] S Ramaswarny, R Rastogi [COL] venue [VAL] Proc. of theACM Sigmod 2000 Int. Conference on Management of\n[6]  [COL] title [VAL] Detecting graph-based spatial outliers: algorithms and applications (a summary of results) [COL] authors [VAL] S Shekhar, CT Lu, P Zhang\n[7]  [COL] title [VAL] An effective and efficient algorithm for high-dimensional outlier detection [COL] authors [VAL] CC Aggarwal, PS Yu [COL] venue [VAL] The VLDB Journal The International Journal on Very Large  &hellip;, [COL] year [VAL] 2005.0\n[8]  [COL] title [VAL] Efficient algorithms for minimizing tree pattern queries [COL] authors [VAL] S Amer-Yahia, S Cho, L Lakshmanan, D Srivastava [COL] venue [VAL] Proc. of the ACM SIGMOD Conf. on Management of Data,\n[9]  [COL] title [VAL] LOF: Identifying Outliers in Large Dataset [COL] authors [VAL] MM Breunig, HP Kriegel, RT Ng, J Sander [COL] venue [VAL] Proc. of ACM SIGMOD,\n[10]  [COL] title [VAL] Mining class outlier: concepts, algorithms and applications in CRM [COL] authors [VAL] Z He, X Xu, JZ Huang, S Deng\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 1
         },
         {
             "query_id": "1275_0",
@@ -3263,20 +3177,6 @@
             "noise_answer": 2
         },
         {
-            "query_id": "1961_1",
-            "ground_truth": 22486,
-            "ground_answer": 2,
-            "options": [
-                39482,
-                22486,
-                18053,
-                42068,
-                58114
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] SQL Query Optimization: Reordering for a General Class of Queries [COL] authors [VAL] Piyush Goel, Balakrishna R. Iyer [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1996\n \nCandidate records:\n [1]  [COL] title [VAL] RankSQL: Query algebra and optimization for relational top-k queries [COL] authors [VAL] C Li, KCC Chang, IF Ilyas, S Song [COL] venue [VAL] Proceedings of the 2005 ACM SIGMOD international conference  &hellip;, [COL] year [VAL] 2005.0\n[2]  [COL] title [VAL] SQL Query Optimization: Reordering for a General Class of Queries [COL] authors [VAL] P Goel, B Iyer [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 1996.0\n[3]  [COL] title [VAL] Optimization of Nested SQL Queries Revisited, Procs [COL] authors [VAL] R Ganski, H Wang [COL] venue [VAL] ACM SIGMOD (San Francisco, May\n[4]  [COL] title [VAL] Efficient Optimization of a Class of Relational Queries [COL] authors [VAL] AV Aho, Y Sagiv, JD Ullman [COL] venue [VAL] ACM TODS\n[5]  [COL] title [VAL] Reordering for a General Class of Queries [COL] authors [VAL] PGBISQL QueryOptimization [COL] venue [VAL] Proceedings of ACM SIGMOD,\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 5
-        },
-        {
             "query_id": "1972_0",
             "ground_truth": 18407,
             "ground_answer": 8,
@@ -3465,25 +3365,6 @@
             "noise_answer": 3
         },
         {
-            "query_id": "2077_1",
-            "ground_truth": 10990,
-            "ground_answer": 3,
-            "options": [
-                21170,
-                276,
-                10990,
-                4247,
-                53690,
-                48078,
-                22223,
-                55513,
-                13051,
-                16083
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] QUIET: Continuous Query-driven Index Tuning [COL] authors [VAL] Eike Schallehn, Ingolf Geist, Kai-Uwe Sattler [COL] venue [VAL] VLDB [COL] year [VAL] 2003\n \nCandidate records:\n [1]  [COL] title [VAL] Monitoring Stream Properties for Continuous Query Processing [COL] authors [VAL] U Srivastava, S Babu, J Widom\n[2]  [COL] title [VAL] Continuous querying in database-centric Web applications [COL] authors [VAL] JC Shafer, R Agrawal [COL] venue [VAL] WWW9 / Computer Networks, [COL] year [VAL] 2000.0\n[3]  [COL] title [VAL] QUIET: Continuous Query-driven Index Tuning [COL] authors [VAL] KU Sattler, I Geist, E Schallehn [COL] venue [VAL] VLDB, [COL] year [VAL] 2003.0\n[4]  [COL] title [VAL] Continuous queries over data streams [COL] authors [VAL] S Balu, J Widom\n[5]  [COL] title [VAL] D-CAPE: Distributed and Self-Tuned Continuous Query Processing [COL] authors [VAL] TM Sutherland, B Liu, M Jbantova, EA Rundensteiner [COL] venue [VAL] Proceedings of the 14th ACM international conference on  &hellip;, [COL] year [VAL] 2005.0\n[6]  [COL] title [VAL] Processing of Continuous Queries over Unlimited Data Streams [COL] authors [VAL] E Vossough, JR Getta\n[7]  [COL] title [VAL] Querying Continuous Time Sequences [COL] authors [VAL] L Lin, T Risch [COL] venue [VAL] PROCEEDINGS OF THE INTERNATIONAL CONFERENCE ON VERY LARGE  &hellip;, [COL] year [VAL] 1998.0\n[8]  [COL] title [VAL] Eddies: Continuously Adaptive Query Processing [COL] authors [VAL] F L?\u00b6sch\n[9]  [COL] title [VAL] Autonomous Query-driven Index Tuning [COL] authors [VAL] KU Sattler, E Schallehn, I Geist\n[10]  [COL] title [VAL] The CQL Continuous Query Language: Semantic Foundations and Query Execution [COL] authors [VAL] A Arasu, S Babu, J Widom [COL] venue [VAL] The VLDB Journal, [COL] year [VAL] 2005.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 9
-        },
-        {
             "query_id": "2084_0",
             "ground_truth": 6348,
             "ground_answer": 3,
@@ -3564,23 +3445,6 @@
                 58868
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Histogram-Based Approximation of Set-Valued Query-Answers [COL] authors [VAL] Viswanath Poosala, Yannis E. Ioannidis [COL] venue [VAL] VLDB [COL] year [VAL] 1999\n \nCandidate records:\n [1]  [COL] title [VAL] Optimal Histograms with Quality Guarantees [COL] authors [VAL] S Muthukrishnan, V Poosala, T Suel [COL] venue [VAL] Bell Labs Technical Report, May 1998.[OR861 F. Olken and D.\n[2]  [COL] title [VAL] Balancing histogram optimality and practicality for query result size estimation [COL] authors [VAL] V Poosala [COL] venue [VAL] 1995\n[3]  [COL] title [VAL] Approximate Query Answering using Histograms [COL] authors [VAL] V Poosala, V Ganti, YE Ioannidis\n[4]  [COL] title [VAL] The History of Histograms (abridged) [COL] authors [VAL] YE Ioannidis [COL] venue [VAL] VLDB, [COL] year [VAL] 2003.0\n[5]  [COL] title [VAL] Optimal histograms for hierarchical range queries (extended abstract) [COL] authors [VAL] N Koudas, S Muthukrishnan, D Srivastava [COL] venue [VAL] Proceedings of the nineteenth ACM SIGMOD-SIGACT-SIGART  &hellip;, [COL] year [VAL] 2000.0\n[6]  [COL] title [VAL] Histogram-Based Approximation of Set-Valued Query-Answers [COL] authors [VAL] YE Ioannidis, V Poosala [COL] venue [VAL] VLDB, [COL] year [VAL] 1999.0\n[7]  [COL] title [VAL] Histogram-based techniques for approximating set-valued query-answers [COL] authors [VAL] Y Ioannidis, V Poosala [COL] venue [VAL] Proc. 25th International Conf. on Very Large Databases,\n[8]  [COL] title [VAL] Selectivity Estimation of Range Predicates Using Histograms [COL] authors [VAL] V Poosala, YE Ioannidis, PJ Haas, EJ Shekita [COL] venue [VAL] Proc. ACM-SIGMOD International Conference on Management of  &hellip;,\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 7
-        },
-        {
-            "query_id": "2119_1",
-            "ground_truth": 48039,
-            "ground_answer": 6,
-            "options": [
-                40002,
-                29061,
-                47226,
-                51158,
-                59297,
-                48039,
-                49980,
-                58868
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Histogram-Based Approximation of Set-Valued Query-Answers [COL] authors [VAL] Viswanath Poosala, Yannis E. Ioannidis [COL] venue [VAL] VLDB [COL] year [VAL] 1999\n \nCandidate records:\n [1]  [COL] title [VAL] Optimal Histograms with Quality Guarantees [COL] authors [VAL] S Muthukrishnan, V Poosala, T Suel [COL] venue [VAL] Bell Labs Technical Report, May 1998.[OR861 F. Olken and D.\n[2]  [COL] title [VAL] Balancing histogram optimality and practicality for query result size estimation [COL] authors [VAL] V Poosala [COL] venue [VAL] 1995\n[3]  [COL] title [VAL] Approximate Query Answering using Histograms [COL] authors [VAL] V Poosala, V Ganti, YE Ioannidis\n[4]  [COL] title [VAL] The History of Histograms (abridged) [COL] authors [VAL] YE Ioannidis [COL] venue [VAL] VLDB, [COL] year [VAL] 2003.0\n[5]  [COL] title [VAL] Optimal histograms for hierarchical range queries (extended abstract) [COL] authors [VAL] N Koudas, S Muthukrishnan, D Srivastava [COL] venue [VAL] Proceedings of the nineteenth ACM SIGMOD-SIGACT-SIGART  &hellip;, [COL] year [VAL] 2000.0\n[6]  [COL] title [VAL] Histogram-Based Approximation of Set-Valued Query-Answers [COL] authors [VAL] YE Ioannidis, V Poosala [COL] venue [VAL] VLDB, [COL] year [VAL] 1999.0\n[7]  [COL] title [VAL] Histogram-based techniques for approximating set-valued query-answers [COL] authors [VAL] Y Ioannidis, V Poosala [COL] venue [VAL] Proc. 25th International Conf. on Very Large Databases,\n[8]  [COL] title [VAL] Selectivity Estimation of Range Predicates Using Histograms [COL] authors [VAL] V Poosala, YE Ioannidis, PJ Haas, EJ Shekita [COL] venue [VAL] Proc. ACM-SIGMOD International Conference on Management of  &hellip;,\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 6
         },
         {
@@ -3611,24 +3475,6 @@
         },
         {
             "query_id": "2187_0",
-            "ground_truth": 14841,
-            "ground_answer": 8,
-            "options": [
-                17235,
-                1169,
-                12918,
-                9522,
-                46808,
-                32404,
-                55257,
-                14841,
-                16747
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] WaveCluster: A Multi-Resolution Clustering Approach for Very Large Spatial Databases [COL] authors [VAL] Surojit Chatterjee, Gholamhosein Sheikholeslami, Aidong Zhang [COL] venue [VAL] VLDB [COL] year [VAL] 1998\n \nCandidate records:\n [1]  [COL] title [VAL] Clustering high-dimensional data using an efficient and effective data space reduction [COL] authors [VAL] R Orlandic, Y Lai, WG Yee [COL] venue [VAL] Proceedings of the 14th ACM international conference on  &hellip;, [COL] year [VAL] 2005.0\n[2]  [COL] title [VAL] Ramakrishnan R. Livny M (1996) BIRCH: An Efficient Data Clustering Method for Very Large Database [COL] authors [VAL] T Zhang [COL] venue [VAL] Proceedings of the 1996 ACM SIGMOD International Conference\n[3]  [COL] title [VAL] WaheedQureshi. Aperformanceanalysis of alternative multi-attribute declustering strategies [COL] authors [VAL] S Ghandeharizadeh, DJ DeWitt [COL] venue [VAL] Proceedings of the 1992 ACMSIGMOD\n[4]  [COL] title [VAL] WaveCluster: a wavelet-based clustering approach for spatial data in very large databases [COL] authors [VAL] G Sheikholeslami, S Chatterjee, A Zhang [COL] venue [VAL] The VLDB Journal The International Journal on Very Large  &hellip;, [COL] year [VAL] 2000.0\n[5]  [COL] title [VAL] Clustering: A powerful aid in classifying QRS waveforms(Abstract Only) [COL] authors [VAL] L PATOMAKI, M JARVILUOTO [COL] venue [VAL] Oulu Univ, Proceedings of the 25 th Annual Conference of the &hellip;, [COL] year [VAL] 1991.0\n[6]  [COL] title [VAL] Hybrid-Range Partitioning Strategy: A New Declustering Strategy for Multiprocessor Databa. se [COL] authors [VAL] DJ DeWitt, S Ghandeharizadeh [COL] venue [VAL] Proc. 16th international Conference on VLDB,\n[7]  [COL] title [VAL] Waveguide-based spatial power combiners [COL] authors [VAL] NS Cheng [COL] venue [VAL] 1999\n[8]  [COL] title [VAL] WaveCluster: A Multi-Resolution Clustering Approach for Very Large Spatial Databases [COL] authors [VAL] G Sheikholeslami, S Chatterjee, A Zhang [COL] venue [VAL] VLDB, [COL] year [VAL] 1998.0\n[9]  [COL] title [VAL] Multi-Dimensional Clustering: A New Data Layout Scheme in DB2 [COL] authors [VAL] S Padmanabhan, B Bhattacharjee, T Malkemus, L [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 2003.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 4
-        },
-        {
-            "query_id": "2187_1",
             "ground_truth": 14841,
             "ground_answer": 8,
             "options": [
@@ -3898,7 +3744,7 @@
                 18861
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] XML Repository and Active Views Demonstration [COL] authors [VAL] Bruno Tessier, Am?lie Marian, Brendan Hills, Sophie Cluet, Jean-Claude Mamou, Bernd Amann, Anne-Marie Vercoustre, Fr?d?ric Hubert, Vincent Aguilera, Laurent Mignet, Serge Abiteboul, S?bastien Ailleret, Tova Milo, Cassio Souza dos Santos [COL] venue [VAL] VLDB [COL] year [VAL] 1999\n \nCandidate records:\n [1]  [COL] title [VAL] Regular Rewriting of Active XML and Unambiguity [COL] authors [VAL] S Abiteboul, T Milo, O Benjelloun\n[2]  [COL] title [VAL] Representing and Querying XML with Incomplete Information [COL] authors [VAL] S Abiteboul, L Segoufin, V Vianu\n[3]  [COL] title [VAL] Structured Multimedia Document Classification [COL] authors [VAL] L Denoyer, JN Vittaut, S Brunessaux, S Brunessaux\n[4]  [COL] title [VAL] The Xyleme project [COL] authors [VAL] S Abiteboul, S Cluet, G Ferran, MC Rousset [COL] venue [VAL] Computer Networks, [COL] year [VAL] 2002.0\n[5]  [COL] title [VAL] Managing Distributed Workspaces with Active XML [COL] authors [VAL] S Abiteboul, J Baumgarten, A Bonifati, G Cobena, C [COL] venue [VAL] PROCEEDINGS OF THE INTERNATIONAL CONFERENCE ON VERY LARGE  &hellip;, [COL] year [VAL] 2003.0\n[6]  [COL] title [VAL] Lazy Evaluation of Active XML Queries [COL] authors [VAL] S Abiteboul, O Benjelloun, B Cautis, I Manolescu, [COL] venue [VAL] Proc. of ACM SIGMOD,\n[7]  [COL] title [VAL] Lazy Query Evaluation for Active XML [COL] authors [VAL] S Abiteboul, O Benjelloun, B Cautis, I Manolescu, [COL] venue [VAL] Proc. of ACM SIGMOD, [COL] year [VAL] 2004.0\n[8]  [COL] title [VAL] B. Lud?\u00a4scher B, R. Marciano, Y. Papakonstantinou, P. Velikhov and V. Chu,.??? XML-Based Information [COL] authors [VAL] C Baru, A Gupta [COL] venue [VAL] Proc. of the ACM\n[9]  [COL] title [VAL] XML Repository and Active Views Demonstration [COL] authors [VAL] S Abiteboul [COL] venue [VAL] PROCEEDINGS OF THE INTERNATIONAL CONFERENCE ON VERY LARGE  &hellip;, [COL] year [VAL] 1999.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 9
+            "noise_answer": 0
         },
         {
             "query_id": "2347_0",

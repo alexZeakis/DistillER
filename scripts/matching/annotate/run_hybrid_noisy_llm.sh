@@ -7,9 +7,7 @@ directories=("D2" "D3" "D4" "D5" "D6" "D7" "D8" "D9")
 seeds=(1924)
 
 # Noisy source
-#models=("llama_8" "llama_70" "qwen_14" "qwen_32")
-
-models=("llama_70")
+models=("llama_8" "llama_70" "qwen_14" "qwen_32")
 
 # SLM models and corresponding paths
 slm_models=("sminilm" "roberta")
@@ -27,7 +25,7 @@ for noisy in "${models[@]}"; do
             for seed in "${seeds[@]}"; do
                 echo "Transforming data for $dir with seed $seed"
     
-                python ../plm/transform_data_plm.py \
+                python ../slm/transform_data_plm.py \
                     --dataset "$dir" \
                     --out_dir "../../../log/matching/annotate_hybrid/llm/$slm_model/${noisy}/data/$dir/"  \
                     --in_dir "../../../data/ccer/cleaned/original/" \
@@ -47,7 +45,7 @@ for noisy in "${models[@]}"; do
             --percentage 0.8
     
         # Step 3: Fine-tune the SLM model
-        python ../plm/supervised_main.py \
+        python ../slm/supervised_main.py \
             --model_type "$slm_model" \
             --model_name_or_path "$slm_path" \
             --data_dir "../../../log/matching/annotate_hybrid/llm/$slm_model/${noisy}/data/" \

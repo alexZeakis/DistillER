@@ -1,7 +1,7 @@
 {
     "settings": {
         "dataset": "D9",
-        "out_file": "../../../log/matching/annotate_hybrid_llm/roberta/llama_70/partial/D9_1924.json",
+        "out_file": "../../../log/matching/annotate_hybrid/llm/roberta/llama_70/partial/D9_1924.json",
         "in_dir": "../../../data/ccer/cleaned/original/",
         "sample_file": "../../../data/ccer/cleaned/fine_tuning/blocking/train/D9.csv",
         "seed": 1924,
@@ -1087,7 +1087,7 @@
                 59627
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] LORE: A Lightweight Object REpository for Semistructured Data [COL] authors [VAL] Janet L. Wiener, Jason McHugh, Serge Abiteboul, Qingshan Luo, Anand Rajaraman, Dallan Quass, Jeffrey D. Ullman, Roy Goldman, Hugo Rivero, Jennifer Widom, Svetlozar Nestorov, Kevin Haas [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1996\n \nCandidate records:\n [1]  [COL] title [VAL] CLASSIC: a Structural Data Model forObjects' [COL] authors [VAL] A Borgida, RJ Brachman, DL McGuinness, LA Resnick [COL] venue [VAL] &hellip;  of the ACM International Conference on Management of Data- &hellip;,\n[2]  [COL] title [VAL] J. Wid om. Lore: A Database Management System for Semistructured Data [COL] authors [VAL] J McHugh, S Abiteboul, R Goldman, D Quass [COL] venue [VAL] SIGMOD Record,\n[3]  [COL] title [VAL] LORE: A Lightweight Object REpository for Semistructured Data. [COL] authors [VAL] ACMS Anthology, P Edition\n[4]  [COL] title [VAL] Lori Alperin Resnick (1989) CLASSIC: A Structural Data Model for Objects [COL] authors [VAL] A Borgida, RJ Brachman, DL McGuinness [COL] venue [VAL] ACM SIGMOD International Conference on Management of\n[5]  [COL] title [VAL] Indexing semistructured data [COL] authors [VAL] J McHugh, J Widom, S Abiteboul, Q Luo, A Rajaraman\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 0
+            "noise_answer": 3
         },
         {
             "query_id": "726_0",
@@ -1693,19 +1693,6 @@
                 22588
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Providing Database-like Access to the Web Using Queries Based on Textual Similarity [COL] authors [VAL] William W. Cohen [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1998\n \nCandidate records:\n [1]  [COL] title [VAL] Integration of Heterogeneous Databases Without Common Domains Using Queries Based on Textual [COL] authors [VAL] WW Cohen [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 1998.0\n[2]  [COL] title [VAL] Providing Database-like Access to the Web Using Queries Based on Textual Similarity [COL] authors [VAL] WW Cohen [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 1998.0\n[3]  [COL] title [VAL] Srinivasan. Accessing relational databases fromtheWorld Wide Web [COL] authors [VAL] T NguyenandV [COL] venue [VAL] Proc. ACM SIGMOD Conference,\n[4]  [COL] title [VAL] Fast Parallel Similarity Search in Multimedia Databases [COL] authors [VAL] S Berchtold [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 1997.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 1
-        },
-        {
-            "query_id": "1101_1",
-            "ground_truth": 11882,
-            "ground_answer": 2,
-            "options": [
-                24895,
-                11882,
-                7026,
-                22588
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Providing Database-like Access to the Web Using Queries Based on Textual Similarity [COL] authors [VAL] William W. Cohen [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1998\n \nCandidate records:\n [1]  [COL] title [VAL] Integration of Heterogeneous Databases Without Common Domains Using Queries Based on Textual [COL] authors [VAL] WW Cohen [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 1998.0\n[2]  [COL] title [VAL] Providing Database-like Access to the Web Using Queries Based on Textual Similarity [COL] authors [VAL] WW Cohen [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 1998.0\n[3]  [COL] title [VAL] Srinivasan. Accessing relational databases fromtheWorld Wide Web [COL] authors [VAL] T NguyenandV [COL] venue [VAL] Proc. ACM SIGMOD Conference,\n[4]  [COL] title [VAL] Fast Parallel Similarity Search in Multimedia Databases [COL] authors [VAL] S Berchtold [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 1997.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 2
         },
         {
@@ -2149,7 +2136,7 @@
                 39924
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Implementing Deletion in B+-Trees [COL] authors [VAL] Jan Jannink [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1995\n \nCandidate records:\n [1]  [COL] title [VAL] Optimizing Jan Jannink???s implementation of B+-tree deletion [COL] authors [VAL] R Maelbrancke, H Olivie [COL] venue [VAL] ACM Sigmod Record, [COL] year [VAL] 1995.0\n[2]  [COL] title [VAL] Good worst-case algorithms for inserting and deleting records in dense sequential files [COL] authors [VAL] DE Willard [COL] venue [VAL] Proceedings of the 1986 ACM SIGMOD International Conference  &hellip;, [COL] year [VAL] 1986.0\n[3]  [COL] title [VAL] Comments on optimality of B-trees [COL] authors [VAL] J Klonk [COL] venue [VAL] ACM SIGMOD Record, [COL] year [VAL] 1983.0\n[4]  [COL] title [VAL] Implementing Deletion in B+-Trees [COL] authors [VAL] J Jannink [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 1995.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 1
+            "noise_answer": 0
         },
         {
             "query_id": "1390_0",
@@ -2833,7 +2820,22 @@
                 43482
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Jan Van den Bussche, Surajit Chaudhuri, Moshe Y. Vardi, Kenneth A. Ross, G?sta Grahne, H. V. Jagadish [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1999\n \nCandidate records:\n [1]  [COL] title [VAL] Sir Jagadis Chandra Bose: A Biography for Students [COL] authors [VAL] B Mitra [COL] venue [VAL] 1982\n[2]  [COL] title [VAL] nez-Molero, J.-P. Sauvage [COL] authors [VAL] JP Collin, C Dietrich-Buchecker, P Gavina, MC Jime [COL] venue [VAL] Acc. Chem. Res,\n[3]  [COL] title [VAL] Recovering from Main-Memory Lapses [COL] authors [VAL] HV Jagadish, A Silberschatz, S Sudarshan [COL] venue [VAL] VLDB, [COL] year [VAL] 1993.0\n[4]  [COL] title [VAL] An overview of GOOD [COL] authors [VAL] J Paredaens, J Van den Bussche, M Andries, M Gemis [COL] venue [VAL] ACM SIGMOD Record, [COL] year [VAL] 1992.0\n[5]  [COL] title [VAL] DBMS Research at a Crossroads: The Vienna Update [COL] authors [VAL] M Stonebraker, R Agrawal, U Dayal, EJ Neuhold, A [COL] venue [VAL] PROCEEDINGS OF THE INTERNATIONAL CONFERENCE ON VERY LARGE  &hellip;, [COL] year [VAL] 1993.0\n[6]  [COL] title [VAL] Similarity Search for Web Services [COL] authors [VAL] X Dong, A Halevy, J Madhavan, E Nemes, J Zhang [COL] venue [VAL] PROCEEDINGS OF THE INTERNATIONAL CONFERENCE ON VERY LARGE  &hellip;, [COL] year [VAL] 2004.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 0
+            "noise_answer": 3
+        },
+        {
+            "query_id": "1842_1",
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "options": [
+                14150,
+                57512,
+                20219,
+                11169,
+                35918,
+                43482
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Jan Van den Bussche, Surajit Chaudhuri, Moshe Y. Vardi, Kenneth A. Ross, G?sta Grahne, H. V. Jagadish [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1999\n \nCandidate records:\n [1]  [COL] title [VAL] Sir Jagadis Chandra Bose: A Biography for Students [COL] authors [VAL] B Mitra [COL] venue [VAL] 1982\n[2]  [COL] title [VAL] nez-Molero, J.-P. Sauvage [COL] authors [VAL] JP Collin, C Dietrich-Buchecker, P Gavina, MC Jime [COL] venue [VAL] Acc. Chem. Res,\n[3]  [COL] title [VAL] Recovering from Main-Memory Lapses [COL] authors [VAL] HV Jagadish, A Silberschatz, S Sudarshan [COL] venue [VAL] VLDB, [COL] year [VAL] 1993.0\n[4]  [COL] title [VAL] An overview of GOOD [COL] authors [VAL] J Paredaens, J Van den Bussche, M Andries, M Gemis [COL] venue [VAL] ACM SIGMOD Record, [COL] year [VAL] 1992.0\n[5]  [COL] title [VAL] DBMS Research at a Crossroads: The Vienna Update [COL] authors [VAL] M Stonebraker, R Agrawal, U Dayal, EJ Neuhold, A [COL] venue [VAL] PROCEEDINGS OF THE INTERNATIONAL CONFERENCE ON VERY LARGE  &hellip;, [COL] year [VAL] 1993.0\n[6]  [COL] title [VAL] Similarity Search for Web Services [COL] authors [VAL] X Dong, A Halevy, J Madhavan, E Nemes, J Zhang [COL] venue [VAL] PROCEEDINGS OF THE INTERNATIONAL CONFERENCE ON VERY LARGE  &hellip;, [COL] year [VAL] 2004.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
+            "noise_answer": 1
         },
         {
             "query_id": "1876_0",
@@ -2932,25 +2934,6 @@
             "noise_answer": 8
         },
         {
-            "query_id": "1915_1",
-            "ground_truth": 55905,
-            "ground_answer": 8,
-            "options": [
-                36055,
-                3122,
-                22129,
-                10712,
-                51007,
-                44890,
-                38662,
-                55905,
-                31964,
-                33993
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Databases for Networks [COL] authors [VAL] H. V. Jagadish [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1994\n \nCandidate records:\n [1]  [COL] title [VAL] Database management systems in 1990 [COL] authors [VAL] JL Berg [COL] venue [VAL] Proceedings of the 1982 ACM SIGMOD international conference  &hellip;, [COL] year [VAL] 1982.0\n[2]  [COL] title [VAL] Issues in multimedia databases [COL] authors [VAL] HV Jagadish [COL] venue [VAL] Proceedings of the 1993 ACM SIGMOD international conference  &hellip;, [COL] year [VAL] 1993.0\n[3]  [COL] title [VAL] Database Systems Management and Oracle8 [COL] authors [VAL] CG Doherty [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 1998.0\n[4]  [COL] title [VAL] The Network is the Database: Data Management for Highly Distributed Systems [COL] authors [VAL] JC Navas, M Wynblatt [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 2001.0\n[5]  [COL] title [VAL] SIGMOD challenges paper: database issues in telecommunications network management [COL] authors [VAL] I Ahn [COL] venue [VAL] Proceedings of the 1994 ACM SIGMOD international conference  &hellip;, [COL] year [VAL] 1994.0\n[6]  [COL] title [VAL] Database in Crisis and Transition: A Technical Agenda for the Year 2001 [COL] authors [VAL] D Vaskevitch [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 1994.0\n[7]  [COL] title [VAL] Panel: user interfaces and database management systems [COL] authors [VAL] TL Anderson, G Ariav [COL] venue [VAL] Proceedings of the 1986 ACM SIGMOD international conference  &hellip;, [COL] year [VAL] 1986.0\n[8]  [COL] title [VAL] Databases for Networks [COL] authors [VAL] HV Jagadish [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 1994.0\n[9]  [COL] title [VAL] FileNet Integrated Document Management Database Usage and Issues [COL] authors [VAL] DS Whelan [COL] venue [VAL] Proceedings of the 1998 ACM SIGMOD international conference  &hellip;, [COL] year [VAL] 1998.0\n[10]  [COL] title [VAL] Databases and Visualization [COL] authors [VAL] DA Keim [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 1996.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 2
-        },
-        {
             "query_id": "1923_0",
             "ground_truth": -1,
             "ground_answer": 0,
@@ -2971,22 +2954,6 @@
         },
         {
             "query_id": "1929_0",
-            "ground_truth": 3955,
-            "ground_answer": 4,
-            "options": [
-                13858,
-                41159,
-                28859,
-                3955,
-                34588,
-                40374,
-                46261
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Context-Based Prefetch for Implementing Objects on Relations [COL] authors [VAL] Philip A. Bernstein, David Shutt, Shankar Pal [COL] venue [VAL] VLDB [COL] year [VAL] 1999\n \nCandidate records:\n [1]  [COL] title [VAL] Context-based prefetch-an optimization for implementing objects on relations [COL] authors [VAL] PA Bernstein, S Pal, D Shutt [COL] venue [VAL] The VLDB Journal The International Journal on Very Large  &hellip;, [COL] year [VAL] 2000.0\n[2]  [COL] title [VAL] A. and Moerkotte, G. Advanced query processing in object bases using access support relations [COL] authors [VAL] KM Kemper [COL] venue [VAL] Proceedings of the 15th international conference on VLDB,\n[3]  [COL] title [VAL] Prefetch Injection Based on Hardware Monitoring and Object Metadata [COL] authors [VAL] AR Adl-Tabatabai, RL Hudson, MJ Serrano, S\n[4]  [COL] title [VAL] Context-Based Prefetch for Implementing Objects on Relations [COL] authors [VAL] PA Bernstein, S Pal, D Shutt [COL] venue [VAL] VLDB, [COL] year [VAL] 1999.0\n[5]  [COL] title [VAL] Sequentiality and prefetching in database systems [COL] authors [VAL] AJ Smith [COL] venue [VAL] ACM Transactions on Database Systems, [COL] year [VAL] 1978.0\n[6]  [COL] title [VAL] A Top-10 Approach to Prefetching on the Web [COL] authors [VAL] EP Markatos, CE Chronaki [COL] venue [VAL] Proceedings of INET, [COL] year [VAL] 1998.0\n[7]  [COL] title [VAL] A performance study of hardware and software data prefetching schemes [COL] authors [VAL] TF Chen, JL Baer [COL] venue [VAL] Proc.\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 1
-        },
-        {
-            "query_id": "1929_1",
             "ground_truth": 3955,
             "ground_answer": 4,
             "options": [
@@ -3182,7 +3149,7 @@
                 17110
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Active Views for Electronic Commerce [COL] authors [VAL] Laurent Mignet, Serge Abiteboul, Tova Milo, Adi Eyal, Bernd Amann, Sophie Cluet [COL] venue [VAL] VLDB [COL] year [VAL] 1999\n \nCandidate records:\n [1]  [COL] title [VAL] Activeviewsforelectroniccommerce [COL] authors [VAL] S Abiteboul, C Cluet, L Mignet, B Amann, T Milo, A [COL] venue [VAL] Proc. 25th VLDB, Edinburgh, UK, September,\n[2]  [COL] title [VAL] Electronic Commerce Technologies [COL] authors [VAL] W Kou [COL] venue [VAL] 2001\n[3]  [COL] title [VAL] B2B E-Commerce Revisited: Leading Perspectives on the Key Issues and Research Directions [COL] authors [VAL] I Participants [COL] venue [VAL] Electronic Markets, [COL] year [VAL] 2002.0\n[4]  [COL] title [VAL] Enabling Technologies for Electronic Commerce [COL] authors [VAL] G Kappel, W Retschitzegger, B Schr?\u00b6der\n[5]  [COL] title [VAL] Electronic Commerce with Software Agents [COL] authors [VAL] W Clurman, T Foley, R Guttman, K Kupres [COL] venue [VAL] PC Magazine,\n[6]  [COL] title [VAL] An architecture in support of universal access to electronic commerce [COL] authors [VAL] T Chiasson, K Hawkey, M McAllister, J Slonim [COL] venue [VAL] Information &amp; Software Technology, [COL] year [VAL] 2002.0\n[7]  [COL] title [VAL] Database Technologies for Electronic Commerce [COL] authors [VAL] R Agrawal, R Srikant, Y Xu [COL] venue [VAL] VLDB, [COL] year [VAL] 2002.0\n[8]  [COL] title [VAL] Electronic Commerce Back-office Integration [COL] authors [VAL] K Lamond, JA Edelheit [COL] venue [VAL] BT Technology Journal, [COL] year [VAL] 1999.0\n[9]  [COL] title [VAL] Electronic commerce and Web technologies [COL] authors [VAL] K Bauknecht, SK Madria, G Pernul [COL] venue [VAL] 2001\n[10]  [COL] title [VAL] E-commerce: Cyber-and Physical Environments [COL] authors [VAL] H BOUWMAN [COL] venue [VAL] Electronic Markets, [COL] year [VAL] 1999.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 1
+            "noise_answer": 0
         },
         {
             "query_id": "2052_0",
@@ -3758,7 +3725,7 @@
                 58136
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] SQLJ Part 0, Now Known as SQL/OLB (Object-Language Bindings) [COL] authors [VAL] Andrew Eisenberg, Jim Melton [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1998\n \nCandidate records:\n [1]  [COL] title [VAL] Observations on the ODMG-93 proposal for an object-oriented database language [COL] authors [VAL] W Kim [COL] venue [VAL] ACM SIGMOD Record, [COL] year [VAL] 1994.0\n[2]  [COL] title [VAL] Ode (object database and environment): The languageand the data model [COL] authors [VAL] R Agrawal, NH Gehani [COL] venue [VAL] Proc. ACM SIGMOD conference, pages46 57,\n[3]  [COL] title [VAL] SQLJ Part 0, Now Known as SQL/OLB (Object-Language Bindings) [COL] authors [VAL] A Eisenberg, J Melton [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 1998.0\n[4]  [COL] title [VAL] 0, now known as SQL/OLB (Object-Language Bindings) [COL] authors [VAL] S Part [COL] venue [VAL] 1998\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 4
+            "noise_answer": 0
         },
         {
             "query_id": "2455_0",

@@ -28,7 +28,7 @@ def compute_f1_score(y_true, y_pred):
     precision = tp / (tp + fp)
     recall = tp / (tp + fn)
     
-    print(precision, recall)
+    # print(precision, recall)
 
     if precision + recall == 0:
         return 0.0
@@ -156,17 +156,21 @@ def prepare_plm_file(path, rdir='log/', measure=compute_f1_score):
         if not file.endswith('csv'):
             continue
         df = pd.read_csv(path + rdir + file)
+        
+        case = file[:2]
+        scores[case]['preds'] = df['predictions'].tolist()
+        scores[case]['true'] = df['labels'].tolist()
     
-        for index, row in df.iterrows():
-            case = 'D{}'.format(row['datasets'])
-            scores[case]['preds'].append(row['predictions'])
-            scores[case]['true'].append(row['labels'])
+        # for index, row in df.iterrows():
+        #     case = 'D{}'.format(row['datasets'])
+        #     scores[case]['preds'].append(row['predictions'])
+        #     scores[case]['true'].append(row['labels'])
 
     results = {}
     for key, val in scores.items():
         results[key] = float(measure(val['true'], val['preds']))
     return pd.Series(results)
-
+    # return None
 
 
 def prepare_plm_train_file(path, measure=compute_f1_score):

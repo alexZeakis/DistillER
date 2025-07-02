@@ -22,7 +22,7 @@ for i in "${!slm_models[@]}"; do
         for seed in "${seeds[@]}"; do
             echo "Transforming data for $dir with seed $seed"
 
-            python ../plm/transform_data_plm.py \
+            python ../slm/transform_data_plm.py \
                 --dataset "$dir" \
                 --out_dir "../../../log/matching/annotate_hybrid/ground/$slm_model/data/$dir/"  \
                 --in_dir "../../../data/ccer/cleaned/original/" \
@@ -41,7 +41,7 @@ for i in "${!slm_models[@]}"; do
         --percentage 0.8
 
     # Step 3: Fine-tune model
-    python ../plm/supervised_main.py \
+    python ../slm/supervised_main.py \
         --model_type "$slm_model" \
         --model_name_or_path "$slm_path" \
         --data_dir "../../../log/matching/annotate_hybrid/ground/$slm_model/data/" \

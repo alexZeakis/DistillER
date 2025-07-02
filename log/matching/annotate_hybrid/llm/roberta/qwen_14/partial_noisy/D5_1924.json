@@ -1,7 +1,7 @@
 {
     "settings": {
         "dataset": "D5",
-        "out_file": "../../../log/matching/annotate_hybrid_llm/roberta/qwen_14/partial/D5_1924.json",
+        "out_file": "../../../log/matching/annotate_hybrid/llm/roberta/qwen_14/partial/D5_1924.json",
         "in_dir": "../../../data/ccer/cleaned/original/",
         "sample_file": "../../../data/ccer/cleaned/fine_tuning/blocking/train/D5.csv",
         "seed": 1924,
@@ -1431,6 +1431,18 @@
             "noise_answer": 3
         },
         {
+            "query_id": "1500_1",
+            "ground_truth": 5342,
+            "ground_answer": 3,
+            "options": [
+                2441,
+                449,
+                5342
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Mr. Wilson's Wife: Part 1 [COL] episodeNumber [VAL] 26.0 [COL] seasonNumber [VAL] 6.0 [COL] startYear [VAL] 1959-01-01 [COL] genre_list [VAL] Drama [COL] runtimeMinutes [VAL] 30.0\n \nCandidate records:\n [1]  [COL] title [VAL] Widow's Walk [COL] episodeNumber [VAL] 5.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 1957-10-24 [COL] release_year [VAL] 1957-01-01\n[2]  [COL] title [VAL] Mr. Wilson's Wife: Part 2 [COL] episodeNumber [VAL] 27.0 [COL] seasonNumber [VAL] 6.0 [COL] releaseDate [VAL] 1959-04-12 [COL] release_year [VAL] 1959-01-01\n[3]  [COL] title [VAL] Mr. Wilson's Wife: Part 1 [COL] episodeNumber [VAL] 26.0 [COL] seasonNumber [VAL] 6.0 [COL] releaseDate [VAL] 1959-04-05 [COL] release_year [VAL] 1959-01-01\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
+            "noise_answer": 2
+        },
+        {
             "query_id": "1544_0",
             "ground_truth": 4926,
             "ground_answer": 1,
@@ -2068,7 +2080,21 @@
                 5753
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Bio-Diesel Man [COL] episodeNumber [VAL] 11.0 [COL] seasonNumber [VAL] 1.0 [COL] startYear [VAL] 2005-01-01 [COL] genre_list [VAL] Reality-TV [COL] runtimeMinutes [VAL] 44.0\n \nCandidate records:\n [1]  [COL] title [VAL] Micro-Algae Man [COL] episodeNumber [VAL] 15.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 2005-11-01 [COL] release_year [VAL] 2005-01-01\n[2]  [COL] title [VAL] Bio-Diesel Man [COL] abstract [VAL] Mike goes to Washington and helps build a house out of cob, which is basically a combination of sand, clay, and straw.Mike then heads to California and works alongside Dave the bee man to get rid of some bee's infesting a church.Finally, Mike goes back to Washington and helps clean out the old oil from a deep fryer at a Mexican restaurant and then recycle the oil into fuel or bio-diesel. [COL] episodeNumber [VAL] 11.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 2005-10-25 [COL] release_year [VAL] 2005-01-01\n[3]  [COL] title [VAL] Bio-Diesel Man [COL] episodeNumber [VAL] 14.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 2005-10-25 [COL] release_year [VAL] 2005-01-01\n[4]  [COL] title [VAL] Man's Estate [COL] episodeNumber [VAL] 29.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 1954-04-11 [COL] release_year [VAL] 1954-01-01\n[5]  [COL] title [VAL] Man Eater [COL] episodeNumber [VAL] 17.0 [COL] seasonNumber [VAL] 2.0 [COL] releaseDate [VAL] 1961-02-06 [COL] release_year [VAL] 1961-01-01\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 0
+            "noise_answer": 2
+        },
+        {
+            "query_id": "2274_1",
+            "ground_truth": 1605,
+            "ground_answer": 2,
+            "options": [
+                2558,
+                1605,
+                1357,
+                3061,
+                5753
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Bio-Diesel Man [COL] episodeNumber [VAL] 11.0 [COL] seasonNumber [VAL] 1.0 [COL] startYear [VAL] 2005-01-01 [COL] genre_list [VAL] Reality-TV [COL] runtimeMinutes [VAL] 44.0\n \nCandidate records:\n [1]  [COL] title [VAL] Micro-Algae Man [COL] episodeNumber [VAL] 15.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 2005-11-01 [COL] release_year [VAL] 2005-01-01\n[2]  [COL] title [VAL] Bio-Diesel Man [COL] abstract [VAL] Mike goes to Washington and helps build a house out of cob, which is basically a combination of sand, clay, and straw.Mike then heads to California and works alongside Dave the bee man to get rid of some bee's infesting a church.Finally, Mike goes back to Washington and helps clean out the old oil from a deep fryer at a Mexican restaurant and then recycle the oil into fuel or bio-diesel. [COL] episodeNumber [VAL] 11.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 2005-10-25 [COL] release_year [VAL] 2005-01-01\n[3]  [COL] title [VAL] Bio-Diesel Man [COL] episodeNumber [VAL] 14.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 2005-10-25 [COL] release_year [VAL] 2005-01-01\n[4]  [COL] title [VAL] Man's Estate [COL] episodeNumber [VAL] 29.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 1954-04-11 [COL] release_year [VAL] 1954-01-01\n[5]  [COL] title [VAL] Man Eater [COL] episodeNumber [VAL] 17.0 [COL] seasonNumber [VAL] 2.0 [COL] releaseDate [VAL] 1961-02-06 [COL] release_year [VAL] 1961-01-01\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
+            "noise_answer": 3
         },
         {
             "query_id": "2286_0",

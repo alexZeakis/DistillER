@@ -1,7 +1,7 @@
 {
     "settings": {
         "dataset": "D9",
-        "out_file": "../../../log/matching/annotate_hybrid_llm/sminilm/0.90/partial/D9_1924.json",
+        "out_file": "../../../log/matching/annotate_hybrid/size/sminilm/0.90/partial/D9_1924.json",
         "in_dir": "../../../data/ccer/cleaned/original/",
         "sample_file": "../../../data/ccer/cleaned/fine_tuning/blocking/train/D9.csv",
         "seed": 1924,
@@ -658,7 +658,7 @@
                 41770
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Cost-driven vertical class partitioning for methods in object oriented databases [COL] authors [VAL] Qing Li, Chi-Wai Fung, Kamalakar Karlapalem [COL] venue [VAL] VLDB J. [COL] year [VAL] 2003\n \nCandidate records:\n [1]  [COL] title [VAL] A Framework for Class Partitioning in Object-Oriented Databases [COL] authors [VAL] K Karlapalem, Q Li [COL] venue [VAL] Distributed and Parallel Databases, [COL] year [VAL] 2000.0\n[2]  [COL] title [VAL] G. &amp; Dou, J.(1984) Vertical Partitioning Algorithms for Database Design [COL] authors [VAL] S Navathe, SW Ceri [COL] venue [VAL] ACM Transactions on Database\n[3]  [COL] title [VAL] An Evaluation of Vertical Class Partitioning for Query Processing in Object-Oriented Databases [COL] authors [VAL] C Fung, K Karlapalem, Q Li [COL] venue [VAL] IEEE Transactions on Knowledge and Data Engineering, [COL] year [VAL] 2002.0\n[4]  [COL] title [VAL] Vertical partitioning algorithms for database design [COL] authors [VAL] S Navathe, S Ceri, G Wiederhold, J Dou [COL] venue [VAL] ACM Transactions on Database Systems, [COL] year [VAL] 1984.0\n[5]  [COL] title [VAL] Cost-Driven Evaluation of Vertical Class Partitioning in Object Oriented Databases ?? [COL] authors [VAL] CW Bay, H Kowloon\n[6]  [COL] title [VAL] Vertical Partitioning Algorithms for Database Design: A Graphical Algorithm [COL] authors [VAL] S Navathe, R Minyoung\n[7]  [COL] title [VAL] An Evaluation of Vertical ClassPartitioning for Query Processingin Object-Oriented Databases [COL] authors [VAL] K Karlapalem\n[8]  [COL] title [VAL] Query optimization using horizontal class partitioning in object oriented databases [COL] authors [VAL] L Bellatreche, K Karlapalem, A Simonet\n[9]  [COL] title [VAL] An overview of vertical partitioning in object oriented databases [COL] authors [VAL] GS Chinchwadkar, A Goh [COL] venue [VAL] The Computer Journal, [COL] year [VAL] 1999.0\n[10]  [COL] title [VAL] Cost-driven vertical class partitioning for methods in object oriented databases [COL] authors [VAL] CW Fung, K Karlapalem, Q Li [COL] venue [VAL] The VLDB Journal The International Journal on Very Large  &hellip;, [COL] year [VAL] 2003.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 10
+            "noise_answer": 0
         },
         {
             "query_id": "381_0",
@@ -2232,19 +2232,6 @@
                 39924
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Implementing Deletion in B+-Trees [COL] authors [VAL] Jan Jannink [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1995\n \nCandidate records:\n [1]  [COL] title [VAL] Optimizing Jan Jannink???s implementation of B+-tree deletion [COL] authors [VAL] R Maelbrancke, H Olivie [COL] venue [VAL] ACM Sigmod Record, [COL] year [VAL] 1995.0\n[2]  [COL] title [VAL] Good worst-case algorithms for inserting and deleting records in dense sequential files [COL] authors [VAL] DE Willard [COL] venue [VAL] Proceedings of the 1986 ACM SIGMOD International Conference  &hellip;, [COL] year [VAL] 1986.0\n[3]  [COL] title [VAL] Comments on optimality of B-trees [COL] authors [VAL] J Klonk [COL] venue [VAL] ACM SIGMOD Record, [COL] year [VAL] 1983.0\n[4]  [COL] title [VAL] Implementing Deletion in B+-Trees [COL] authors [VAL] J Jannink [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 1995.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 1
-        },
-        {
-            "query_id": "1387_1",
-            "ground_truth": 39924,
-            "ground_answer": 4,
-            "options": [
-                59932,
-                35933,
-                13992,
-                39924
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Implementing Deletion in B+-Trees [COL] authors [VAL] Jan Jannink [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1995\n \nCandidate records:\n [1]  [COL] title [VAL] Optimizing Jan Jannink???s implementation of B+-tree deletion [COL] authors [VAL] R Maelbrancke, H Olivie [COL] venue [VAL] ACM Sigmod Record, [COL] year [VAL] 1995.0\n[2]  [COL] title [VAL] Good worst-case algorithms for inserting and deleting records in dense sequential files [COL] authors [VAL] DE Willard [COL] venue [VAL] Proceedings of the 1986 ACM SIGMOD International Conference  &hellip;, [COL] year [VAL] 1986.0\n[3]  [COL] title [VAL] Comments on optimality of B-trees [COL] authors [VAL] J Klonk [COL] venue [VAL] ACM SIGMOD Record, [COL] year [VAL] 1983.0\n[4]  [COL] title [VAL] Implementing Deletion in B+-Trees [COL] authors [VAL] J Jannink [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 1995.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 4
         },
         {
@@ -2277,6 +2264,23 @@
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Developments at ACM TODS [COL] authors [VAL] Richard T. Snodgrass [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2003\n \nCandidate records:\n [1]  [COL] title [VAL] CMM and TODS [COL] authors [VAL] R Snodgrass [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 2005.0\n[2]  [COL] title [VAL] Rights of TODS Readers, Authors and Reviewers [COL] authors [VAL] RT Snodgrass [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 2002.0\n[3]  [COL] title [VAL] Source ACM SIGMOD Record archive [COL] authors [VAL] RT Snodgrass, M Winslett [COL] venue [VAL] ACM SIGMOD Record, [COL] year [VAL] 1994.0\n[4]  [COL] title [VAL] Developments at ACM TODS [COL] authors [VAL] R Snodgrass [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 2003.0\n[5]  [COL] title [VAL] Changes to the TODS Editorial Board [COL] authors [VAL] R Snodgrass [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 2005.0\n[6]  [COL] title [VAL] Why I Like Working in Academia [COL] authors [VAL] RT Snodgrass [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 2002.0\n[7]  [COL] title [VAL] TODS report [COL] authors [VAL] R Snodgrass [COL] venue [VAL] ACM SIGMOD Record, [COL] year [VAL] 2005.0\n[8]  [COL] title [VAL] ACM TODS in this Internet Age [COL] authors [VAL] RT Snodgrass [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 2003.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
             "noise_answer": 4
+        },
+        {
+            "query_id": "1419_1",
+            "ground_truth": 43546,
+            "ground_answer": 4,
+            "options": [
+                7029,
+                6541,
+                12096,
+                43546,
+                51168,
+                21832,
+                29563,
+                46831
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Developments at ACM TODS [COL] authors [VAL] Richard T. Snodgrass [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2003\n \nCandidate records:\n [1]  [COL] title [VAL] CMM and TODS [COL] authors [VAL] R Snodgrass [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 2005.0\n[2]  [COL] title [VAL] Rights of TODS Readers, Authors and Reviewers [COL] authors [VAL] RT Snodgrass [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 2002.0\n[3]  [COL] title [VAL] Source ACM SIGMOD Record archive [COL] authors [VAL] RT Snodgrass, M Winslett [COL] venue [VAL] ACM SIGMOD Record, [COL] year [VAL] 1994.0\n[4]  [COL] title [VAL] Developments at ACM TODS [COL] authors [VAL] R Snodgrass [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 2003.0\n[5]  [COL] title [VAL] Changes to the TODS Editorial Board [COL] authors [VAL] R Snodgrass [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 2005.0\n[6]  [COL] title [VAL] Why I Like Working in Academia [COL] authors [VAL] RT Snodgrass [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 2002.0\n[7]  [COL] title [VAL] TODS report [COL] authors [VAL] R Snodgrass [COL] venue [VAL] ACM SIGMOD Record, [COL] year [VAL] 2005.0\n[8]  [COL] title [VAL] ACM TODS in this Internet Age [COL] authors [VAL] RT Snodgrass [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 2003.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
+            "noise_answer": 8
         },
         {
             "query_id": "1444_0",
@@ -3760,23 +3764,6 @@
         },
         {
             "query_id": "2358_0",
-            "ground_truth": 2866,
-            "ground_answer": 1,
-            "options": [
-                2866,
-                1036,
-                4521,
-                35914,
-                61261,
-                5053,
-                19048,
-                59553
-            ],
-            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Exploratory Mining via Constrained Frequent Set Queries [COL] authors [VAL] Jiawei Han, Teresa Mah, Laks V. S. Lakshmanan, Raymond T. Ng [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1999\n \nCandidate records:\n [1]  [COL] title [VAL] Exploratory Mining via Constrained Frequent Set Queries [COL] authors [VAL] R Ng, LVS Lakshmanan, J Han, T Mah [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 1999.0\n[2]  [COL] title [VAL] PangA (1998) Exploratory mining and pruning optimizations of constrained association rules [COL] authors [VAL] R Ng, LVS Lakshmanan, J Han [COL] venue [VAL] Proc. ACM SIGMOD International Conference on Management of\n[3]  [COL] title [VAL] Data Mining: Concepts and Techniques [COL] authors [VAL] J Han, M Kamber [COL] venue [VAL] SIGMOD Record, [COL] year [VAL] 2002.0\n[4]  [COL] title [VAL] Mining association rules between sets in large databases [COL] authors [VAL] R Aggrawal, T Imielinski, A Swami [COL] venue [VAL] Proceedings of the ACM-SIGMOD International Conference on\n[5]  [COL] title [VAL] Exploratory Mining Via Constrained Frequent Set Queries (Demo) [COL] authors [VAL] R Ng??\u00a6 [COL] venue [VAL] Proc. 1999 ACM SIGMOD Conf. on Management of\n[6]  [COL] title [VAL] Mining Association Rules Between Sets of Items in Large Databases. 1993 [COL] authors [VAL] R Agrawal, T Imielinski, A Swami [COL] venue [VAL] Proc. ACM SIGMOD International Conference on Management of\n[7]  [COL] title [VAL] Efficient dynamic mining of constrained frequent sets [COL] authors [VAL] LVS Lakshmanan, CKS Leung, RT Ng [COL] venue [VAL] ACM Transactions on Database Systems, [COL] year [VAL] 2003.0\n[8]  [COL] title [VAL] Mining long sequential patterns in a noisy environment [COL] authors [VAL] J Yang, W Wang, PS Yu, J Han [COL] venue [VAL] SIGMOD Conference, [COL] year [VAL] 2002.0\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 5
-        },
-        {
-            "query_id": "2358_1",
             "ground_truth": 2866,
             "ground_answer": 1,
             "options": [

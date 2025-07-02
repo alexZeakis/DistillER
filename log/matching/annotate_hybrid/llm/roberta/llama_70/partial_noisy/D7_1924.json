@@ -1,7 +1,7 @@
 {
     "settings": {
         "dataset": "D7",
-        "out_file": "../../../log/matching/annotate_hybrid_llm/roberta/llama_70/partial/D7_1924.json",
+        "out_file": "../../../log/matching/annotate_hybrid/llm/roberta/llama_70/partial/D7_1924.json",
         "in_dir": "../../../data/ccer/cleaned/original/",
         "sample_file": "../../../data/ccer/cleaned/fine_tuning/blocking/train/D7.csv",
         "seed": 1924,
@@ -465,6 +465,24 @@
         },
         {
             "query_id": "532_0",
+            "ground_truth": 3957,
+            "ground_answer": 9,
+            "options": [
+                4297,
+                2151,
+                2691,
+                2181,
+                5571,
+                4822,
+                5864,
+                2884,
+                3957
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Steel Mill Worker [COL] abstract [VAL] Mike Rowe gets dirty in St. Louis as he works with a river barge demolition team and then melts down the scrap steel into molten metal. [COL] episodeNumber [VAL] 2.0 [COL] seasonNumber [VAL] 4.0 [COL] releaseDate [VAL] 2008-01-15\n \nCandidate records:\n [1]  [COL] title [VAL] Bell Maker [COL] abstract [VAL] Mike Rowe rolls up his sleeve and gets dirty making giant bells at the McShane Bell Foundry. Mike also gets down and dirty with the US Army Corps of Engineers as they conduct yearly maintenance on a hurricane barrier that was raised from the oceans floor. [COL] episodeNumber [VAL] 19.0 [COL] seasonNumber [VAL] 2.0 [COL] releaseDate [VAL] 2006-12-12 [COL] release_year [VAL] 2006-01-01\n[2]  [COL] title [VAL] Exotic Animal Keeper [COL] abstract [VAL] Mike Rowe rolls up his sleeves and gets dirty at a recycling center in San Francisco that requires their dump truck drivers to clean out the back of their dirty trucks after each shift. It's a dirty job that even Mike has a hard time completing. [COL] episodeNumber [VAL] 17.0 [COL] seasonNumber [VAL] 3.0 [COL] releaseDate [VAL] 2007-11-13 [COL] release_year [VAL] 2007-01-01\n[3]  [COL] title [VAL] Mud Mineral Excavator [COL] abstract [VAL] Mike Rowe gets dirty in Death Valley, CA preparing for a gem and mineral show. He then helps save injured birds from a nearby salt lake. Finally, he gets dirty working at a rice plantation in South Carolina. [COL] episodeNumber [VAL] 6.0 [COL] seasonNumber [VAL] 4.0 [COL] releaseDate [VAL] 2008-02-12 [COL] release_year [VAL] 2008-01-01\n[4]  [COL] title [VAL] Garbage Pit Technician [COL] abstract [VAL] 'Mike first heads off to Las Vegas to work at an old fashioned printing press making lithographs of himself for the official Dirty Jobs poster. Mike then goes to Lincoln, CA and helps make large scale terra cotta building sculpture pieces from recycled terra cotta sewer pipes. Finally, Mike visits a garbage processing plant in San Francisco where food and assorted scraps are passed through a rolling cylinder and ''digested'' to make a methane gas energy supply. [COL] episodeNumber [VAL] 9.0 [COL] seasonNumber [VAL] 2.0 [COL] releaseDate [VAL] 2006-06-27 [COL] release_year [VAL] 2006-01-01\n[5]  [COL] title [VAL] Sludge Cleaner [COL] abstract [VAL] Mike Rowe gets dirty as he works with surfboard shaper Matt Barker. Mike masters the art of shaping a surfboard from Styrofoam. And Mike goes underground into a greasy pit of sludge as he joins an environmental company that recycles the gunky grime. [COL] episodeNumber [VAL] 6.0 [COL] seasonNumber [VAL] 1.0 [COL] releaseDate [VAL] 2005-08-30 [COL] release_year [VAL] 2005-01-01\n[6]  [COL] title [VAL] Ice Salvage Crew [COL] abstract [VAL] Mike gets dirty in Alaska as he helps protect the environment by cleaning up an oil spill. He then travels to Minnesota where he works to pull a car out of a lake that has fallen through the ice. [COL] episodeNumber [VAL] 12.0 [COL] seasonNumber [VAL] 4.0 [COL] releaseDate [VAL] 2008-05-19 [COL] release_year [VAL] 2008-01-01\n[7]  [COL] title [VAL] Parade Float Dismantler [COL] abstract [VAL] Mike first goes to Pennsylvania at a coal processing plant and learns how to make coke, carbonized coal used to make iron which in turn is used to make steel. Mike then goes to Washington to an oyster shucking plant and works alongside a very dirty girl. Finally, Mike goes to Pasadena, CA to dismantle floats from the Tournament of Roses Parade. [COL] episodeNumber [VAL] 8.0 [COL] seasonNumber [VAL] 2.0 [COL] releaseDate [VAL] 2006-06-20 [COL] release_year [VAL] 2006-01-01\n[8]  [COL] name [VAL] Mike Rowe\n[9]  [COL] title [VAL] Steel Mill Worker [COL] abstract [VAL] Mike Rowe gets dirty in St. Louis as he works with a river barge demolition team and then melts down the scrap steel into molten metal. [COL] episodeNumber [VAL] 2.0 [COL] seasonNumber [VAL] 4.0 [COL] releaseDate [VAL] 2008-01-15 [COL] release_year [VAL] 2008-01-01\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
+            "noise_answer": 8
+        },
+        {
+            "query_id": "532_1",
             "ground_truth": 3957,
             "ground_answer": 9,
             "options": [
@@ -2404,7 +2422,7 @@
                 3868
             ],
             "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] name [VAL] MTV\n \nCandidate records:\n [1]  [COL] name [VAL] MTV [COL] origin_country [VAL] US\n[2]  [COL] name [VAL] MTV Animation\n[3]  [COL] name [VAL] TVC\n[4]  [COL] name [VAL] ITV Studios Sweden [COL] origin_country [VAL] SE\n[5]  [COL] name [VAL] NTV [COL] origin_country [VAL] JP\n[6]  [COL] name [VAL] SundanceTV [COL] origin_country [VAL] US\n[7]  [COL] name [VAL] YouTube\n[8]  [COL] name [VAL] MTV\n[9]  [COL] name [VAL] Sundance Channel\n[10]  [COL] name [VAL] MGM Television [COL] origin_country [VAL] US\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```",
-            "noise_answer": 0
+            "noise_answer": 8
         },
         {
             "query_id": "2607_0",
