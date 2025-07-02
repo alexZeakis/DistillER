@@ -11,9 +11,9 @@ for dir in "${directories[@]}"; do
        
         python ../build_prompt.py \
         --dataset "$dir" \
-        --out_file "../../../log/matching/llm/ground/partial/${dir}_${seed}.json"  \
+        --out_file "../../../log/matching/annotate/blocking/ground/partial/${dir}_${seed}.json"  \
         --in_dir "../../../data/ccer/cleaned/original/" \
-        --sample_file "../../../data/ccer/cleaned/fine_tuning/train/$dir.csv" \
+        --sample_file "../../../data/ccer/cleaned/fine_tuning/blocking/train/$dir.csv" \
         --seed $seed \
         --serialization "DITTO" \
         --task_description "EXPLAIN"

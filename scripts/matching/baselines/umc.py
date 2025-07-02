@@ -31,7 +31,7 @@ if __name__ == "__main__":
     
     df = pd.read_csv(args.in_file)
     
-    df['Similarity'] = 1 / (df['Similarity'] + 1.0)
+    # df['Similarity'] = 1 / (df['Similarity'] + 1.0)
         
     # edges = df[['D1', 'D2', 'Similarity']].values.tolist()
     edges = [[int(row['D1']), int(row['D2']), row['Similarity']] for i, row in df.iterrows()]

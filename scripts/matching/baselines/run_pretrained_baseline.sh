@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # List of directories
-#directories=("D2" "D3" "D4" "D5" "D6" "D7" "D8" "D9" )
-#directories=("D5")
-directories=("D3" "D4" "D6" "D7" "D8" "D9" )
+directories=("D2" "D3" "D4" "D5" "D6" "D7" "D8" "D9" )
 
 # Loop over each directory and run the Python script
 for dir in "${directories[@]}"; do
@@ -13,7 +11,7 @@ for dir in "${directories[@]}"; do
     --dataset "$dir" \
     --out_file "../../../log/matching/baselines/pretrained/$dir.json"  \
     --in_dir "../../../data/ccer/cleaned/original/" \
-    --sample_file "../../../data/ccer/cleaned/fine_tuning/test/$dir.csv" \
+    --sample_file "../../../data/ccer/cleaned/fine_tuning/blocking/test/$dir.csv" \
     --seed 1924 \
     --serialization "DITTO" \
     --task_description "EXPLAIN"

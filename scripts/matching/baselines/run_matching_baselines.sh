@@ -7,7 +7,7 @@ for dir in "${directories[@]}"; do
     echo "Processing directory: $dir"
 
     python umc.py \
-     --in_file "../../../data/ccer/fine_tuning/test/$dir.csv" \
+     --in_file "../../../data/ccer/cleaned/fine_tuning/blocking/test/$dir.csv" \
      --out_file "../../../log/matching/baselines/umc/$dir.csv"
     
 done
