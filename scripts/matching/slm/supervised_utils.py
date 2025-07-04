@@ -493,12 +493,7 @@ def get_max_sequence_length_from_dataset(examples, tokenizer, sep_token_extra=Fa
     lengths = []
     for example in examples:
         tokens_a = tokenizer.tokenize(example.text_a)
-        try:
-            tokens_b = tokenizer.tokenize(example.text_b) if example.text_b else None
-        except:
-            print("Error ", example.text_b)
-            print(example.id_a, example.id_b)
-            raise ValueError("WRONG.")
+        tokens_b = tokenizer.tokenize(example.text_b) if example.text_b else None
 
         if tokens_b:
             special_tokens_count = 4 if sep_token_extra else 3

@@ -4,8 +4,7 @@ directories=("D2" "D3" "D4" "D5" "D6" "D7" "D8" "D9")
 # Seeds
 seeds=(1924)
 
-#noisy_levels=("ground" "qwen_32" "roberta/qwen_32")
-noisy_levels=("ground")
+noisy_levels=("ground" "qwen_32" "roberta/qwen_32")
 
 # Loop over each noise level
 for noisy in "${noisy_levels[@]}"; do

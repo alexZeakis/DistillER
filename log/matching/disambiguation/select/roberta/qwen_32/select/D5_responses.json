@@ -8,10 +8,40 @@
         "serialization": "DITTO",
         "task_description": "EXPLAIN",
         "skip": true,
-        "len_q99": 1492.23,
-        "len_q50": 1307.5
+        "len_q99": 1490.6,
+        "len_q50": 1116.0
     },
     "responses": [
+        {
+            "dataset": "D5",
+            "query_id": 432,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has a similar name, John Sharian.",
+            "confidence": 1.0,
+            "time": 0.7822155952453613
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1222,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given entity record [COL] name [VAL] Masa matches with candidate record [1] [COL] name [VAL] Masaya Kato because the names are similar, suggesting they refer to the same person.",
+            "confidence": 1.0,
+            "time": 0.6346435546875
+        },
+        {
+            "dataset": "D5",
+            "query_id": 1638,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name \"Im Ye-Jin\" with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4421694278717041
+        },
         {
             "dataset": "D5",
             "query_id": 2102,
@@ -20,17 +50,77 @@
             "answer": "[1]",
             "explanation": "The candidate record [1] has a matching title 'Upstairs Inferno' and release_year '2015-01-01', which matches the given entity record's startYear '2015-01-01'. Additionally, both records have a runtime of 96 minutes, further confirming their match.",
             "confidence": 1.0,
-            "time": 1.4734764099121094
+            "time": 0.8093738555908203
         },
         {
             "dataset": "D5",
-            "query_id": 5001,
-            "ground_truth": 1473,
+            "query_id": 2487,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching name \"Yukito Kizawa\" with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4640779495239258
+        },
+        {
+            "dataset": "D5",
+            "query_id": 2756,
+            "ground_truth": 1477,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a slight variation in last name (Sahilova vs Sadykhova).",
+            "confidence": 1.0,
+            "time": 0.5776569843292236
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3179,
+            "ground_truth": 1520,
             "ground_answer": 2,
             "answer": "[2]",
-            "explanation": "The candidate record [2] has a matching name 'Julie Martin' with the given entity record.",
+            "explanation": "The record [2] refers to the same real-world entity as the given record because it has the same name, Sue Jones-Davies.",
             "confidence": 1.0,
-            "time": 0.6550126075744629
+            "time": 0.5089449882507324
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3450,
+            "ground_truth": 2475,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same name, Roberta Maxwell.",
+            "confidence": 1.0,
+            "time": 0.5092439651489258
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3753,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching title, episodeNumber, seasonNumber, and release_year with the given entity record. Although the releaseDate in the candidate record is different from the startYear in the entity record by one day, it's likely that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.7854397296905518
+        },
+        {
+            "dataset": "D5",
+            "query_id": 3975,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same episode number (4.0), season number (1.0) and start year (1971-01-01) as the given entity record, but a different release date. However, since the start year is the most important attribute for matching episodes, we consider them to be the same entity.",
+            "confidence": 1.0,
+            "time": 0.8576438426971436
+        },
+        {
+            "dataset": "D5",
+            "query_id": 5022,
+            "ground_truth": 4201,
+            "ground_answer": 1,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has a name that matches the given entity record's name, Gummaluri Sastri.",
+            "confidence": 1.0,
+            "time": 0.49942612648010254
         }
     ]
 }

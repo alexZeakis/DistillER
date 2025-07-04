@@ -1,7 +1,7 @@
 # List of directories
 directories=("D2" "D3" "D4" "D5" "D6" "D7" "D8" "D9")
 
-noisy_levels=("ground" "llama_8" "llama_70" "qwen_14" "qwen_32")
+noisy_levels=("ground" "qwen_32" "roberta/qwen_32")
 
 models=("roberta" "sminilm")
 
@@ -11,10 +11,9 @@ for model in "${models[@]}"; do
         for dir in "${directories[@]}"; do
             echo $model " " $noisy " " $dir
             
-<<xom
             python clean_edges.py \
-              --predictions_file "../../../log/matching/plm/$model/${noisy}/log/${dir}_predictions.csv" \
-              --input_file "../../../data/ccer/cleaned/fine_tuning/test/$dir.csv" \
+              --predictions_file "../../../log/matching/slm/$model/${noisy}/log/${dir}_predictions.csv" \
+              --input_file "../../../data/ccer/cleaned/fine_tuning/blocking/test/$dir.csv" \
               --out_file "../../../log/matching/disambiguation/cleaned_edges/$model/${noisy}/${dir}.csv"
 
             python ../build_prompt.py \
@@ -32,12 +31,10 @@ for model in "${models[@]}"; do
                 --model "llama3.1:latest" \
                 --in_file "../../../log/matching/disambiguation/select/$model/${noisy}/select/$dir.json" \
                 --out_file "../../../log/matching/disambiguation/select/$model/${noisy}/select/${dir}_responses.json" \
-                --endpoint "http://localhost:11435/v1"
-
-xom
+                --endpoint "http://localhost:11434/v1"
 
             python merge_select.py \
-               --input_file "../../../log/matching/plm/$model/${noisy}/log/${dir}_predictions.csv" \
+               --input_file "../../../log/matching/slm/$model/${noisy}/log/${dir}_predictions.csv" \
                --cleaned_file "../../../log/matching/disambiguation/select/$model/${noisy}/select/${dir}_responses.json" \
                --prompts_file "../../../log/matching/disambiguation/select/$model/${noisy}/select/${dir}.json" \
                --out_file "../../../log/matching/disambiguation/select/$model/${noisy}/final/${dir}.csv"

@@ -2,15 +2,10 @@
 directories=("D2" "D3" "D4" "D5" "D6" "D7" "D8" "D9")
 
 # Noisy levels
-#noisy_levels=("ground" "qwen_32" "roberta/qwen_32")
-noisy_levels=("ground")
-
+noisy_levels=("ground" "qwen_32" "roberta/qwen_32")
 
 slm_models=("sminilm" "roberta")
 slm_paths=("sentence-transformers/all-MiniLM-L6-v2" "roberta-base")
-
-#slm_models=("roberta")
-#slm_paths=("roberta-base")
 
 for i in "${!slm_models[@]}"; do
     slm_model="${slm_models[$i]}"

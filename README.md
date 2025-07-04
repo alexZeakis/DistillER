@@ -23,36 +23,78 @@ To run Vectorization with S-GTR-T5, Blocking and Sampling, run:
 cd scripts/blocking/
 ./run_blocking.sh
 ```
-### Annotate
+### Data Selection (Q1)
 
-To run LLM - Random & Sampled (Q1):
+To run LLM - Random & Sampled:
 ```
 cd scripts/annotate/
 ./run_llm_noisy_data_selection.sh
 ```
 
-To run LLM - Ground (Q2):
+### Annotate (Q2)
+To run LLM - Ground:
 ```
 cd scripts/annotate/
 ./run_llm_ground.sh
 ```
 
-To run LLM - Noisy (Q2):
+To run LLM - Noisy:
 ```
 cd scripts/annotate/
 ./run_llm_noisy.sh
 ```
 
-To run Hybrid - Ground (Q2):
+To run Hybrid - Noisy with different LLM Annotators:
+```
+cd scripts/annotate/
+./run_hybrid_noisy_llm.sh
+```
+
+To run Hybrid - Noisy with different Training Size:
+```
+cd scripts/annotate/
+./run_hybrid_noisy_size.sh
+```
+
+To run Hybrid - Ground:
 ```
 cd scripts/annotate/
 ./run_hybrid_ground.sh
 ```
 
-To run Hybrid - Noisy (Q2):
+### Fine-Tuning (Q3)
+
+To run LLM - Fine-Tuning:
 ```
-cd scripts/annotate/
-./run_hybrid_noisy.sh
+cd scripts/llm/
+./run_finetuning.sh
+```
+
+To run SLM - Fine-Tuning:
+```
+cd scripts/slm/
+./run_data.sh
+./run_finetuning.sh
+```
+
+### Disambiguation (Q4)
+
+To run UMC:
+```
+cd scripts/disambiguation/
+./run_umc.sh
+```
+
+To run SELECT:
+```
+cd scripts/disambiguation/
+./run_select.sh
+```
+
+To run Hybrid:
+```
+cd scripts/slm/
+./run_hybrid.sh
 ```
 
 - Blocking: [Blocking & Sampling](scripts/blocking/README.md)

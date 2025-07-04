@@ -3,7 +3,8 @@
 # List of directories
 directories=("D2" "D3" "D4" "D5" "D6" "D7" "D8" "D9")
 
-models=("ground" "qwen_32" "roberta/qwen_32")
+#models=("ground" "qwen_32" "roberta/qwen_32")
+models=("roberta/qwen_32")
 
 for noisy in "${models[@]}"; do
     

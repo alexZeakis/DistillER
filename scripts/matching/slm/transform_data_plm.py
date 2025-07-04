@@ -111,7 +111,9 @@ def get_scores_from_noisy_json(path):
     j = json.load(open(path))
     predictions = {}
     for res in j['prompts']:
-        qid = int(res['query_id'].split('_')[0])
+        qid = res['query_id']
+        if type(qid) != int:
+            qid = int(qid.split('_')[0])
         if qid not in predictions:
             predictions[qid] = []
         # predictions[res['query_id']] = res['noise_answer']

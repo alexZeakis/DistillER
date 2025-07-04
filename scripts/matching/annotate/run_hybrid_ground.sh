@@ -54,4 +54,23 @@ for i in "${!slm_models[@]}"; do
         --seed 1924 \
         --device "cuda:1"
 
+
+    # Step 4: Build prompt and embed noisy data
+    for dir in "${directories[@]}"; do
+        echo "Final processing for $dir with seed 1924"
+
+        python ../build_prompt.py \
+            --dataset "$dir" \
+            --out_file "../../../log/matching/annotate_hybrid/ground/$slm_model/partial/${dir}_1924.json" \
+            --in_dir "../../../data/ccer/cleaned/original/" \
+            --sample_file "../../../data/ccer/cleaned/fine_tuning/blocking/train/$dir.csv" \
+            --seed 1924 \
+            --serialization "DITTO" \
+            --task_description "EXPLAIN"
+
+        python ../embed_noisy.py \
+            --prompts "../../../log/matching/annotate_hybrid/ground/$slm_model/partial/${dir}_1924.json" \
+            --labels "../../../log/matching/annotate_hybrid/ground/$slm_model/log/total_predictions.csv" \
+            --out_file "../../../log/matching/annotate_hybrid/ground/$slm_model/partial_noisy/${dir}_1924.json"
+    done
 done

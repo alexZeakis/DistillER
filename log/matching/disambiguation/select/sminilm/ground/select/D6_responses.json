@@ -8,69 +8,59 @@
         "serialization": "DITTO",
         "task_description": "EXPLAIN",
         "skip": true,
-        "len_q99": 1970.3,
-        "len_q50": 1220.5
+        "len_q99": 1600.8600000000004,
+        "len_q50": 1257.0
     },
     "responses": [
         {
             "dataset": "D6",
-            "query_id": 168,
-            "ground_truth": 7387,
-            "ground_answer": 1,
+            "query_id": 124,
+            "ground_truth": -1,
+            "ground_answer": 0,
             "answer": "[1]",
-            "explanation": "The record at index [1] refers to the same real-world entity as the given record because it has the same name, 'Richard Lewis', and one of his primary professions is listed as 'actor'.",
+            "explanation": "The record [1] refers to the same real-world entity as the given record because it contains the name Sharat Sardana, which is likely a reference to the Indian actor and writer Sharat Sardana. The job field in this record also matches the profession of an actress mentioned in the given record.",
             "confidence": 1.0,
-            "time": 1.213270902633667
+            "time": 1.0875957012176514
         },
         {
             "dataset": "D6",
-            "query_id": 276,
-            "ground_truth": 807,
-            "ground_answer": 2,
-            "answer": "[2]",
-            "explanation": "The record [2] refers to the same real-world entity as the given record because it has the same name and primary profession.",
-            "confidence": 1.0,
-            "time": 0.7195518016815186
-        },
-        {
-            "dataset": "D6",
-            "query_id": 663,
-            "ground_truth": 3831,
-            "ground_answer": 2,
+            "query_id": 656,
+            "ground_truth": 1551,
+            "ground_answer": 0,
             "answer": "[1]",
-            "explanation": "The record [1] refers to the same real-world entity as the given record because it has the same name, Steve Buscemi.",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity because they have matching title, episodeNumber, and seasonNumber values.",
             "confidence": 1.0,
-            "time": 0.7574267387390137
+            "time": 0.521550178527832
         },
         {
             "dataset": "D6",
-            "query_id": 948,
-            "ground_truth": 5652,
-            "ground_answer": 1,
+            "query_id": 1174,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record. The given entity record refers to an episode with title 'Episode #2.1', while the candidate records refer to episodes with titles 'Episode 2' which do not match.",
+            "confidence": 1.0,
+            "time": 0.6598267555236816
+        },
+        {
+            "dataset": "D6",
+            "query_id": 1186,
+            "ground_truth": 7510,
+            "ground_answer": 0,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same name, Bill Smitrovich.",
+            "explanation": "The given record and candidate record [1] have matching title, episodeNumber, and seasonNumber values.",
             "confidence": 1.0,
-            "time": 0.7789006233215332
+            "time": 0.4565138816833496
         },
         {
             "dataset": "D6",
-            "query_id": 1006,
-            "ground_truth": 5869,
-            "ground_answer": 1,
+            "query_id": 1694,
+            "ground_truth": 2460,
+            "ground_answer": 0,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same name, Michael Sinterniklaas.",
+            "explanation": "The candidate record [1] has the same title, episodeNumber, and seasonNumber as the given entity record.",
             "confidence": 1.0,
-            "time": 0.7948744297027588
-        },
-        {
-            "dataset": "D6",
-            "query_id": 1326,
-            "ground_truth": 3056,
-            "ground_answer": 2,
-            "answer": "[2]",
-            "explanation": "The record with job 'actor' matches the given entity record, which lists actor as one of Patrick Warburton's primary professions.",
-            "confidence": 1.0,
-            "time": 0.7457854747772217
+            "time": 0.4657604694366455
         },
         {
             "dataset": "D6",
@@ -80,17 +70,37 @@
             "answer": "[1]",
             "explanation": "The candidate record [1] refers to the same real-world entity as the given record, Amelia Bullmore is an actress and writer.",
             "confidence": 1.0,
-            "time": 0.7330923080444336
+            "time": 0.49019670486450195
         },
         {
             "dataset": "D6",
-            "query_id": 2131,
-            "ground_truth": 6383,
+            "query_id": 1899,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both have the name Barry Levinson and one of his primary professions is writer.",
+            "confidence": 1.0,
+            "time": 0.555077314376831
+        },
+        {
+            "dataset": "D6",
+            "query_id": 2153,
+            "ground_truth": 5916,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity because they have the same title, episodeNumber, and seasonNumber.",
+            "confidence": 1.0,
+            "time": 0.5297548770904541
+        },
+        {
+            "dataset": "D6",
+            "query_id": 2220,
+            "ground_truth": 5946,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they have matching title, episodeNumber, seasonNumber, startYear, and genre_list values.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same name, Sharat Sardana.",
             "confidence": 1.0,
-            "time": 0.9267244338989258
+            "time": 0.506727933883667
         },
         {
             "dataset": "D6",
@@ -98,79 +108,49 @@
             "ground_truth": 3997,
             "ground_answer": 1,
             "answer": "[2]",
-            "explanation": "The candidate record [2] has a matching name and profession, indicating that it refers to the same real-world entity as the given record.",
+            "explanation": "The candidate record [2] has a matching name 'John McGreevey' and job 'writers', which refers to the same real-world entity as the given record.",
             "confidence": 1.0,
-            "time": 0.7623872756958008
+            "time": 0.5420145988464355
         },
         {
             "dataset": "D6",
-            "query_id": 2426,
-            "ground_truth": 484,
-            "ground_answer": 2,
-            "answer": "[2]",
-            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, Shaquille O'Neal.",
+            "query_id": 2606,
+            "ground_truth": 7685,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both have 'Sutton Roley' as name and one of the primary professions is director.",
             "confidence": 1.0,
-            "time": 0.7525207996368408
+            "time": 0.5954320430755615
         },
         {
             "dataset": "D6",
-            "query_id": 2510,
+            "query_id": 2743,
+            "ground_truth": 2532,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] have matching title, episodeNumber, and seasonNumber values.",
+            "confidence": 1.0,
+            "time": 0.45412778854370117
+        },
+        {
+            "dataset": "D6",
+            "query_id": 2954,
             "ground_truth": -1,
             "ground_answer": 0,
-            "answer": "[2]",
-            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it shares the same name, Jorge Zamacona, and lists writing as one of his professions, which is also mentioned in the given record.",
-            "confidence": 1.0,
-            "time": 0.9962220191955566
-        },
-        {
-            "dataset": "D6",
-            "query_id": 2524,
-            "ground_truth": 4782,
-            "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has the same title 'Dirtiest Water Jobs' and is a part of the Dirty Jobs series.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both have the name Gene Levitt and one of them is a director.",
             "confidence": 1.0,
-            "time": 0.9847793579101562
+            "time": 0.5420839786529541
         },
         {
             "dataset": "D6",
-            "query_id": 2576,
-            "ground_truth": 3234,
-            "ground_answer": 1,
+            "query_id": 3121,
+            "ground_truth": -1,
+            "ground_answer": 0,
             "answer": "[1]",
-            "explanation": "The record at index [1] refers to the same real-world entity as the given record, as both records have the name 'Lisa Hammer' and are related to her profession in the entertainment industry.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the exact name 'Felix E. Feist' and job 'director', which matches the primary profession of director in the given record.",
             "confidence": 1.0,
-            "time": 0.9024500846862793
-        },
-        {
-            "dataset": "D6",
-            "query_id": 2675,
-            "ground_truth": 1731,
-            "ground_answer": 2,
-            "answer": "[2]",
-            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as both have the name 'R.D. Reid' and one of the primary professions is 'actor'.",
-            "confidence": 1.0,
-            "time": 0.9144325256347656
-        },
-        {
-            "dataset": "D6",
-            "query_id": 2919,
-            "ground_truth": 2906,
-            "ground_answer": 2,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a slight difference in spelling (Nesbitt vs Nesbit).",
-            "confidence": 1.0,
-            "time": 0.8353025913238525
-        },
-        {
-            "dataset": "D6",
-            "query_id": 3009,
-            "ground_truth": 3424,
-            "ground_answer": 2,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has a similar title and is part of the Lupin III series.",
-            "confidence": 1.0,
-            "time": 0.8981008529663086
+            "time": 0.6674790382385254
         },
         {
             "dataset": "D6",
@@ -180,17 +160,17 @@
             "answer": "[1]",
             "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same name, Sanjeev Bhaskar, and one of his primary professions is writer.",
             "confidence": 1.0,
-            "time": 0.9075307846069336
+            "time": 0.5920252799987793
         },
         {
             "dataset": "D6",
-            "query_id": 3256,
-            "ground_truth": 4260,
-            "ground_answer": 3,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same name, Christopher McCulloch.",
+            "query_id": 3489,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of episodeNumber, seasonNumber and startYear.",
             "confidence": 1.0,
-            "time": 0.7748878002166748
+            "time": 0.46041083335876465
         },
         {
             "dataset": "D6",
@@ -200,17 +180,17 @@
             "answer": "[1]",
             "explanation": "The record at index [1] refers to the same real-world entity as the given record because it has the same name, Clark Johnson.",
             "confidence": 1.0,
-            "time": 0.7565970420837402
+            "time": 0.4989030361175537
         },
         {
             "dataset": "D6",
-            "query_id": 3698,
-            "ground_truth": 1659,
-            "ground_answer": 1,
+            "query_id": 3753,
+            "ground_truth": -1,
+            "ground_answer": 0,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching name and profession of actor.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching episodeNumber and seasonNumber.",
             "confidence": 1.0,
-            "time": 0.7513248920440674
+            "time": 0.4821805953979492
         },
         {
             "dataset": "D6",
@@ -218,79 +198,49 @@
             "ground_truth": 7123,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both have the name Edward J. Lakso and one of them is listed as a writer.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both have the name Edward J. Lakso and one of them has a profession that matches 'writer' in the primaryProfessions field.",
             "confidence": 1.0,
-            "time": 0.9229893684387207
+            "time": 0.6536879539489746
         },
         {
             "dataset": "D6",
-            "query_id": 4057,
-            "ground_truth": 5127,
+            "query_id": 4146,
+            "ground_truth": 277,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity because they have matching episodeNumber (4.0) and seasonNumber (2.0), which is a strong indication that they are from the same series.",
+            "confidence": 1.0,
+            "time": 0.6702141761779785
+        },
+        {
+            "dataset": "D6",
+            "query_id": 4164,
+            "ground_truth": 1135,
             "ground_answer": 1,
-            "answer": "[1]",
-            "explanation": "The record [1] refers to the same real-world entity as the given record because it has the same name, Bruno Kirby.",
-            "confidence": 1.0,
-            "time": 0.7344100475311279
-        },
-        {
-            "dataset": "D6",
-            "query_id": 4397,
-            "ground_truth": 3526,
-            "ground_answer": 2,
-            "answer": "[1]",
-            "explanation": "The record at index [1] refers to the same real-world entity as the given record, sharing the name 'Giancarlo Esposito' and having a job of 'guestStars', which is consistent with being an actor.",
-            "confidence": 1.0,
-            "time": 1.006739616394043
-        },
-        {
-            "dataset": "D6",
-            "query_id": 4428,
-            "ground_truth": 5945,
-            "ground_answer": 1,
-            "answer": "[1]",
-            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they both mention 'Curb Your Enthusiasm' with a start year of 2000.",
-            "confidence": 1.0,
-            "time": 0.9425792694091797
-        },
-        {
-            "dataset": "D6",
-            "query_id": 4883,
-            "ground_truth": 6265,
-            "ground_answer": 1,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same name, Kyle Secor.",
-            "confidence": 1.0,
-            "time": 0.7559940814971924
-        },
-        {
-            "dataset": "D6",
-            "query_id": 4890,
-            "ground_truth": 2561,
-            "ground_answer": 2,
             "answer": "[2]",
-            "explanation": "The record [2] refers to the same real-world entity as the given record because it has the same name, Colin Fox, and one of his primary professions is actor.",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has the same name, Larry David, and a job that is one of his primary professions (writer).",
             "confidence": 1.0,
-            "time": 0.8363962173461914
+            "time": 0.6404252052307129
         },
         {
             "dataset": "D6",
-            "query_id": 4959,
-            "ground_truth": 231,
-            "ground_answer": 2,
+            "query_id": 4612,
+            "ground_truth": -1,
+            "ground_answer": 0,
             "answer": "[1]",
-            "explanation": "The record [1] refers to the same real-world entity as the given record because it has a matching name, Marcia Wilkie and Marcia Warren are likely referring to the same person.",
+            "explanation": "The candidate record [1] has a matching title, episodeNumber, and seasonNumber with the given entity record.",
             "confidence": 1.0,
-            "time": 0.9095704555511475
+            "time": 0.472362756729126
         },
         {
             "dataset": "D6",
-            "query_id": 4996,
-            "ground_truth": 5111,
-            "ground_answer": 1,
+            "query_id": 4928,
+            "ground_truth": 1547,
+            "ground_answer": 0,
             "answer": "[1]",
-            "explanation": "The record [1] refers to the same real-world entity as the given record because it has the same name, Melissa Leo.",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity because they have the same title 'Chapter 14' and episodeNumber '1.0', which matches the seasonNumber in the candidate record.",
             "confidence": 1.0,
-            "time": 0.7345678806304932
+            "time": 0.6405961513519287
         }
     ]
 }

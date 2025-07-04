@@ -8,319 +8,349 @@
         "serialization": "DITTO",
         "task_description": "EXPLAIN",
         "skip": true,
-        "len_q99": 2463.609999999999,
-        "len_q50": 1645.0
+        "len_q99": 2039.8600000000001,
+        "len_q50": 1622.0
     },
     "responses": [
         {
             "dataset": "D8",
-            "query_id": 3,
-            "ground_truth": 4378,
-            "ground_answer": 4,
-            "answer": "[4]",
-            "explanation": "Record [4] refers to the same real-world entity as the given record, with the same model number (DCS-1100) and price ($99.82).",
-            "confidence": 1.0,
-            "time": 1.6165497303009033
-        },
-        {
-            "dataset": "D8",
-            "query_id": 30,
-            "ground_truth": 11088,
-            "ground_answer": 2,
-            "answer": "[1]",
-            "explanation": "The given record and candidate record [1] refer to the same real-world entity because they both belong to the Fujifilm Instax brand, have a 'brand' column with value 'Fuji', and are instant film products.",
-            "confidence": 1.0,
-            "time": 1.0479857921600342
-        },
-        {
-            "dataset": "D8",
-            "query_id": 53,
-            "ground_truth": 17892,
-            "ground_answer": 1,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] has the same brand and price as the given entity record, indicating that it refers to the same real-world entity.",
-            "confidence": 1.0,
-            "time": 0.8064613342285156
-        },
-        {
-            "dataset": "D8",
-            "query_id": 88,
+            "query_id": 86,
             "ground_truth": -1,
             "ground_answer": 0,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The model number, title, and brand in both records match.",
+            "explanation": "The candidate record [1] has a matching model number (ECR-D985BEG) and brand (Samsung), indicating that it refers to the same real-world entity as the given record.",
             "confidence": 1.0,
-            "time": 0.8303205966949463
+            "time": 0.8778543472290039
         },
         {
             "dataset": "D8",
-            "query_id": 101,
-            "ground_truth": 2593,
-            "ground_answer": 2,
-            "answer": "[2]",
-            "explanation": "The given record and candidate record [2] refer to the same real-world entity because they both have the brand 'Case Logic' and modelno 'DCB-309'.",
-            "confidence": 1.0,
-            "time": 2.3135128021240234
-        },
-        {
-            "dataset": "D8",
-            "query_id": 176,
-            "ground_truth": 4854,
+            "query_id": 99,
+            "ground_truth": 4520,
             "ground_answer": 2,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The model number PA70750U1YR and brand ioSafe match between the two records.",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Canon PowerShot A3300 IS Black 16.0MP Digital Camera with 5x Optical Zoom 3.0 LCD 720p Video w 50 Bonus Prints, as they have matching brand, modelno (A3300), dimensions, and price.",
             "confidence": 1.0,
-            "time": 0.9390921592712402
+            "time": 0.8828599452972412
         },
         {
             "dataset": "D8",
-            "query_id": 191,
+            "query_id": 148,
             "ground_truth": -1,
             "ground_answer": 0,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The model number, brand, and dimensions are identical in both records.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same model number (108R00579), brand (Xerox), and a similar title that includes the model number, indicating they are referring to the same product.",
             "confidence": 1.0,
-            "time": 0.8784434795379639
+            "time": 0.7203078269958496
         },
         {
             "dataset": "D8",
-            "query_id": 297,
-            "ground_truth": 15653,
+            "query_id": 211,
+            "ground_truth": 400,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity because they have matching modelno (2160) and brand (Avery), indicating that they are the same product.",
+            "confidence": 1.0,
+            "time": 0.6182506084442139
+        },
+        {
+            "dataset": "D8",
+            "query_id": 225,
+            "ground_truth": 12627,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has a similar title, brand, and model number (although with some minor differences in dimensions).",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same brand, modelno, and title (with slight variations in length), indicating that they are different versions or lengths of the same product.",
             "confidence": 1.0,
-            "time": 0.9469366073608398
+            "time": 0.6800897121429443
         },
         {
             "dataset": "D8",
-            "query_id": 299,
-            "ground_truth": 4644,
+            "query_id": 235,
+            "ground_truth": 21783,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] has the same model number (APB-00001) and brand as the given entity record, indicating that they refer to the same real-world entity.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same brand and model number (Avery and 11907 respectively), indicating that they are likely the same product.",
             "confidence": 1.0,
-            "time": 0.95155930519104
+            "time": 0.6279017925262451
         },
         {
             "dataset": "D8",
-            "query_id": 336,
-            "ground_truth": 20174,
-            "ground_answer": 1,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same model number (108R00657) and price ($154.84), which are strong indicators of a match.",
-            "confidence": 1.0,
-            "time": 1.0151498317718506
-        },
-        {
-            "dataset": "D8",
-            "query_id": 428,
-            "ground_truth": 6990,
+            "query_id": 457,
+            "ground_truth": 8018,
             "ground_answer": 2,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The model number 'HP27 / C8727A (XL)' in the candidate record matches the model number 'C8727AN' in the given record, and both records refer to an HP inkjet cartridge.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The model numbers and brand match, indicating that they are the same product.",
             "confidence": 1.0,
-            "time": 1.2451989650726318
+            "time": 0.5666203498840332
         },
         {
             "dataset": "D8",
-            "query_id": 461,
-            "ground_truth": 18389,
-            "ground_answer": 1,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same brand 'Expo' and a similar title that includes the model number '80054'.",
-            "confidence": 1.0,
-            "time": 0.9394054412841797
-        },
-        {
-            "dataset": "D8",
-            "query_id": 539,
-            "ground_truth": 11542,
-            "ground_answer": 1,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same model number (CE-MT0B12-S1) and brand (SIIG).",
-            "confidence": 1.0,
-            "time": 0.954038143157959
-        },
-        {
-            "dataset": "D8",
-            "query_id": 541,
-            "ground_truth": 9189,
-            "ground_answer": 0,
-            "answer": "[0]",
-            "explanation": "The given record and candidate record [1] refer to the same real-world entity because they both have the brand 'iGo' and the model number is very similar, with a difference of only one digit.",
-            "confidence": 1.0,
-            "time": 1.0020253658294678
-        },
-        {
-            "dataset": "D8",
-            "query_id": 598,
+            "query_id": 475,
             "ground_truth": -1,
             "ground_answer": 0,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a slight difference in color description.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same model number (000-10236-001), brand (Lowrance), and similar dimensions. Although there is a slight difference in shipweight, it's still within a reasonable range.",
             "confidence": 1.0,
-            "time": 0.801084041595459
+            "time": 0.7553708553314209
         },
         {
             "dataset": "D8",
-            "query_id": 625,
-            "ground_truth": 18443,
+            "query_id": 503,
+            "ground_truth": 10206,
             "ground_answer": 2,
-            "answer": "[2]",
-            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has the same brand and model number (27639).",
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching brand, modelno, dimensions, and shipweight.",
             "confidence": 1.0,
-            "time": 0.8269588947296143
+            "time": 0.5409684181213379
         },
         {
             "dataset": "D8",
-            "query_id": 668,
+            "query_id": 530,
             "ground_truth": -1,
             "ground_answer": 0,
-            "answer": "[0]",
-            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they both describe a laptop memory upgrade kit with similar specifications.",
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has a matching modelno (75101), brand (Tops), and similar product description, despite some differences in price and shipweight.",
             "confidence": 1.0,
-            "time": 0.8775875568389893
+            "time": 0.66261887550354
         },
         {
             "dataset": "D8",
-            "query_id": 678,
-            "ground_truth": 8962,
+            "query_id": 542,
+            "ground_truth": 13159,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same brand, model number, and a similar title. Although the price and dimensions are different, they could be variations of the same product.",
+            "confidence": 1.0,
+            "time": 0.7010798454284668
+        },
+        {
+            "dataset": "D8",
+            "query_id": 599,
+            "ground_truth": 556,
             "ground_answer": 2,
             "answer": "[2]",
-            "explanation": "The given record and candidate record [2] refer to the same real-world entity because they have the same brand, modelno, and dimensions.",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, with matching brand and modelno fields.",
             "confidence": 1.0,
-            "time": 0.8331232070922852
+            "time": 0.5122921466827393
         },
         {
             "dataset": "D8",
-            "query_id": 684,
-            "ground_truth": 17573,
-            "ground_answer": 1,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] has a matching model number (85781) and brand name (Weyerhaeuser), indicating that it refers to the same real-world entity as the given record.",
-            "confidence": 1.0,
-            "time": 0.9496595859527588
-        },
-        {
-            "dataset": "D8",
-            "query_id": 765,
-            "ground_truth": 15415,
-            "ground_answer": 1,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The model number, brand, and dimensions in both records match.",
-            "confidence": 1.0,
-            "time": 0.8408815860748291
-        },
-        {
-            "dataset": "D8",
-            "query_id": 1044,
-            "ground_truth": 3009,
+            "query_id": 688,
+            "ground_truth": 4783,
             "ground_answer": 2,
-            "answer": "[0]",
-            "explanation": "The candidate record [2] has a matching model number (IT4LO-BLU/BLK) and brand (iFrogz), indicating that it refers to the same real-world entity as the given record.",
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The model number, brand, and dimensions are consistent between the two records.",
             "confidence": 1.0,
-            "time": 1.0288949012756348
+            "time": 0.5456106662750244
         },
         {
             "dataset": "D8",
-            "query_id": 1070,
-            "ground_truth": 18620,
+            "query_id": 699,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same title, brand, and model number as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.46442079544067383
+        },
+        {
+            "dataset": "D8",
+            "query_id": 801,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The modelno, brand, and dimensions in both records match.",
+            "confidence": 1.0,
+            "time": 0.5399887561798096
+        },
+        {
+            "dataset": "D8",
+            "query_id": 832,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same model number (TIP-PU301CB) and brand as the given entity record, indicating that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.5915224552154541
+        },
+        {
+            "dataset": "D8",
+            "query_id": 895,
+            "ground_truth": 12463,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The given record and candidate record [1] refer to the same real-world entity because they have the same brand (Tribeca) and title (Chicago Cubs Pink iPhone 4 Hard Case), which is a strong match.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same brand, price, and shipweight, and the dimensions are close enough (13.5 x 10.5 x 1.3 inches vs 14.0 x 10.0 x 1.0 inches).",
             "confidence": 1.0,
-            "time": 0.9978704452514648
+            "time": 0.822751522064209
         },
         {
             "dataset": "D8",
-            "query_id": 1136,
-            "ground_truth": 17383,
+            "query_id": 944,
+            "ground_truth": 14177,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same brand, dimensions, price, and model number (although not explicitly mentioned in the candidate record, we can infer that the model number is likely PVR135H1 based on the title). The only difference is the shipweight, which could be due to a different packaging or shipping method.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same model number (TN360) and brand (Brother), indicating that they are the same product. Although the dimensions and shipweight are different, this is likely due to a difference in packaging or other factors rather than a fundamental difference in the product itself.",
             "confidence": 1.0,
-            "time": 1.4240450859069824
+            "time": 0.8901958465576172
         },
         {
             "dataset": "D8",
-            "query_id": 1141,
-            "ground_truth": 9253,
+            "query_id": 1073,
+            "ground_truth": 2522,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same model number (WDBABV5000ABK-NESN), brand (Western Digital), and dimensions (5.0 x 3.1 x 0.6 inches) as the given record.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a match in brand and modelno.",
             "confidence": 1.0,
-            "time": 1.2751688957214355
+            "time": 0.5258402824401855
         },
         {
             "dataset": "D8",
-            "query_id": 1338,
-            "ground_truth": 17543,
+            "query_id": 1165,
+            "ground_truth": 3695,
             "ground_answer": 2,
             "answer": "[2]",
-            "explanation": "The candidate record [2] has a modelno of 75174, which matches the given entity record's modelno.",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, with matching brand and modelno fields.",
             "confidence": 1.0,
-            "time": 0.7405486106872559
+            "time": 0.49130892753601074
+        },
+        {
+            "dataset": "D8",
+            "query_id": 1189,
+            "ground_truth": 2759,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching model number (602956007722) and brand (Marware), indicating that it refers to the same real-world entity as the given record.",
+            "confidence": 1.0,
+            "time": 0.5853602886199951
+        },
+        {
+            "dataset": "D8",
+            "query_id": 1208,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[3]",
+            "explanation": "The candidate record [3] has a matching model number (283DMW), brand, and dimensions (5.0 x 3.0 x 0.2 inches) to the given entity record.",
+            "confidence": 1.0,
+            "time": 0.658254861831665
+        },
+        {
+            "dataset": "D8",
+            "query_id": 1251,
+            "ground_truth": 2073,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The model number '5450PE3512SB' and brand 'Sapphire' in the candidate record match the model number and brand 'Diamond' in the given record, indicating that they are referring to the same graphics card.",
+            "confidence": 1.0,
+            "time": 0.8031618595123291
+        },
+        {
+            "dataset": "D8",
+            "query_id": 1260,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The brand and modelno in both records match, indicating that they are the same product.",
+            "confidence": 1.0,
+            "time": 0.5743248462677002
+        },
+        {
+            "dataset": "D8",
+            "query_id": 1298,
+            "ground_truth": 8455,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same model number (41U4820), brand (Lenovo), and dimensions (9.6 x 5.8 x 2.2 inches). The only differences are in price and shipweight, which may be variations or errors.",
+            "confidence": 1.0,
+            "time": 0.8641643524169922
+        },
+        {
+            "dataset": "D8",
+            "query_id": 1408,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same brand (Olympus) and modelno is not present, but the title and shipweight are close enough to be considered a match.",
+            "confidence": 1.0,
+            "time": 0.6847083568572998
         },
         {
             "dataset": "D8",
             "query_id": 1423,
             "ground_truth": 9727,
             "ground_answer": 1,
-            "answer": "[0]",
-            "explanation": "The candidate record [1] has a similar model number (P-FD4GB/MINI-EF) and brand (PNY), but the dimensions are different. However, it's likely that this is the same product with a slightly different packaging or design. The price difference of $0.83 might be due to variations in shipping weight (1 vs 0.0518 lbs).",
-            "confidence": 1.0,
-            "time": 1.459942102432251
-        },
-        {
-            "dataset": "D8",
-            "query_id": 1426,
-            "ground_truth": 10692,
-            "ground_answer": 4,
-            "answer": "[4]",
-            "explanation": "The given record and candidate record [4] refer to the same real-world entity because they have matching title, price, shipweight, brand, and dimensions.",
-            "confidence": 1.0,
-            "time": 0.9323160648345947
-        },
-        {
-            "dataset": "D8",
-            "query_id": 1435,
-            "ground_truth": 7324,
-            "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The model number, brand name, and dimensions of both records match.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The model number, brand, and dimensions of the candidate record match those of the given record.",
             "confidence": 1.0,
-            "time": 0.8676114082336426
+            "time": 0.5811710357666016
         },
         {
             "dataset": "D8",
-            "query_id": 1506,
-            "ground_truth": 16666,
+            "query_id": 1468,
+            "ground_truth": 2293,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The model number BV9955 in the candidate record is similar to the model number BV9958B in the given record, and both records are from Boss Audio.",
+            "confidence": 1.0,
+            "time": 0.7106380462646484
+        },
+        {
+            "dataset": "D8",
+            "query_id": 1498,
+            "ground_truth": 5234,
             "ground_answer": 2,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same brand and a similar title, indicating that they are related products from the same manufacturer.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar model number (900367 vs 900368), brand (VisionTek), and dimensions. The only differences are in the model year (HD6750 vs HD6770) and price.",
             "confidence": 1.0,
-            "time": 0.940657377243042
+            "time": 0.7713162899017334
         },
         {
             "dataset": "D8",
-            "query_id": 1563,
-            "ground_truth": 430,
-            "ground_answer": 2,
+            "query_id": 1530,
+            "ground_truth": -1,
+            "ground_answer": 0,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching brand 'Asus' and modelno 'F1A75-M PRO'. Although there are some differences in dimensions and price, they can be considered minor variations.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The modelno, brand and product description in both records match.",
             "confidence": 1.0,
-            "time": 1.1683783531188965
+            "time": 0.5136592388153076
         },
         {
             "dataset": "D8",
-            "query_id": 1578,
-            "ground_truth": 3323,
+            "query_id": 1531,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same title, model number (10707RNN), brand (HON), and dimensions (72w x 24d x 29-1/2h Mahogany).",
+            "confidence": 1.0,
+            "time": 0.7705273628234863
+        },
+        {
+            "dataset": "D8",
+            "query_id": 1573,
+            "ground_truth": 5415,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] has a matching model number (M30P10-7N) and brand (V7), indicating that it refers to the same real-world entity as the given record.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same model number (MU3MMS2RA), brand (StarTech), and is a similar product type (Slim 3.5mm Right Angle Stereo Audio Cable).",
             "confidence": 1.0,
-            "time": 0.9917993545532227
+            "time": 0.7636520862579346
+        },
+        {
+            "dataset": "D8",
+            "query_id": 1614,
+            "ground_truth": 11350,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same model number (K38085US) and brand (Kensington).",
+            "confidence": 1.0,
+            "time": 0.5859887599945068
+        },
+        {
+            "dataset": "D8",
+            "query_id": 1654,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching brand and model number.",
+            "confidence": 1.0,
+            "time": 0.507028341293335
         },
         {
             "dataset": "D8",
@@ -328,89 +358,59 @@
             "ground_truth": -1,
             "ground_answer": 0,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The 'brand' column in record [1] matches the 'COL' title 'Boise ASPEN 30 Office Paper 92 Brightness 20lb 8-1 2 x 14 5000 Sheets Carton' which is present in the given record.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The 'brand' column in record [1] matches the 'COL' title 'Boise ASPEN 30 Office Paper 92 Brightness 20lb 8-1 2 x 14 5000 Sheets Carton' which is similar to the 'title' column in the given record.",
             "confidence": 1.0,
-            "time": 1.351405143737793
+            "time": 0.925412654876709
         },
         {
             "dataset": "D8",
-            "query_id": 1700,
-            "ground_truth": 13659,
-            "ground_answer": 2,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same model number (PRO330) and brand (Post-It), indicating that they are the same product.",
-            "confidence": 1.0,
-            "time": 0.9754631519317627
-        },
-        {
-            "dataset": "D8",
-            "query_id": 1802,
-            "ground_truth": 14924,
-            "ground_answer": 2,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The modelno and brand in both records match, indicating that they are the same product.",
-            "confidence": 1.0,
-            "time": 0.9113636016845703
-        },
-        {
-            "dataset": "D8",
-            "query_id": 1829,
-            "ground_truth": 19353,
+            "query_id": 1713,
+            "ground_truth": 21093,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The model number, brand, and dimensions in both records match.",
+            "explanation": "The candidate record [1] has a modelno value of '36226' which matches the given entity's modelno value, indicating that they refer to the same real-world entity.",
             "confidence": 1.0,
-            "time": 0.8583652973175049
+            "time": 0.5865602493286133
         },
         {
             "dataset": "D8",
-            "query_id": 1860,
-            "ground_truth": 5560,
-            "ground_answer": 2,
-            "answer": "[2]",
-            "explanation": "The given record and candidate record [2] refer to the same real-world entity, Chicago White Sox Pink iPhone 4 Hard Case, as they have matching title values.",
-            "confidence": 1.0,
-            "time": 0.85904860496521
-        },
-        {
-            "dataset": "D8",
-            "query_id": 1891,
-            "ground_truth": 15304,
+            "query_id": 1726,
+            "ground_truth": 18463,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The model number, brand, and dimensions of both records match.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same brand and model number (EG020304).",
             "confidence": 1.0,
-            "time": 0.8829548358917236
+            "time": 0.539757490158081
         },
         {
             "dataset": "D8",
-            "query_id": 1893,
-            "ground_truth": 11120,
-            "ground_answer": 4,
-            "answer": "[4]",
-            "explanation": "The record with modelno '01G-P3-1302-LR' and brand 'EVGA' is the same as the given entity record.",
+            "query_id": 1813,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has the same brand and model number as the given entity record, indicating that they refer to the same real-world entity.",
             "confidence": 1.0,
-            "time": 1.0467934608459473
+            "time": 0.5234203338623047
         },
         {
             "dataset": "D8",
-            "query_id": 1907,
-            "ground_truth": 10481,
+            "query_id": 1834,
+            "ground_truth": 16331,
             "ground_answer": 2,
-            "answer": "[2]",
-            "explanation": "The given record and candidate record [2] refer to the same real-world entity because they have the same model number (CMX4GX3M2A1600C8), brand (Corsair), and dimensions (7.4 x 4.8 x 0.3 inches).",
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same brand 'Guardian' and a similar title, although the model number is different. However, the shipweight in the given record (11.0) is closer to the shipweight in the candidate record [1] (13.2) than in the candidate record [2] (24.2), suggesting that the given record might be related to the candidate record [1].",
             "confidence": 1.0,
-            "time": 1.3169310092926025
+            "time": 1.0823583602905273
         },
         {
             "dataset": "D8",
-            "query_id": 1908,
-            "ground_truth": 20111,
+            "query_id": 1875,
+            "ground_truth": 9386,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same brand, modelno, shipweight, and a similar title.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same model number (TL-ANT2409B), brand (TP-Link), and antenna specifications (2.4GHz 9dBi). The price and shipweight are different, but these can be considered variations of the product.",
             "confidence": 1.0,
-            "time": 0.8816478252410889
+            "time": 0.8388190269470215
         },
         {
             "dataset": "D8",
@@ -418,19 +418,19 @@
             "ground_truth": 11214,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] has the same brand, modelno and dimensions as the given entity record. Although there are some minor discrepancies in the title and price, they can be considered as variations of the same product.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The model number, brand, and dimensions in both records match.",
             "confidence": 1.0,
-            "time": 1.0187034606933594
+            "time": 0.5527708530426025
         },
         {
             "dataset": "D8",
-            "query_id": 1943,
-            "ground_truth": 15780,
-            "ground_answer": 2,
-            "answer": "[2]",
-            "explanation": "Both records refer to the Kenwood speaker model KFC-6993PS.",
+            "query_id": 1951,
+            "ground_truth": 20443,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same model number (IP-909), brand name (Incipio), and dimensions (4.6 x 2.5 x 0.2 inches). The only difference is in the title, which is a minor variation.",
             "confidence": 1.0,
-            "time": 1.9417006969451904
+            "time": 0.8305175304412842
         },
         {
             "dataset": "D8",
@@ -440,27 +440,27 @@
             "answer": "[1]",
             "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching brand 'StarTech' and modelno 'MU3MMSRA'.",
             "confidence": 1.0,
-            "time": 1.3120005130767822
+            "time": 0.5709095001220703
         },
         {
             "dataset": "D8",
-            "query_id": 1975,
-            "ground_truth": 8180,
-            "ground_answer": 2,
-            "answer": "[2]",
-            "explanation": "The candidate record [2] has the same model number (7068) as the given entity record, indicating that they refer to the same real-world entity.",
+            "query_id": 1963,
+            "ground_truth": 6961,
+            "ground_answer": 1,
+            "answer": "[0]",
+            "explanation": "The candidate record [1] has a similar title and model number to the given entity, but the price and dimensions are different. The candidate record [2] has a different title and model number, and also different dimensions. However, all three records have the same brand name \"humantoolz\" which is close to the given entity's brand name \"Human Toolz\", suggesting that they might refer to the same real-world entity.",
             "confidence": 1.0,
-            "time": 0.8510720729827881
+            "time": 1.0047504901885986
         },
         {
             "dataset": "D8",
-            "query_id": 1997,
-            "ground_truth": 12451,
-            "ground_answer": 4,
-            "answer": "[4]",
-            "explanation": "The given entity record matches candidate record [4] in all fields.",
+            "query_id": 2021,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same brand and model number, indicating that it is the same product.",
             "confidence": 1.0,
-            "time": 2.2160253524780273
+            "time": 0.5610809326171875
         },
         {
             "dataset": "D8",
@@ -470,127 +470,77 @@
             "answer": "[1]",
             "explanation": "The candidate record [1] refers to the same real-world entity as the given record. Although it has a different price and shipweight, its title and brand match the given record.",
             "confidence": 1.0,
-            "time": 0.9021060466766357
+            "time": 0.5767545700073242
         },
         {
             "dataset": "D8",
-            "query_id": 2084,
-            "ground_truth": 8987,
-            "ground_answer": 1,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The model number BK357AA#ABA in the candidate record matches the modelno HP BK357AA in the given record, and both records have the brand HP.",
-            "confidence": 1.0,
-            "time": 1.069265604019165
-        },
-        {
-            "dataset": "D8",
-            "query_id": 2118,
-            "ground_truth": 20621,
-            "ground_answer": 1,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching brand 'Antec', modelno 'TriCool 92mm DBB', and price '8.25'.",
-            "confidence": 1.0,
-            "time": 1.424912929534912
-        },
-        {
-            "dataset": "D8",
-            "query_id": 2123,
-            "ground_truth": 1794,
-            "ground_answer": 2,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The modelno in both records is DMC-TS3S, which indicates that they are the same camera model.",
-            "confidence": 1.0,
-            "time": 1.0146522521972656
-        },
-        {
-            "dataset": "D8",
-            "query_id": 2126,
+            "query_id": 2079,
             "ground_truth": -1,
             "ground_answer": 0,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching brand 'PNY', model number 'P-SDHC4G4-EF' and dimensions (although the actual values are different).",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has a similar title, brand, and dimensions. Although the model number is different (AM00776-CEU vs AM00778-CEU), this could be due to a minor variation or an error in one of the records.",
             "confidence": 1.0,
-            "time": 1.125605583190918
+            "time": 0.8224873542785645
         },
         {
             "dataset": "D8",
-            "query_id": 2139,
-            "ground_truth": 101,
+            "query_id": 2149,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching model number (M552) and brand (Kodak).",
+            "confidence": 1.0,
+            "time": 0.5782690048217773
+        },
+        {
+            "dataset": "D8",
+            "query_id": 2155,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same brand 'Ape Case' and a similar title that includes the model number 'AC252'. Although the shipweight is different, it's possible that this is an error in one of the records.",
+            "confidence": 1.0,
+            "time": 0.7806336879730225
+        },
+        {
+            "dataset": "D8",
+            "query_id": 2267,
+            "ground_truth": 2527,
             "ground_answer": 2,
             "answer": "[2]",
-            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has the same model number (HA0435-M005) and brand (AGF), which matches the given record's modelno and brand fields.",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has the same model number (SGA-6000-KKYF1) and brand name (Cooler Master).",
             "confidence": 1.0,
-            "time": 1.0967726707458496
+            "time": 0.6403486728668213
         },
         {
             "dataset": "D8",
-            "query_id": 2191,
-            "ground_truth": 16173,
-            "ground_answer": 1,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] has the same title, price, and brand as the given entity record. Although it has a different team name (Chicago Blackhawks instead of Chicago Bears), this difference is not significant enough to consider them as different entities in this context.",
-            "confidence": 1.0,
-            "time": 1.0759377479553223
-        },
-        {
-            "dataset": "D8",
-            "query_id": 2210,
-            "ground_truth": 16560,
-            "ground_answer": 2,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same brand 'Crown' and a similar title, indicating that they are likely the same product.",
-            "confidence": 1.0,
-            "time": 0.9520978927612305
-        },
-        {
-            "dataset": "D8",
-            "query_id": 2211,
-            "ground_truth": 4646,
-            "ground_answer": 2,
-            "answer": "[2]",
-            "explanation": "The candidate record [2] has the same brand and model number as the given entity, indicating that it refers to the same real-world entity.",
-            "confidence": 1.0,
-            "time": 0.8055253028869629
-        },
-        {
-            "dataset": "D8",
-            "query_id": 2264,
-            "ground_truth": 19007,
-            "ground_answer": 2,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has a similar title, model number (VL100D vs VL100), brand name (Lumiere LA), and dimensions. The only differences are the presence of a dimmer in the title, a different price, and slightly different dimensions.",
-            "confidence": 1.0,
-            "time": 1.3150715827941895
-        },
-        {
-            "dataset": "D8",
-            "query_id": 2297,
-            "ground_truth": 10869,
-            "ground_answer": 1,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] has a matching model number (73171) and brand (Da-Lite), but the title is slightly different. However, it's likely that this is the same product with a different description.",
-            "confidence": 1.0,
-            "time": 1.0052437782287598
-        },
-        {
-            "dataset": "D8",
-            "query_id": 2328,
-            "ground_truth": 16352,
-            "ground_answer": 4,
-            "answer": "[4]",
-            "explanation": "The record with modelno [VAL] 282D and brand [VAL] Xantech matches the given entity record.",
-            "confidence": 1.0,
-            "time": 0.8323431015014648
-        },
-        {
-            "dataset": "D8",
-            "query_id": 2371,
-            "ground_truth": 10923,
+            "query_id": 2331,
+            "ground_truth": 21976,
             "ground_answer": 3,
-            "answer": "[0]",
-            "explanation": "The given record and candidate record [3] refer to the same real-world entity as they have the same brand, modelno, and dimensions.",
+            "answer": "[3]",
+            "explanation": "The model number and brand match between the given entity record and candidate record [3].",
             "confidence": 1.0,
-            "time": 0.8945670127868652
+            "time": 1.4343516826629639
+        },
+        {
+            "dataset": "D8",
+            "query_id": 2360,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same brand and modelno, and a similar title.",
+            "confidence": 1.0,
+            "time": 0.5402486324310303
+        },
+        {
+            "dataset": "D8",
+            "query_id": 2364,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has a matching modelno (99712) and brand (Tops) with the given entity record.",
+            "confidence": 1.0,
+            "time": 0.4949769973754883
         },
         {
             "dataset": "D8",
@@ -600,17 +550,17 @@
             "answer": "[3]",
             "explanation": "The given record and candidate record [3] refer to the same real-world entity because they have the same model number (WDBACX7500ASL-NESN), brand, and dimensions.",
             "confidence": 1.0,
-            "time": 1.0571839809417725
+            "time": 0.6191871166229248
         },
         {
             "dataset": "D8",
-            "query_id": 2502,
-            "ground_truth": 16032,
-            "ground_answer": 4,
-            "answer": "[3]",
-            "explanation": "Record [3] refers to the same real-world entity as the given record because it has the same brand 'SVAT' and model number 'GX301-011', which are key identifiers for this type of product.",
+            "query_id": 2507,
+            "ground_truth": 5038,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same model number (GB01957) and brand (Griffin Technology), indicating that it refers to the same real-world entity as the given record.",
             "confidence": 1.0,
-            "time": 1.417790174484253
+            "time": 0.604184627532959
         }
     ]
 }

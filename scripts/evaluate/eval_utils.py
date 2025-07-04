@@ -4,6 +4,31 @@ import re
 import os
 import matplotlib.pyplot as plt
 
+def compute_f1_equality(y_true, y_pred):
+    """
+    Compute F1 score based on equality between two sequential lists.
+
+    Parameters:
+        y_true (list): Ground truth labels (any type).
+        y_pred (list): Predicted labels (any type).
+
+    Returns:
+        float: F1 score based on element-wise equality.
+    """
+    assert len(y_true) == len(y_pred), "Length of true and predicted lists must match"
+
+    tp = sum(yt == yp for yt, yp in zip(y_true, y_pred))
+    fp = sum(yt != yp for yt, yp in zip(y_true, y_pred))
+    fn = fp  # since every false prediction is also a missed correct label
+
+    if tp == 0:
+        return 0.0
+
+    precision = tp / (tp + fp)
+    recall = tp / (tp + fn)
+
+    return 2 * precision * recall / (precision + recall)
+
 
 def compute_f1_score(y_true, y_pred):
     """
@@ -28,14 +53,13 @@ def compute_f1_score(y_true, y_pred):
     precision = tp / (tp + fp)
     recall = tp / (tp + fn)
     
-    # print(precision, recall)
+    # print("\t", precision, recall)
 
     if precision + recall == 0:
         return 0.0
 
     f1 = 2 * (precision * recall) / (precision + recall)
     return f1
-
 
 def calc_f1(true, preds):
     if len(true) > 0:
@@ -69,7 +93,10 @@ def get_scores_from_ft_json(path, measure=calc_f1):
                 answer = int(answer[1:-1])
             except:
                     answer = 0
-            predictions.add((res['query_id'], answer))
+            #predictions.add((res['query_id'], answer))
+        else:
+            answer = 0 #TODO
+        predictions.add((res['query_id'], answer)) #TODO
             
     score = measure(ground_results, predictions)
     
@@ -94,19 +121,19 @@ def get_scores_from_json(path, measure=calc_f1):
                     answer = answer['answer']
         else:
             answer = res['answer']
-        # if res['ground_answer'] == -1: #TODO: Check for certainty
-        #     ground_answer = 0
         
         ground_results.add((res['query_id'], res['ground_answer']))
+        
         if len(answer) > 0:
             try:
                 answer = int(answer[1:-1])
             except:
                     answer = 0
-            predictions.add((res['query_id'], answer))
+        else:
+            answer = 0 #TODO
+        predictions.add((res['query_id'], answer)) #TODO
             
     score = measure(ground_results, predictions)
-    
     return dataset, score
 
 
@@ -168,24 +195,60 @@ def prepare_plm_file(path, rdir='log/', measure=compute_f1_score):
 
     results = {}
     for key, val in scores.items():
+        # print(key)
         results[key] = float(measure(val['true'], val['preds']))
     return pd.Series(results)
     # return None
 
 
-def prepare_plm_train_file(path, measure=compute_f1_score):
-    df = pd.read_csv(path + 'log/total_predictions.csv')
-    scores = {f'D{i}': {'preds': [], 'true': []} for i in range(2,10)}
-    for index, row in df.iterrows():
-        case = 'D{}'.format(row['datasets'])
-        scores[case]['preds'].append(row['predictions'])
-        scores[case]['true'].append(row['labels'])
 
-    results = {}
-    for key, val in scores.items():
-        results[key] = float(measure(val['true'], val['preds']))
-    return pd.Series(results)
+
+def read_prompt_file(file, field='noise_answer'):
+    with open(file) as f:
+        data = json.load(f)['prompts']
         
+    ans = {}
+    for p in data:
+        qid = p['query_id']
+        if type(qid) == int:
+            ans[qid] = [p[field]]
+        else:
+            qid, no = qid.split("_")
+            qid = int(qid)
+            if qid in ans:
+                ans[qid].append(p[field])
+            else:
+                ans[qid] = [p[field]]
+    return ans
+
+
+def prepare_train_file(path_pred, path_true):
+    path_pred = path_pred + 'partial_noisy/'
+    temp_scores = {}
+    for file in os.listdir(path_pred):
+        # if 'D2' not in file:
+        #     continue
+        dataset = file.split("_")[0]
+        true = read_prompt_file(path_true+file, "ground_answer")
+        pred = read_prompt_file(path_pred+file)
+        
+        actual_true, actual_pred = [], []
+        # actual_true_2, actual_pred_2 = [], []
+        for qid, vals in pred.items():
+            for val in vals:
+                actual_true.append(true[qid][0])
+                actual_pred.append(val)
+                # actual_true_2.append((qid, true[qid][0]))
+                # actual_pred_2.append((qid, val))
+        f1 = compute_f1_equality(actual_true, actual_pred)
+        temp_scores[dataset] = f1
+        # print("Ground:", actual_true_2)
+        # print("Predictions: ", actual_pred_2)
+    return pd.Series(temp_scores)
+
+
+
+
 
 
 

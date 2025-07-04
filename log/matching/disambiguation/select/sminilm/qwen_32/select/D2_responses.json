@@ -8,69 +8,429 @@
         "serialization": "DITTO",
         "task_description": "EXPLAIN",
         "skip": true,
-        "len_q99": 3127.379999999998,
-        "len_q50": 1872.0
+        "len_q99": 4565.900000000001,
+        "len_q50": 1969.5
     },
     "responses": [
         {
             "dataset": "D2",
-            "query_id": 81,
-            "ground_truth": 194,
-            "ground_answer": 3,
-            "answer": "[3]",
-            "explanation": "The given entity record refers to a Linksys WRV54G Wireless-G VPN Broadband Router, which is the same as the one described in candidate record [3].",
-            "confidence": 1.0,
-            "time": 1.3128983974456787
-        },
-        {
-            "dataset": "D2",
-            "query_id": 104,
-            "ground_truth": 988,
-            "ground_answer": 1,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar name and product code (0345B002).",
-            "confidence": 1.0,
-            "time": 0.8698880672454834
-        },
-        {
-            "dataset": "D2",
-            "query_id": 162,
-            "ground_truth": 358,
-            "ground_answer": 0,
-            "answer": "[2]",
-            "explanation": "The candidate records refer to a product from Garmin with the same part number (010-10723-xx), suggesting they are related products.",
-            "confidence": 1.0,
-            "time": 2.2844808101654053
-        },
-        {
-            "dataset": "D2",
-            "query_id": 168,
-            "ground_truth": 295,
+            "query_id": 2,
+            "ground_truth": 434,
             "ground_answer": 2,
             "answer": "[2]",
-            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as both are Linksys WAP4400N Wireless-N Access Points with POE.",
+            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, as they have similar names and descriptions.",
             "confidence": 1.0,
-            "time": 0.9001054763793945
+            "time": 0.7813384532928467
         },
         {
             "dataset": "D2",
-            "query_id": 169,
-            "ground_truth": 831,
+            "query_id": 9,
+            "ground_truth": 134,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, Linksys EtherFast EF4124 Ethernet Switch.",
+            "confidence": 1.0,
+            "time": 0.5022509098052979
+        },
+        {
+            "dataset": "D2",
+            "query_id": 17,
+            "ground_truth": 1075,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record refers to a Linksys Wireless-G Range Expander, which is also referred to in candidate record [3].",
+            "confidence": 1.0,
+            "time": 0.5139667987823486
+        },
+        {
+            "dataset": "D2",
+            "query_id": 26,
+            "ground_truth": 100,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, Netgear ProSafe FS726TP 24 Port 10/100 Smart Switch.",
+            "confidence": 1.0,
+            "time": 0.5596082210540771
+        },
+        {
+            "dataset": "D2",
+            "query_id": 27,
+            "ground_truth": 127,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given record and candidate [1] refer to the same real-world entity, as they both describe a Sony PlayStation 2 8MB Memory Card.",
+            "confidence": 1.0,
+            "time": 0.5415382385253906
+        },
+        {
+            "dataset": "D2",
+            "query_id": 40,
+            "ground_truth": 20,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both records mention the Linksys Wireless-N WRVS4400N device.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar name and description that matches the given record's details.",
             "confidence": 1.0,
-            "time": 0.8494055271148682
+            "time": 0.5419502258300781
+        },
+        {
+            "dataset": "D2",
+            "query_id": 41,
+            "ground_truth": 30,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar name and description, but with different finish options.",
+            "confidence": 1.0,
+            "time": 0.536750078201294
+        },
+        {
+            "dataset": "D2",
+            "query_id": 43,
+            "ground_truth": 29,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar name and description, but with different speaker mounting methods and finish.",
+            "confidence": 1.0,
+            "time": 0.557105541229248
+        },
+        {
+            "dataset": "D2",
+            "query_id": 47,
+            "ground_truth": 27,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as both have the name 'Sanus Speaker Mount - WMS3B BLACK' and similar descriptions.",
+            "confidence": 1.0,
+            "time": 0.587158203125
+        },
+        {
+            "dataset": "D2",
+            "query_id": 48,
+            "ground_truth": 28,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, as they have the same name (Sanus Wall/Ceiling Speaker Mount - WMS3S SILVER) and description (Plastic - 8 lb), with the only difference being the color. The price is also the same in both records.",
+            "confidence": 1.0,
+            "time": 0.8218262195587158
+        },
+        {
+            "dataset": "D2",
+            "query_id": 57,
+            "ground_truth": 329,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both records mention Panasonic and have similar product names (KX-TSC14B and KXTSC14B).",
+            "confidence": 1.0,
+            "time": 0.6582317352294922
+        },
+        {
+            "dataset": "D2",
+            "query_id": 59,
+            "ground_truth": 62,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, Sanus Flat Panel TV Wall Mount - VM1B.",
+            "confidence": 1.0,
+            "time": 0.5069763660430908
+        },
+        {
+            "dataset": "D2",
+            "query_id": 63,
+            "ground_truth": 48,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar name and description.",
+            "confidence": 1.0,
+            "time": 0.48239874839782715
+        },
+        {
+            "dataset": "D2",
+            "query_id": 72,
+            "ground_truth": 64,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar name and description.",
+            "confidence": 1.0,
+            "time": 0.4915497303009033
+        },
+        {
+            "dataset": "D2",
+            "query_id": 73,
+            "ground_truth": 164,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The second candidate record has a matching product code \"VMUC1S\" which is present in the given entity record.",
+            "confidence": 1.0,
+            "time": 1.205193281173706
+        },
+        {
+            "dataset": "D2",
+            "query_id": 74,
+            "ground_truth": 65,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching name and description.",
+            "confidence": 1.0,
+            "time": 0.4879598617553711
+        },
+        {
+            "dataset": "D2",
+            "query_id": 77,
+            "ground_truth": 61,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has the same name, description and price as the given entity record, but with a different product code (841001 instead of 848001). However, it also mentions that the lid is Black, which matches the given entity record. Therefore, it refers to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.7948334217071533
+        },
+        {
+            "dataset": "D2",
+            "query_id": 79,
+            "ground_truth": 47,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, OmniMount TV Top Shelf Mount - CCH1P, as they have identical names.",
+            "confidence": 1.0,
+            "time": 0.5676171779632568
+        },
+        {
+            "dataset": "D2",
+            "query_id": 80,
+            "ground_truth": 78,
+            "ground_answer": 3,
+            "answer": "[2]",
+            "explanation": "The record [2] refers to the same real-world entity as the given record because it has similar characteristics such as being compatible with Sony LCS series cameras, having durable nylon construction, and a black finish.",
+            "confidence": 1.0,
+            "time": 1.4592435359954834
+        },
+        {
+            "dataset": "D2",
+            "query_id": 81,
+            "ground_truth": 194,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record refers to a Linksys WRV54G Wireless-G VPN Broadband Router, which is the same as the one described in candidate record [2].",
+            "confidence": 1.0,
+            "time": 0.6172175407409668
+        },
+        {
+            "dataset": "D2",
+            "query_id": 101,
+            "ground_truth": 49,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, with a matching name and description.",
+            "confidence": 1.0,
+            "time": 0.5093798637390137
+        },
+        {
+            "dataset": "D2",
+            "query_id": 109,
+            "ground_truth": 344,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record refers to a Linksys Wireless-G Broadband Router, which is also described in candidate record [2].",
+            "confidence": 1.0,
+            "time": 0.5262806415557861
+        },
+        {
+            "dataset": "D2",
+            "query_id": 123,
+            "ground_truth": 227,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, as they have the same model number (VGPPRSZ1) and similar descriptions.",
+            "confidence": 1.0,
+            "time": 0.57051682472229
+        },
+        {
+            "dataset": "D2",
+            "query_id": 136,
+            "ground_truth": 191,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they both mention Panasonic KX-TGA450B and have similar descriptions.",
+            "confidence": 1.0,
+            "time": 0.5495908260345459
+        },
+        {
+            "dataset": "D2",
+            "query_id": 138,
+            "ground_truth": 146,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it is an add-on handset for the KXTG6700B phone system.",
+            "confidence": 1.0,
+            "time": 0.6010482311248779
+        },
+        {
+            "dataset": "D2",
+            "query_id": 139,
+            "ground_truth": 147,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity as they both describe an additional handset for the KXTG6700B phone system.",
+            "confidence": 1.0,
+            "time": 0.5980887413024902
+        },
+        {
+            "dataset": "D2",
+            "query_id": 142,
+            "ground_truth": 117,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record [COL] name [VAL] Weber Q 300 Gas Grill matches with candidate record [3] [COL] name [VAL] Weber Q 300 Liquid Propane Outdoor Grill - 426001 because they both refer to the same real-world entity, a Weber Q 300 gas grill.",
+            "confidence": 1.0,
+            "time": 1.7385973930358887
+        },
+        {
+            "dataset": "D2",
+            "query_id": 163,
+            "ground_truth": 416,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both have a 'Garmin' brand and a similar product name ('Carrying Case' vs 'Leather GPS Case'), indicating they are related products.",
+            "confidence": 1.0,
+            "time": 0.6859169006347656
+        },
+        {
+            "dataset": "D2",
+            "query_id": 174,
+            "ground_truth": 145,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both mention Panasonic and have a similar model number (KXTS3282W).",
+            "confidence": 1.0,
+            "time": 0.5852866172790527
+        },
+        {
+            "dataset": "D2",
+            "query_id": 182,
+            "ground_truth": 207,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, LG Electronics WDP3 Laundry Pedestal with Drawer - Blue, as they have similar names and descriptions.",
+            "confidence": 1.0,
+            "time": 0.6003167629241943
+        },
+        {
+            "dataset": "D2",
+            "query_id": 183,
+            "ground_truth": 1035,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record refers to an LG WSTK1 Washer/Dryer Stacking Kit, which is also mentioned in candidate record [3] as the name of a product.",
+            "confidence": 1.0,
+            "time": 0.6069598197937012
+        },
+        {
+            "dataset": "D2",
+            "query_id": 184,
+            "ground_truth": 946,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, Nintendo DS Lite Onyx Black Portable Gaming System.",
+            "confidence": 1.0,
+            "time": 0.5178389549255371
+        },
+        {
+            "dataset": "D2",
+            "query_id": 186,
+            "ground_truth": 151,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, as they both mention the CNP2000 XM Mini-Tuner.",
+            "confidence": 1.0,
+            "time": 0.5546290874481201
+        },
+        {
+            "dataset": "D2",
+            "query_id": 211,
+            "ground_truth": 246,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record refers to an LG Titanium washer and dryer combo, which matches the description of candidate record [1].",
+            "confidence": 1.0,
+            "time": 0.47972726821899414
+        },
+        {
+            "dataset": "D2",
+            "query_id": 212,
+            "ground_truth": 245,
+            "ground_answer": 1,
+            "answer": "[7]",
+            "explanation": "The candidate record [7] matches the given entity record, referring to a 24' Washer/Dryer Combo from LG Electronics.",
+            "confidence": 1.0,
+            "time": 1.6838047504425049
+        },
+        {
+            "dataset": "D2",
+            "query_id": 214,
+            "ground_truth": 236,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record refers to an LG refrigerator with a capacity of 10 cu.ft. and the model LRBP1031TT, which matches the candidate record [1] that also mentions the same model number.",
+            "confidence": 1.0,
+            "time": 0.7341079711914062
         },
         {
             "dataset": "D2",
             "query_id": 215,
             "ground_truth": 235,
             "ground_answer": 2,
-            "answer": "[2]",
-            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, as they have the same model number (LRBP1031W) and similar descriptions.",
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity because they have the same model number (LRBP1031) and similar descriptions, indicating that they are the same product with different color options.",
             "confidence": 1.0,
-            "time": 0.8904261589050293
+            "time": 0.6782875061035156
+        },
+        {
+            "dataset": "D2",
+            "query_id": 216,
+            "ground_truth": 206,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The candidate record [3] refers to the same real-world entity as the given record, which is an LG Navy Blue SteamWasher.",
+            "confidence": 1.0,
+            "time": 1.4721667766571045
+        },
+        {
+            "dataset": "D2",
+            "query_id": 222,
+            "ground_truth": 55,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, DeLonghi Twenty Four Seven Coffee Maker, as they have the same name and description.",
+            "confidence": 1.0,
+            "time": 0.5755805969238281
+        },
+        {
+            "dataset": "D2",
+            "query_id": 226,
+            "ground_truth": 586,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record because it has the same name and description, with the only difference being the finish color (Silver vs Orange).",
+            "confidence": 1.0,
+            "time": 0.5979154109954834
+        },
+        {
+            "dataset": "D2",
+            "query_id": 227,
+            "ground_truth": 588,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity as they have the same name 'Belkin CushTop - F8N044-GRN' and description contains the color 'Green'.",
+            "confidence": 1.0,
+            "time": 0.657172441482544
+        },
+        {
+            "dataset": "D2",
+            "query_id": 228,
+            "ground_truth": 587,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same name and description, with the only difference being the color (Silver in the given record vs Silver Finish in the candidate record).",
+            "confidence": 1.0,
+            "time": 0.6608231067657471
         },
         {
             "dataset": "D2",
@@ -78,19 +438,159 @@
             "ground_truth": 161,
             "ground_answer": 2,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching product name and model number (ST4TK1/SP4TK1).",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching name and description.",
             "confidence": 1.0,
-            "time": 0.9188778400421143
+            "time": 0.49218320846557617
         },
         {
             "dataset": "D2",
-            "query_id": 257,
-            "ground_truth": 172,
+            "query_id": 238,
+            "ground_truth": 424,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given entity record refers to a Sirius Satellite Radio Receiver, which is also described in candidate record [1] as a SIRIUS SiriusConnect Vehicle Kit In Black - SCVDOC1.",
+            "confidence": 1.0,
+            "time": 0.5983037948608398
+        },
+        {
+            "dataset": "D2",
+            "query_id": 239,
+            "ground_truth": 401,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, Sirius SUPH1, as they have the same product name and description.",
+            "confidence": 1.0,
+            "time": 0.5468728542327881
+        },
+        {
+            "dataset": "D2",
+            "query_id": 244,
+            "ground_truth": 153,
             "ground_answer": 2,
             "answer": "[0]",
-            "explanation": "The given entity record refers to the Nikon Nikkor 70-300mm f/4.5-5.6G ED-IF AF-S VR Telephoto Zoom Lens, which matches the candidate record [2].",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity as they both mention Sony LCS-CSJ/LCSCSH, which is a specific model of camera case.",
             "confidence": 1.0,
-            "time": 1.6924614906311035
+            "time": 0.5886881351470947
+        },
+        {
+            "dataset": "D2",
+            "query_id": 248,
+            "ground_truth": 1002,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, LG Electronics DLE0442W XL Load Capacity with NeveRust Stainless Steel Drum, as they both mention 'NeveRust Stainless Steel Drum' in their descriptions.",
+            "confidence": 1.0,
+            "time": 0.720421314239502
+        },
+        {
+            "dataset": "D2",
+            "query_id": 251,
+            "ground_truth": 222,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The candidate record [3] refers to the same real-world entity as the given entity record, with the same model number (WM0642HW) and features (7 Washing Programs).",
+            "confidence": 1.0,
+            "time": 1.7049169540405273
+        },
+        {
+            "dataset": "D2",
+            "query_id": 254,
+            "ground_truth": 81,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, as they have similar names (OmniMount Stellar Series Audio Tower) and descriptions that match each other's details (three floating shelf design, integrated cable management, etc.).",
+            "confidence": 1.0,
+            "time": 0.7110733985900879
+        },
+        {
+            "dataset": "D2",
+            "query_id": 272,
+            "ground_truth": 184,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has a matching part number (010-10823-00) and is also a Garmin suction cup mount.",
+            "confidence": 1.0,
+            "time": 0.6135909557342529
+        },
+        {
+            "dataset": "D2",
+            "query_id": 273,
+            "ground_truth": 354,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as it has the same product name and model number (SCH1), indicating that they are the same product.",
+            "confidence": 1.0,
+            "time": 0.6437695026397705
+        },
+        {
+            "dataset": "D2",
+            "query_id": 276,
+            "ground_truth": 201,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching name and description.",
+            "confidence": 1.0,
+            "time": 0.47884440422058105
+        },
+        {
+            "dataset": "D2",
+            "query_id": 299,
+            "ground_truth": 419,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The product names and model numbers are similar, indicating that they are likely the same product.",
+            "confidence": 1.0,
+            "time": 0.5718653202056885
+        },
+        {
+            "dataset": "D2",
+            "query_id": 308,
+            "ground_truth": 243,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, with a matching name and description.",
+            "confidence": 1.0,
+            "time": 0.4722456932067871
+        },
+        {
+            "dataset": "D2",
+            "query_id": 309,
+            "ground_truth": 257,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has the same model number (DVPNS57PS) and similar description.",
+            "confidence": 1.0,
+            "time": 0.5842320919036865
+        },
+        {
+            "dataset": "D2",
+            "query_id": 311,
+            "ground_truth": 187,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, as they both mention Panasonic SR-NA18 with Advanced Fuzzy Logic Technology.",
+            "confidence": 1.0,
+            "time": 0.5537779331207275
+        },
+        {
+            "dataset": "D2",
+            "query_id": 315,
+            "ground_truth": 228,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, as they have the same model number (3741001) and similar specifications.",
+            "confidence": 1.0,
+            "time": 0.5558991432189941
+        },
+        {
+            "dataset": "D2",
+            "query_id": 316,
+            "ground_truth": 211,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record refers to a Weber Genesis Series grill, and candidate record [2] also refers to a Weber Stainless Steel Genesis S-310 Liquid Propane Grill, which is the same model as the given entity record.",
+            "confidence": 1.0,
+            "time": 0.6607568264007568
         },
         {
             "dataset": "D2",
@@ -98,19 +598,59 @@
             "ground_truth": 418,
             "ground_answer": 0,
             "answer": "[0]",
-            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, as they both mention Garmin and have a similar product name format.",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity as they both mention Garmin and have a similar product name and description.",
             "confidence": 1.0,
-            "time": 0.8309774398803711
+            "time": 0.5304043292999268
+        },
+        {
+            "dataset": "D2",
+            "query_id": 321,
+            "ground_truth": 212,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity as they both describe a Weber Genesis S-320 grill with slight variations in fuel type.",
+            "confidence": 1.0,
+            "time": 1.4547204971313477
+        },
+        {
+            "dataset": "D2",
+            "query_id": 322,
+            "ground_truth": 247,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record refers to a Weber Genesis E-310 Natural Gas grill, which is also described in candidate record [3].",
+            "confidence": 1.0,
+            "time": 0.5265748500823975
+        },
+        {
+            "dataset": "D2",
+            "query_id": 323,
+            "ground_truth": 213,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record refers to a Weber Genesis S-320 Natural Gas Grill, which is also described in candidate record [2].",
+            "confidence": 1.0,
+            "time": 0.5431146621704102
+        },
+        {
+            "dataset": "D2",
+            "query_id": 331,
+            "ground_truth": 250,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity as they both mention Panasonic KX-TG6702B, which is a specific model of cordless telephone.",
+            "confidence": 1.0,
+            "time": 0.6268312931060791
         },
         {
             "dataset": "D2",
             "query_id": 340,
             "ground_truth": 270,
-            "ground_answer": 2,
-            "answer": "[1]",
-            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, as they both mention Panasonic NNSD767S (or a similar model) with a stainless steel finish and similar features.",
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] refer to the same real-world entity, as they have the same model number (NNSD667S) and description.",
             "confidence": 1.0,
-            "time": 0.988553524017334
+            "time": 0.5838344097137451
         },
         {
             "dataset": "D2",
@@ -118,89 +658,499 @@
             "ground_truth": 268,
             "ground_answer": 2,
             "answer": "[2]",
-            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as both have the model number NNSD967SS and are described as Panasonic Stainless Steel Luxury Full Size Countertop Microwave Ovens.",
+            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity as they have the same brand name 'Panasonic' and model number 'NNSD967SS'.",
             "confidence": 1.0,
-            "time": 1.0265281200408936
+            "time": 0.6198370456695557
+        },
+        {
+            "dataset": "D2",
+            "query_id": 344,
+            "ground_truth": 267,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, Panasonic Countertop Microwave Oven In Black - NNSN667BK.",
+            "confidence": 1.0,
+            "time": 0.6330525875091553
+        },
+        {
+            "dataset": "D2",
+            "query_id": 345,
+            "ground_truth": 269,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they have the same brand (Panasonic), model number (NNSN667W), and description.",
+            "confidence": 1.0,
+            "time": 0.6194703578948975
         },
         {
             "dataset": "D2",
             "query_id": 347,
             "ground_truth": 230,
             "ground_answer": 2,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has the same model number (DVPNS57PS) and similar features.",
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as both have the model number DVPNS57PB and share similar features such as Precision Drive 3 System, MP3 Playback, On Screen Display, and Dolby Digital Decoding.",
             "confidence": 1.0,
-            "time": 0.8888869285583496
+            "time": 0.7380235195159912
         },
         {
             "dataset": "D2",
-            "query_id": 391,
-            "ground_truth": 402,
+            "query_id": 349,
+            "ground_truth": 140,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it contains the exact model number WED8300SWH and a description that matches the product name.",
+            "confidence": 1.0,
+            "time": 0.6002955436706543
+        },
+        {
+            "dataset": "D2",
+            "query_id": 360,
+            "ground_truth": 265,
             "ground_answer": 2,
             "answer": "[2]",
-            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, with a matching product name and description.",
+            "explanation": "The given entity record refers to Altec Lansing inMotion iM600 Portable Audio Speaker System, which is the same as the one described in candidate record [2].",
             "confidence": 1.0,
-            "time": 0.766228199005127
+            "time": 0.5610322952270508
+        },
+        {
+            "dataset": "D2",
+            "query_id": 368,
+            "ground_truth": 296,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "Record [4] has the same model number (DLE2516W) and description as the given record, indicating that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.0265374183654785
+        },
+        {
+            "dataset": "D2",
+            "query_id": 373,
+            "ground_truth": 638,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record at index [3] refers to the same real-world entity as the given record, which is a Sony SRS-BTM30 Wireless Stereo Bluetooth Speaker.",
+            "confidence": 1.0,
+            "time": 0.5472679138183594
+        },
+        {
+            "dataset": "D2",
+            "query_id": 376,
+            "ground_truth": 414,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record refers to a Sirius SCC1 Universal Vehicle Tuner, which is also mentioned in candidate record [1].",
+            "confidence": 1.0,
+            "time": 0.521176815032959
+        },
+        {
+            "dataset": "D2",
+            "query_id": 385,
+            "ground_truth": 290,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity as they both mention Sharp, 1100 Watts, and Over The Counter Microwave Oven.",
+            "confidence": 1.0,
+            "time": 0.5650336742401123
+        },
+        {
+            "dataset": "D2",
+            "query_id": 404,
+            "ground_truth": 241,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] has a 'Red' finish that matches the description in the given entity record.",
+            "confidence": 1.0,
+            "time": 1.0668809413909912
+        },
+        {
+            "dataset": "D2",
+            "query_id": 405,
+            "ground_truth": 251,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The candidate record [4] matches the given entity record as it mentions Sony LCS-TWA/B Black Soft Leather Carrying Case, which is compatible with Cyber-Shot W and T Series Digital Cameras.",
+            "confidence": 1.0,
+            "time": 1.5569474697113037
+        },
+        {
+            "dataset": "D2",
+            "query_id": 409,
+            "ground_truth": 345,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar name and description that includes the EF 28-135mm f/3.5-5.6 IS USM Lens.",
+            "confidence": 1.0,
+            "time": 0.6794588565826416
+        },
+        {
+            "dataset": "D2",
+            "query_id": 413,
+            "ground_truth": 299,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record refers to an LG Electric Dryer with 9 Drying Programs, which matches the description of record [4] in the candidate records.",
+            "confidence": 1.0,
+            "time": 0.5877201557159424
         },
         {
             "dataset": "D2",
             "query_id": 414,
             "ground_truth": 297,
-            "ground_answer": 1,
-            "answer": "[5]",
-            "explanation": "The given record [COL] name [VAL] LG XL Capacity Electric Dryer matches with candidate record [5] which has the same model number DLE5955WH and similar description.",
+            "ground_answer": 9,
+            "answer": "[1]",
+            "explanation": "The given entity record [COL] name [VAL] LG XL Capacity Electric Dryer matches with the candidate record [1] which has the same brand, model type (Electric Dryer), and capacity (XL).",
             "confidence": 1.0,
-            "time": 1.1297111511230469
+            "time": 0.7422137260437012
+        },
+        {
+            "dataset": "D2",
+            "query_id": 415,
+            "ground_truth": 301,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record refers to an LG 3.8 Cu. Ft. 7-Cycle Extra-Large Capacity Washer - White, which matches the description of the washer in candidate record [1].",
+            "confidence": 1.0,
+            "time": 1.6700923442840576
+        },
+        {
+            "dataset": "D2",
+            "query_id": 416,
+            "ground_truth": 302,
+            "ground_answer": 2,
+            "answer": "[6]",
+            "explanation": "The given entity record refers to an LG Front Load Washer with a capacity of 4.0 cu. ft., and the selected candidate record [6] also matches this description, making it the correct answer.",
+            "confidence": 1.0,
+            "time": 0.6764335632324219
         },
         {
             "dataset": "D2",
             "query_id": 417,
             "ground_truth": 951,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, Nintendo DS Lite (Crimson & Black) - USGSRMKB.",
+            "confidence": 1.0,
+            "time": 0.5927002429962158
+        },
+        {
+            "dataset": "D2",
+            "query_id": 432,
+            "ground_truth": 350,
+            "ground_answer": 0,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity as they both belong to Sony LCS-TWA/B Black Soft Leather Carrying Case - LCSTWAB.",
+            "confidence": 1.0,
+            "time": 1.4939239025115967
+        },
+        {
+            "dataset": "D2",
+            "query_id": 433,
+            "ground_truth": 225,
             "ground_answer": 3,
             "answer": "[3]",
-            "explanation": "The given entity record and candidate record [3] refer to the same real-world entity, Nintendo DS Lite (Crimson & Black) - USGSRMKB.",
+            "explanation": "The candidate record [3] matches the given entity record because it shares the same product name and description.",
             "confidence": 1.0,
-            "time": 0.9631879329681396
+            "time": 1.5288865566253662
         },
         {
             "dataset": "D2",
             "query_id": 434,
             "ground_truth": 226,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The candidate record [5] refers to the same real-world entity as the given record, as both have \"Sony LCS-CSQ/B\" in their names and describe a soft carrying case for Cyber-shot cameras.",
+            "confidence": 1.0,
+            "time": 0.6525743007659912
+        },
+        {
+            "dataset": "D2",
+            "query_id": 441,
+            "ground_truth": 385,
+            "ground_answer": 0,
+            "answer": "[3]",
+            "explanation": "The LG WM3988HWA 4.2 Cu Ft White Full Size SteamWasher And Dryer Combo has a separate dryer section with 7.3 cu. ft. capacity, matching the given entity record.",
+            "confidence": 1.0,
+            "time": 1.969212532043457
+        },
+        {
+            "dataset": "D2",
+            "query_id": 442,
+            "ground_truth": 387,
+            "ground_answer": 5,
+            "answer": "[3]",
+            "explanation": "The candidate record [3] matches the given entity record as it has a similar name and description.",
+            "confidence": 1.0,
+            "time": 1.475944995880127
+        },
+        {
+            "dataset": "D2",
+            "query_id": 443,
+            "ground_truth": 386,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The candidate record [3] matches the given entity record, referring to an LG Electric SteamDryer.",
+            "confidence": 1.0,
+            "time": 2.092280864715576
+        },
+        {
+            "dataset": "D2",
+            "query_id": 445,
+            "ground_truth": 177,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as both have a part number of '010-10815-00' and are described as Garmin suction cup mounts.",
+            "confidence": 1.0,
+            "time": 0.6139094829559326
+        },
+        {
+            "dataset": "D2",
+            "query_id": 447,
+            "ground_truth": 253,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity as they both describe a Sony LCS-CSL Cyber-shot Camera Case with similar specifications.",
+            "confidence": 1.0,
+            "time": 0.5478556156158447
+        },
+        {
+            "dataset": "D2",
+            "query_id": 452,
+            "ground_truth": 369,
+            "ground_answer": 2,
+            "answer": "[0]",
+            "explanation": "The given entity record and candidate record [1] refer to different products. However, the name of the product in candidate record [2], Sirius Sportster 5 Dock And Play Radio With Car Kit - SP5TK1, matches the name of the product in the given entity record, Sirius Sportster 5 Radio with Vehicle Kit.",
+            "confidence": 1.0,
+            "time": 0.8312342166900635
+        },
+        {
+            "dataset": "D2",
+            "query_id": 453,
+            "ground_truth": 381,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The names and descriptions of both records match, indicating that they are for the same product.",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, as they both mention 'Sirius Stiletto 2' and have a similar description.",
             "confidence": 1.0,
-            "time": 0.8862743377685547
+            "time": 0.6035118103027344
+        },
+        {
+            "dataset": "D2",
+            "query_id": 454,
+            "ground_truth": 367,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record refers to a Sirius Stiletto 2 Portable Radio, which is also mentioned in candidate record [2].",
+            "confidence": 1.0,
+            "time": 0.5069046020507812
         },
         {
             "dataset": "D2",
             "query_id": 455,
             "ground_truth": 368,
-            "ground_answer": 2,
-            "answer": "[2]",
-            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, as they both describe a Sirius Stiletto 2 Home Docking Kit with the same product code SLH2 and price.",
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] refer to the same real-world entity, as they both mention 'Stiletto 2' and have a similar name ('Sirius STILETTO 2 Home Docking Kit - SLH2' vs '[COL] name [VAL] SIRIUS SLH2 SIRIUS? Stiletto 2 Portable Radio Home Kit').",
             "confidence": 1.0,
-            "time": 0.9865188598632812
+            "time": 1.0015771389007568
         },
         {
             "dataset": "D2",
-            "query_id": 473,
-            "ground_truth": 1013,
+            "query_id": 464,
+            "ground_truth": 319,
             "ground_answer": 2,
             "answer": "[2]",
-            "explanation": "The given entity record refers to a Linksys Wireless Gaming Adapter, which is also described in candidate record [2].",
+            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, Yamaha YSP-4000 Digital Sound Projector.",
             "confidence": 1.0,
-            "time": 0.7601208686828613
+            "time": 0.516071081161499
+        },
+        {
+            "dataset": "D2",
+            "query_id": 470,
+            "ground_truth": 458,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record, as it has the exact same name and model number (SCVDOC1).",
+            "confidence": 1.0,
+            "time": 0.5629055500030518
         },
         {
             "dataset": "D2",
             "query_id": 480,
             "ground_truth": 263,
             "ground_answer": 2,
-            "answer": "[1]",
-            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Escort new radar gps powered - 9500I, as they have similar names and descriptions.",
+            "answer": "[2]",
+            "explanation": "The given entity record refers to an Escort radar detector with model number '9500I', which matches the description of candidate record [2].",
             "confidence": 1.0,
-            "time": 0.9057803153991699
+            "time": 0.5389156341552734
+        },
+        {
+            "dataset": "D2",
+            "query_id": 488,
+            "ground_truth": 945,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record 'Nintendo DS Lite (Cobalt Blue and Black) - USGSBMKB' matches the candidate record [2] 'Nintendo DS Lite Cobalt/Black Portable Gaming System - NDSUSGBMKB', which has a similar name and description.",
+            "confidence": 1.0,
+            "time": 0.759429931640625
+        },
+        {
+            "dataset": "D2",
+            "query_id": 496,
+            "ground_truth": 457,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a slight difference in model number (HF10 vs HF100), but both are Canon Vixia High Definition Camcorders.",
+            "confidence": 1.0,
+            "time": 0.6465272903442383
+        },
+        {
+            "dataset": "D2",
+            "query_id": 502,
+            "ground_truth": 754,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they both mention Uniden DCX300 DECT 6.0 Accessory Handset.",
+            "confidence": 1.0,
+            "time": 0.5867795944213867
+        },
+        {
+            "dataset": "D2",
+            "query_id": 503,
+            "ground_truth": 533,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given record and candidate record [4] refer to the same real-world entity as they have the same name, description, and finish color.",
+            "confidence": 1.0,
+            "time": 0.5540461540222168
+        },
+        {
+            "dataset": "D2",
+            "query_id": 504,
+            "ground_truth": 593,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they have the same brand (Panasonic), model name (KX-TG4324B), and description.",
+            "confidence": 1.0,
+            "time": 0.619220495223999
+        },
+        {
+            "dataset": "D2",
+            "query_id": 509,
+            "ground_truth": 727,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record [COL] name [VAL] Weber Q 320 Gas Grill matches with the candidate record [5] [COL] name [VAL] Weber Q 320 Liquid Propane Table And Outdoor Grill - 586002, as both refer to the same real-world entity, a Weber Q 320 grill.",
+            "confidence": 1.0,
+            "time": 0.8699111938476562
+        },
+        {
+            "dataset": "D2",
+            "query_id": 519,
+            "ground_truth": 759,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record [COL] name [VAL] 15in Lcd/dvd Tv Combo - HLC15R matches the candidate record [1] with the same product name and model number.",
+            "confidence": 1.0,
+            "time": 0.6209704875946045
+        },
+        {
+            "dataset": "D2",
+            "query_id": 520,
+            "ground_truth": 283,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity as they both mention a Haier 13' TV with ATSC/NTSC tuner, similar specifications, and have a silver finish.",
+            "confidence": 1.0,
+            "time": 0.6394927501678467
+        },
+        {
+            "dataset": "D2",
+            "query_id": 521,
+            "ground_truth": 378,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, as they have the same model number (TCR13) and similar product names.",
+            "confidence": 1.0,
+            "time": 0.5655512809753418
+        },
+        {
+            "dataset": "D2",
+            "query_id": 522,
+            "ground_truth": 807,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, Griffin RoadTrip with SmartScan FM Transmitter - 4040-RDTRPB.",
+            "confidence": 1.0,
+            "time": 0.5570402145385742
+        },
+        {
+            "dataset": "D2",
+            "query_id": 523,
+            "ground_truth": 520,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity, Nikon CoolPix S550 Digital Camera, as they have the same model name, megapixel count, optical zoom, and finish (plum).",
+            "confidence": 1.0,
+            "time": 0.6542916297912598
+        },
+        {
+            "dataset": "D2",
+            "query_id": 524,
+            "ground_truth": 519,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching camera model (Nikon CoolPix S550), megapixel count (10 Megapixels), and features such as optical zoom, image stabilization, LCD resolution, and red-eye fix.",
+            "confidence": 1.0,
+            "time": 0.729527473449707
+        },
+        {
+            "dataset": "D2",
+            "query_id": 526,
+            "ground_truth": 518,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Nikon CoolPix S550 Digital Camera.",
+            "confidence": 1.0,
+            "time": 1.3849475383758545
+        },
+        {
+            "dataset": "D2",
+            "query_id": 530,
+            "ground_truth": 485,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as both have the same model number (SD1100IS) and specifications.",
+            "confidence": 1.0,
+            "time": 0.5582294464111328
+        },
+        {
+            "dataset": "D2",
+            "query_id": 531,
+            "ground_truth": 992,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, as they both describe a Canon PowerShot SD1100 IS Digital ELPH Camera in different colors (Melody Pink and Pink Melody respectively).",
+            "confidence": 1.0,
+            "time": 0.6748206615447998
+        },
+        {
+            "dataset": "D2",
+            "query_id": 535,
+            "ground_truth": 513,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] refer to the same real-world entity, Toshiba D-VR610 DVD VCR Combo.",
+            "confidence": 1.0,
+            "time": 0.5030090808868408
+        },
+        {
+            "dataset": "D2",
+            "query_id": 536,
+            "ground_truth": 512,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both have a built-in digital tuner and are from Toshiba.",
+            "confidence": 1.0,
+            "time": 0.52630615234375
         },
         {
             "dataset": "D2",
@@ -210,27 +1160,257 @@
             "answer": "[2]",
             "explanation": "The given record and candidate record [2] refer to the same real-world entity, as they have the same model number (TH50PX80U) and similar specifications.",
             "confidence": 1.0,
-            "time": 0.937204122543335
+            "time": 0.5767817497253418
+        },
+        {
+            "dataset": "D2",
+            "query_id": 545,
+            "ground_truth": 502,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Panasonic Viera TH-42PZ85U and Panasonic VIERA TH58PZ850U respectively. Although they have different sizes (42' vs 58'), they share similar features such as ATSC NTSC, 16:9 aspect ratio, 1920 x 1080 resolution, Surround Sound, and HDTV capabilities.",
+            "confidence": 1.0,
+            "time": 1.0040256977081299
         },
         {
             "dataset": "D2",
             "query_id": 546,
             "ground_truth": 504,
             "ground_answer": 2,
-            "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching model number (TH-50PZ85U) and similar specifications.",
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, as they both describe a Panasonic VIERA TH-50PZ85U 50' Plasma TV with similar specifications.",
             "confidence": 1.0,
-            "time": 0.9796707630157471
+            "time": 0.6661581993103027
         },
         {
             "dataset": "D2",
-            "query_id": 670,
-            "ground_truth": 965,
+            "query_id": 547,
+            "ground_truth": 503,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching product name and model number.",
+            "explanation": "The given record and candidate [1] refer to the same real-world entity as they have similar names, descriptions, and specifications.",
             "confidence": 1.0,
-            "time": 0.782850980758667
+            "time": 0.5260932445526123
+        },
+        {
+            "dataset": "D2",
+            "query_id": 549,
+            "ground_truth": 500,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, as they have the same model number (TH50PZ80U) and similar specifications.",
+            "confidence": 1.0,
+            "time": 0.6384944915771484
+        },
+        {
+            "dataset": "D2",
+            "query_id": 550,
+            "ground_truth": 499,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity as they have the same model number (TH46PZ80U) and similar specifications.",
+            "confidence": 1.0,
+            "time": 0.5950100421905518
+        },
+        {
+            "dataset": "D2",
+            "query_id": 572,
+            "ground_truth": 595,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching camera model (DMC-TZ5K), megapixel count (9.1), lens type (LEICA 28mm Wide-Angle Lens With 10x Optical Zoom), and other features.",
+            "confidence": 1.0,
+            "time": 0.7980871200561523
+        },
+        {
+            "dataset": "D2",
+            "query_id": 573,
+            "ground_truth": 574,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity, a Sony LCS-X20 Camcorder Case.",
+            "confidence": 1.0,
+            "time": 0.501678466796875
+        },
+        {
+            "dataset": "D2",
+            "query_id": 576,
+            "ground_truth": 667,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as it contains similar specifications and model numbers (DSLR-A350K).",
+            "confidence": 1.0,
+            "time": 0.556121826171875
+        },
+        {
+            "dataset": "D2",
+            "query_id": 578,
+            "ground_truth": 539,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as it has the same model number (22LV505) and similar specifications.",
+            "confidence": 1.0,
+            "time": 0.554443359375
+        },
+        {
+            "dataset": "D2",
+            "query_id": 579,
+            "ground_truth": 515,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Toshiba 19LV506 - 19' Widescreen LCD HDTV w/ Built-in DVD Player - 800:1 Contrast Ratio - 5ms Response Time - White, as they have the same model number (19LV506) and similar descriptions.",
+            "confidence": 1.0,
+            "time": 0.8376610279083252
+        },
+        {
+            "dataset": "D2",
+            "query_id": 588,
+            "ground_truth": 522,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as both have the model number '19AV500U' and similar specifications.",
+            "confidence": 1.0,
+            "time": 0.5579805374145508
+        },
+        {
+            "dataset": "D2",
+            "query_id": 590,
+            "ground_truth": 464,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same Yamaha Outdoor NS-AW390 All-Weather Speaker System as the given entity record.",
+            "confidence": 1.0,
+            "time": 1.4050745964050293
+        },
+        {
+            "dataset": "D2",
+            "query_id": 591,
+            "ground_truth": 466,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they both describe the Yamaha NS-AW390BL All-Weather Speaker System.",
+            "confidence": 1.0,
+            "time": 1.4512088298797607
+        },
+        {
+            "dataset": "D2",
+            "query_id": 594,
+            "ground_truth": 594,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as it has the same model name (DMCTZ5S), megapixel count (9.1 Megapixel), lens type (LEICA 28mm Wide-Angle Lens With 10x Optical Zoom), and other features.",
+            "confidence": 1.0,
+            "time": 0.8139078617095947
+        },
+        {
+            "dataset": "D2",
+            "query_id": 595,
+            "ground_truth": 980,
+            "ground_answer": 2,
+            "answer": "Based on the given entity record and candidate records, I have selected a record that refers to the same real-world entity.\n\nThe given entity record is:\n```\n[COL] name [VAL] Panasonic Lumix DMC-FS3 Digital Camera - Silver\n[COL] description [VAL] Panasonic DMC-FS3S 8 Megapixel Compact Digital Camera with 33mm Lens 3x Optical Zoom Intelligent Auto Mode and 2.5' Diagonal Intelligent LCD - Silver\n[COL] price [VAL] 137.33\n```\nThe candidate records are:\n```\n[1]  [COL] name [VAL] Panasonic Blue 8.1 Megapixel Digital Camera - DMCFS3A\n[COL] description [VAL] Panasonic Blue 8.1 Megapixel Digital Camera - DMCFS3A/ 8.1 Megapixel/ 33mm Lens/ 3x Optical Zoom/ Intelligent Auto Mode/ 2.5' Diagonal Intelligent LCD/ MEGA Optical Image Stabilization/ Intelligent ISO Control/ Face Detection/ Hi-Speed Burst Mode/ Blue Finish\n[2]  [COL] name [VAL] Panasonic Silver 8.1 Megapixel Digital Camera - DMCFS3S\n[COL] description [VAL] Panasonic Silver 8.1 Megapixel Digital Camera - DMCFS3S/ 8.1-Megapixel/ 33mm Lens/ 3x Optical Zoom/ Intelligent Auto Mode/ 2.5' Diagonal Intelligent LCD/ MEGA Optical Image Stabilization/ Intelligent ISO Control/ Face Detection/ Hi-Speed Burst Mode/ Silver Finish\n```\nI have selected candidate record [2] as the corresponding record, since it has a similar name and description to the given entity record.\n\nHere is the output in the correct format:\n```\n{\n  \"answer\": \"[2]\",\n  \"explanation\": \"The selected record has a similar name and description to the given entity record.\"\n}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 3.480187177658081
+        },
+        {
+            "dataset": "D2",
+            "query_id": 596,
+            "ground_truth": 869,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching 'name' and 'VGPUPR1' in the product code.",
+            "confidence": 1.0,
+            "time": 0.5793511867523193
+        },
+        {
+            "dataset": "D2",
+            "query_id": 603,
+            "ground_truth": 592,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has a matching product name (Sony LCS-MX100 Camcorder Case) and model number (LCSMX100).",
+            "confidence": 1.0,
+            "time": 0.6711838245391846
+        },
+        {
+            "dataset": "D2",
+            "query_id": 604,
+            "ground_truth": 611,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same product name (Sony LCSX30) and description, with a slight variation in the case material (Nylon Polyester vs Stain Resistant Nylon).",
+            "confidence": 1.0,
+            "time": 0.706230878829956
+        },
+        {
+            "dataset": "D2",
+            "query_id": 607,
+            "ground_truth": 995,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching camera model (DMC-FS3A), megapixel count (8.1), lens size (33mm), and features such as Intelligent Auto Mode, 2.5' Diagonal Intelligent LCD, MEGA Optical Image Stabilization, Intelligent ISO Control, Face Detection, and Hi-Speed Burst Mode.",
+            "confidence": 1.0,
+            "time": 0.951542854309082
+        },
+        {
+            "dataset": "D2",
+            "query_id": 609,
+            "ground_truth": 661,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar name and description.",
+            "confidence": 1.0,
+            "time": 0.48006224632263184
+        },
+        {
+            "dataset": "D2",
+            "query_id": 614,
+            "ground_truth": 532,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a high degree of similarity in name and description.",
+            "confidence": 1.0,
+            "time": 0.5170173645019531
+        },
+        {
+            "dataset": "D2",
+            "query_id": 622,
+            "ground_truth": 642,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity as they have the same model number (KXTG9344T) and similar product description.",
+            "confidence": 1.0,
+            "time": 0.6113214492797852
+        },
+        {
+            "dataset": "D2",
+            "query_id": 623,
+            "ground_truth": 643,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity as they have the same model number (KXTG9343T) and similar product description.",
+            "confidence": 1.0,
+            "time": 0.6100165843963623
+        },
+        {
+            "dataset": "D2",
+            "query_id": 657,
+            "ground_truth": 660,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it is a different capacity version of the same product (8GB vs 2GB), and both have the 'PRO Duo Mark 2' designation.",
+            "confidence": 1.0,
+            "time": 0.6638047695159912
+        },
+        {
+            "dataset": "D2",
+            "query_id": 660,
+            "ground_truth": 658,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, Sony 2GB Memory Stick PRO Duo Card - MSMT2G, as they have the same name and description.",
+            "confidence": 1.0,
+            "time": 0.6459774971008301
         },
         {
             "dataset": "D2",
@@ -238,9 +1418,9 @@
             "ground_truth": 653,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has the same model number (TH-50PZ800U) and similar specifications.",
+            "explanation": "The given record and candidate [1] refer to the same real-world entity as they have the same model number (TH-50PZ800U) and similar specifications.",
             "confidence": 1.0,
-            "time": 0.9713866710662842
+            "time": 0.614978551864624
         },
         {
             "dataset": "D2",
@@ -250,7 +1430,97 @@
             "answer": "[2]",
             "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as it has the same model number (LN22A451) and similar specifications.",
             "confidence": 1.0,
-            "time": 0.9040861129760742
+            "time": 0.5666713714599609
+        },
+        {
+            "dataset": "D2",
+            "query_id": 679,
+            "ground_truth": 591,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has the same model number HL61A650 and similar specifications.",
+            "confidence": 1.0,
+            "time": 0.5625283718109131
+        },
+        {
+            "dataset": "D2",
+            "query_id": 687,
+            "ground_truth": 337,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity as they both mention Techcraft ABS60 TV Stand with a black finish.",
+            "confidence": 1.0,
+            "time": 0.5192534923553467
+        },
+        {
+            "dataset": "D2",
+            "query_id": 691,
+            "ground_truth": 813,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they have the same product name (Sony Bud Style Headphones In Red) and similar description.",
+            "confidence": 1.0,
+            "time": 0.5832080841064453
+        },
+        {
+            "dataset": "D2",
+            "query_id": 692,
+            "ground_truth": 636,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record refers to Ex Series Earbuds in White color, which is also mentioned in candidate record [2].",
+            "confidence": 1.0,
+            "time": 0.4923224449157715
+        },
+        {
+            "dataset": "D2",
+            "query_id": 696,
+            "ground_truth": 527,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "Record [3] has the same model number (DVPFX820) and features as the given record.",
+            "confidence": 1.0,
+            "time": 0.9335052967071533
+        },
+        {
+            "dataset": "D2",
+            "query_id": 725,
+            "ground_truth": 313,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they both mention Alpine CDA-9886/7 and have similar features.",
+            "confidence": 1.0,
+            "time": 0.5609323978424072
+        },
+        {
+            "dataset": "D2",
+            "query_id": 726,
+            "ground_truth": 435,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they both mention Pioneer Premier In-Dash CD/WMA/MP3/AAC Receiver with a similar model number (DEHP500UB in [1], DEHP400UB in the given record). Although the prices are different, it is likely that the given record refers to an older or lower-end version of the product.",
+            "confidence": 1.0,
+            "time": 0.962214469909668
+        },
+        {
+            "dataset": "D2",
+            "query_id": 735,
+            "ground_truth": 422,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record refers to a Pioneer CD-SB10 Sirius Interface Cable, which is also mentioned in the description of record [8].",
+            "confidence": 1.0,
+            "time": 0.5654239654541016
+        },
+        {
+            "dataset": "D2",
+            "query_id": 741,
+            "ground_truth": 437,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they have the same name and description.",
+            "confidence": 1.0,
+            "time": 0.5161523818969727
         },
         {
             "dataset": "D2",
@@ -258,49 +1528,279 @@
             "ground_truth": 624,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching brand 'Sony' and model name 'DAVHDX279W', although the description is slightly different.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar name and description.",
             "confidence": 1.0,
-            "time": 1.0000009536743164
+            "time": 0.4867546558380127
+        },
+        {
+            "dataset": "D2",
+            "query_id": 748,
+            "ground_truth": 528,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "Record [2] has the same model number (DVPFX820LI) and features as the given record, indicating that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.0135397911071777
+        },
+        {
+            "dataset": "D2",
+            "query_id": 749,
+            "ground_truth": 530,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] both refer to the Sony DVP-FX820 Portable DVD Player with Red color variation.",
+            "confidence": 1.0,
+            "time": 1.6934936046600342
+        },
+        {
+            "dataset": "D2",
+            "query_id": 752,
+            "ground_truth": 691,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given record refers to an LG refrigerator, and candidate record [1] also refers to an LG product with a similar naming convention (e.g., 'LG LMX25981ST' in the given record matches 'LG LMX25981ST' in candidate record [1]).",
+            "confidence": 1.0,
+            "time": 0.7615408897399902
+        },
+        {
+            "dataset": "D2",
+            "query_id": 757,
+            "ground_truth": 701,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given entity record matches candidate record [1] because both mention LG as the brand name, have similar capacity, and feature ice and water dispensing capabilities.",
+            "confidence": 1.0,
+            "time": 2.0436182022094727
+        },
+        {
+            "dataset": "D2",
+            "query_id": 758,
+            "ground_truth": 702,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record refers to an LG French Door Bottom Freezer Refrigerator with a capacity of 24.7 cu. ft. and a stainless steel finish. Record [5] is the best match, as it has the same capacity and finish.",
+            "confidence": 1.0,
+            "time": 0.8618035316467285
+        },
+        {
+            "dataset": "D2",
+            "query_id": 759,
+            "ground_truth": 700,
+            "ground_answer": 5,
+            "answer": "After analyzing the given entity record and candidate records, I found a match.\n\nThe given entity record is: [COL] name [VAL] LG 25 CF Refrigerator 3 Door White Tall\n\nAnd one of the candidate records matches this description:\n\n[3]  [COL] name [VAL] LG LFC25770SW 25.0 Cu. Ft. Smooth White French Door Bottom Freezer Refrigerator - LFC25770WH\n[COL] description [VAL] LG LFC25770SW 25.0 Cu. Ft. Smooth White French Door Bottom Freezer Refrigerator - LFC25770WH/ 4 Slide Out Tempered Glass Shelves/ Internal LED Touch Pad Digital Temperature Controls/ 2 Humidity Crispers/ 4 Compartment Crisper System/ Multi Air Flow Cooling/ IcePlus Accelerated Freezing Function/ LoDecibel Quiet Operation/ BioShield Anti Bacterial Door Seal/ Pull Out Freezer Drawer/ Smooth White Finish\n\nThis candidate record has the same brand (LG), capacity (25 CF), and type of appliance (Refrigerator) as the given entity record. The only difference is that this candidate record specifies a \"Bottom Freezer\" type, which is consistent with the description in the given entity record.\n\nTherefore, the answer is:\n\n{\"answer\": \"[3]\", \"explanation\": \"The candidate record [3] matches the given entity record because it has the same brand (LG), capacity (25 CF), and type of appliance (Refrigerator) as the given entity record.\"}",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 2.8537204265594482
+        },
+        {
+            "dataset": "D2",
+            "query_id": 760,
+            "ground_truth": 740,
+            "ground_answer": 7,
+            "answer": "[3]",
+            "explanation": "The given record refers to an LG 25 Cu.Ft. Total Capacity 4 Door Refrigerator, which is the same as the record in [3] with a Titanium Finish.",
+            "confidence": 1.0,
+            "time": 0.6790585517883301
+        },
+        {
+            "dataset": "D2",
+            "query_id": 761,
+            "ground_truth": 733,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity, as they have the same model number (LDF6920BB) and similar descriptions.",
+            "confidence": 1.0,
+            "time": 0.5864455699920654
+        },
+        {
+            "dataset": "D2",
+            "query_id": 762,
+            "ground_truth": 732,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the LG LDF6920ST dishwasher model with a Stainless Steel finish, which matches the given entity record.",
+            "confidence": 1.0,
+            "time": 1.4488203525543213
+        },
+        {
+            "dataset": "D2",
+            "query_id": 763,
+            "ground_truth": 730,
+            "ground_answer": 5,
+            "answer": "[1]",
+            "explanation": "The given entity record [COL] name [VAL] LG Dishwasher matches with candidate record [1] which has the same brand and model information.",
+            "confidence": 1.0,
+            "time": 0.5919599533081055
+        },
+        {
+            "dataset": "D2",
+            "query_id": 764,
+            "ground_truth": 729,
+            "ground_answer": 4,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to a control panel with electronic features, matching the given entity record.",
+            "confidence": 1.0,
+            "time": 1.3824713230133057
+        },
+        {
+            "dataset": "D2",
+            "query_id": 765,
+            "ground_truth": 728,
+            "ground_answer": 3,
+            "answer": "[4]",
+            "explanation": "The given record and candidate record [4] refer to the same real-world entity as they both describe a LG Semi-Integrated Electronic Panel with Digital Status Display Dishwasher, which is also mentioned in the description of candidate record [4].",
+            "confidence": 1.0,
+            "time": 0.7019309997558594
         },
         {
             "dataset": "D2",
             "query_id": 766,
             "ground_truth": 715,
-            "ground_answer": 2,
-            "answer": "[1]",
-            "explanation": "The given record and candidate record [1] refer to the same real-world entity, LG Over-The-Range Microwave Oven, as they have the same model number (LMV1680SS) and similar descriptions.",
+            "ground_answer": 6,
+            "answer": "[3]",
+            "explanation": "Record [3] has the same brand and model number (LG Over-The-Range Microwave Oven) as the given record.",
             "confidence": 1.0,
-            "time": 1.0246455669403076
+            "time": 0.962367057800293
+        },
+        {
+            "dataset": "D2",
+            "query_id": 768,
+            "ground_truth": 690,
+            "ground_answer": 9,
+            "answer": "[2]",
+            "explanation": "The given entity record refers to an LG Freestanding Electric Range with a capacity of 5.6 cu.ft., which matches the description in candidate record [2].",
+            "confidence": 1.0,
+            "time": 0.6501514911651611
+        },
+        {
+            "dataset": "D2",
+            "query_id": 773,
+            "ground_truth": 710,
+            "ground_answer": 8,
+            "answer": "[4]",
+            "explanation": "Record [4] refers to the same real-world entity as the given record because it has a similar name and capacity (5.0 Cu. Ft.)",
+            "confidence": 1.0,
+            "time": 0.9547357559204102
+        },
+        {
+            "dataset": "D2",
+            "query_id": 776,
+            "ground_truth": 480,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Sony Cyber-shot DSC-W150 Digital Camera - Gold - DSCW150N, as they have identical specifications.",
+            "confidence": 1.0,
+            "time": 0.6677289009094238
+        },
+        {
+            "dataset": "D2",
+            "query_id": 777,
+            "ground_truth": 479,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given record and candidate record [4] refer to the same real-world entity, Sony Red Cyber-Shot DSC-W150 Digital Camera - Red - DSCW150R.",
+            "confidence": 1.0,
+            "time": 0.6359953880310059
+        },
+        {
+            "dataset": "D2",
+            "query_id": 778,
+            "ground_truth": 482,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, as they both describe a Sony Cyber-shot DSC-W170 Digital Camera with similar specifications.",
+            "confidence": 1.0,
+            "time": 0.6034469604492188
+        },
+        {
+            "dataset": "D2",
+            "query_id": 783,
+            "ground_truth": 716,
+            "ground_answer": 1,
+            "answer": "[4]",
+            "explanation": "The candidate record [4] has a similar name to the given entity record, with the same brand (LG) and model type (Over-the-range microwave).",
+            "confidence": 1.0,
+            "time": 1.5758345127105713
         },
         {
             "dataset": "D2",
             "query_id": 784,
             "ground_truth": 718,
-            "ground_answer": 1,
-            "answer": "[1]",
-            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, as they have the same brand (LG), model size (2.0 cu.ft.), and product type (Over the Range Microwave Oven).",
+            "ground_answer": 8,
+            "answer": "[4]",
+            "explanation": "The given record refers to an LG 2.0 Cu.ft. Over the Range Microwave Oven, which is also described in candidate record [4].",
             "confidence": 1.0,
-            "time": 1.0859589576721191
+            "time": 0.5848991870880127
         },
         {
             "dataset": "D2",
             "query_id": 788,
             "ground_truth": 817,
-            "ground_answer": 2,
+            "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they both mention 'Flip Video' and have similar product names.",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they have the same model name (Flip Video F360) and similar specifications.",
             "confidence": 1.0,
-            "time": 0.8555195331573486
+            "time": 0.5540986061096191
         },
         {
             "dataset": "D2",
-            "query_id": 803,
-            "ground_truth": 841,
-            "ground_answer": 3,
-            "answer": "[3]",
-            "explanation": "The candidate record [3] has a similar product name and description as the given entity record, but with a different color. It follows the same pattern of 'Speck SeeThru [Color] Hard Shell Case For 13' MacBook - MB13[COLOR]SEEV2'.",
+            "query_id": 792,
+            "ground_truth": 772,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching name and description.",
             "confidence": 1.0,
-            "time": 7.432421445846558
+            "time": 0.48082685470581055
+        },
+        {
+            "dataset": "D2",
+            "query_id": 793,
+            "ground_truth": 771,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as both have the same model name (Samsung S2), capacity (1GB Flash Memory), and finish color (Green).",
+            "confidence": 1.0,
+            "time": 0.642589807510376
+        },
+        {
+            "dataset": "D2",
+            "query_id": 796,
+            "ground_truth": 41,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The record [2] refers to the same real-world entity as the given record, as both have the name 'Maytag MMV4205BAQ Over-the-Range Microwave' and 'Maytag Bisque Over-The-Range Microwave Oven - MMV4205BT'.",
+            "confidence": 1.0,
+            "time": 1.652658462524414
+        },
+        {
+            "dataset": "D2",
+            "query_id": 797,
+            "ground_truth": 42,
+            "ground_answer": 0,
+            "answer": "[4]",
+            "explanation": "The candidate record [4] matches the given entity record because it has the same brand name 'Maytag' and a similar product description, including the capacity of 2.0 Cu. Ft.",
+            "confidence": 1.0,
+            "time": 2.4757091999053955
+        },
+        {
+            "dataset": "D2",
+            "query_id": 818,
+            "ground_truth": 596,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a high degree of similarity in name and description.",
+            "confidence": 1.0,
+            "time": 0.6029171943664551
+        },
+        {
+            "dataset": "D2",
+            "query_id": 824,
+            "ground_truth": 675,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, a Sony BRAVIA S Series KDL-46S4100 46' LCD TV.",
+            "confidence": 1.0,
+            "time": 0.5791075229644775
         },
         {
             "dataset": "D2",
@@ -310,7 +1810,187 @@
             "answer": "[2]",
             "explanation": "The given record and candidate record [2] refer to the same real-world entity, Sony BRAVIA KDL-32L4000 32' LCD TV.",
             "confidence": 1.0,
-            "time": 0.9175407886505127
+            "time": 0.5747711658477783
+        },
+        {
+            "dataset": "D2",
+            "query_id": 828,
+            "ground_truth": 753,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate [3] refer to the same real-world entity as they have matching model numbers (TH46PZ850U) and similar descriptions.",
+            "confidence": 1.0,
+            "time": 0.5780084133148193
+        },
+        {
+            "dataset": "D2",
+            "query_id": 829,
+            "ground_truth": 476,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity, Sony Cyber-shot DSC-W150 Digital Camera - Silver - DSCW150, as they have identical specifications.",
+            "confidence": 1.0,
+            "time": 0.6594090461730957
+        },
+        {
+            "dataset": "D2",
+            "query_id": 834,
+            "ground_truth": 1032,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity as they have similar names, descriptions, and specifications.",
+            "confidence": 1.0,
+            "time": 0.5086257457733154
+        },
+        {
+            "dataset": "D2",
+            "query_id": 841,
+            "ground_truth": 947,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Nintendo DS Lite (Metallic Silver), as they have the same name and price.",
+            "confidence": 1.0,
+            "time": 0.633582592010498
+        },
+        {
+            "dataset": "D2",
+            "query_id": 845,
+            "ground_truth": 355,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching model number (GLD4355RF) and similar product description.",
+            "confidence": 1.0,
+            "time": 0.5620517730712891
+        },
+        {
+            "dataset": "D2",
+            "query_id": 846,
+            "ground_truth": 356,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record, as it has the same model number (GLD4355RFS) and similar features.",
+            "confidence": 1.0,
+            "time": 0.5825133323669434
+        },
+        {
+            "dataset": "D2",
+            "query_id": 851,
+            "ground_truth": 529,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity as they have the same model name (Sony DVP-FX820), description, and price. The only difference is in the color, but it's not a crucial factor for identifying the same entity.",
+            "confidence": 1.0,
+            "time": 0.781254768371582
+        },
+        {
+            "dataset": "D2",
+            "query_id": 853,
+            "ground_truth": 129,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record refers to a Whirlpool WFW8300SW washer, and candidate record [2] also refers to the same model.",
+            "confidence": 1.0,
+            "time": 0.5207197666168213
+        },
+        {
+            "dataset": "D2",
+            "query_id": 857,
+            "ground_truth": 550,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has the same model number (WTW6700TW) and is a Whirlpool Cabrio Top Loading Washer.",
+            "confidence": 1.0,
+            "time": 0.640552282333374
+        },
+        {
+            "dataset": "D2",
+            "query_id": 858,
+            "ground_truth": 628,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has the same model number (WTW6700TU) and is from the same manufacturer (Whirlpool).",
+            "confidence": 1.0,
+            "time": 0.6439046859741211
+        },
+        {
+            "dataset": "D2",
+            "query_id": 860,
+            "ground_truth": 548,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity as they have the same model name (Weber Summit E-620) and both are LP Gas Grills.",
+            "confidence": 1.0,
+            "time": 0.6025545597076416
+        },
+        {
+            "dataset": "D2",
+            "query_id": 861,
+            "ground_truth": 460,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record refers to a Weber Summit SP-320 Stainless LP Gas Grill, which is the same as the candidate record [1] Weber Spirit SP-320 Stainless Steel Liquid Propane Gas Outdoor Grill - 3730001.",
+            "confidence": 1.0,
+            "time": 0.6648542881011963
+        },
+        {
+            "dataset": "D2",
+            "query_id": 862,
+            "ground_truth": 249,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, Weber Genesis EP-320 Blue LP Gas Grill, as they have identical names and descriptions.",
+            "confidence": 1.0,
+            "time": 0.5798723697662354
+        },
+        {
+            "dataset": "D2",
+            "query_id": 863,
+            "ground_truth": 558,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The model number and description match between the given entity record and record [4].",
+            "confidence": 1.0,
+            "time": 2.0559258460998535
+        },
+        {
+            "dataset": "D2",
+            "query_id": 864,
+            "ground_truth": 531,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "Record [5] has the same model number (DVPFX820W) and description as the given record, indicating that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.0152409076690674
+        },
+        {
+            "dataset": "D2",
+            "query_id": 865,
+            "ground_truth": 478,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching camera model (DSCW150), resolution (8.1 Megapixel), and features such as Carl Zeiss 5X Optical Zoom Lens and Super SteadyShot Optical Image Stabilization.",
+            "confidence": 1.0,
+            "time": 0.8103387355804443
+        },
+        {
+            "dataset": "D2",
+            "query_id": 874,
+            "ground_truth": 735,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar model number (KDL46Z4100B vs KDL40Z4100) and features (1920 x 1080 Full HD 1080p Resolution, Digital Media Extender (DMex), BRAVIA Engine Technology, etc.).",
+            "confidence": 1.0,
+            "time": 0.9001383781433105
+        },
+        {
+            "dataset": "D2",
+            "query_id": 875,
+            "ground_truth": 738,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Sony BRAVIA Z Series KDL-46Z4100 46' LCD TV - KDL46Z4100/B, as they have identical model numbers (KDL46Z4100B) and descriptions.",
+            "confidence": 1.0,
+            "time": 0.8297164440155029
         },
         {
             "dataset": "D2",
@@ -320,7 +2000,7 @@
             "answer": "[1]",
             "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching brand (Sony), model number (KDL32M4000), and features such as ATSC/NTSC Tuner With QAM and 1366 x 768 Resolution.",
             "confidence": 1.0,
-            "time": 1.1860358715057373
+            "time": 0.7710604667663574
         },
         {
             "dataset": "D2",
@@ -328,9 +2008,29 @@
             "ground_truth": 680,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching name and model number (KDL46W4100).",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity as they have the same model number (KDL46W4100) and brand name (Sony).",
             "confidence": 1.0,
-            "time": 0.912060022354126
+            "time": 0.6219398975372314
+        },
+        {
+            "dataset": "D2",
+            "query_id": 878,
+            "ground_truth": 681,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, a Sony BRAVIA V Series KDL-52V4100 52' LCD TV.",
+            "confidence": 1.0,
+            "time": 0.598015546798706
+        },
+        {
+            "dataset": "D2",
+            "query_id": 902,
+            "ground_truth": 304,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they have the same model number (MED5900TW) and similar product names.",
+            "confidence": 1.0,
+            "time": 0.5498216152191162
         },
         {
             "dataset": "D2",
@@ -338,9 +2038,99 @@
             "ground_truth": 954,
             "ground_answer": 1,
             "answer": "[1]",
-            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The product name and description in both records match, indicating that they are the same Bluetooth headset model.",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching product name and model number (Jabra BT2070).",
             "confidence": 1.0,
-            "time": 0.9186499118804932
+            "time": 0.5469105243682861
+        },
+        {
+            "dataset": "D2",
+            "query_id": 926,
+            "ground_truth": 978,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has the same model number (26AV502U) and brand name (Toshiba).",
+            "confidence": 1.0,
+            "time": 0.598820686340332
+        },
+        {
+            "dataset": "D2",
+            "query_id": 929,
+            "ground_truth": 894,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, Garmin nuVi 265WT GPS navigation system.",
+            "confidence": 1.0,
+            "time": 0.5174357891082764
+        },
+        {
+            "dataset": "D2",
+            "query_id": 931,
+            "ground_truth": 896,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a similar product name and description.",
+            "confidence": 1.0,
+            "time": 0.4969444274902344
+        },
+        {
+            "dataset": "D2",
+            "query_id": 936,
+            "ground_truth": 832,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, as they both describe an iHome product with a similar name and features.",
+            "confidence": 1.0,
+            "time": 0.5718107223510742
+        },
+        {
+            "dataset": "D2",
+            "query_id": 940,
+            "ground_truth": 940,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, Toshiba 52RV535U - 52' Widescreen 1080p LCD HDTV w/ Cinespeed - Piano Black, as they have the same model number (52RV535U) and similar descriptions.",
+            "confidence": 1.0,
+            "time": 0.8044369220733643
+        },
+        {
+            "dataset": "D2",
+            "query_id": 944,
+            "ground_truth": 920,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record refers to a Yamaha YAS-71 Front Surround System, which is also mentioned in candidate record [5].",
+            "confidence": 1.0,
+            "time": 0.5379836559295654
+        },
+        {
+            "dataset": "D2",
+            "query_id": 951,
+            "ground_truth": 901,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, as they both describe a Nikon D90 Black Digital SLR Camera with an AF-S DX Nikkor 18-105mm Lens.",
+            "confidence": 1.0,
+            "time": 0.6555266380310059
+        },
+        {
+            "dataset": "D2",
+            "query_id": 970,
+            "ground_truth": 327,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with a matching model number (GSD2400NWW) and brand name (GE).",
+            "confidence": 1.0,
+            "time": 0.6280567646026611
+        },
+        {
+            "dataset": "D2",
+            "query_id": 978,
+            "ground_truth": 943,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Canon PowerShot SD990 IS 14 Megapixel Digital Camera w/ 3.7x Optical Zoom UA Len Face Detection 2.5 LCD & ISO 1600 - Black - 2669B001, as they have the same model name and specifications.",
+            "confidence": 1.0,
+            "time": 0.86572265625
         },
         {
             "dataset": "D2",
@@ -350,7 +2140,67 @@
             "answer": "[1]",
             "explanation": "The given record and candidate record [1] refer to the same real-world entity, Canon PowerShot SD990 IS 14 Megapixel Digital Camera w/ 3.7x Optical Zoom UA Len Face Detection 2.5 LCD & ISO 1600 - Silver, as they have the same model name and specifications.",
             "confidence": 1.0,
-            "time": 1.2755956649780273
+            "time": 0.8057339191436768
+        },
+        {
+            "dataset": "D2",
+            "query_id": 1003,
+            "ground_truth": 936,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, with matching camera model (Canon EOS 50D), lens (28-135MM IS USM Lens), and other features.",
+            "confidence": 1.0,
+            "time": 0.6550440788269043
+        },
+        {
+            "dataset": "D2",
+            "query_id": 1014,
+            "ground_truth": 930,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches exactly with the given entity record.",
+            "confidence": 1.0,
+            "time": 1.268279790878296
+        },
+        {
+            "dataset": "D2",
+            "query_id": 1018,
+            "ground_truth": 645,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, SONY IPOD/PHONE DOCK CLOCK RADIO BLACK NIC - ICFC1IPMK2BLK, as they have the same name and description.",
+            "confidence": 1.0,
+            "time": 0.6756806373596191
+        },
+        {
+            "dataset": "D2",
+            "query_id": 1019,
+            "ground_truth": 646,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, SONY IPOD/PHONE DOCK CLOCK RADIO BLACK NIC - ICFC1IPMK2WHI, as they have the same model number (ICFC1IPMK2WHT) and description.",
+            "confidence": 1.0,
+            "time": 0.7566535472869873
+        },
+        {
+            "dataset": "D2",
+            "query_id": 1023,
+            "ground_truth": 379,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as both are related to VholdR Wearable Camcorders.",
+            "confidence": 1.0,
+            "time": 0.5483818054199219
+        },
+        {
+            "dataset": "D2",
+            "query_id": 1029,
+            "ground_truth": 964,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record refers to the Escort Passport 9500ix Radar/Laser Detector, which is also mentioned in candidate record [3] as the Escort Passport 9500IX Radar Detector - 9500IX.",
+            "confidence": 1.0,
+            "time": 0.649613618850708
         },
         {
             "dataset": "D2",
@@ -360,7 +2210,7 @@
             "answer": "[1]",
             "explanation": "The given record and candidate record [1] refer to the same real-world entity, Escort 9500CI Radar Detector.",
             "confidence": 1.0,
-            "time": 0.8326857089996338
+            "time": 0.5047519207000732
         }
     ]
 }
