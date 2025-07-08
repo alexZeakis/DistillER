@@ -97,6 +97,27 @@ cd scripts/slm/
 ./run_hybrid.sh
 ```
 
+
+### SotA (Q5)
+
+#### ZeroER
+```
+cd scripts/matching/sota/ZeroER
+conda env create -f environment.yml
+conda activate ZeroER
+
+./run.sh 
+```
+
+#### HierGAT
+```
+python -m venv HierGAT
+source HierGAT/bin/activate
+pip install -r requirements.txt
+
+./run.sh 
+```
+
 - Blocking: [Blocking & Sampling](scripts/blocking/README.md)
 - Baselines: [Experiments](scripts/matching/baselines/README.md)
 - Label Refinement: [Experiments](scripts/matching/label_refinement/README.md) [Evaluations](scripts/evaluate/label_refinement/README.md)
