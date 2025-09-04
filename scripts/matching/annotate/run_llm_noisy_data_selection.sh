@@ -3,7 +3,8 @@
 # List of directories
 directories=("D2" "D3" "D4" "D5" "D6" "D7" "D8" "D9")
 
-strategies=("random" "sampled")
+#strategies=("random" "sampled")
+strategies=("blocking_top2" "clustering_kmeans" "clustering_hierarchical")
 
 # Seeds
 seeds=(1924)
