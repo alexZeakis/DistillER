@@ -58,8 +58,8 @@ if __name__ == '__main__':
                          }
                     prompts.append(d)
                     
-                if len(prompts) > 100:
-                    break
+                # if len(prompts) > 100:
+                #     break
             elif args.mode == 'test':
                 
                 d = {'id': '{}_{}_{}'.format(dataset, seed, p['query_id']),

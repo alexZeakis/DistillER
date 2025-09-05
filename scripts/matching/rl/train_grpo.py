@@ -180,12 +180,12 @@ def train_grpo(model_name, input_file, out_dir, log_file, eval_split_ratio=0.0):
         # # save_steps = 250,
         # # save_strategy="epoch",
         
-        per_device_train_batch_size = 2,
+        per_device_train_batch_size = 8,
         gradient_accumulation_steps = 4,
-        # num_train_epochs = 1, #TODO: Change to 3
+        # num_generations=4,
+        num_train_epochs = 1, #TODO: Change to 3
         # num_generations = 1,
-        
-        max_steps = 2,   # to match ~3 epochs of DPO
+        # max_steps = 2,   # to match ~3 epochs of DPO
         
         max_grad_norm = 0.1,
         report_to = "none", # Can use Weights & Biases

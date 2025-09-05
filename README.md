@@ -109,6 +109,22 @@ conda activate ZeroER
 ./run.sh 
 ```
 
+#### CollaborEM
+#python data/make_collaborem.py
+```
+gdown --fuzzy https://drive.google.com/file/d/1MHRfyk5bp7jv1dz-dCByhnTL483G43tR/view?usp=sharing
+pip install conda-pack
+mkdir -p er
+tar -xzf er.tar.gz -C er
+source er/bin/activate
+gdown --fuzzy https://drive.google.com/file/d/13uzWfiZNfJewEkCtAfS4J1rX5td8CaWf/view?usp=sharing
+unzip lm_model.zip
+
+./run.sh
+```
+
+
+
 #### HierGAT
 ```
 python -m venv HierGAT
@@ -116,6 +132,29 @@ source HierGAT/bin/activate
 pip install -r requirements.txt
 
 ./run.sh 
+```
+
+#### Unicorn
+```
+python -m venv unicorn_env
+source unicorn_env/bin/activate
+pip install -r requirements.txt
+pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
+pip install torch==1.13.1 --extra-index-url https://download.pytorch.org/whl/cu110
+
+./run.sh
+```
+
+#### SudoWoodo
+```
+python -m venv sudowoodo_env
+source sudowoodo_env/bin/activate
+pip install -r requirements.txt
+cd apex
+python setup.py install
+cd ../
+
+./run.sh
 ```
 
 - Blocking: [Blocking & Sampling](scripts/blocking/README.md)

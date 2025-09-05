@@ -22,43 +22,40 @@ for noisy in "${models[@]}"; do
         exit 1
     fi
  
-    python grpo_data.py \
+    python dpo_data.py \
        --input_files "${input_files[@]}" \
-       --out_file "../../../log/matching/rl/rlhf/grpo/$noisy/train.json" \
+       --out_file "../../../log/matching/rl/dpo/$noisy/train.json" \
        --mode "train" \
        --field "${field}"
     
-    python train_grpo.py \
-       --input_file "../../../log/matching/rl/rlhf/grpo/$noisy/train.json" \
-       --log_file "../../../log/matching/rl/rlhf/grpo/$noisy/train_log.json" \
-       --out_dir "../../../log/matching/rl/rlhf/grpo/$noisy/llama31_gt" \
+    python train_dpo.py \
+       --input_file "../../../log/matching/rl/dpo/$noisy/train.json" \
+       --log_file "../../../log/matching/rl/dpo/$noisy/train_log.json" \
+       --out_dir "../../../log/matching/rl/dpo/$noisy/llama31_gt" \
        --model "llama3.1"
 
-<<xom
     for dir in "${directories[@]}"; do
         echo "Processing directory: $dir with seed: $seed"
        
         python ../build_prompt.py \
         --dataset "$dir" \
-        --out_file "../../../log/matching/rl/rlhf/grpo/$noisy/test/${dir}_1924.json"  \
+        --out_file "../../../log/matching/rl/dpo/$noisy/test/${dir}_1924.json"  \
         --in_dir "../../../data/ccer/cleaned/original/" \
         --sample_file "../../../data/ccer/cleaned/fine_tuning/blocking/test/$dir.csv" \
         --seed 1924 \
         --serialization "DITTO" \
         --task_description "EXPLAIN"
         
-        python grpo_data.py \
-           --input_files "../../../log/matching/rl/rlhf/grpo/$noisy/test/${dir}_1924.json" \
-           --out_file "../../../log/matching/rl/rlhf/grpo/$noisy/test/${dir}_total.json" \
+        python dpo_data.py \
+           --input_files "../../../log/matching/rl/dpo/$noisy/test/${dir}_1924.json" \
+           --out_file "../../../log/matching/rl/dpo/$noisy/test/${dir}_total.json" \
            --mode "test"
         
-        python test_dpo.py \
+        python test_rl.py \
            --dataset "$dir" \
-           --model_path "../../../log/matching/rl/rlhf/grpo/$noisy/llama31_gt" \
-           --input_file "../../../log/matching/rl/rlhf/grpo/$noisy/test/${dir}_total.json" \
-           --out_file "../../../log/matching/rl/rlhf/grpo/$noisy/test_responses/${dir}_responses.json"
+           --model_path "../../../log/matching/rl/dpo/$noisy/llama31_gt" \
+           --input_file "../../../log/matching/rl/dpo/$noisy/test/${dir}_total.json" \
+           --out_file "../../../log/matching/rl/dpo/$noisy/test_responses/${dir}_responses.json"
            
-        break
     done
-xom
-done 
+done    

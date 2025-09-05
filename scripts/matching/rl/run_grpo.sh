@@ -8,7 +8,6 @@ models=("qwen_32")
 
 for noisy in "${models[@]}"; do
 
-<<xom    
     if [ "$noisy" = "ground" ]; then
         input_files=(../../../log/matching/annotate/blocking/$noisy/partial/*.json)
         field="ground_answer"
@@ -23,42 +22,40 @@ for noisy in "${models[@]}"; do
         exit 1
     fi
  
-    python dpo_data.py \
+    python grpo_data.py \
        --input_files "${input_files[@]}" \
-       --out_file "../../../log/matching/rl/rlhf/dpo/$noisy/train.json" \
+       --out_file "../../../log/matching/rl/grpo/$noisy/train.json" \
        --mode "train" \
        --field "${field}"
     
-    python train_dpo.py \
-       --input_file "../../../log/matching/rl/rlhf/dpo/$noisy/train.json" \
-       --log_file "../../../log/matching/rl/rlhf/dpo/$noisy/train_log.json" \
-       --out_dir "../../../log/matching/rl/rlhf/dpo/$noisy/llama31_gt" \
+    python train_grpo.py \
+       --input_file "../../../log/matching/rl/grpo/$noisy/train.json" \
+       --log_file "../../../log/matching/rl/grpo/$noisy/train_log.json" \
+       --out_dir "../../../log/matching/rl/grpo/$noisy/llama31_gt" \
        --model "llama3.1"
-xom
 
     for dir in "${directories[@]}"; do
         echo "Processing directory: $dir with seed: $seed"
        
         python ../build_prompt.py \
         --dataset "$dir" \
-        --out_file "../../../log/matching/rl/rlhf/dpo/$noisy/test/${dir}_1924.json"  \
+        --out_file "../../../log/matching/rl/grpo/$noisy/test/${dir}_1924.json"  \
         --in_dir "../../../data/ccer/cleaned/original/" \
         --sample_file "../../../data/ccer/cleaned/fine_tuning/blocking/test/$dir.csv" \
         --seed 1924 \
         --serialization "DITTO" \
         --task_description "EXPLAIN"
         
-        python dpo_data.py \
-           --input_files "../../../log/matching/rl/rlhf/dpo/$noisy/test/${dir}_1924.json" \
-           --out_file "../../../log/matching/rl/rlhf/dpo/$noisy/test/${dir}_total.json" \
+        python grpo_data.py \
+           --input_files "../../../log/matching/rl/grpo/$noisy/test/${dir}_1924.json" \
+           --out_file "../../../log/matching/rl/grpo/$noisy/test/${dir}_total.json" \
            --mode "test"
         
-        python test_dpo.py \
+        python test_rl.py \
            --dataset "$dir" \
-           --model_path "../../../log/matching/rl/rlhf/dpo/$noisy/llama31_gt" \
-           --input_file "../../../log/matching/rl/rlhf/dpo/$noisy/test/${dir}_total.json" \
-           --out_file "../../../log/matching/rl/rlhf/dpo/$noisy/test_responses/${dir}_responses.json"
+           --model_path "../../../log/matching/rl/grpo/$noisy/llama31_gt" \
+           --input_file "../../../log/matching/rl/grpo/$noisy/test/${dir}_total.json" \
+           --out_file "../../../log/matching/rl/grpo/$noisy/test_responses/${dir}_responses.json"
            
-        break
     done
-done    
+done 
