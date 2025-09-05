@@ -1,0 +1,2466 @@
+{
+    "settings": {
+        "dataset": "D9",
+        "out_file": "../../../log/matching/annotate/blocking/qwen_32/partial/D9_1924.json",
+        "in_dir": "../../../data/ccer/cleaned/original/",
+        "sample_file": "../../../data/ccer/cleaned/fine_tuning/train/D9.csv",
+        "seed": 1924,
+        "serialization": "DITTO",
+        "task_description": "EXPLAIN",
+        "skip": false,
+        "len_q99": 3235.96,
+        "len_q50": 2345.0
+    },
+    "responses": [
+        {
+            "dataset": "D9",
+            "query_id": 5,
+            "ground_truth": 45565,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (with a slight variation in name format), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 2.3090035915374756
+        },
+        {
+            "dataset": "D9",
+            "query_id": 8,
+            "ground_truth": 18579,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (with a slight variation in name format), venue, and year. The other candidates have different titles and years.",
+            "confidence": 1.0,
+            "time": 1.8268327713012695
+        },
+        {
+            "dataset": "D9",
+            "query_id": 15,
+            "ground_truth": 7909,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record does not fully match the given entity record. While there is a similarity in titles, the list of authors and the year are missing from the candidate record, making it insufficient to confirm that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.1213109493255615
+        },
+        {
+            "dataset": "D9",
+            "query_id": 19,
+            "ground_truth": 4918,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] both have the same title, venue, and year. The only difference is in the author's name where 'Joachim Hammer' in the given record is abbreviated to 'J Hammer' in the candidate record [1]. This abbreviation suggests that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.6867191791534424
+        },
+        {
+            "dataset": "D9",
+            "query_id": 33,
+            "ground_truth": 51622,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] share the same title, authors (with a slight difference in order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.9264872074127197
+        },
+        {
+            "dataset": "D9",
+            "query_id": 36,
+            "ground_truth": 1425,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record matches with candidate record [3] because they share the same title, author (CE Dyreson is a variation of Curtis E. Dyreson), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.9891612529754639
+        },
+        {
+            "dataset": "D9",
+            "query_id": 49,
+            "ground_truth": 42564,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record matches with candidate record [4] in terms of title, authors (Hans-Joachim Klein is abbreviated to HJ Klein), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.7524538040161133
+        },
+        {
+            "dataset": "D9",
+            "query_id": 50,
+            "ground_truth": 5076,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] share the same title, authors (with slight variations in name formatting), venue (VLDB is short for Very Large Data Bases Conference which matches with 'Proceedings of the 20th International Conference on Very'), and year. These similarities indicate that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.8377747535705566
+        },
+        {
+            "dataset": "D9",
+            "query_id": 59,
+            "ground_truth": 27180,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The third candidate record matches the given entity record in all specified attributes: title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.4739501476287842
+        },
+        {
+            "dataset": "D9",
+            "query_id": 67,
+            "ground_truth": 47953,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] share the same title, authors (though in a different order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.8446757793426514
+        },
+        {
+            "dataset": "D9",
+            "query_id": 77,
+            "ground_truth": 44890,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given entity record matches with candidate record [6] in terms of title, authors (with a slight variation in the author's name format), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.793966293334961
+        },
+        {
+            "dataset": "D9",
+            "query_id": 96,
+            "ground_truth": 16520,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record matches with candidate record [3] because they have identical titles, authors (with only a difference in the format of first names), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.8392016887664795
+        },
+        {
+            "dataset": "D9",
+            "query_id": 109,
+            "ground_truth": 49494,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given entity record and candidate record [6] both have the same title, venue (VLDB), and year (1999). Although there is a discrepancy in the authors' names, it's possible that 'idt.unit.no' refers to Kjetil N?rv?g or includes him as an author. Therefore, they likely refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.990837335586548
+        },
+        {
+            "dataset": "D9",
+            "query_id": 112,
+            "ground_truth": 34316,
+            "ground_answer": 10,
+            "answer": "[10]",
+            "explanation": "The given entity record and candidate record [10] both have similar titles, authors (with slight variations in name formatting), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.0514161586761475
+        },
+        {
+            "dataset": "D9",
+            "query_id": 120,
+            "ground_truth": 22466,
+            "ground_answer": 1,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record. The titles are either completely different or have significant differences, and the authors do not match any of the candidates provided.",
+            "confidence": 1.0,
+            "time": 1.7532904148101807
+        },
+        {
+            "dataset": "D9",
+            "query_id": 122,
+            "ground_truth": 1960,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, venue, and year. The only difference is that the author's name is abbreviated to 'J Zhang' instead of 'Jian Zhang', which can be considered a minor variation referring to the same person.",
+            "confidence": 1.0,
+            "time": 2.348026990890503
+        },
+        {
+            "dataset": "D9",
+            "query_id": 135,
+            "ground_truth": 24938,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (with different name formats), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.891272783279419
+        },
+        {
+            "dataset": "D9",
+            "query_id": 159,
+            "ground_truth": 36763,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given entity record and candidate record [6] share the same title, authors (with slightly different formatting), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.9078726768493652
+        },
+        {
+            "dataset": "D9",
+            "query_id": 160,
+            "ground_truth": 21979,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, venue, and year. The only difference is that the author's name is abbreviated to 'T Mihalisin' instead of 'Ted Mihalisin', but this does not change the fact that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.7076594829559326
+        },
+        {
+            "dataset": "D9",
+            "query_id": 177,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, or year.",
+            "confidence": 1.0,
+            "time": 1.4172751903533936
+        },
+        {
+            "dataset": "D9",
+            "query_id": 182,
+            "ground_truth": 18671,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The title and authors in both the given entity record and candidate [1] match closely, with slight variations in formatting. The venue also matches as 'SIGMOD Conference' corresponds to 'Proc. of the ACM SIGMOD'. Candidate [2] refers to a different topic and has a different set of authors and year.",
+            "confidence": 1.0,
+            "time": 2.4757111072540283
+        },
+        {
+            "dataset": "D9",
+            "query_id": 187,
+            "ground_truth": 31618,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (though with a different order and abbreviation), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 2.0534379482269287
+        },
+        {
+            "dataset": "D9",
+            "query_id": 188,
+            "ground_truth": 57945,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record and candidate record [5] both have the same title, 'The TPR*-Tree: An Optimized Spatio-Temporal Access Method for Predictive Queries', and share the same authors (though in a different order), venue (both related to VLDB), and year (2003). This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 3.0145950317382812
+        },
+        {
+            "dataset": "D9",
+            "query_id": 191,
+            "ground_truth": 26561,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (with abbreviated names), venue (VLDB conference), and year. The other candidates refer to different papers with distinct titles and authors.",
+            "confidence": 1.0,
+            "time": 2.1335368156433105
+        },
+        {
+            "dataset": "D9",
+            "query_id": 192,
+            "ground_truth": 48805,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The title, authors (with a slight variation in name format), venue and year match closely between the given entity record and candidate record [1]. The other candidates have different titles, authors, venues, and years.",
+            "confidence": 1.0,
+            "time": 1.9070611000061035
+        },
+        {
+            "dataset": "D9",
+            "query_id": 195,
+            "ground_truth": 12398,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The record [8] matches the given entity record in terms of title, author (with a slight variation in name format), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 2.0035574436187744
+        },
+        {
+            "dataset": "D9",
+            "query_id": 204,
+            "ground_truth": 16829,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record matches with candidate record [8] in terms of title, authors (with slight variation in the order and middle names), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.7768425941467285
+        },
+        {
+            "dataset": "D9",
+            "query_id": 235,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.4742159843444824
+        },
+        {
+            "dataset": "D9",
+            "query_id": 239,
+            "ground_truth": 48079,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given entity record and candidate record [1] do not refer to the same real-world entity. The titles, authors, venues, and years are all different.",
+            "confidence": 1.0,
+            "time": 1.6960222721099854
+        },
+        {
+            "dataset": "D9",
+            "query_id": 254,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record. The titles, authors, and years do not correspond to those in the given entity record.",
+            "confidence": 1.0,
+            "time": 1.6268329620361328
+        },
+        {
+            "dataset": "D9",
+            "query_id": 265,
+            "ground_truth": 37050,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record matches with candidate record [4] because they share the same title, authors (with slight variation in naming format), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.7474308013916016
+        },
+        {
+            "dataset": "D9",
+            "query_id": 271,
+            "ground_truth": 1030,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record matches with candidate record [4] in terms of title, authors (Joseph Fong is likely the same as J Fong), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.7806901931762695
+        },
+        {
+            "dataset": "D9",
+            "query_id": 272,
+            "ground_truth": 37000,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record matches with candidate record [5] in terms of title (with minor case differences), authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.5829298496246338
+        },
+        {
+            "dataset": "D9",
+            "query_id": 280,
+            "ground_truth": 21445,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] matches the given entity record in terms of title, authors (with a slight difference in name format), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.9784376621246338
+        },
+        {
+            "dataset": "D9",
+            "query_id": 293,
+            "ground_truth": 4743,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] both have the same title, 'XPERANTO: Middleware for Publishing Object-Relational Data as XML Documents', and share common authors (though abbreviated in the candidate). They also match on venue ('VLDB') and year ('2000').",
+            "confidence": 1.0,
+            "time": 2.6217660903930664
+        },
+        {
+            "dataset": "D9",
+            "query_id": 296,
+            "ground_truth": 53771,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record matches with candidate record [5] in terms of title, authors (L Yang is likely Li Yang), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.5870423316955566
+        },
+        {
+            "dataset": "D9",
+            "query_id": 303,
+            "ground_truth": 38272,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (with different name formats), venue, and year. The other candidates have different titles or authors.",
+            "confidence": 1.0,
+            "time": 1.8940236568450928
+        },
+        {
+            "dataset": "D9",
+            "query_id": 304,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[5]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.4095659255981445
+        },
+        {
+            "dataset": "D9",
+            "query_id": 319,
+            "ground_truth": 15389,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The candidate record [3] matches the given entity record in terms of title, author (V Draluk is likely Vadim Draluk), venue (both refer to a VLDB conference), and year. The slight differences in how the information is presented do not change the fact that they are referring to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.6981687545776367
+        },
+        {
+            "dataset": "D9",
+            "query_id": 323,
+            "ground_truth": 39764,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given entity record matches with candidate record [6] because they share the same title, authors (with different formatting), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.6733465194702148
+        },
+        {
+            "dataset": "D9",
+            "query_id": 333,
+            "ground_truth": 9213,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record matches with candidate record [3] because they share the same title, authors (with a slight difference in name order and initials), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.67836332321167
+        },
+        {
+            "dataset": "D9",
+            "query_id": 358,
+            "ground_truth": 41770,
+            "ground_answer": 10,
+            "answer": "[10]",
+            "explanation": "The given entity record and candidate record [10] share the same title, authors (with a slight variation in author name order), venue (VLDB J.), and year (2003). This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.352341651916504
+        },
+        {
+            "dataset": "D9",
+            "query_id": 381,
+            "ground_truth": 11079,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] matches the given entity record in terms of title and venue, although there is a slight difference in the authors' names. The other candidates do not match the title or the year.",
+            "confidence": 1.0,
+            "time": 1.9731433391571045
+        },
+        {
+            "dataset": "D9",
+            "query_id": 392,
+            "ground_truth": 13814,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] both have the same title, authors (with slight variations in name formatting), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.069061040878296
+        },
+        {
+            "dataset": "D9",
+            "query_id": 396,
+            "ground_truth": 60922,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record and candidate record [8] both have the same title 'Architecture of Oracle Parallel Server', share the same authors (with a slight difference in order), venue 'VLDB', and year '1998'. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.4863595962524414
+        },
+        {
+            "dataset": "D9",
+            "query_id": 433,
+            "ground_truth": 43893,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, venue, and year. The only difference is that the author's name is abbreviated to 'M Toyama' instead of 'Motomichi Toyama', but this does not change the fact that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.5573010444641113
+        },
+        {
+            "dataset": "D9",
+            "query_id": 437,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record. The titles, authors, venues and years do not correspond to the same real-world entity as specified in the given record.",
+            "confidence": 1.0,
+            "time": 1.7729086875915527
+        },
+        {
+            "dataset": "D9",
+            "query_id": 444,
+            "ground_truth": 1115,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] share the same title, authors (with slight variation in first names), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.9009654521942139
+        },
+        {
+            "dataset": "D9",
+            "query_id": 445,
+            "ground_truth": 1589,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] both have the same title, authors (with slight variations in spelling), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.888033390045166
+        },
+        {
+            "dataset": "D9",
+            "query_id": 472,
+            "ground_truth": 5118,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] both have the same title, 'LockX: A System for Efficiently Querying Secure XML', share the same authors (with different formatting), and were published in the SIGMOD Conference in the year 2003. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.7419073581695557
+        },
+        {
+            "dataset": "D9",
+            "query_id": 492,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.4483215808868408
+        },
+        {
+            "dataset": "D9",
+            "query_id": 496,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[3]",
+            "explanation": "The given entity record refers to a collection of titles and roles associated with the VLDB conference in the year 2000. Among the candidates, record [3] matches this description as it lists authors for 'VLDB 2000' and is listed under the venue 'Proceedings of 26th International Conference on Very Large', which aligns with the given entity's focus on VLDB in the year 2000.",
+            "confidence": 1.0,
+            "time": 3.4294381141662598
+        },
+        {
+            "dataset": "D9",
+            "query_id": 503,
+            "ground_truth": 36580,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record matches with candidate record [4] because they share the same title, author (JD Ullman is a variation of Jeffrey D. Ullman), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.8316948413848877
+        },
+        {
+            "dataset": "D9",
+            "query_id": 516,
+            "ground_truth": 37052,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] share the same title, authors (with slight variations in name ordering), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.9766275882720947
+        },
+        {
+            "dataset": "D9",
+            "query_id": 520,
+            "ground_truth": 1392,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record matches with candidate record [3] in terms of title, authors (with slight variation in the format), venue and year.",
+            "confidence": 1.0,
+            "time": 1.5883333683013916
+        },
+        {
+            "dataset": "D9",
+            "query_id": 532,
+            "ground_truth": 50349,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record matches with candidate record [8] in terms of title, authors (with slight variation in the spelling of first names), venue and year.",
+            "confidence": 1.0,
+            "time": 1.7693443298339844
+        },
+        {
+            "dataset": "D9",
+            "query_id": 545,
+            "ground_truth": 52642,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] share the same title, venue, and year. The authors in both records are also the same but with different name formats (e.g., Jun-Ki Min vs JK Min).",
+            "confidence": 1.0,
+            "time": 2.106050968170166
+        },
+        {
+            "dataset": "D9",
+            "query_id": 547,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, or year.",
+            "confidence": 1.0,
+            "time": 1.3363265991210938
+        },
+        {
+            "dataset": "D9",
+            "query_id": 561,
+            "ground_truth": 17588,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record matches with candidate record [3] because they share the same title, authors (with slight variation in first names), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.6704421043395996
+        },
+        {
+            "dataset": "D9",
+            "query_id": 572,
+            "ground_truth": 4333,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The second candidate record matches the given entity record in terms of title (both contain 'The Drill Down Benchmark') and authors (Boncz is listed as an author in both, though with a different format). The venue and year do not perfectly match but are close enough ('VLDB' vs. 'Procedings of the International Conference on Very Large', and 1998 vs. no specific year mentioned), suggesting they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 3.379765033721924
+        },
+        {
+            "dataset": "D9",
+            "query_id": 573,
+            "ground_truth": 7668,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given entity record and candidate record [6] share the same title (with slight variation in punctuation), authors, venue, and year. The order of author names is different but they are the same individuals.",
+            "confidence": 1.0,
+            "time": 2.02774715423584
+        },
+        {
+            "dataset": "D9",
+            "query_id": 576,
+            "ground_truth": 12185,
+            "ground_answer": 1,
+            "answer": "[4]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year. The closest one is [4], but it lacks detailed author information and does not fully match the title or venue.",
+            "confidence": 1.0,
+            "time": 2.1997950077056885
+        },
+        {
+            "dataset": "D9",
+            "query_id": 589,
+            "ground_truth": 6691,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] both have titles that are very similar, with slight differences in capitalization. The authors listed for the given entity (Dimitris Papadias, Yufei Tao) match those of candidate record [2] (T Yufei, D Papadias), though the order is reversed and initials are used in the candidate record. However, there's a discrepancy in the year; the given entity specifies 2001 while candidate [2] lists 2000. Despite this minor difference, the title and authors strongly suggest that these records refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 4.518634796142578
+        },
+        {
+            "dataset": "D9",
+            "query_id": 649,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[6]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.5329196453094482
+        },
+        {
+            "dataset": "D9",
+            "query_id": 664,
+            "ground_truth": 2867,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] both have the same title, venue, and year. The authors' names are slightly different (Philip A. Bernstein vs PA Bernstein), but they likely refer to the same person.",
+            "confidence": 1.0,
+            "time": 2.081181764602661
+        },
+        {
+            "dataset": "D9",
+            "query_id": 684,
+            "ground_truth": 31779,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given entity record and candidate record [6] both have the same title, authors (with slight variation in name formatting), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.0410730838775635
+        },
+        {
+            "dataset": "D9",
+            "query_id": 699,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, or year.",
+            "confidence": 1.0,
+            "time": 1.3862404823303223
+        },
+        {
+            "dataset": "D9",
+            "query_id": 704,
+            "ground_truth": 32344,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The third candidate record matches the given entity record in terms of title (with minor case differences), authors, venue (both refer to VLDB conference), and year.",
+            "confidence": 1.0,
+            "time": 1.6847572326660156
+        },
+        {
+            "dataset": "D9",
+            "query_id": 715,
+            "ground_truth": 23718,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] share the exact same title, venue (VLDB), and year (1997). Although there is a slight difference in the authors' names format between the two records, they still refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.394726276397705
+        },
+        {
+            "dataset": "D9",
+            "query_id": 717,
+            "ground_truth": 2137,
+            "ground_answer": 3,
+            "answer": "[2]",
+            "explanation": "Record [3] has a title that matches exactly with the given entity record's title, 'LORE: A Lightweight Object REpository for Semistructured Data'. Although it lacks detailed author information and venue details, its title is an exact match which indicates it refers to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.5907273292541504
+        },
+        {
+            "dataset": "D9",
+            "query_id": 726,
+            "ground_truth": 22610,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] matches the given entity record in terms of title, authors (with abbreviated names), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.8817896842956543
+        },
+        {
+            "dataset": "D9",
+            "query_id": 729,
+            "ground_truth": 39232,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] have identical titles, authors (with a different order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.7514426708221436
+        },
+        {
+            "dataset": "D9",
+            "query_id": 733,
+            "ground_truth": 10533,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (though listed in a different order), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.8921661376953125
+        },
+        {
+            "dataset": "D9",
+            "query_id": 742,
+            "ground_truth": 46831,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given entity record and candidate record [6] share the same title, author (with a slight variation in name format), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.025952100753784
+        },
+        {
+            "dataset": "D9",
+            "query_id": 749,
+            "ground_truth": 48771,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record and candidate record [8] both have titles that are very similar ('Infering Structure in Semistructured Data' vs 'Inferring Structure in Semistructured Data'), the same authors (though listed in a different order), the same venue (SIGMOD Record), and the same year (1997). These similarities indicate they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 3.1644287109375
+        },
+        {
+            "dataset": "D9",
+            "query_id": 770,
+            "ground_truth": 1749,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (with a slight difference in name format), venue, and year. The minor differences do not affect the overall matching as they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.1337742805480957
+        },
+        {
+            "dataset": "D9",
+            "query_id": 779,
+            "ground_truth": 17676,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] share the same title, authors (with a slight difference in the order of names), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.056175947189331
+        },
+        {
+            "dataset": "D9",
+            "query_id": 801,
+            "ground_truth": 22705,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] matches the given entity record in terms of title, authors (though the order is reversed), and year. The venue information differs slightly but still refers to the same event (VLDB in 1998).",
+            "confidence": 1.0,
+            "time": 2.176762819290161
+        },
+        {
+            "dataset": "D9",
+            "query_id": 806,
+            "ground_truth": 7083,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The third candidate record matches the given entity record in terms of title (with minor variation in capitalization), authors (M Freeston vs Michael Freeston), venue (SIGMOD Conference), and year (1995.0).",
+            "confidence": 1.0,
+            "time": 2.207346200942993
+        },
+        {
+            "dataset": "D9",
+            "query_id": 811,
+            "ground_truth": 10610,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] share the same title, authors (though in a different order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.988100528717041
+        },
+        {
+            "dataset": "D9",
+            "query_id": 815,
+            "ground_truth": 24312,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] share the same title, authors (with a slight difference in order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.0196926593780518
+        },
+        {
+            "dataset": "D9",
+            "query_id": 835,
+            "ground_truth": 47314,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record. The title, venue, and year match exactly between both records. Although the authors' names are abbreviated in the candidate record (VS Sengar instead of Vibhuti S. Sengar, JR Haritsa instead of Jayant R. Haritsa), they still refer to the same individuals.",
+            "confidence": 1.0,
+            "time": 2.8898282051086426
+        },
+        {
+            "dataset": "D9",
+            "query_id": 841,
+            "ground_truth": 29007,
+            "ground_answer": 9,
+            "answer": "[9]",
+            "explanation": "The given entity record matches with candidate record [9] in terms of title, authors (though the order is different), venue and year.",
+            "confidence": 1.0,
+            "time": 1.683793544769287
+        },
+        {
+            "dataset": "D9",
+            "query_id": 844,
+            "ground_truth": 165,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] share the same title, authors (with a slight difference in name order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.8587942123413086
+        },
+        {
+            "dataset": "D9",
+            "query_id": 846,
+            "ground_truth": 13483,
+            "ground_answer": 9,
+            "answer": "[9]",
+            "explanation": "The given entity record and candidate record [9] share the same title, authors (with abbreviated names), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.8669369220733643
+        },
+        {
+            "dataset": "D9",
+            "query_id": 848,
+            "ground_truth": 54533,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (T Critchlow is a shortened form of Terence Critchlow), venue, and year. The other candidate record [2] refers to a different workshop and has different authors and year.",
+            "confidence": 1.0,
+            "time": 2.3724281787872314
+        },
+        {
+            "dataset": "D9",
+            "query_id": 854,
+            "ground_truth": 36183,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (though with a different order and abbreviation), venue, and year. The other candidates refer to different titles and authors.",
+            "confidence": 1.0,
+            "time": 2.0254571437835693
+        },
+        {
+            "dataset": "D9",
+            "query_id": 861,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[5]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.5159149169921875
+        },
+        {
+            "dataset": "D9",
+            "query_id": 880,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[8]",
+            "explanation": "The given entity record has a title that includes 'Foreword' and is from the year 1995. Among the candidates, only candidate [8] matches both criteria: it also contains 'Foreword' in its title and was published in the same year (1995).",
+            "confidence": 1.0,
+            "time": 2.629697799682617
+        },
+        {
+            "dataset": "D9",
+            "query_id": 881,
+            "ground_truth": 28913,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record and candidate record [8] share the same title, authors (with a slight difference in order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.013536214828491
+        },
+        {
+            "dataset": "D9",
+            "query_id": 905,
+            "ground_truth": 10825,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] share the same title, authors (with a slight difference in order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.9062488079071045
+        },
+        {
+            "dataset": "D9",
+            "query_id": 918,
+            "ground_truth": 35529,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record and candidate record [8] share the same title, authors (with slight variation in name formatting), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.9757802486419678
+        },
+        {
+            "dataset": "D9",
+            "query_id": 920,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[6]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year. The titles are different, the years do not align with the given year (2000), and there is no information about the authors for the given entity record to compare.",
+            "confidence": 1.0,
+            "time": 2.601935863494873
+        },
+        {
+            "dataset": "D9",
+            "query_id": 921,
+            "ground_truth": 30357,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record matches with candidate record [4] because they share the same title, authors (with slightly different formatting), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.5781993865966797
+        },
+        {
+            "dataset": "D9",
+            "query_id": 941,
+            "ground_truth": 36875,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record matches with candidate record [4] because they share identical values for the title, authors (with a slight variation in first name formatting), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.8877174854278564
+        },
+        {
+            "dataset": "D9",
+            "query_id": 946,
+            "ground_truth": 10154,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] share the same title (with minor differences in formatting), authors, venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.7899065017700195
+        },
+        {
+            "dataset": "D9",
+            "query_id": 949,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.5252056121826172
+        },
+        {
+            "dataset": "D9",
+            "query_id": 950,
+            "ground_truth": 27673,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] share the same title, authors (though in a different order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.9567618370056152
+        },
+        {
+            "dataset": "D9",
+            "query_id": 963,
+            "ground_truth": 26490,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The third candidate record matches the given entity record in terms of title (with slight variation in formatting), authors, venue (though with a more detailed name), and year.",
+            "confidence": 1.0,
+            "time": 1.7390329837799072
+        },
+        {
+            "dataset": "D9",
+            "query_id": 966,
+            "ground_truth": 13486,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record matches with candidate record [4] because they share the same title, authors (with a slight variation in name order), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.7235679626464844
+        },
+        {
+            "dataset": "D9",
+            "query_id": 975,
+            "ground_truth": 6940,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] matches the given entity record in terms of title, authors (C Ahlberg is a shortened form of Christopher Ahlberg), venue, and year. Candidate [1] does not match as closely because it has a different title format and author name.",
+            "confidence": 1.0,
+            "time": 2.3891942501068115
+        },
+        {
+            "dataset": "D9",
+            "query_id": 988,
+            "ground_truth": 39102,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (Kamar Aulakh is abbreviated to K Aulakh), venue, and year. The only difference is that the year in the candidate record is represented as a float (1998.0) instead of an integer (1998).",
+            "confidence": 1.0,
+            "time": 2.6308038234710693
+        },
+        {
+            "dataset": "D9",
+            "query_id": 993,
+            "ground_truth": 27588,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] both have the same title, 'TAM: A System for Dynamic Transactional Activity Management', and venue, 'SIGMOD Conference'. Although there is a slight discrepancy in the authors' names (the given record lists more authors), they share at least one author, T Zhou. The year also matches exactly between the two records.",
+            "confidence": 1.0,
+            "time": 2.9499170780181885
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1028,
+            "ground_truth": 36647,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given entity record matches with candidate record [6] in terms of title, authors (with slight variation in name formatting), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.7217257022857666
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1050,
+            "ground_truth": 48646,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record and candidate record [8] both have the same title 'Editorial', authors (with slight variation in first name initials), venue (VLDB J. vs The VLDB Journal The International Journal on Very Large &hellip; which are essentially the same journal with a more detailed description), and year 2002.",
+            "confidence": 1.0,
+            "time": 2.7482333183288574
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1057,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, or year.",
+            "confidence": 1.0,
+            "time": 1.3352744579315186
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1067,
+            "ground_truth": 32243,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, venue, and year. The only difference is that the author's name is abbreviated to 'L Wong' instead of 'Limsoon Wong', but this can be considered a match as it refers to the same person.",
+            "confidence": 1.0,
+            "time": 2.293860912322998
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1068,
+            "ground_truth": 39530,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] both have the same title, 'Pixel-oriented Database Visualizations', share the same author (Daniel A. Keim is also represented as DA Keim), are published in the same venue, SIGMOD Record, and were published in the same year, 1996.",
+            "confidence": 1.0,
+            "time": 2.6184022426605225
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1087,
+            "ground_truth": 61342,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record and candidate record [5] both have titles that refer to a charter or scope, share the same author (Won Kim/W Kim), and are published in venues related to ACM Transactions on Database Systems. Although there is a slight difference in the year of publication (1994 vs 1995) and the exact title wording, these differences are minor compared to the strong similarities in other fields.",
+            "confidence": 1.0,
+            "time": 3.161398410797119
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1093,
+            "ground_truth": 18061,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] matches the given entity record in terms of title, authors (with abbreviated names), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.8292772769927979
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1101,
+            "ground_truth": 11882,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The second candidate record matches the given entity record in terms of title, authors (WW Cohen is a variation of William W. Cohen), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.7376554012298584
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1106,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, or year.",
+            "confidence": 1.0,
+            "time": 1.514939546585083
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1110,
+            "ground_truth": 13956,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The candidate record [4] matches the given entity record in terms of title, authors (YE Ioannidis), venue (SIGMOD Conference), and year (1994).",
+            "confidence": 1.0,
+            "time": 1.8732836246490479
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1118,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[6]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.3956549167633057
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1119,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record. The titles are different, and the authors do not match any of those listed in the given entity record.",
+            "confidence": 1.0,
+            "time": 1.6632530689239502
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1134,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, or year.",
+            "confidence": 1.0,
+            "time": 1.502889633178711
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1137,
+            "ground_truth": 25207,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record matches with candidate record [3] in terms of title, authors (J Fong), venue (SIGMOD Record), and year (1995).",
+            "confidence": 1.0,
+            "time": 1.8772804737091064
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1144,
+            "ground_truth": 11350,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate [4] both mention work related to disk utilization for news-on-demand systems, authored by RT Ng. The venue also matches with 'Proceedings of the International Conference on Very Large', which is similar to VLDB (Very Large Data Bases).",
+            "confidence": 1.0,
+            "time": 2.583858013153076
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1151,
+            "ground_truth": 584,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] share the same title, authors (with a different order), venue (VLDB J.), and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.9447362422943115
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1158,
+            "ground_truth": 32868,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record matches with candidate record [4] in terms of title, authors (Ron Sacks-Davis is abbreviated to R Sacks-Davis), venue (VLDB), and year (1996).",
+            "confidence": 1.0,
+            "time": 1.9870939254760742
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1160,
+            "ground_truth": 60038,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record and candidate record [5] both have the same title, 'DISNIC-PLAN: A NICNET Based Distributed Database for Micro-level Planning in India', the same author, M Moni, and the same year, 1996. The venue is slightly differently formatted but refers to the same conference (VLDB).",
+            "confidence": 1.0,
+            "time": 2.8231778144836426
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1162,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.4142680168151855
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1166,
+            "ground_truth": 33303,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (with slight variation in name formatting), venue, and year. The other candidates do not match any of these attributes with the given entity record.",
+            "confidence": 1.0,
+            "time": 2.1389012336730957
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1180,
+            "ground_truth": 8535,
+            "ground_answer": 10,
+            "answer": "[10]",
+            "explanation": "The given entity record and candidate record [10] share the same title, 'From Tree Patterns to Generalized Tree Patterns: On Efficient Evaluation of XQuery', and have a similar list of authors. The year also matches for both records.",
+            "confidence": 1.0,
+            "time": 2.29949951171875
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1216,
+            "ground_truth": 60763,
+            "ground_answer": 7,
+            "answer": "[7]",
+            "explanation": "The given entity record and candidate record [7] both have the same title, 'Efficient Search of Multi-Dimensional B-Trees', share the same authors (though in a different order), venue ('VLDB'), and year ('1995'). This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.6603622436523438
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1229,
+            "ground_truth": 16519,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The title and year match closely between the given entity record and candidate [1], with only minor differences in spelling (Wuerttemberg vs W\u00fcrtemberg). The authors also correspond, though they are abbreviated in candidate [1].",
+            "confidence": 1.0,
+            "time": 2.2837700843811035
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1238,
+            "ground_truth": 13245,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] share the same title, venue (VLDB), year (1995), and some of the authors (Laurent Amsaleg and Michael J. Franklin). Although not all authors are listed in candidate [2], the other details match closely enough to indicate they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.908984661102295
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1254,
+            "ground_truth": 51862,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (though abbreviated), venue (with a slight variation in naming convention), and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.916724443435669
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1255,
+            "ground_truth": 488,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] matches the given entity record in terms of title, authors (though with a different order), venue, and year. The slight variations in how the information is presented do not change the fact that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.396183967590332
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1258,
+            "ground_truth": 31013,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (though abbreviated), venue and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.6696252822875977
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1269,
+            "ground_truth": 33510,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] share the same title, authors (though with a different order), and venue. The year is not explicitly mentioned in candidate [3], but it can be inferred from the venue name that it matches the SIGMOD Conference of the given entity record.",
+            "confidence": 1.0,
+            "time": 2.6421685218811035
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1275,
+            "ground_truth": 54104,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (Nikos Mamoulis is abbreviated to N. Mamoulis), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.8682992458343506
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1283,
+            "ground_truth": 3113,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The given entity record and candidate record [1] do not refer to the same real-world entity. The titles, authors, venues, and years are all different.",
+            "confidence": 1.0,
+            "time": 1.6156518459320068
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1291,
+            "ground_truth": 14563,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] both have the same title, 'LegoDB: Customizing Relational Storage for XML Documents', share some of the same authors (though not all), are published in the same venue, VLDB, and were published in the same year, 2002. These similarities indicate that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 3.055863857269287
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1322,
+            "ground_truth": 32366,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record and candidate record [5] share the same title, authors (with a different order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.9054539203643799
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1328,
+            "ground_truth": 28191,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record and candidate record [5] share the same title, authors (though in a different order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.8997397422790527
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1381,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The candidate record does not match the given entity record because the titles are different, and although the author's name is similar (Xiaolei Qian vs X Qian), the years do not match (1995 vs 1996).",
+            "confidence": 1.0,
+            "time": 2.268770456314087
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1382,
+            "ground_truth": 704,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] both have the same title, authors (with slight variation in first name initial), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.0458357334136963
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1387,
+            "ground_truth": 39924,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] share the same title, authors (with a slight variation in name format), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.8683726787567139
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1390,
+            "ground_truth": 23464,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The candidate record [4] matches the given entity record in terms of title, authors (though the order is different), venue and year.",
+            "confidence": 1.0,
+            "time": 1.5618278980255127
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1419,
+            "ground_truth": 43546,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] both have the same title 'Developments at ACM TODS', author 'R Snodgrass' (which can be considered a match for 'Richard T. Snodgrass'), venue 'SIGMOD Record', and year '2003'.",
+            "confidence": 1.0,
+            "time": 2.5142598152160645
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1444,
+            "ground_truth": 3004,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] both have the same title, author (with a slight variation in name format), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.0204198360443115
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1446,
+            "ground_truth": 28310,
+            "ground_answer": 10,
+            "answer": "[10]",
+            "explanation": "The given entity record and candidate record [10] share the same title, authors (with slight variation in name formatting), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.085662841796875
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1455,
+            "ground_truth": 36530,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record matches with candidate record [8] because they share the same title, authors (YJ Choi and CW Chung), venue (SIGMOD Conference), and year (2002).",
+            "confidence": 1.0,
+            "time": 2.0297582149505615
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1459,
+            "ground_truth": 20430,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (with a slight difference in name format), venue, and year. The other candidates have different titles and/or years.",
+            "confidence": 1.0,
+            "time": 1.8397314548492432
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1480,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, or year.",
+            "confidence": 1.0,
+            "time": 1.4802749156951904
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1481,
+            "ground_truth": 12640,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] share the same title, author (with a slight difference in name format), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.8679509162902832
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1494,
+            "ground_truth": 31541,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record and candidate record [5] share the same title, venue, and year. Although there is a slight difference in the order of authors and some names are abbreviated in the candidate record, they likely refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.230989933013916
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1497,
+            "ground_truth": 57218,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] both have the same title, 'MARS: A System for Publishing XML from Mixed and Redundant Storage', and the authors' names match (Alin Deutsch and Val Tannen in the given record are represented as A Deutsch and V Tannen in the candidate). The venue is also consistent with VLDB (Very Large Data Conference) and the year of publication is 2003 for both records.",
+            "confidence": 1.0,
+            "time": 3.4255788326263428
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1530,
+            "ground_truth": 48068,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The title and authors in both records are essentially the same, with only minor differences in formatting (e.g., initials vs. full names). The venue is slightly different but refers to the same conference (SIGMOD Conference vs. ACM SIGMOD Record), and the year matches.",
+            "confidence": 1.0,
+            "time": 2.317103147506714
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1536,
+            "ground_truth": 60898,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record and candidate record [5] share the same title, authors (with different name formats), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.9541230201721191
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1540,
+            "ground_truth": 51033,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] both have the same title, authors (with a slight difference in name format), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 2.020397424697876
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1546,
+            "ground_truth": 54075,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given entity record and candidate record [6] share the same title, authors (with a slight difference in order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.017094850540161
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1547,
+            "ground_truth": 38921,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given entity record and candidate record [6] both have the same title, 'Tabular Placement of Relational Data on MEMS-based Storage Devices', share similar author names (Divyakant Agrawal, Amr El Abbadi, Hailing Yu in the given record and D Agrawal, H Yu in the candidate), are published at the same venue (VLDB), and have the same year (2003). These similarities indicate that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 3.64323353767395
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1571,
+            "ground_truth": 58652,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] both have the same title, authors (though in a different order), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.818208932876587
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1579,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record. The titles, authors, venues and years do not correspond between the given entity record and the provided candidate.",
+            "confidence": 1.0,
+            "time": 1.5555062294006348
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1608,
+            "ground_truth": 1981,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] both have the same title, authors (with a slight difference in format), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.0380842685699463
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1622,
+            "ground_truth": 34960,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] share the same title, authors (with slightly different name formats), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.8748633861541748
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1645,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[5]",
+            "explanation": "The given entity record has a venue 'VLDB' and year '2000'. Among the candidate records, only record [5] matches both criteria: it is published in 'The VLDB Journal The International Journal on Very Large...' (which can be considered as part of the VLDB series) and its publication year is 2000. Other candidates either have different venues or years.",
+            "confidence": 1.0,
+            "time": 3.1862118244171143
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1650,
+            "ground_truth": 18459,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record and candidate record [8] both have the same title, authors (with slight variation in name formatting), venue (both related to VLDB/Very Large Conference), and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.307410717010498
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1654,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "The candidate record does not match the given entity record. The titles, authors, and years are different.",
+            "confidence": 1.0,
+            "time": 1.394577980041504
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1661,
+            "ground_truth": 6121,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] both have the same title, 'Reducing Multidatabase Query Response Time by Tree Balancing', share authors (Weimin Du as W Du and Umeshwar Dayal as U Dayal), are from the same venue, SIGMOD Conference, and were published in the same year, 1995. These matching attributes indicate that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 3.1351170539855957
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1665,
+            "ground_truth": 6839,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] both have the same title, 'Fault-tolerant Architectures for Continuous Media Servers', and share the same venue (SIGMOD Conference) and year (1996). Although there is a slight difference in how authors are listed, they refer to the same set of authors. Therefore, these records represent the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.9922990798950195
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1668,
+            "ground_truth": 2196,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] share the same title, venue, and year. Although there is a slight difference in the authors' names (Jianwen Su vs J Su), it can be inferred that they refer to the same author.",
+            "confidence": 1.0,
+            "time": 2.288200616836548
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1677,
+            "ground_truth": 4732,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] share the same title, authors (though with a slight difference in order), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.8579607009887695
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1678,
+            "ground_truth": 44411,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The third candidate record matches the given entity record in terms of title, authors (though with different name formats), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.4733705520629883
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1700,
+            "ground_truth": 44608,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record matches with candidate record [4] because they share the same title, authors (with slight variation in naming format), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.7697365283966064
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1701,
+            "ground_truth": 38646,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The title, authors (with different name formats), venue and year match between the given entity record and candidate [1]. The other candidates have different titles and authors.",
+            "confidence": 1.0,
+            "time": 1.6368927955627441
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1730,
+            "ground_truth": 26875,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record matches with candidate record [2] because they share the same title, authors (though in a different order), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.631371259689331
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1736,
+            "ground_truth": 30660,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given entity record matches with candidate record [6] because they share the same title, authors (though in a different order), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.7615900039672852
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1755,
+            "ground_truth": 903,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, venue, and year. The authors are listed differently but represent the same individuals as mentioned in the given record.",
+            "confidence": 1.0,
+            "time": 1.7517354488372803
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1771,
+            "ground_truth": 6542,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] both have the same title, 'Tree Pattern Aggregation for Scalable XML Data Dissemination', share similar authors (though in a different order), and have the same venue ('VLDB') and year ('2002'). This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.7630038261413574
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1778,
+            "ground_truth": 35774,
+            "ground_answer": 10,
+            "answer": "[10]",
+            "explanation": "The given entity record and candidate record [10] share the same title, authors (with slight variation in name formatting), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.045201063156128
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1789,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.4773318767547607
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1795,
+            "ground_truth": 45043,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] both have the same title, 'Containment Join Size Estimation: Models and Methods', share the same authors (though in a different order), venue ('SIGMOD Conference'), and year (2003). This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.6358721256256104
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1797,
+            "ground_truth": 33993,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record matches with candidate record [5] in terms of title, authors (DA Keim is the abbreviated form of Daniel A. Keim), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.9508044719696045
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1803,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[2]",
+            "explanation": "The given entity record has a title that includes 'Foreword', is published in 'VLDB J.', and the year is 1994. Among the candidates, only record [7] matches closely with these attributes: it also has a title of 'Foreword', is published in 'The VLDB Journal The International Journal on Very Large...', and its publication year (1995) is closest to 1994 compared to other records.",
+            "confidence": 1.0,
+            "time": 3.4789180755615234
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1806,
+            "ground_truth": 840,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] both have the same title, 'IPSOFACTO: A Visual Correlation Tool for Aggregate Network Traffic Data', share the same authors (though in a different order), are published in the same venue, SIGMOD Conference, and in the same year, 2003. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.982987642288208
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1816,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[9]",
+            "explanation": "The given entity record has a title that includes 'Announcement' and is from the year 1995. Among the candidate records, only [9] matches both criteria: it has 'Announcement' as its title and was published in 1995.",
+            "confidence": 1.0,
+            "time": 2.4014182090759277
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1818,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.4448835849761963
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1831,
+            "ground_truth": 18038,
+            "ground_answer": 9,
+            "answer": "[9]",
+            "explanation": "The given entity record and candidate record [9] both have the same title, 'OrientStore: A Schema Based Native XML Storage System', share similar authors (with slight variations in order or initials), and match on venue ('VLDB') and year ('2003'). These similarities indicate they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.8008880615234375
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1842,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[3]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.4225506782531738
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1876,
+            "ground_truth": 8085,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] share the same title, authors (with abbreviated names), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.8878962993621826
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1888,
+            "ground_truth": 36871,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] share the same title, authors (with slight variation in name formatting), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.8988609313964844
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1899,
+            "ground_truth": 48782,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] both have the same title, venue, and year. The only difference is in the authors' names where 'Sergio Greco' in the given record is abbreviated to 'S Greco' in the candidate record, which can be considered a match.",
+            "confidence": 1.0,
+            "time": 2.5650768280029297
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1906,
+            "ground_truth": 31823,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] matches the given entity record in terms of title, authors (with abbreviated names), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.8859350681304932
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1907,
+            "ground_truth": 21138,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record matches with candidate record [3] because they share the same title, authors (with a slight difference in name formatting), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.7423014640808105
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1911,
+            "ground_truth": 2684,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, venue, and year. The only difference is that the author's name is abbreviated to 'K Tajima' instead of 'Keishi Tajima', but this does not change the fact that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.5087087154388428
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1915,
+            "ground_truth": 55905,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record matches with candidate record [8] in terms of title, authors (H. V. Jagadish and HV Jagadish), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.8893797397613525
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1923,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.4793269634246826
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1929,
+            "ground_truth": 3955,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The record [4] matches the given entity record in terms of title, authors (with initials), venue and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.7541425228118896
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1941,
+            "ground_truth": 18384,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The title and authors in candidate record [1] match closely with those in the given entity record, despite minor differences such as initials instead of full names for the authors. The venue and year are not provided in candidate [1], but based on the matching title and authors, it is reasonable to conclude that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.7590320110321045
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1949,
+            "ground_truth": 45029,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given entity record matches with candidate record [6] in terms of title, authors (with slight variation in the format), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.6890466213226318
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1953,
+            "ground_truth": 46979,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The third candidate record matches the given entity record in terms of title, authors (with slight variation in name format), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.6199183464050293
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1961,
+            "ground_truth": 22486,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] matches the given entity record in terms of title, authors (with slight variation in first names), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.964082956314087
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1972,
+            "ground_truth": 18407,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record matches with candidate record [8] in terms of title, authors, venue and year.",
+            "confidence": 1.0,
+            "time": 1.483567237854004
+        },
+        {
+            "dataset": "D9",
+            "query_id": 1976,
+            "ground_truth": 16511,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record matches with candidate record [3] because they share the same title, author (with a slight variation in name format), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.692154884338379
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2001,
+            "ground_truth": 17166,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title and authors, with slight variations (e.g., 'A Rosenthal' instead of 'Arnon Rosenthal'). The venue and year are not provided in the candidate but the available information strongly suggests they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.500124454498291
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2009,
+            "ground_truth": 33960,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record matches with candidate record [2] because they share the same title, authors (with a slight difference in order), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.6976120471954346
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2014,
+            "ground_truth": 15736,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (with abbreviated first names), venue, and year. The other candidates have different titles, authors, or years.",
+            "confidence": 1.0,
+            "time": 2.0478713512420654
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2040,
+            "ground_truth": 32393,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] both have the same title, authors (with slight variation in name formatting), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.9923796653747559
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2041,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, or year.",
+            "confidence": 1.0,
+            "time": 1.4903016090393066
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2047,
+            "ground_truth": 22305,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate [1] share similar titles ('Active Views for Electronic Commerce' vs 'Activeviewsforelectroniccommerce') and a significant number of authors (Laurent Mignet, Serge Abiteboul, Tova Milo, Adi Eyal, Bernd Amann, Sophie Cluet vs S Abiteboul, C Cluet, L Mignet, B Amann, T Milo, A). Additionally, both are associated with the VLDB venue and published in 1999.",
+            "confidence": 1.0,
+            "time": 3.821486234664917
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2052,
+            "ground_truth": 31297,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "Record [4] matches the given entity record in terms of title, authors (with slight name abbreviation), venue and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.8301784992218018
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2066,
+            "ground_truth": 47769,
+            "ground_answer": 0,
+            "answer": "[9]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.5093467235565186
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2069,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, or year.",
+            "confidence": 1.0,
+            "time": 1.4228928089141846
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2077,
+            "ground_truth": 10990,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] both have the same title 'QUIET: Continuous Query-driven Index Tuning', authors (though in a different order), venue 'VLDB', and year '2003'. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.4862563610076904
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2084,
+            "ground_truth": 6348,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] both have the same title, authors (though in a different order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.9061706066131592
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2095,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[7]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.4843573570251465
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2104,
+            "ground_truth": 30049,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given entity record matches with candidate record [6] in terms of title, authors (L Libkin is the abbreviated form of Leonid Libkin), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.9151921272277832
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2116,
+            "ground_truth": 179,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] share the same title, authors (with slight variation in naming format), and year. The venue is abbreviated to '2002' in the candidate but matches with the given record's venue of 'VLDB'.",
+            "confidence": 1.0,
+            "time": 2.423151731491089
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2119,
+            "ground_truth": 48039,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given entity record matches with candidate record [6] because they share the same title, authors (though in a different order), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.7008388042449951
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2120,
+            "ground_truth": 7815,
+            "ground_answer": 4,
+            "answer": "[7]",
+            "explanation": "Record [7] has a title that closely matches 'To Weave the Web', authors P Atezni, G Mecca, and P Merialdo which correspond to the given record's authors. The venue also aligns with the conference on Very Large Databases (VLDB) in 1997.",
+            "confidence": 1.0,
+            "time": 2.64365291595459
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2147,
+            "ground_truth": 11095,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, venue, and year. The authors are listed differently but refer to the same individuals (Dennis Shasha and Yunyue Zhu).",
+            "confidence": 1.0,
+            "time": 1.8864398002624512
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2187,
+            "ground_truth": 14841,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record and candidate record [8] share the same title, authors (with a slight difference in order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.0605251789093018
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2191,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, and year.",
+            "confidence": 1.0,
+            "time": 1.4311814308166504
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2192,
+            "ground_truth": 20650,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (with abbreviated names), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.8900113105773926
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2208,
+            "ground_truth": 2391,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record and candidate record [2] both have the same title, authors (with a slight difference in order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.02083420753479
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2211,
+            "ground_truth": 14388,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (with a slight difference in name format), venue, and year. The other candidates do not match these details.",
+            "confidence": 1.0,
+            "time": 1.8213129043579102
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2239,
+            "ground_truth": 7365,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record matches with candidate record [3] in terms of title, authors (with slight variation in name format), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.5971474647521973
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2251,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, or year.",
+            "confidence": 1.0,
+            "time": 1.4109199047088623
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2263,
+            "ground_truth": 20787,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record matches with candidate record [5] in terms of title, authors (with initials matching), venue and year.",
+            "confidence": 1.0,
+            "time": 1.5990190505981445
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2276,
+            "ground_truth": 21104,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, venue, and year. The only difference is that the author's name is abbreviated to 'J Richey' in the candidate record compared to 'Jeff Richey' in the given record, but they likely refer to the same person.",
+            "confidence": 1.0,
+            "time": 2.456406593322754
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2277,
+            "ground_truth": 53931,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record and candidate record [5] share the same title, authors (with a slight difference in name order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.9970028400421143
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2288,
+            "ground_truth": 20066,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record matches with candidate record [8] in terms of title, authors, venue, and year. The titles are identical, the authors' names match (with slight variations in formatting), they both were published at VLDB, and in the same year, 1997.",
+            "confidence": 1.0,
+            "time": 2.4898345470428467
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2304,
+            "ground_truth": 58708,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record and candidate record [8] both have titles that are identical: 'The hcC-tree: An Efficient Index Structure for Object Oriented Databases'. Additionally, the authors' names in the given entity record (B. Sreenath, S. Seshadri) match with one of the authors listed in candidate record [8] (B Sreenath). The venue and year also match between both records.",
+            "confidence": 1.0,
+            "time": 3.3088457584381104
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2309,
+            "ground_truth": 50149,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] both have the same title, authors (with slight variation in author names format), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.993760347366333
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2310,
+            "ground_truth": 51158,
+            "ground_answer": 7,
+            "answer": "[7]",
+            "explanation": "The given entity record matches with candidate record [7] in terms of title, authors (YE Ioannidis), venue (VLDB), and year (2003).",
+            "confidence": 1.0,
+            "time": 1.8650004863739014
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2312,
+            "ground_truth": 44429,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] have identical titles, authors (with a minor difference in the formatting of 'C. Mohan' vs 'C Mohan'), venue ('VLDB'), and year ('2002'). These similarities indicate that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.646972417831421
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2342,
+            "ground_truth": 18861,
+            "ground_answer": 9,
+            "answer": "[9]",
+            "explanation": "The given entity record and candidate record [9] share the same title, 'XML Repository and Active Views Demonstration', and year, '1999'. Although the list of authors differs between the two records, with the given record having a more extensive author list including S Abiteboul among others, while record [9] only lists S Abiteboul as an author, they both refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 3.3542912006378174
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2347,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[7]",
+            "explanation": "The given entity record has a venue of 'VLDB J.' and year '1995'. Among the candidate records, only [7] matches both criteria with its venue being 'The VLDB Journal The International Journal on Very Large' (which is an expanded form of 'VLDB J.') and the year 1995.",
+            "confidence": 1.0,
+            "time": 2.850267171859741
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2358,
+            "ground_truth": 2866,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] matches the given entity record in terms of title, authors (though the order is different), venue, and year. The other candidates either have a different title or do not match all attributes.",
+            "confidence": 1.0,
+            "time": 2.0796260833740234
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2362,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record. The given record has a title 'The Rubicon of Smart Data', authored by Roger King, published in VLDB in the year 2002. None of the candidates have this exact combination of attributes.",
+            "confidence": 1.0,
+            "time": 2.2923054695129395
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2394,
+            "ground_truth": 22129,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record matches with candidate record [3] in terms of title, authors (C. Gregory Doherty is represented as CG Doherty), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.9461331367492676
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2397,
+            "ground_truth": 57687,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record matches with candidate record [2] because they share the same title, authors (with slight variation in name format), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.654270887374878
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2414,
+            "ground_truth": 10457,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] both have the same title 'Who needs XML Databases?', similar author names (Sophie Cluet in the given record and S Cluet in the candidate), and the same year of publication, 2003. The venue is also consistent with VLDB despite slight differences in how it's written.",
+            "confidence": 1.0,
+            "time": 2.78035306930542
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2426,
+            "ground_truth": 40071,
+            "ground_answer": 7,
+            "answer": "[7]",
+            "explanation": "The given entity record and candidate record [7] both have the same title 'ASSET: A System for Supporting Extended Transactions', share similar author names (though not all are listed in the same order), and were published in the same venue, SIGMOD Conference, in the year 1994. These similarities indicate that they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.9548823833465576
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2446,
+            "ground_truth": 37633,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The third candidate record matches the given entity record in terms of title, authors (with slight variation in first names), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.6439168453216553
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2455,
+            "ground_truth": 55230,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record matches with candidate record [8] because they share the same title 'Guest editorial', author 'MP Atkinson' (with slight variation in name format), venue 'The VLDB Journal The International Journal on Very Large...', and year '2000'.",
+            "confidence": 1.0,
+            "time": 2.451449155807495
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2468,
+            "ground_truth": 31843,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record and candidate record [5] share the same title, authors (with initials matching), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.8380126953125
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2474,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, or year.",
+            "confidence": 1.0,
+            "time": 1.5167148113250732
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2475,
+            "ground_truth": 14399,
+            "ground_answer": 9,
+            "answer": "[9]",
+            "explanation": "The given entity record and candidate record [9] both have the same title, authors (with a slight difference in name order), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 2.062030553817749
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2494,
+            "ground_truth": 2581,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record and candidate record [4] both have the same title, authors (with slightly different formatting), venue, and year. This indicates they refer to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 1.8673131465911865
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2498,
+            "ground_truth": 16058,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record matches with candidate record [3] in terms of title, authors (Anindya Datta is represented as A Datta), venue, and year.",
+            "confidence": 1.0,
+            "time": 1.752856731414795
+        },
+        {
+            "dataset": "D9",
+            "query_id": 2503,
+            "ground_truth": -1,
+            "ground_answer": 0,
+            "answer": "[0]",
+            "explanation": "None of the candidate records match the given entity record in terms of title, authors, venue, or year.",
+            "confidence": 1.0,
+            "time": 1.3735532760620117
+        }
+    ]
+}

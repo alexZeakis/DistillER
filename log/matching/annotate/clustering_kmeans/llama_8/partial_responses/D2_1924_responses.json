@@ -1,0 +1,1056 @@
+{
+    "settings": {
+        "dataset": "D2",
+        "out_file": "../../../log/matching/annotate/clustering_kmeans/llama_8/partial/D2_1924.json",
+        "in_dir": "../../../data/ccer/cleaned/original/",
+        "sample_file": "../../../data/ccer/cleaned/fine_tuning/clustering_kmeans/train/D2.csv",
+        "seed": 1924,
+        "serialization": "DITTO",
+        "task_description": "EXPLAIN",
+        "skip": false,
+        "len_q99": 6492.58,
+        "len_q50": 3923.0
+    },
+    "responses": [
+        {
+            "dataset": "D2",
+            "query_id": 20,
+            "ground_truth": 89,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, a Sony Notebook case with AC adapter, as they have similar names and descriptions.",
+            "confidence": 1.0,
+            "time": 2.7176167964935303
+        },
+        {
+            "dataset": "D2",
+            "query_id": 34,
+            "ground_truth": 10,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate [1] refer to the same real-world entity as they both mention Panasonic KX-TS108W Corded Phone.",
+            "confidence": 1.0,
+            "time": 0.5761747360229492
+        },
+        {
+            "dataset": "D2",
+            "query_id": 45,
+            "ground_truth": 171,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, with a matching product code (VCTR640) and brand name (Sony).",
+            "confidence": 1.0,
+            "time": 1.6584229469299316
+        },
+        {
+            "dataset": "D2",
+            "query_id": 47,
+            "ground_truth": 27,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record refers to a Sanus Speaker Mount with a black finish, and candidate record [2] also refers to a Sanus Speaker Mount with a black finish.",
+            "confidence": 1.0,
+            "time": 0.5541701316833496
+        },
+        {
+            "dataset": "D2",
+            "query_id": 79,
+            "ground_truth": 47,
+            "ground_answer": 3,
+            "answer": "The output should be formatted as a JSON instance that conforms to the schema:\n\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```\n\nHere is the output:\n\n```\n{\"answer\": \"[3]\", \"explanation\": \"The record [3] refers to the same real-world entity as the given record, as it has the same name and description.\"}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 1.4101686477661133
+        },
+        {
+            "dataset": "D2",
+            "query_id": 86,
+            "ground_truth": 91,
+            "ground_answer": 0,
+            "answer": "[3]",
+            "explanation": "The given record and candidate record [3] refer to the same real-world entity as they both describe a Canon Cyan Photo Ink Cartridge with the CLI8PC model number.",
+            "confidence": 1.0,
+            "time": 0.5789446830749512
+        },
+        {
+            "dataset": "D2",
+            "query_id": 99,
+            "ground_truth": 292,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record refers to a Canon PG-50 High Capacity Black Ink Cartridge, which is the same as the one described in candidate record [3].",
+            "confidence": 1.0,
+            "time": 0.6229455471038818
+        },
+        {
+            "dataset": "D2",
+            "query_id": 103,
+            "ground_truth": 403,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, as they have similar names and descriptions.",
+            "confidence": 1.0,
+            "time": 0.52622389793396
+        },
+        {
+            "dataset": "D2",
+            "query_id": 140,
+            "ground_truth": 224,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record refers to a Fellowes W11C Shredder, which is also mentioned in candidate record [2].",
+            "confidence": 1.0,
+            "time": 0.5169384479522705
+        },
+        {
+            "dataset": "D2",
+            "query_id": 154,
+            "ground_truth": 399,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Peerless PLAV70-UNLP-S Articulating Dual-Arm with Vertical Adjustment - PLAV70 UNLPS, as they both belong to the Peerless brand.",
+            "confidence": 1.0,
+            "time": 1.639214038848877
+        },
+        {
+            "dataset": "D2",
+            "query_id": 198,
+            "ground_truth": 26,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given record and candidate record [6] refer to the same real-world entity, a Sony Compact Disc Player/Recorder - RCDW500C.",
+            "confidence": 1.0,
+            "time": 0.5827124118804932
+        },
+        {
+            "dataset": "D2",
+            "query_id": 217,
+            "ground_truth": 259,
+            "ground_answer": 4,
+            "answer": "After analyzing the given entity record and the candidate records, I found a match.\n\nThe given entity record is:\n```\n[COL] name [VAL] Sony 17-in-1 External USB Memory Card Reader And Writer - MRW62E/S1/181\n[COL] description [VAL] 17-in-1 - Memory Stick Duo Memory Stick MagicGate Duo Memory Stick PRO Memory Stick PRO MagicGate miniSD Card MultiMediaCard (MMC) RS-MMC CompactFlash (CF) Card Secure Digital (SD) Card Smart\n```\nAnd the candidate record that refers to the same real-world entity is:\n```\n[4]  [COL] name [VAL] Sony MRW62E/S1/181 17-In-1 External USB Memory Card Reader - MRW62ES1181\n[COL] description [VAL] Sony MRW62E/S1/181 17-In-1 External USB Memory Card Reader - MRW62ES1181/ Supports 17 Different Memory Card Formats/ Works With Macintosh And Windows Computers/ Easy Hi-Speed USB 2.0 Connection/ Black Finish\n```\nThe explanation for the match is that both records mention \"Sony\" and have a similar description, specifically mentioning various memory card formats.\n\nHere is the output in the required format:\n```\n{\n  \"answer\": \"[4]\",\n  \"explanation\": \"Both records mention 'Sony' and have a similar description, specifically mentioning various memory card formats.\"\n}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 2.7000844478607178
+        },
+        {
+            "dataset": "D2",
+            "query_id": 222,
+            "ground_truth": 55,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record matches exactly with one of the candidate records, which is [3].",
+            "confidence": 1.0,
+            "time": 1.3472421169281006
+        },
+        {
+            "dataset": "D2",
+            "query_id": 248,
+            "ground_truth": 1002,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "The given entity record matches the description of LG WM3431W All-In-One White Washer And Dryer Combo - WM3431WH from candidate record [1].",
+            "confidence": 1.0,
+            "time": 2.3372552394866943
+        },
+        {
+            "dataset": "D2",
+            "query_id": 251,
+            "ground_truth": 222,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record refers to a LG Front Load Washing Machine with 7 Washing Programs, which matches the description of record [2] that also mentions a LG WM0642HW 4.0 Cu Ft White Rear Control Washer with 7 Washing Programs.",
+            "confidence": 1.0,
+            "time": 0.8323769569396973
+        },
+        {
+            "dataset": "D2",
+            "query_id": 260,
+            "ground_truth": 193,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record refers to a PlayStation 3 ChargeLink USB Charging Cable by Nyko, which is the same real-world entity as the candidate record [2] that also mentions Nyko and a PlayStation 3 ChargeLink USB Charging Cable.",
+            "confidence": 1.0,
+            "time": 0.707430362701416
+        },
+        {
+            "dataset": "D2",
+            "query_id": 261,
+            "ground_truth": 192,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, a Nyko PS3 Dual AC Charger.",
+            "confidence": 1.0,
+            "time": 0.5316946506500244
+        },
+        {
+            "dataset": "D2",
+            "query_id": 285,
+            "ground_truth": 371,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given record refers to a Transcend 4GB Secure Digital High Capacity (SDHC) Card, and candidate record [4] also refers to the same product with the exact model number TS4GSDHC6.",
+            "confidence": 1.0,
+            "time": 0.7563490867614746
+        },
+        {
+            "dataset": "D2",
+            "query_id": 288,
+            "ground_truth": 789,
+            "ground_answer": 6,
+            "answer": "After analyzing the given entity record and candidate records, I have found a match.\n\nThe given entity record is:\n```\n[COL] name [VAL] polkaudio TCi Series TC60i In-Ceiling Loudspeaker - TC60iW\n[COL] description [VAL] 2-way Speaker 125W (RMS) - White\n[COL] price [VAL] 132.83\n```\n\nAnd the matching candidate record is:\n```\n[6]\n[COL] name [VAL] Polk Audio White Round Two-Way In-Wall Loudspeaker  - TC60I\n[COL] description [VAL] Polk Audio White Round Two-Way In-Wall Loudspeaker - TC60I/ Dynamic Balance Polymer Composite Driver/ Aimable 1' Silk Dome Tweeter With Neodymium Magnet/ 15-Degree Offset Drive Unit/ Wide Dispersion Design/ Durable Moisture Resistant Materials/ Infinite Baffle Tuning/ Paintable Powder-Coated Aluminum Grilles/ Conveniently Accessible Front Panel Controls/ Each Speaker Sold Seperately/ White Finish\n[COL] price [VAL] 299.95\n```\n\nThe explanation for the match is that both records refer to a Polk Audio product, specifically an in-ceiling loudspeaker with a white finish and similar specifications.\n\nHere is the output in the required format:\n```\n{\n  \"answer\": \"[6]\",\n  \"explanation\": \"Both records refer to a Polk Audio product, specifically an in-ceiling loudspeaker with a white finish and similar specifications.\"\n}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 2.974400043487549
+        },
+        {
+            "dataset": "D2",
+            "query_id": 298,
+            "ground_truth": 280,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record refers to a Panasonic KX-TGA101S DECT 6.0 Expansion Handset, which is also referred to in candidate record [2] as a Panasonic Expandable Digital Cordless DECT 6.0 Handset In Silver - KXTGA101S.",
+            "confidence": 1.0,
+            "time": 0.8741827011108398
+        },
+        {
+            "dataset": "D2",
+            "query_id": 322,
+            "ground_truth": 247,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record refers to a Weber Genesis E-310 Natural Gas Black Outdoor Grill, which is the same entity as candidate record [1].",
+            "confidence": 1.0,
+            "time": 0.6526212692260742
+        },
+        {
+            "dataset": "D2",
+            "query_id": 324,
+            "ground_truth": 244,
+            "ground_answer": 9,
+            "answer": "[9]",
+            "explanation": "Record [9] has the same product name and description as the given record.",
+            "confidence": 1.0,
+            "time": 0.8637685775756836
+        },
+        {
+            "dataset": "D2",
+            "query_id": 334,
+            "ground_truth": 376,
+            "ground_answer": 4,
+            "answer": "After analyzing the given entity record and candidate records, I found a match.\n\nThe given entity record is:\n```\n[COL] name [VAL] GN Jabra BT5010 Wireless Earset\n[COL] description [VAL] Jabra BT5010 Bluetooth Headset\n[COL] price [VAL] 26.37\n```\n\nAnd the matching candidate record is:\n```\n[4]  [COL] name [VAL] Jabra Black Bluetooth Headset - BT5010\n[COL] description [VAL] Jabra Black Bluetooth Headset - BT5010/ Up To 10 Hours Of Talk Time And 300 Hours Of Stand-By/ Wind-Noise Reduction Technology/ Vibrating And Visual Alerts/ Colored LED Indicator/ Up To 33-Foot Wireless Range/ Black Finish\n[COL] price [VAL] 79.0\n```\n\nThe matching criteria are:\n\n* Name: \"Jabra BT5010\" in the given entity record matches with \"Jabra Black Bluetooth Headset - BT5010\" in candidate record 4.\n* Description: The descriptions of both records mention Jabra and BT5010, indicating they refer to the same product.\n\nHere is the output in the required format:\n```\n{\n  \"answer\": \"[4]\",\n  \"explanation\": \"The given entity record refers to the Jabra BT5010 Bluetooth Headset, which matches with candidate record 4.\"\n}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 2.67435884475708
+        },
+        {
+            "dataset": "D2",
+            "query_id": 343,
+            "ground_truth": 268,
+            "ground_answer": 9,
+            "answer": "[9]",
+            "explanation": "The given entity record refers to a Panasonic Stainless Steel Luxury Full Size Countertop Microwave Oven, and the selected candidate record [9] also refers to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.6816623210906982
+        },
+        {
+            "dataset": "D2",
+            "query_id": 347,
+            "ground_truth": 230,
+            "ground_answer": 4,
+            "answer": "After analyzing the given entity record and the candidate records, I found a match.\n\nThe given entity record is:\n```\n[COL] name [VAL] Sony DVPNS57P DVD Player - DVPNS57PB\n[COL] description [VAL] DVD+RW DVD-RW DVD+R DVD-R CD-RW - DVD Video SVCD Video CD JPEG MP3 Playback - 1 Disc(s) - Progressive Scan - Black\n[COL] price [VAL] 39.0\n```\nAnd the matching candidate record is:\n```\n[4]  [COL] name [VAL] Sony Progressive Scan Black DVD Player - DVPNS57PB\n[COL] description [VAL] Sony Progressive Scan Black DVD Player - DVPNS57PB/ Precision Drive 3 System/ MP3 Playback/ On Screen Display/ Dolby Digital Decoding/ Black Finish\n```\nThe explanation for the match is that both records refer to a Sony DVD player with progressive scan capabilities and black finish, which matches the description in the given entity record.\n\nHere is the output in the required format:\n```\n{\n  \"answer\": \"[4]\",\n  \"explanation\": \"Both records refer to a Sony DVD player with progressive scan capabilities and black finish.\"\n}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 2.384244441986084
+        },
+        {
+            "dataset": "D2",
+            "query_id": 351,
+            "ground_truth": 111,
+            "ground_answer": 4,
+            "answer": "The output should be formatted as a JSON instance that conforms to the schema:\n\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```\n\nHere is the output:\n\n```\n{\"answer\": \"[4]\", \"explanation\": \"The record [4] refers to the same real-world entity as the given record, Nikon 18-200mm 3.5-5.6 G ED DX AFS VR Zoom Wide Angle Nikkor Lens.\"}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 1.537947654724121
+        },
+        {
+            "dataset": "D2",
+            "query_id": 367,
+            "ground_truth": 300,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record refers to an LG Side-by-Side Refrigerator with a capacity of 21.0 cu. ft., which matches the description in candidate record [2].",
+            "confidence": 1.0,
+            "time": 0.7295050621032715
+        },
+        {
+            "dataset": "D2",
+            "query_id": 405,
+            "ground_truth": 251,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, a Sony LCS-TWA/B Cyber-shot Camera Case.",
+            "confidence": 1.0,
+            "time": 0.5713543891906738
+        },
+        {
+            "dataset": "D2",
+            "query_id": 416,
+            "ground_truth": 302,
+            "ground_answer": 7,
+            "answer": "[2]",
+            "explanation": "The given entity record matches candidate record 2, which also mentions an LG Front Load Washer with a 4.0 cu. ft. capacity and a Sanitary cycle.",
+            "confidence": 1.0,
+            "time": 1.4683749675750732
+        },
+        {
+            "dataset": "D2",
+            "query_id": 433,
+            "ground_truth": 225,
+            "ground_answer": 3,
+            "answer": "After analyzing the given entity record and the candidate records, I have found a match.\n\nThe given entity record is:\n```\n[COL] name [VAL] Sony LCS-CSJ Soft Camera Case - LCSCSJ\n[COL] description [VAL] Top Loading - Polyamide - Black\n```\n\nAnd one of the candidate records matches this entity:\n```\n[3]  [COL] name [VAL] Sony LCS-CSJ Black Soft Carrying Case - LCSCSJ\n[COL] description [VAL] Sony LCS-CSJ Black Soft Carrying Case - LCSCSJ/ Compatible With S W T And N Series Digital Cameras/ Durable Nylon Construction/ Convenient Front Pocket/ Black Finish\n```\n\nThis candidate record has the same name and product code (LCSCSJ) as the given entity record, indicating that they refer to the same real-world entity.\n\nHere is the output in the required format:\n```\n{\n  \"answer\": \"[3]\",\n  \"explanation\": \"The candidate record [3] matches the given entity record because it has the same name and product code (LCSCSJ).\"\n}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 2.1051981449127197
+        },
+        {
+            "dataset": "D2",
+            "query_id": 438,
+            "ground_truth": 1026,
+            "ground_answer": 8,
+            "answer": "The output should be formatted as a JSON instance that conforms to the schema:\n\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```\n\nHere is the output:\n\n```\n{\"answer\": \"[8]\", \"explanation\": \"The record [8] refers to the same real-world entity as the given record, Transcend 8GB Compact Flash Card (133x) - TS8GCF133.\"}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 1.5465235710144043
+        },
+        {
+            "dataset": "D2",
+            "query_id": 447,
+            "ground_truth": 253,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate [1] refer to the same real-world entity, a Sony LCS-CSL Cyber-shot Camera Case.",
+            "confidence": 1.0,
+            "time": 0.5491960048675537
+        },
+        {
+            "dataset": "D2",
+            "query_id": 453,
+            "ground_truth": 381,
+            "ground_answer": 1,
+            "answer": "[3]",
+            "explanation": "The record at index [3] refers to the same real-world entity as the given record, SIRIUS SLV2 SIRIUS Stiletto 2 Portable Radio Vehicle Kit. This is because both records mention 'Stiletto 2' and have similar product names.",
+            "confidence": 1.0,
+            "time": 0.8362441062927246
+        },
+        {
+            "dataset": "D2",
+            "query_id": 458,
+            "ground_truth": 803,
+            "ground_answer": 7,
+            "answer": "[7]",
+            "explanation": "The given record and candidate record [7] refer to the same real-world entity, Canon PSC-1000 Semi-Hard Leather Case, as they have the same model number (2349B001) and description.",
+            "confidence": 1.0,
+            "time": 0.6930270195007324
+        },
+        {
+            "dataset": "D2",
+            "query_id": 475,
+            "ground_truth": 406,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record and candidate record [1] refer to the same real-world entity, LaCie 500GB USB 2.0 External Hard Drive - 301302U.",
+            "confidence": 1.0,
+            "time": 0.6724789142608643
+        },
+        {
+            "dataset": "D2",
+            "query_id": 494,
+            "ground_truth": 449,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate [1] refer to the same real-world entity, Canon Vixia High Definition Camcorder - HF100.",
+            "confidence": 1.0,
+            "time": 0.611276388168335
+        },
+        {
+            "dataset": "D2",
+            "query_id": 507,
+            "ground_truth": 828,
+            "ground_answer": 1,
+            "answer": "[7]",
+            "explanation": "The given entity record and candidate record [7] refer to the same real-world entity, Transcend 8GB SDHC Card And Compact Card Reader - TS8GSDHC6S5W.",
+            "confidence": 1.0,
+            "time": 0.7207047939300537
+        },
+        {
+            "dataset": "D2",
+            "query_id": 511,
+            "ground_truth": 604,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record refers to a Weber Cast Iron Griddle, and candidate record [5] also refers to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.5531680583953857
+        },
+        {
+            "dataset": "D2",
+            "query_id": 524,
+            "ground_truth": 519,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record refers to the same real-world entity as candidate record [1] because it has the same model name (Nikon Coolpix S550), megapixel count (10 Megapixel), and features such as 4x Digital Zoom, 2.5' Active Matrix TFT Color LCD, In-Camera Red-Eye Fix, Face-Priority AF, and D-Lighting.",
+            "confidence": 1.0,
+            "time": 1.0097730159759521
+        },
+        {
+            "dataset": "D2",
+            "query_id": 535,
+            "ground_truth": 513,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "Record [2] has the same model number (DVR610) and features as the given record.",
+            "confidence": 1.0,
+            "time": 0.875192403793335
+        },
+        {
+            "dataset": "D2",
+            "query_id": 539,
+            "ground_truth": 484,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record refers to a Canon PIXMA MX850 Multifunction Photo Printer, and the selected candidate record [3] also refers to the same printer model.",
+            "confidence": 1.0,
+            "time": 0.6589562892913818
+        },
+        {
+            "dataset": "D2",
+            "query_id": 545,
+            "ground_truth": 502,
+            "ground_answer": 9,
+            "answer": "After analyzing the given entity record and the candidate records, I have found a match.\n\nThe corresponding record number is: [9]\n\nHere's why:\n\n* The given entity record mentions a Panasonic Viera TH-42PZ85U 42' Plasma TV.\n* Record [9] has a name that matches this description: \"Panasonic VIERA 42' Plasma Flat Panel 1080p HDTV In Black - TH42PZ85U\".\n* Both the given entity record and record [9] mention similar features such as 1920 x 1080 Native Resolution, Surround Sound, Anti-Reflective Filter, VIERA Link HDAVI Control, Built-In NTSC/ATSC/QAM Tuners, PC Input, 3 HDMI Inputs, Built-In GalleryPlayer Capable, SD Card Memory Slot, and Pedestal Stand Included.\n\nTherefore, the answer is: [9]\n\nAnd here's a brief explanation of the answer:\n\nThe given entity record refers to a Panasonic Viera TH-42PZ85U 42' Plasma TV. Record [9] has a matching name and features, making it the corresponding record number.",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 2.3020339012145996
+        },
+        {
+            "dataset": "D2",
+            "query_id": 555,
+            "ground_truth": 324,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record and candidate record [2] refer to the same real-world entity, Bose Lifestyle 48 Home Theater System - 43479.",
+            "confidence": 1.0,
+            "time": 0.5460131168365479
+        },
+        {
+            "dataset": "D2",
+            "query_id": 564,
+            "ground_truth": 463,
+            "ground_answer": 7,
+            "answer": "[7]",
+            "explanation": "The given record refers to a Sony Handycam DCR-HC52 Digital Camcorder, and the selected candidate record [7] also refers to a Sony Handycam DCR-HC52 Digital Camcorder.",
+            "confidence": 1.0,
+            "time": 0.8037071228027344
+        },
+        {
+            "dataset": "D2",
+            "query_id": 567,
+            "ground_truth": 438,
+            "ground_answer": 2,
+            "answer": "After analyzing the given entity record and the candidate records, I found a match.\n\nThe given entity record is:\n```\n[COL] name [VAL] Sony Handycam HDR-SR10 High Definition Digital Camcorder - HDRSR10\n[COL] description [VAL] 16:9 - 2.7' Hybrid LCD\n[COL] price [VAL] 549.0\n```\n\nAnd the matching candidate record is:\n```\n[2]  [COL] name [VAL] Sony 40GB High Definition Hard Disk Drive Handycam Camcorder - HDRSR10\n[COL] description [VAL] Sony 40GB High Definition Hard Disk Drive Handycam Camcorder - HDRSR10/ 1920 x 1080 Recording/ Face Detection/ 2.3 Megapixel ClearVid CMOS Sensor/ Bionz Image Processor/ Exmor Imaging Sensor/ 15X Optical/180X Digital Zoom/ 2.7' Wide (16:9) Hybrid Touch Panel Clear Photo LCD Plus Display/ Dolby Digital 5.1ch Recording/ Dynamic Range Optimizer/ Super NightShot Infrared System/ x.v. Color Technology\n```\n\nThe explanation for the match is that both records refer to a Sony Handycam camcorder model HDR-SR10, which has a similar description and features.\n\nHere is the output in the required format:\n```\n{\n  \"answer\": \"[2]\",\n  \"explanation\": \"Both records refer to a Sony Handycam camcorder model HDR-SR10 with similar description and features.\"\n}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 3.0606229305267334
+        },
+        {
+            "dataset": "D2",
+            "query_id": 572,
+            "ground_truth": 595,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The candidate record [5] refers to the same real-world entity as the given entity record, with the same model name and color.",
+            "confidence": 1.0,
+            "time": 1.7399101257324219
+        },
+        {
+            "dataset": "D2",
+            "query_id": 575,
+            "ground_truth": 882,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given record and candidate [5] refer to the same real-world entity, Sony alpha DSLR-A350 Digital SLR Camera.",
+            "confidence": 1.0,
+            "time": 0.5546019077301025
+        },
+        {
+            "dataset": "D2",
+            "query_id": 576,
+            "ground_truth": 667,
+            "ground_answer": 7,
+            "answer": "[7]",
+            "explanation": "This record matches the given entity because it has the same camera model (Sony Alpha DSLR) and lens (18-70mm zoom lens).",
+            "confidence": 1.0,
+            "time": 1.6599829196929932
+        },
+        {
+            "dataset": "D2",
+            "query_id": 578,
+            "ground_truth": 539,
+            "ground_answer": 10,
+            "answer": "[10]",
+            "explanation": "The given entity record and candidate record [10] refer to the same real-world entity, a Toshiba 22' LCD HDTV with built-in DVD player in black.",
+            "confidence": 1.0,
+            "time": 0.6496853828430176
+        },
+        {
+            "dataset": "D2",
+            "query_id": 581,
+            "ground_truth": 546,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record refers to a Toshiba portable DVD player with a 10.2' screen, and candidate record [5] also describes a Toshiba portable DVD player with a 10.2' screen.",
+            "confidence": 1.0,
+            "time": 1.309701681137085
+        },
+        {
+            "dataset": "D2",
+            "query_id": 585,
+            "ground_truth": 555,
+            "ground_answer": 9,
+            "answer": "The output should be formatted as a JSON instance that conforms to the schema:\n\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```\n\nHere is the output:\n\n```\n{\"answer\": \"[9]\", \"explanation\": \"The given record and candidate record [9] refer to the same real-world entity, a Panasonic Black 1080p Up-Conversion DVD Recorder.\"}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 1.510298490524292
+        },
+        {
+            "dataset": "D2",
+            "query_id": 588,
+            "ground_truth": 522,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record refers to a Toshiba 19' LCD TV, and candidate record [3] also refers to the same Toshiba model (19AV500U), making it the correct match.",
+            "confidence": 1.0,
+            "time": 0.6987409591674805
+        },
+        {
+            "dataset": "D2",
+            "query_id": 614,
+            "ground_truth": 532,
+            "ground_answer": 7,
+            "answer": "After analyzing the given entity record and candidate records, I have found a match.\n\nThe given entity record is:\n```\n[COL] name [VAL] Panasonic KX-TG4321B 5.8 GHz Expandable Digital Cordless Phone\n[COL] description [VAL] 1 x Phone Line(s) - Black\n```\n\nAnd the matched candidate record is:\n```\n[7]\n[COL] name [VAL] Panasonic 5.8 GHz Black Expandable Digital Cordless Phone - KXTG4321B\n[COL] description [VAL] Panasonic 5.8 GHz Black Expandable Digital Cordless Phone - KXTG4321B/ Multi-Handset Capability/ Digital Answering Machine System/ Ringer ID/ Call Waiting Caller ID/ Voicemail/ Hold/ Mute/ Clock/ Alarm/ LED Lighting/ Speakerphone/ Intercom/ 11 Days Standby/ 5 Hours Talk Time/ Black Finish\n```\n\nHere is the output in the correct format:\n```\n{\n  \"answer\": \"[7]\",\n  \"explanation\": \"The given entity record matches with candidate record [7] as both have the same name and description.\"\n}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 2.267953634262085
+        },
+        {
+            "dataset": "D2",
+            "query_id": 622,
+            "ground_truth": 642,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given record and candidate record [6] refer to the same real-world entity as they both describe a Panasonic DECT 6.0 Expandable Digital Cordless Phone With All-Digital Answering System with similar features such as up to 6 multi-handset capability, digital answering machine system, ringer ID, call waiting caller ID, voicemail, hold, voice menu, marker message, mute, clock, alarm, LED lighting, night mode, call block, speakerphone, and a black metallic finish.",
+            "confidence": 1.0,
+            "time": 1.2129886150360107
+        },
+        {
+            "dataset": "D2",
+            "query_id": 627,
+            "ground_truth": 534,
+            "ground_answer": 0,
+            "answer": "[3]",
+            "explanation": "The record [3] refers to the same real-world entity as the given record, as it has similar features such as DECT 6.0 technology, expandable up to 6 handsets, digital answering machine system, and a black metallic finish.",
+            "confidence": 1.0,
+            "time": 0.8645360469818115
+        },
+        {
+            "dataset": "D2",
+            "query_id": 650,
+            "ground_truth": 490,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The candidate record [3] matches the entity record because it refers to the same Canon EOS Rebel XSi Digital SLR Camera.",
+            "confidence": 1.0,
+            "time": 1.5122950077056885
+        },
+        {
+            "dataset": "D2",
+            "query_id": 672,
+            "ground_truth": 471,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record refers to a Yamaha RX-V863 Home Theater Receiver, and candidate record [3] also refers to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.6794350147247314
+        },
+        {
+            "dataset": "D2",
+            "query_id": 675,
+            "ground_truth": 723,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given record and candidate record [6] refer to the same real-world entity, Sharp LC26DV24U 26' TV/DVD Combo.",
+            "confidence": 1.0,
+            "time": 0.5871834754943848
+        },
+        {
+            "dataset": "D2",
+            "query_id": 681,
+            "ground_truth": 801,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record refers to a Samsung LN19A650 19' LCD TV, which is the same as the record at index [4] in the candidate records.",
+            "confidence": 1.0,
+            "time": 0.6203877925872803
+        },
+        {
+            "dataset": "D2",
+            "query_id": 685,
+            "ground_truth": 608,
+            "ground_answer": 7,
+            "answer": "[7]",
+            "explanation": "The given entity record and record [7] refer to the same real-world entity, a Samsung 42' Plasma HDTV with model PN42A450P.",
+            "confidence": 1.0,
+            "time": 1.5330994129180908
+        },
+        {
+            "dataset": "D2",
+            "query_id": 686,
+            "ground_truth": 713,
+            "ground_answer": 6,
+            "answer": "After analyzing the given entity record and the candidate records, I have found a match.\n\nThe given entity record is:\n```\n[COL] name [VAL] Samsung HT-TZ515 Home Theater System - HTZ515/XAA\n[COL] description [VAL] SAMSUNG 5 DVD HM THEATER WI-FI XM READY NIC\n```\n\nAnd the matching candidate record is:\n```\n[6]  [COL] name [VAL] Samsung 5 Disc Home Theater Surround Sound System - HTTZ515\n[COL] description [VAL] Samsung 5 Disc Home Theater Surround Sound System - HTTZ515/ 5.1 Channel/ 5 Disc Capability/ USB Host Play/ iPod Dock/ DivX Playback/ Dolby Digital Dolby Pro Logic And DTS System/ Black Finish\n```\n\nThe output is:\n```\n{\n  \"answer\": \"[6]\",\n  \"explanation\": \"This record refers to the same real-world entity as the given record, with a similar name and description.\"\n}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 1.945314884185791
+        },
+        {
+            "dataset": "D2",
+            "query_id": 689,
+            "ground_truth": 812,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given record refers to Bass Lover Earbuds Slver - MDRED12LP/SLV, which is the same real-world entity as Sony Bud Style Headphones In Silver - MDRED12LPSLV in candidate record [5].",
+            "confidence": 1.0,
+            "time": 0.7413408756256104
+        },
+        {
+            "dataset": "D2",
+            "query_id": 698,
+            "ground_truth": 462,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] has an almost identical name and features to the given entity record, making it a match.",
+            "confidence": 1.0,
+            "time": 1.8592970371246338
+        },
+        {
+            "dataset": "D2",
+            "query_id": 717,
+            "ground_truth": 577,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record refers to the Onkyo TXSR506 A/V Receiver, which is also mentioned in candidate record [1].",
+            "confidence": 1.0,
+            "time": 0.6027393341064453
+        },
+        {
+            "dataset": "D2",
+            "query_id": 739,
+            "ground_truth": 564,
+            "ground_answer": 0,
+            "answer": "[4]",
+            "explanation": "The given record and candidate record [4] refer to the same real-world entity, Sony Black 1080p Upscaling DVD Player - DVPNS700HB.",
+            "confidence": 1.0,
+            "time": 0.5842666625976562
+        },
+        {
+            "dataset": "D2",
+            "query_id": 747,
+            "ground_truth": 624,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given record and candidate record [6] refer to the same real-world entity, a Sony BRAVIA Home Theater System.",
+            "confidence": 1.0,
+            "time": 0.592195987701416
+        },
+        {
+            "dataset": "D2",
+            "query_id": 750,
+            "ground_truth": 561,
+            "ground_answer": 6,
+            "answer": "After analyzing the given entity record and the candidate records, I found a match.\n\nThe given entity record is:\n```\n[COL] name [VAL] Sony DVP-NS700H/S DVD Player - DVPNS700HS\n[COL] description [VAL] DVD+RW DVD-RW DVD+R DVD-R CD-RW - DVD Video CD-DA MP3 JPEG SVCD Video CD Playback - 1 Disc(s) - Progressive Scan - Silver\n[COL] price [VAL] 111.68\n```\nAnd the matching candidate record is:\n```\n[6]  [COL] name [VAL] Sony Silver 1080p Upscaling DVD Player - DVPNS700HS\n[COL] description [VAL] Sony Silver 1080p Upscaling DVD Player - DVPNS700HS/ 1080p Upscaling Video Output Through HDMI Connection/ BRAVIA Sync/ High Resolution JPEG Output/ Precision Cinema Progressive Technology/ Precision Drive/ Child Lock/ Multi Disc Resume/ Multi Brand TV Remote Control/ Silver Finish\n```\nThe explanation for the match is that both records refer to a Sony DVD player with the model number DVP-NS700H/S (or DVPNS700HS) and have similar features such as progressive scan, DVD playback, and a silver finish.\n\nHere is the output in the required format:\n```\n{\n  \"answer\": \"[6]\",\n  \"explanation\": \"Both records refer to a Sony DVD player with the model number DVP-NS700H/S (or DVPNS700HS) and have similar features such as progressive scan, DVD playback, and a silver finish.\"\n}\n```",
+            "explanation": null,
+            "confidence": 1.0,
+            "time": 3.115755796432495
+        },
+        {
+            "dataset": "D2",
+            "query_id": 763,
+            "ground_truth": 730,
+            "ground_answer": 5,
+            "answer": "[1]",
+            "explanation": "The given entity record [COL] name [VAL] LG Dishwasher matches with candidate record [1] which has the same brand and model information.",
+            "confidence": 1.0,
+            "time": 0.5801150798797607
+        },
+        {
+            "dataset": "D2",
+            "query_id": 765,
+            "ground_truth": 728,
+            "ground_answer": 1,
+            "answer": "[3]",
+            "explanation": "The given entity record refers to an LG Semi-Integrated Electronic Panel with Digital Status Display Dishwasher, which is the same as the one described in candidate record [3].",
+            "confidence": 1.0,
+            "time": 0.62544846534729
+        },
+        {
+            "dataset": "D2",
+            "query_id": 776,
+            "ground_truth": 480,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The name and description of the camera in both records are similar, and the price is also the same.",
+            "confidence": 1.0,
+            "time": 1.8785934448242188
+        },
+        {
+            "dataset": "D2",
+            "query_id": 777,
+            "ground_truth": 479,
+            "ground_answer": 1,
+            "answer": "[7]",
+            "explanation": "The given record and candidate record [7] refer to the same real-world entity, Sony Gold Cyber-Shot Digital Camera - DSCW150N.",
+            "confidence": 1.0,
+            "time": 0.6896252632141113
+        },
+        {
+            "dataset": "D2",
+            "query_id": 778,
+            "ground_truth": 482,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The camera model and specifications match exactly.",
+            "confidence": 1.0,
+            "time": 1.4415864944458008
+        },
+        {
+            "dataset": "D2",
+            "query_id": 797,
+            "ground_truth": 42,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record refers to a Maytag Over-The-Range Microwave Oven, which is also described in candidate record [1].",
+            "confidence": 1.0,
+            "time": 0.5790202617645264
+        },
+        {
+            "dataset": "D2",
+            "query_id": 800,
+            "ground_truth": 842,
+            "ground_answer": 7,
+            "answer": "[7]",
+            "explanation": "The given entity record refers to a Speck SeeThru Clear Hard Shell Case for Apple 15' MacBook Pro, which is the same as the candidate record [7] Speck SeeThru Clear Hard Shell Case For 15' MacBook - MB15CLRSEEV2.",
+            "confidence": 1.0,
+            "time": 0.8272364139556885
+        },
+        {
+            "dataset": "D2",
+            "query_id": 809,
+            "ground_truth": 836,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record and candidate record [3] refer to the same real-world entity, as they have the same product name (Speck SeeThru Aqua Hard Shell Case For 13' MacBook), model number (MB13AQUSEEV2), and description (Translucent Hard Plastic Shell Gives Great Protection/ Full Access To All Controls/ Rubber Feet For Added Support/ Aqua Finish).",
+            "confidence": 1.0,
+            "time": 0.9993789196014404
+        },
+        {
+            "dataset": "D2",
+            "query_id": 817,
+            "ground_truth": 752,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given record and candidate record [8] refer to the same real-world entity, Sony RDR-VX560 DVD/VCR Combo.",
+            "confidence": 1.0,
+            "time": 0.5878574848175049
+        },
+        {
+            "dataset": "D2",
+            "query_id": 819,
+            "ground_truth": 673,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record refers to a Sony BRAVIA M Series KDL-26M4000 26' LCD TV, and the selected record is also a Sony BRAVIA M-Series Black LCD Flat Panel HDTV with the same model number (KDL26M4000).",
+            "confidence": 1.0,
+            "time": 0.8824286460876465
+        },
+        {
+            "dataset": "D2",
+            "query_id": 822,
+            "ground_truth": 684,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given record refers to the Onkyo TXSR606 A/V Receiver, and candidate record [3] also refers to an Onkyo product with a similar model number (TXSR606B), indicating that they are likely referring to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.8187086582183838
+        },
+        {
+            "dataset": "D2",
+            "query_id": 827,
+            "ground_truth": 652,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The record [5] refers to the same real-world entity as the given record, as both have the model number WD65736 and are Mitsubishi 736 Series 65' 1080p DLP Rear Projection Black HDTVs.",
+            "confidence": 1.0,
+            "time": 0.7302761077880859
+        },
+        {
+            "dataset": "D2",
+            "query_id": 830,
+            "ground_truth": 17,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given record refers to a Frigidaire FDB130RGS 24' Built-In Dishwasher (White) with a price of $246.54, which is the same as the record in candidate [2] that also refers to a Frigidaire 24' White Built-In Dishwasher - FDB130WH.",
+            "confidence": 1.0,
+            "time": 0.9592025279998779
+        },
+        {
+            "dataset": "D2",
+            "query_id": 841,
+            "ground_truth": 947,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate record [1] refer to the same real-world entity, Nintendo DS Lite (Metallic Silver), as they have the same name and price.",
+            "confidence": 1.0,
+            "time": 0.6307666301727295
+        },
+        {
+            "dataset": "D2",
+            "query_id": 857,
+            "ground_truth": 550,
+            "ground_answer": 6,
+            "answer": "[2]",
+            "explanation": "The record at index [2] refers to the same real-world entity as the given record, Whirlpool WTW6700TW 28' Cabrio Series Top Loader Washer (Metallic/White), because it has a similar model number and description.",
+            "confidence": 1.0,
+            "time": 0.7646811008453369
+        },
+        {
+            "dataset": "D2",
+            "query_id": 872,
+            "ground_truth": 731,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given record and candidate record [4] refer to the same real-world entity, Sony HT7200DH Home Theater System.",
+            "confidence": 1.0,
+            "time": 0.5281150341033936
+        },
+        {
+            "dataset": "D2",
+            "query_id": 880,
+            "ground_truth": 721,
+            "ground_answer": 4,
+            "answer": "[4]",
+            "explanation": "The given entity record refers to an LG 47' LCD TV, and candidate record [4] also refers to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.5998148918151855
+        },
+        {
+            "dataset": "D2",
+            "query_id": 881,
+            "ground_truth": 749,
+            "ground_answer": 8,
+            "answer": "[8]",
+            "explanation": "The given entity record refers to an LG 32' TV/DVD Combo, and candidate record [8] also refers to an LG 32' Black LCD Flat Panel HDTV With Built In DVD Player - 32LG40, which is the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.8402318954467773
+        },
+        {
+            "dataset": "D2",
+            "query_id": 882,
+            "ground_truth": 1072,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has a similar name and is from the same brand (Mitsubishi).",
+            "confidence": 1.0,
+            "time": 0.5633375644683838
+        },
+        {
+            "dataset": "D2",
+            "query_id": 884,
+            "ground_truth": 742,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record refers to an LG 52' LCD TV, and candidate record [2] also refers to the same real-world entity.",
+            "confidence": 1.0,
+            "time": 0.5731585025787354
+        },
+        {
+            "dataset": "D2",
+            "query_id": 888,
+            "ground_truth": 810,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given record and candidate record [6] refer to the same real-world entity, Denon AVR-1609 A/V Receiver.",
+            "confidence": 1.0,
+            "time": 0.5808899402618408
+        },
+        {
+            "dataset": "D2",
+            "query_id": 905,
+            "ground_truth": 827,
+            "ground_answer": 2,
+            "answer": "[2]",
+            "explanation": "The given entity record refers to a Samsung 63' Widescreen 1080p Plasma HDTV, which is the same as the candidate record [2] that also describes a Samsung 63' Black Flat Panel Series 6 Plasma HDTV with the same specifications.",
+            "confidence": 1.0,
+            "time": 0.797809362411499
+        },
+        {
+            "dataset": "D2",
+            "query_id": 925,
+            "ground_truth": 924,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given entity record refers to a Toshiba 32AV502 - 31.5' Widescreen 720p LCD HDTV w/ Cinespeed - Piano Black - 32av502u, which is the same as the candidate record [1] Toshiba 32' Black LCD Flat Panel HDTV - 32AV502U.",
+            "confidence": 1.0,
+            "time": 0.9234912395477295
+        },
+        {
+            "dataset": "D2",
+            "query_id": 936,
+            "ground_truth": 832,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The given entity record [COL] name [VAL] iHome IP47BR Bluetooth Clock Radio & Speakerphone for iPhone & iPod - iP47BR matches the candidate record [6] [COL] name [VAL] iHome iPod & iPhone Bluetooth Alarm Clock Radio System - IP47, which has similar features such as auto-set clock, speakerphone with built-in microphone, and dual alarm.",
+            "confidence": 1.0,
+            "time": 1.0456786155700684
+        },
+        {
+            "dataset": "D2",
+            "query_id": 937,
+            "ground_truth": 70,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, as it has the same name and description.",
+            "confidence": 1.0,
+            "time": 0.47358083724975586
+        },
+        {
+            "dataset": "D2",
+            "query_id": 945,
+            "ground_truth": 898,
+            "ground_answer": 9,
+            "answer": "[9]",
+            "explanation": "The given entity record refers to a Canon PowerShot SX110 IS Digital Camera, which is also referred to in candidate record [9] as Canon PowerShot SX110 IS Silver Digital Camera.",
+            "confidence": 1.0,
+            "time": 0.7041962146759033
+        },
+        {
+            "dataset": "D2",
+            "query_id": 951,
+            "ground_truth": 901,
+            "ground_answer": 6,
+            "answer": "[6]",
+            "explanation": "The candidate record [6] refers to the same real-world entity as the given entity record, which mentions a Nikon D90 Digital SLR Camera with AF-S DX Nikkor 18-105mm f/3.5-5.6G ED VR Lens.",
+            "confidence": 1.0,
+            "time": 1.8743526935577393
+        },
+        {
+            "dataset": "D2",
+            "query_id": 972,
+            "ground_truth": 926,
+            "ground_answer": 9,
+            "answer": "[9]",
+            "explanation": "The given record and candidate record [9] refer to the same real-world entity, a Sony VAIO CS Series Red Notebook Computer with Intel Core 2 Duo T5800 processor.",
+            "confidence": 1.0,
+            "time": 0.7505295276641846
+        },
+        {
+            "dataset": "D2",
+            "query_id": 977,
+            "ground_truth": 982,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given record refers to a Canon PowerShot SD880 IS Digital Camera, and candidate record [5] also refers to the same camera model with similar specifications.",
+            "confidence": 1.0,
+            "time": 0.664686918258667
+        },
+        {
+            "dataset": "D2",
+            "query_id": 1014,
+            "ground_truth": 930,
+            "ground_answer": 6,
+            "answer": "[0]",
+            "explanation": "The given record refers to a Sony VAIO CS Series notebook computer with a 2.26 GHz Intel Core 2 Duo P8400 processor, 4 GB RAM, and a Blu-ray drive. Record [6] is the best match among the candidates because it has the same specifications as the given record.",
+            "confidence": 1.0,
+            "time": 0.9930403232574463
+        },
+        {
+            "dataset": "D2",
+            "query_id": 1021,
+            "ground_truth": 1033,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record and candidate record [5] refer to the same real-world entity, a Sony Blu-ray Disc Home-Theater System.",
+            "confidence": 1.0,
+            "time": 0.5577237606048584
+        },
+        {
+            "dataset": "D2",
+            "query_id": 1025,
+            "ground_truth": 991,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The given record and candidate [1] refer to the same real-world entity, Sharp AQUOS BD-HP50U Blu-ray Disc Player.",
+            "confidence": 1.0,
+            "time": 0.568932056427002
+        },
+        {
+            "dataset": "D2",
+            "query_id": 1029,
+            "ground_truth": 964,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given entity record refers to the Escort Passport 9500ix Radar/Laser Detector, which is also mentioned in candidate record [5] as Escort Passport 9500IX Radar Detector - 9500IX.",
+            "confidence": 1.0,
+            "time": 0.6660571098327637
+        },
+        {
+            "dataset": "D2",
+            "query_id": 1039,
+            "ground_truth": 1025,
+            "ground_answer": 5,
+            "answer": "[5]",
+            "explanation": "The given record refers to a Transcend 8GB microSDHC Card - Class 6, and candidate [5] also refers to an 8GB Micro Secure Digital Memory Card from Transcend with the same capacity and class.",
+            "confidence": 1.0,
+            "time": 0.7911725044250488
+        },
+        {
+            "dataset": "D2",
+            "query_id": 1050,
+            "ground_truth": 895,
+            "ground_answer": 0,
+            "answer": "[1]",
+            "explanation": "This record has a similar size and features to the given entity record, although it is a plasma TV instead of an LCD TV.",
+            "confidence": 1.0,
+            "time": 3.9557504653930664
+        },
+        {
+            "dataset": "D2",
+            "query_id": 1062,
+            "ground_truth": 878,
+            "ground_answer": 7,
+            "answer": "[7]",
+            "explanation": "The corresponding record number surrounded by \"[]\" or \"[0]\" if there is none. Record [7] has the same model number (KDL52XBR6) and series name (Sony BRAVIA XBR Series) as the given entity record.",
+            "confidence": 1.0,
+            "time": 1.3971362113952637
+        },
+        {
+            "dataset": "D2",
+            "query_id": 1074,
+            "ground_truth": 1063,
+            "ground_answer": 3,
+            "answer": "[3]",
+            "explanation": "The given entity record refers to Apple iWork 09 Software Family Pack For Mac - MB943Z/A, which is the same real-world entity as candidate record [3]",
+            "confidence": 1.0,
+            "time": 0.5763084888458252
+        }
+    ]
+}
