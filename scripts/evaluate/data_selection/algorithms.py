@@ -1,6 +1,10 @@
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
 import pandas as pd
 import os
 from eval_utils import prepare_pt_file, prepare_df
+
 
 def prepare_distr(path, label):
     scores = {}
@@ -19,7 +23,7 @@ def prepare_distr(path, label):
 
 ################### COMPARING LLMS ON TRAIN DATA AND METHOD OF SAMPLING #########################
 
-path = '../../log/matching/annotate/'
+path = '../../../log/matching/annotate/'
 df = pd.DataFrame()
 df['Random-Llama3.1:8b'] = prepare_pt_file(path+'random/llama_8/partial_responses/')
 df['Random-Qwen2.5:14b'] = prepare_pt_file(path+'random/qwen_14/partial_responses/')
@@ -45,7 +49,7 @@ latex_code = df.to_latex(index=True, escape=False, multirow=False)
 
 ################### DISTRIBUTION OF CLASSES PER METHOD OF SAMPLING #########################
 
-path = '../../data/ccer/cleaned/'
+path = '../../../data/ccer/cleaned/'
 
 scores = pd.DataFrame()
 scores['Positive-Random'] = prepare_distr(path+'fine_tuning/random/train/', 'positive')

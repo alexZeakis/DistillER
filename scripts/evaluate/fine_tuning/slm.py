@@ -1,11 +1,14 @@
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
 import pandas as pd
 from eval_utils import prepare_plm_file, prepare_umc_file, prepare_df
 
 ################### COMPARING PLMS - GENERALIZED ON TEST DATA #################
 
-path = '../../log/matching/slm/'
+path = '../../../log/matching/slm/'
 df = pd.DataFrame()
-df['UMC'] = prepare_umc_file('../../log/matching/baselines/umc/')
+df['UMC'] = prepare_umc_file('../../../log/matching/baselines/umc/')
 
 df['SMiniLM-GT'] = prepare_plm_file(path+'sminilm/ground/')
 df['SMiniLM-Qwen2.5:32b'] = prepare_plm_file(path+'sminilm/qwen_32/')

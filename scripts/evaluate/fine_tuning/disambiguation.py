@@ -1,10 +1,13 @@
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
 import pandas as pd
 from eval_utils import prepare_plm_file_cardinality, prepare_plm_file, prepare_ft_file, prepare_umc_file, prepare_df
 
 
 # ################### COMPARING PLMS - GENERALIZED ON TEST DATA #################
 
-path = '../../log/matching/slm/'
+path = '../../../log/matching/slm/'
 df = pd.DataFrame()
 
 df['SMiniLM-GT'] = prepare_plm_file_cardinality(path+'sminilm/ground/')
@@ -20,8 +23,8 @@ df = df.T
 latex_code = df.to_latex(index=True, escape=False, multirow=False)
 
 
-path = '../../log/matching/slm/'
-path2 = '../../log/matching/disambiguation/'
+path = '../../../log/matching/slm/'
+path2 = '../../../log/matching/disambiguation/'
 df = pd.DataFrame()
 
 df['SMiniLM-GT'] = prepare_plm_file(path+'sminilm/ground/')

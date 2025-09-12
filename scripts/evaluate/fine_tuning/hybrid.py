@@ -1,4 +1,7 @@
 import pandas as pd
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
 from eval_utils import prepare_plm_file, prepare_ft_file, prepare_umc_file, prepare_df
 from time import time
 import os
@@ -6,9 +9,9 @@ import os
 ################### COMPARING PLMS - GENERALIZED ON TEST DATA #################
 
 t1 = time()
-path = '../../log/matching/hybrid/'
+path = '../../../log/matching/hybrid/'
 df = pd.DataFrame()
-df['UMC'] = prepare_umc_file('../../log/matching/baselines/umc/')
+df['UMC'] = prepare_umc_file('../../../log/matching/baselines/umc/')
 
 slm_annotators={
                 # 'GT': 'ground',
@@ -32,7 +35,7 @@ for slm_mod_k, slm_mod_val in slm_models.items():
             # t_name = '{}/{}'.format(slm_an_k, llm_mod_k)
             df[t_name] = prepare_plm_file(t_path)
 
-path = '../../log/matching/disambiguation/'
+path = '../../../log/matching/disambiguation/'
 df['SMiniLM-LLM'] = prepare_plm_file(path+'select/sminilm/qwen_32/', 'final/')
 df['RoBERTa-LLM'] = prepare_plm_file(path+'select/roberta/qwen_32/', 'final/')
 

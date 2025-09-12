@@ -74,6 +74,20 @@ def calc_f1(true, preds):
 
 
 
+def get_time_from_ft_json(path):
+    j = json.load(open(path))
+    dataset = j['settings']['dataset']
+    
+    total_time = 0
+    for res in j['responses']:
+        # print(res)
+        total_time += res['time']
+    
+    # print(path, len(j['responses']))
+    return dataset, total_time
+
+
+
 def get_scores_from_ft_json(path, measure=calc_f1):
     j = json.load(open(path))
     dataset = j['settings']['dataset']
@@ -167,6 +181,21 @@ def prepare_umc_file(path, measure='F1'):
         df = pd.read_csv(path+file)
         temp_scores[file.split('.')[0]] = df.iloc[-1][measure]
     # total_df_test['UMC'] = pd.Series(temp_scores)
+    return pd.Series(temp_scores)
+
+def prepare_ft_file_time(path):
+    temp_scores = {}
+    for file in os.listdir(path):
+        if 'responses' not in file:
+            continue
+        dataset, score = get_time_from_ft_json(path+file)
+        temp_scores[dataset] = score
+        
+    path2 = path.replace('test_responses/', '')+'train_log.json'
+    with open(path2) as f:
+        j = json.load(f)
+        temp_scores['train'] = j['Training time (seconds)']
+        
     return pd.Series(temp_scores)
 
 # def prepare_plm_file(path):
@@ -370,4 +399,12 @@ def prepare_df(df):
     df = df.loc[order]
     df.loc['Mean', :] = df.mean()
     df = df.round(2)
+    return df
+
+def prepare_df_time(df):
+    order = ['train'] + [f'D{no}' for no in range(2,10)]
+    df = df.loc[order]
+    df.loc['Sum', :] = df.sum()
+    # df = df.round(2)
+    df = df.astype(int)
     return df

@@ -1,3 +1,6 @@
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
 import pandas as pd
 from eval_utils import prepare_ft_file, prepare_df
 import json
@@ -28,8 +31,8 @@ def read_sudowoodo_sota(path):
 
 ################### COMPARING PLMS - GENERALIZED ON TEST DATA #################
 
-# path2 = '../../log/matching/disambiguation/'
-path = '../../log/matching/llm/'
+# path2 = '../../../log/matching/disambiguation/'
+path = '../../../log/matching/llm/'
 df = pd.DataFrame()
 
 # df['RoBERTa-GT-UMC'] = prepare_plm_file(path2+'umc/roberta/ground/', 'final/')
@@ -40,11 +43,11 @@ df['DistillER-SLM Labels'] = prepare_ft_file(path+'roberta/qwen_32/test_response
 # df['Avenger-Sup.'] = pd.Series(avenger_sup)
 df['AvengER'] = prepare_ft_file(path+'ground/test_responses/')
 
-df['ZeroER'] = read_sota('../../log/matching/sota/zeroer/scores.jsonl', 'dataset')
-df['CollaborEM'] = read_sota('../../log/matching/sota/CollaborEM.txt', 'case', 'test_f1')
-df['HierGAT'] = read_sota('../../log/matching/sota/HierGAT.jsonl', 'data_name')
-df['Unicorn'] = read_sota('../../log/matching/sota/Unicorn.jsonl', 'data')
-df['SudoWoodo'] = read_sudowoodo_sota('../../log/matching/sota/sudowoodo/sudowoodo.txt')
+df['ZeroER'] = read_sota('../../../log/matching/sota/zeroer/scores.jsonl', 'dataset')
+df['CollaborEM'] = read_sota('../../../log/matching/sota/CollaborEM.txt', 'case', 'test_f1')
+df['HierGAT'] = read_sota('../../../log/matching/sota/HierGAT.jsonl', 'data_name')
+df['Unicorn'] = read_sota('../../../log/matching/sota/Unicorn.jsonl', 'data')
+df['SudoWoodo'] = read_sudowoodo_sota('../../../log/matching/sota/sudowoodo/sudowoodo.txt')
 
 
 
