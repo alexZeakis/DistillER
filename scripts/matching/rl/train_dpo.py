@@ -15,7 +15,7 @@ from sklearn.model_selection import train_test_split
 # Patch DPO for unsloth
 PatchDPOTrainer()
 
-def train_dpo(model_name, input_file, out_dir, log_file, eval_split_ratio=0.0):
+def train_dpo(model_name, input_file, out_dir, log_file, eval_split_ratio=0.0, epochs=1):
     models = {
             'llama3.1': "unsloth/Meta-Llama-3.1-8B-bnb-4bit",
               'llama3.1-instruct': "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
@@ -96,7 +96,7 @@ def train_dpo(model_name, input_file, out_dir, log_file, eval_split_ratio=0.0):
             per_device_train_batch_size=2,
             gradient_accumulation_steps=4,
             warmup_ratio=0.1,
-            num_train_epochs=3,
+            num_train_epochs=epochs, # default 1
             fp16=not is_bfloat16_supported(),
             bf16=is_bfloat16_supported(),
             logging_steps=10,
@@ -163,6 +163,7 @@ if __name__ == "__main__":
     parser.add_argument("--log_file", type=str, required=True, help="Log JSON file path")
     parser.add_argument("--eval_split_ratio", type=float, default=0.0,
                         help="Fraction of data to hold out for evaluation (0.0 means all for training)")
-
+    parser.add_argument("--epochs", type=int, default=1, help="Number of epochs")
     args = parser.parse_args()
-    train_dpo(args.model, args.input_file, args.out_dir, args.log_file, args.eval_split_ratio)
+    train_dpo(args.model, args.input_file, args.out_dir, args.log_file, 
+              args.eval_split_ratio, args.epochs)

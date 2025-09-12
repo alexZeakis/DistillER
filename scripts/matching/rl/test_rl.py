@@ -44,8 +44,8 @@ def test_model(model_path, input_file, out_file, dataset, max_new_tokens=64):
     for idx, prompt_set in enumerate(all_prompts):
         if idx % 50 == 0:
             print(f"Processing {idx}/{len(all_prompts)}\r", end="")
-        if len(output) >= 20:
-            break
+        # if len(output) >= 20:
+        #     break
             
             
         qtime = time()
