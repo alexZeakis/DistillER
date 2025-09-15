@@ -13,10 +13,10 @@ path = '../../../log/matching/rl/'
 df['UMC'] = prepare_umc_file('../../../log/matching/baselines/umc/')
 df['Pretrained'] = prepare_pt_file('../../../log/matching/baselines/pretrained/')    
 
-df['LLM-GRPO-1'] = prepare_ft_file(path+'grpo/qwen_32/test_responses/')
+df['LLM-GRPO-1'] = prepare_ft_file(path+'grpo/PT/qwen_32/test_responses/')
 df['LLM-GRPO-3'] = prepare_ft_file(path+'grpo/epochs/qwen_32/test_responses/')
 
-df['LLM-DPO-1'] = prepare_ft_file(path+'dpo/qwen_32/test_responses/')
+df['LLM-DPO-1'] = prepare_ft_file(path+'dpo/PT/qwen_32/test_responses/')
 df['LLM-DPO-3'] = prepare_ft_file(path+'dpo/epochs/qwen_32/test_responses/')
 
 df = prepare_df(df)
