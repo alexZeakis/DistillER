@@ -4,7 +4,8 @@ import argparse
 import json
 from langchain_community.chat_models import ChatOpenAI
 from langchain.output_parsers import PydanticOutputParser
-from structured_responses import AnswerSelectSchema, AnswerExplainSchema,AnswerConfidenceSchema
+from structured_responses import AnswerSelectSchema, AnswerExplainSchema, \
+    AnswerConfidenceSchema, AnswerJustifySchema
 import traceback
 import httpx
 
@@ -39,6 +40,8 @@ if __name__ == '__main__':
         obj = AnswerExplainSchema
     elif task_description == 'CONFIDENCE':
         obj = AnswerConfidenceSchema
+    elif task_description == 'JUSTIFY':
+        obj = AnswerJustifySchema
         
     path2 = args.out_file
     if os.path.exists(path2):
@@ -64,8 +67,10 @@ if __name__ == '__main__':
             with open(path2, 'w') as f:
                 f.write(json.dumps(logs, indent=4))
                 
-        if prompt['query_id'] in examined_ids:
+        if prompt['query_id'] in examined_ids: #TODO: Change if Justifications
             continue
+        # if prompt['reference_no'] != 0:
+        #     continue
 
         if args.skip and len(prompt['options'])==1:
             query_time = time()
@@ -87,7 +92,10 @@ if __name__ == '__main__':
                 response = llm.invoke(messages)
                 
                 result = response_parser.parse(response.content)
-                answer = result.answer
+                if task_description != 'JUSTIFY':
+                    answer = result.answer
+                else:
+                    answer = "[{}]".format(prompt['reference_no'])
                 explanation = result.explanation
                 confidence = getattr(result, 'confidence', 1.0)
                 
@@ -112,6 +120,9 @@ if __name__ == '__main__':
                'answer': answer, 'explanation': explanation,
                'confidence': confidence, 'time': query_time
                }
+        if 'reference' in prompt:
+            log['reference'] = prompt['reference']
+            log['reference_no'] = prompt['reference_no']
         responses.append(log)
 
     # print('\nMissed: ', missed)

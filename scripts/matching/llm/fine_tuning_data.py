@@ -16,6 +16,8 @@ if __name__ == '__main__':
                         type=float, help='Percentage of data to use.')
     parser.add_argument('--field', required=False, default="ground_answer", 
                         type=str, help='Field with the correct answer.')
+    parser.add_argument('--explanations', action='store_true', 
+                        help='Add explanations if flag is set')
     
     # Parse the arguments
     args = parser.parse_args()
@@ -38,10 +40,12 @@ if __name__ == '__main__':
                 print('Query {}/{}\r'.format(no, len(original_prompts)), end='')
     
             if args.mode == 'train':
-                answer = p[field]
+                answer = "[{}]".format(p[field])
+                if args.explanations:
+                    answer = "Answer:[{}]. {}".format(p[field], p['explanation'])
                 conv = [
                     {"from":"human", "value": p['prompt']},
-                    {"from":"gpt", "value":f"[{answer}]"}
+                    {"from":"gpt", "value":f"{answer}"}
                     ]
             elif args.mode == 'test':
                 conv = [

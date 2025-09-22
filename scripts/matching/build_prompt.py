@@ -5,7 +5,8 @@ import json
 from utils import settings
 from langchain.output_parsers import PydanticOutputParser
 from langchain.prompts import ChatPromptTemplate
-from structured_responses import AnswerSelectSchema, AnswerExplainSchema,AnswerConfidenceSchema
+from structured_responses import AnswerSelectSchema, AnswerExplainSchema, \
+    AnswerConfidenceSchema, AnswerJustifySchema
 import traceback
 import re
     
@@ -76,6 +77,31 @@ def prepare_select_prompt(df1, df2, serialization='DITTO', task_description='SEL
 
     return human_prompt
 
+def prepare_justify_prompt(df1, df2, answer, serialization='DITTO'):
+    
+    entity_description = prepare_description(df1, True, serialization=serialization)
+    entity_description = re.sub(r"[{}]", "", entity_description) 
+    candidate_description = prepare_description(df2, serialization=serialization)
+    candidate_description = re.sub(r"[{}]", "", candidate_description) 
+    
+    prompt = """Given a record, candidates that possibly refer """ \
+             """to the same real-world entity as the given record and """\
+             """the correct answer, justify why this is the correct answer. """\
+             """The corresponding answer is surrounded by \"[]\" """ \
+             """or \"[0]\" if there is none. """ \
+             """\n\nGiven entity record: {} """ \
+             """\nCandidate records:\n{}\n""" \
+             """\nAnswer: [{}]\n""" 
+    prompt = prompt.format(entity_description, candidate_description, answer)
+    
+    parser = PydanticOutputParser(pydantic_object=AnswerJustifySchema)
+    prompt += "Please respond in the correct format:\n{format_instructions}"
+    prompt = ChatPromptTemplate.from_messages([("human", prompt)])
+    formatted_prompt = prompt.format_messages(format_instructions=parser.get_format_instructions())
+    human_prompt = formatted_prompt[0].content
+
+    return human_prompt
+
 if __name__ == '__main__':
 
     # Create the parser
@@ -89,7 +115,7 @@ if __name__ == '__main__':
     parser.add_argument('--seed', type=int, default=1924, required=False, help='Seed for shuffling')
     parser.add_argument('--serialization', type=str, choices=['DITTO', 'schema_agnostic', 'llm'],
                         required=True, help='Serialization Strategy')
-    parser.add_argument('--task_description', type=str, choices=['SELECT', 'EXPLAIN', 'CONFIDENCE'],
+    parser.add_argument('--task_description', type=str, choices=['SELECT', 'EXPLAIN', 'CONFIDENCE', 'JUSTIFY'],
                         required=True, help='Task Description Strategy')
     parser.add_argument('--skip', action='store_true', help='Skip processing if flag is set')
     
@@ -136,15 +162,40 @@ if __name__ == '__main__':
         true_answer = int(ground_truth.get(key, -1))
         answer = find_answer_on_shuffle(temp_df2, true_answer)
             
-        prompt = prepare_select_prompt(temp_df1, temp_df2,
-                                       serialization=serialization,
-                                       task_description=task_description)
-        
-        log = {'query_id': key, 'ground_truth': true_answer,
-               'ground_answer': answer, 'options': list(options), 'prompt': prompt,
-               }
-        logs.append(log)
-        lens.append(len(prompt))
+        if task_description != 'JUSTIFY':
+            prompt = prepare_select_prompt(temp_df1, temp_df2,
+                                           serialization=serialization,
+                                           task_description=task_description)
+            
+            log = {'query_id': key, 'ground_truth': true_answer,
+                   'ground_answer': answer, 'options': list(options), 'prompt': prompt,
+                   }
+            logs.append(log)
+            lens.append(len(prompt))
+        else:
+            for noc, c in enumerate(options):
+                prompt = prepare_justify_prompt(temp_df1, temp_df2, answer=noc+1,
+                                               serialization=serialization,
+                                               )
+                
+                log = {'query_id': key, 'ground_truth': true_answer,
+                       'ground_answer': answer, 'options': list(options), 
+                       'prompt': prompt, 'reference': c, 'reference_no': noc+1
+                       }
+                logs.append(log)
+                lens.append(len(prompt))    
+
+            prompt = prepare_justify_prompt(temp_df1, temp_df2, answer=0,
+                                           serialization=serialization,
+                                           )
+            
+            log = {'query_id': key, 'ground_truth': true_answer,
+                   'ground_answer': answer, 'options': list(options), 
+                   'prompt': prompt, 'reference': None, 'reference_no': 0
+                   }
+            logs.append(log)
+            lens.append(len(prompt))
+
             
     settings = vars(args)
     if len(lens) != 0:

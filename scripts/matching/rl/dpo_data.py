@@ -3,6 +3,24 @@ import argparse
 import json
 import re
 
+def clean_explanations(file):
+    final_explanations = {}
+    with open(file) as f:
+        explanations = json.load(f)
+        
+        dataset = explanations["settings"]['dataset']
+        
+        for expl in explanations['responses']:
+            qid = expl['query_id']
+            cid = expl['reference_no']
+            if qid not in final_explanations:
+                final_explanations[qid] = {}
+                
+            final_explanations[qid][cid] = expl['explanation']
+            
+            
+    return dataset, final_explanations
+
 if __name__ == '__main__':
 
     # Create the parser
@@ -17,10 +35,19 @@ if __name__ == '__main__':
                         type=float, help='Percentage of data to use.')
     parser.add_argument('--field', required=False, default="ground_answer", 
                         type=str, help='Field with the correct answer.')
+    parser.add_argument('--explanation_files', nargs='+', type=str, required=False,
+                        help='List of explanation files')
     
     # Parse the arguments
     args = parser.parse_args()
     
+    explanations = None
+    if args.explanation_files:
+        explanations = {}
+        for file in args.explanation_files:
+            dataset, expl = clean_explanations(file)
+            explanations[dataset] = expl
+        
     print(args)
     prompts = []    
     for file in args.input_files:
@@ -49,10 +76,17 @@ if __name__ == '__main__':
                     if noc == answer:
                         continue
                     
+                    if explanations is None:
+                        chosen_text = "[{}]".format(answer)
+                        rejected_text = "[{}]".format(noc)
+                    else:
+                        chosen_text = "Answer:[{}]. {}".format(answer, explanations[dataset][p['query_id']][answer])
+                        rejected_text = "Answer:[{}]. {}".format(noc, explanations[dataset][p['query_id']][noc])
+                    
                     d = {'id': '{}_{}_{}_{}'.format(dataset, seed, p['query_id'], noc),
                          'prompt': prompt,
-                         'chosen': "[{}]".format(answer),
-                         'rejected': "[{}]".format(noc),
+                         'chosen': chosen_text,
+                         'rejected': rejected_text,
                          # 'true': p['ground_answer'], 
                          # 'gt': p['ground_truth']
                          }

@@ -104,7 +104,7 @@ def get_scores_from_ft_json(path, measure=calc_f1):
         ground_results.add((res['query_id'], res['answer']))
         if len(answer) > 0:
             try:
-                answer = int(answer[1:-1])
+                    answer = int(answer[1:-1])
             except:
                     answer = 0
             #predictions.add((res['query_id'], answer))

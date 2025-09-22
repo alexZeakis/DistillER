@@ -88,6 +88,19 @@ def clean_labels(responses, confidence_flag=False, confidence_threshold=0.0):
         confidence[res['query_id']] = float(conf)
     return labels, confidence
     
+def clean_explanations(file):
+    final_explanations = {}
+    with open(file) as f:
+        explanations = json.load(f)['responses']
+        
+        for expl in explanations:
+            qid = expl['query_id']
+            cid = expl['reference_no']
+            if qid not in final_explanations:
+                final_explanations[qid] = {}
+                
+            final_explanations[qid][cid] = expl['explanation']
+    return final_explanations
 
 if __name__ == '__main__':
 
@@ -96,6 +109,7 @@ if __name__ == '__main__':
     
     parser.add_argument('--prompts', type=str, required=True, help='Prompts file')
     parser.add_argument('--labels', type=str, required=True, help='Labels file')
+    parser.add_argument('--explanations', type=str, required=False, help='Explanations file')
     parser.add_argument('--out_file', type=str, required=True, help='Output file')
     parser.add_argument('--confidence', type=bool, default=False, required=False, help='Confidence flag')
     parser.add_argument('--confidence_threshold', type=float, default=0.0, required=False, help='Confidence Threshold')
@@ -113,10 +127,24 @@ if __name__ == '__main__':
             
         labels, confidence = clean_labels(labels['responses'], args.confidence, args.confidence_threshold)
         
+        explanations = None
+        if args.explanations is not None:
+            explanations = clean_explanations(args.explanations)
+        
         for prompt in prompts['prompts']:
-            prompt['noise_answer'] = labels[prompt['query_id']]
+            qid = prompt['query_id']
+            
+            noise_answer = labels[qid]
+            if noise_answer > len(prompt['options']): #error
+                noise_answer = 0
+            
+            prompt['noise_answer'] = noise_answer
             if args.confidence:
-                prompt['confidence'] = confidence[prompt['query_id']]
+                prompt['confidence'] = confidence[qid]
+            if explanations is not None:
+                # print(qid, prompt['noise_answer'])
+                # print(qid in explanations)
+                prompt['explanation'] = explanations[qid][noise_answer]
     
         # if not confidence_flag, then conf = 1.0 and thres = 0.0, so condition=True
         if args.confidence:
