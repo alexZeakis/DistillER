@@ -12,7 +12,7 @@ df = pd.DataFrame()
 
 path = '../../../log/matching/rl/'
 df['UMC'] = prepare_umc_file('../../../log/matching/baselines/umc/')
-df['Pretrained'] = prepare_pt_file('../../../log/matching/baselines/pretrained/')    
+df['Pretrained'] = prepare_pt_file('../../../log/matching/baselines/pretrained/')
 
 df['Ground-GRPO'] = prepare_ft_file(path+'grpo/PT/ground/test_responses/')
 df['LLM-GRPO'] = prepare_ft_file(path+'grpo/PT/qwen_32/test_responses/')

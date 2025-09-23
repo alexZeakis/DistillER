@@ -151,10 +151,54 @@ def get_scores_from_json(path, measure=calc_f1):
     return dataset, score
 
 
+def get_scores_from_comem_json(path, measure=calc_f1, gt_dir=None):
+    j = json.load(open(path))
+    dataset = j['settings']['dataset']
+    
+    ground_results = {}
+    predictions = set()
+    for res in j['responses']:
+
+        if res['response'] is None: #timeout
+            answer = {}
+        else: #error in Structured output
+            answer = find_json(res['response'])
+            if len(answer) > 0:
+                answer = answer['answer']
+        
+        # ground_results.add((res['query_id'], res['ground_answer']))
+        # ground_results.add((res['query_id'], res['answer']))
+        ground_results[res['query_id']] = res['answer']
+        
+        if len(answer) > 0:
+            try:
+                answer = int(answer[1:-1])
+            except:
+                    answer = 0
+        else:
+            answer = 0 #TODO
+        predictions.add((res['query_id'], answer)) #TODO
+
+    if gt_dir is not None:
+        gt_file = gt_dir + dataset + '_responses.json'
+        j = json.load(open(gt_file))
+        for res in j['responses']:
+            if res['query_id'] not in ground_results: #enhance with missing queries
+                ground_results[res['query_id']] = res['ground_answer']
+            
+    ground_results = set([(k, v) for k,v in ground_results.items()])
+        
+    score = measure(ground_results, predictions)
+    return dataset, score
 
 
-
-
+def prepare_comem_file(path, measure=calc_f1, gt_dir=None):
+    temp_scores = {}
+    for file in os.listdir(path):
+        dataset, score = get_scores_from_comem_json(path+file, measure=measure,
+                                                    gt_dir=gt_dir)
+        temp_scores[dataset] = score
+    return pd.Series(temp_scores)
 
 
 def prepare_pt_file(path, measure=calc_f1):
