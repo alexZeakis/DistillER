@@ -28,19 +28,25 @@ def read_sudowoodo_sota(path):
 path = '../../../log/matching/llm/'
 df = pd.DataFrame()
 
-# # df['RoBERTa-GT-UMC'] = prepare_plm_file(path2+'umc/roberta/ground/', 'final/')
-# df['DistillER-LLM Labels'] = prepare_ft_file(path+'qwen_32/test_responses/')
-# df['DistillER-SLM Labels'] = prepare_ft_file(path+'roberta/qwen_32/test_responses/')
+# df['RoBERTa-GT-UMC'] = prepare_plm_file(path2+'umc/roberta/ground/', 'final/')
+df['DistillER-SFT/LLM'] = prepare_ft_file(path+'qwen_32/test_responses/')
+df['DistillER-SFT/SLM'] = prepare_ft_file(path+'roberta/qwen_32/test_responses/')
 
 df['AvengER'] = prepare_ft_file(path+'ground/test_responses/')
 df['ComEM'] = prepare_comem_file('../../../log/matching/sota/ComEM/responses/SELECT/',
                                  gt_dir='../../../log/matching/baselines/pretrained/')
-df['ComEM-wo GT'] = prepare_comem_file('../../../log/matching/sota/ComEM/responses/SELECT/')
-# df['ZeroER'] = read_sota('../../../log/matching/sota/zeroer/scores.jsonl', 'dataset')
-# df['CollaborEM'] = read_sota('../../../log/matching/sota/CollaborEM.txt', 'case', 'test_f1')
-# df['HierGAT'] = read_sota('../../../log/matching/sota/HierGAT.jsonl', 'data_name')
-# df['Unicorn'] = read_sota('../../../log/matching/sota/Unicorn.jsonl', 'data')
-# df['SudoWoodo'] = read_sudowoodo_sota('../../../log/matching/sota/sudowoodo/sudowoodo.txt')
+
+# df['ComEM-wo GT'] = prepare_comem_file('../../../log/matching/sota/ComEM/responses/SELECT/')
+
+# df['Unicorn-PT'] = read_sota('../../../log/matching/sota/Unicorn_PT.jsonl', 'data')
+df['ZeroER'] = read_sota('../../../log/matching/sota/zeroer/scores.jsonl', 'dataset')
+df['CollaborEM'] = read_sota('../../../log/matching/sota/CollaborEM.txt', 'case', 'test_f1')
+
+df['SudoWoodo'] = read_sudowoodo_sota('../../../log/matching/sota/sudowoodo/sudowoodo.txt')
+df['HierGAT'] = read_sota('../../../log/matching/sota/HierGAT.jsonl', 'data_name')
+df['Unicorn'] = read_sota('../../../log/matching/sota/Unicorn.jsonl', 'data')
+
+
 
 
 
