@@ -1,4 +1,9 @@
-To run Vectorization with S-GTR-T5, Blocking and Sampling, run:
+To run UMC:
+```
+./run_matching_baselines.sh
+```
 
-cd scripts/blocking/
-./run_blocking.sh
+To run the pre-trained version of the model:
+```
+./run_pretrained_baseline.sh
+```
