@@ -1,0 +1,46 @@
+{
+    "settings": {
+        "dataset": "D6",
+        "out_file": "../../../log/matching/disambiguation/select/roberta/roberta/qwen_32/select/D6.json",
+        "in_dir": "../../../data/ccer/cleaned/original/",
+        "sample_file": "../../../log/matching/disambiguation/cleaned_edges/roberta/roberta/qwen_32/D6.csv",
+        "seed": 1924,
+        "serialization": "DITTO",
+        "task_description": "EXPLAIN",
+        "skip": true,
+        "len_q99": 1212.7,
+        "len_q50": 1198.0
+    },
+    "responses": [
+        {
+            "dataset": "D6",
+            "query_id": 1877,
+            "ground_truth": 7538,
+            "ground_answer": 1,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record, Amelia Bullmore is an actress and writer.",
+            "confidence": 1.0,
+            "time": 0.7700886726379395
+        },
+        {
+            "dataset": "D6",
+            "query_id": 3159,
+            "ground_truth": 1593,
+            "ground_answer": 2,
+            "answer": "[1]",
+            "explanation": "The candidate record [1] refers to the same real-world entity as the given record because it has the same name, Sanjeev Bhaskar, and one of his primary professions is writer.",
+            "confidence": 1.0,
+            "time": 0.5921082496643066
+        },
+        {
+            "dataset": "D6",
+            "query_id": 4164,
+            "ground_truth": 1135,
+            "ground_answer": 1,
+            "answer": "[2]",
+            "explanation": "The candidate record [2] refers to the same real-world entity as the given record, as both have the name 'Larry David' and one of his primary professions is a writer.",
+            "confidence": 1.0,
+            "time": 0.5724239349365234
+        }
+    ]
+}

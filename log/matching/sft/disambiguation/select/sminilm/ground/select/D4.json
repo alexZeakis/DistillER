@@ -1,0 +1,1021 @@
+{
+    "settings": {
+        "dataset": "D4",
+        "out_file": "../../../log/matching/disambiguation/select/sminilm/ground/select/D4.json",
+        "in_dir": "../../../data/ccer/cleaned/original/",
+        "sample_file": "../../../log/matching/disambiguation/cleaned_edges/sminilm/ground/D4.csv",
+        "seed": 1924,
+        "serialization": "DITTO",
+        "task_description": "EXPLAIN",
+        "skip": true,
+        "len_q99": 2465.07,
+        "len_q50": 1619.5
+    },
+    "prompts": [
+        {
+            "query_id": 189,
+            "ground_truth": 142,
+            "ground_answer": 2,
+            "options": [
+                688,
+                142
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Catching the boat with Strudel: experiences with a Web-site management system [COL] authors [VAL] Mary Fern&#225;ndez, Daniela Florescu, Jaewoo Kang, Alon Levy, Dan Suciu [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 1998.0\n \nCandidate records:\n [1]  [COL] title [VAL] STRUDEL: A Web-site Management System [COL] authors [VAL] Alon Y. Levy, Mary F. Fernandez, Jaewoo Kang, Daniela Florescu, Dan Suciu [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1997\n[2]  [COL] title [VAL] Catching the Boat with Strudel: Experiences with a Web-Site Management System [COL] authors [VAL] Jaewoo Kang, Dan Suciu, Alon Y. Levy, Daniela Florescu, Mary F. Fernandez [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1998\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 194,
+            "ground_truth": 1818,
+            "ground_answer": 1,
+            "options": [
+                1818,
+                168
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Ripple joins for online aggregation [COL] authors [VAL] Peter J. Haas, Joseph M. Hellerstein [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 1999.0\n \nCandidate records:\n [1]  [COL] title [VAL] Ripple Joins for Online Aggregation [COL] authors [VAL] Peter J. Haas, Joseph M. Hellerstein [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1999\n[2]  [COL] title [VAL] Online Aggregation [COL] authors [VAL] Helen J. Wang, Peter J. Haas, Joseph M. Hellerstein [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1997\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 241,
+            "ground_truth": 1393,
+            "ground_answer": 2,
+            "options": [
+                2588,
+                1393
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] prospector: a content-based multimedia server for massively parallel architectures [COL] authors [VAL] S. Choo, W. O'Connell, G. Linerman, H. Chen, K. Ganapathy, A. Biliris, E. Panagos, D. Schrader [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 1996.0\n \nCandidate records:\n [1]  [COL] title [VAL] A Content-Based Multimedia Server for Massively Parallel Architectures [COL] authors [VAL] C. Watson, G. Linderman, Euthimios Panagos, T. Walters, Ion Tim Ieong, Alexandros Biliris, J. Wang, S. Choo, David Schrader, P. Colin, William O'Connell, Grace Au [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1996\n[2]  [COL] title [VAL] Prospector: A Content-Based Multimedia Server for Massively Parallel Architectures [COL] authors [VAL] G. Linderman, Alexandros Biliris, H. Chen, K. Ganapathi, Euthimios Panagos, S. Choo, David Schrader, William O'Connell [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1996\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 246,
+            "ground_truth": 206,
+            "ground_answer": 2,
+            "options": [
+                2602,
+                206
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] METU interoperable database system [COL] authors [VAL] Asuman Dogac, Ugur Halici, Ebru Kilic, Gokhan Ozhan, Fatma Ozcan, Sena Nural, Cevdet Dengi, Sema Mancuhan, Budak Arpinar, Pinar Koksal, Cem Evrendilek [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 1996.0\n \nCandidate records:\n [1]  [COL] title [VAL] METU Interoperable Database System [COL] authors [VAL] Ebru Kilic, Pinar Koksal, Cem Evrendilek, Ugur Halici, Sema Mancuhan, N. Kesim, Asuman Dogac, Cevdet Dengi, Sena Nural, G?khan ?zhan, Fatma Ozcan, Ismailcem Budak Arpinar [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1995\n[2]  [COL] title [VAL] METU Interoperable Database System [COL] authors [VAL] Sema Mancuhan, Ismailcem Budak Arpinar, Fatma Ozcan, Pinar Koksal, Asuman Dogac, G?khan ?zhan, Cevdet Dengi, Ugur Halici, Cem Evrendilek, Sena Nural, Ebru Kilic [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1996\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 256,
+            "ground_truth": 1468,
+            "ground_answer": 1,
+            "options": [
+                1468,
+                175
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Minimization of tree pattern queries [COL] authors [VAL] Sihem Amer-Yahia, SungRan Cho, Laks V. S. Lakshmanan, Divesh Srivastava [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 2001.0\n \nCandidate records:\n [1]  [COL] title [VAL] Minimization of Tree Pattern Queries [COL] authors [VAL] Sihem Amer-Yahia, Divesh Srivastava, Laks V. S. Lakshmanan, SungRan Cho [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2001\n[2]  [COL] title [VAL] Tree pattern query minimization [COL] authors [VAL] Divesh Srivastava, SungRan Cho, Laks V. S. Lakshmanan, Sihem Amer-Yahia [COL] venue [VAL] VLDB J. [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 303,
+            "ground_truth": 1879,
+            "ground_answer": 2,
+            "options": [
+                2613,
+                1879
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Locally adaptive dimensionality reduction for indexing large time series databases [COL] authors [VAL] Eamonn Keogh, Kaushik Chakrabarti, Michael Pazzani, Sharad Mehrotra [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 2001.0\n \nCandidate records:\n [1]  [COL] title [VAL] Locally adaptive dimensionality reduction for indexing large time series databases [COL] authors [VAL] Kaushik Chakrabarti, Eamonn J. Keogh, Michael J. Pazzani, Sharad Mehrotra [COL] venue [VAL] ACM Trans. Database Syst. [COL] year [VAL] 2002\n[2]  [COL] title [VAL] Locally Adaptive Dimensionality Reduction for Indexing Large Time Series Databases [COL] authors [VAL] Kaushik Chakrabarti, Sharad Mehrotra, Eamonn J. Keogh, Michael J. Pazzani [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2001\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 390,
+            "ground_truth": 1697,
+            "ground_answer": 1,
+            "options": [
+                1697,
+                339
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Designing an ultra highly available DBMS (tutorial session) [COL] authors [VAL] Svein Erik Bratsberg, &#216;ystein Torbj&#248;rnsen [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 2000.0\n \nCandidate records:\n [1]  [COL] title [VAL] Tutorial: Designing an Ultra Highly Available DBMS [COL] authors [VAL] ?ystein Torbj?rnsen, Svein Erik Bratsberg [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2000\n[2]  [COL] title [VAL] An Ultra Highly Available DBMS [COL] authors [VAL] Svein-Olaf Hvasshovd, Svein Erik Bratsberg, ?ystein Torbj?rnsen [COL] venue [VAL] VLDB [COL] year [VAL] 2000\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 413,
+            "ground_truth": 45,
+            "ground_answer": 2,
+            "options": [
+                738,
+                45
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] FACT: a learning based Web query processing system [COL] authors [VAL] Songting Chen, Yanlei Diao, Hongjun Lu, Zengping Tian [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 2000.0\n \nCandidate records:\n [1]  [COL] title [VAL] Toward Learning Based Web Query Processing [COL] authors [VAL] Yanlei Diao, Hongjun Lu, Zengping Tian, Songting Chen [COL] venue [VAL] VLDB [COL] year [VAL] 2000\n[2]  [COL] title [VAL] Fact: A Learning Based Web Query Processing System [COL] authors [VAL] Zengping Tian, Hongjun Lu, Yanlei Diao, Songting Chen [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2000\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 494,
+            "ground_truth": 926,
+            "ground_answer": 2,
+            "options": [
+                1649,
+                926
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] An extensible compressor for XML data [COL] authors [VAL] Hartmut Liefke, Dan Suciu [COL] venue [VAL] ACM SIGMOD Record [COL] year [VAL] 2000.0\n \nCandidate records:\n [1]  [COL] title [VAL] XMILL: An Efficient Compressor for XML Data [COL] authors [VAL] Hartmut Liefke, Dan Suciu [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2000\n[2]  [COL] title [VAL] An Extensible Compressor for XML Data [COL] authors [VAL] Dan Suciu, Hartmut Liefke [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2000\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 514,
+            "ground_truth": 574,
+            "ground_answer": 1,
+            "options": [
+                574,
+                188
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Clustering validity checking methods: part II [COL] authors [VAL] Maria Halkidi, Yannis Batistakis, Michalis Vazirgiannis [COL] venue [VAL] ACM SIGMOD Record [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] Clustering Validity Checking Methods: Part II [COL] authors [VAL] Michalis Vazirgiannis, Maria Halkidi, Yannis Batistakis [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2002\n[2]  [COL] title [VAL] Cluster Validity Methods: Part I [COL] authors [VAL] Michalis Vazirgiannis, Yannis Batistakis, Maria Halkidi [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 535,
+            "ground_truth": 2613,
+            "ground_answer": 1,
+            "options": [
+                2613,
+                1879
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Locally adaptive dimensionality reduction for indexing large time series databases [COL] authors [VAL] Kaushik Chakrabarti, Eamonn Keogh, Sharad Mehrotra, Michael Pazzani [COL] venue [VAL] ACM Transactions on Database Systems (TODS) [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] Locally adaptive dimensionality reduction for indexing large time series databases [COL] authors [VAL] Kaushik Chakrabarti, Eamonn J. Keogh, Michael J. Pazzani, Sharad Mehrotra [COL] venue [VAL] ACM Trans. Database Syst. [COL] year [VAL] 2002\n[2]  [COL] title [VAL] Locally Adaptive Dimensionality Reduction for Indexing Large Time Series Databases [COL] authors [VAL] Kaushik Chakrabarti, Sharad Mehrotra, Eamonn J. Keogh, Michael J. Pazzani [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2001\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 547,
+            "ground_truth": 359,
+            "ground_answer": 0,
+            "options": [
+                387,
+                2391,
+                726,
+                131,
+                958,
+                968
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Reminiscences on influential papers [COL] authors [VAL] Kenneth A. Ross [COL] venue [VAL] ACM SIGMOD Record [COL] year [VAL] 2001.0\n \nCandidate records:\n [1]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross, Kyuseok Shim, Mary F. Fernandez [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2002\n[2]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross, Beng Chin Ooi, Frank Neven [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2003\n[3]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross, Anastassia Ailamaki, Alfred V. Aho [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2002\n[4]  [COL] title [VAL] Reminiscences an Influential Papers [COL] authors [VAL] Jeffrey F. Naughton, Minos N. Garofalakis, Kenneth A. Ross [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2003\n[5]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] S. Sudarshan, Charu C. Aggarwal, Mihalis Yannakakis, Alfons Kemper, Kenneth A. Ross, Sunita Sarawagi [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2000\n[6]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] James R. Hamilton, Limsoon Wong, Kenneth A. Ross, Laks V. S. Lakshmanan [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2001\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 551,
+            "ground_truth": 304,
+            "ground_answer": 0,
+            "options": [
+                359,
+                968,
+                387,
+                131,
+                726,
+                958,
+                2391
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross [COL] venue [VAL] ACM SIGMOD Record [COL] year [VAL] 2001.0\n \nCandidate records:\n [1]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Daniel J. Rosenkrantz, Nick Koudas, Dan Suciu, Peter Scheuermann, Rajeev Rastogi, Jiawei Han, Kenneth A. Ross [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2001\n[2]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] James R. Hamilton, Limsoon Wong, Kenneth A. Ross, Laks V. S. Lakshmanan [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2001\n[3]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross, Kyuseok Shim, Mary F. Fernandez [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2002\n[4]  [COL] title [VAL] Reminiscences an Influential Papers [COL] authors [VAL] Jeffrey F. Naughton, Minos N. Garofalakis, Kenneth A. Ross [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2003\n[5]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross, Anastassia Ailamaki, Alfred V. Aho [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2002\n[6]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] S. Sudarshan, Charu C. Aggarwal, Mihalis Yannakakis, Alfons Kemper, Kenneth A. Ross, Sunita Sarawagi [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2000\n[7]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross, Beng Chin Ooi, Frank Neven [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2003\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 564,
+            "ground_truth": 1645,
+            "ground_answer": 0,
+            "options": [
+                726,
+                387,
+                359,
+                958,
+                2391
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross [COL] venue [VAL] ACM SIGMOD Record [COL] year [VAL] 2000.0\n \nCandidate records:\n [1]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross, Anastassia Ailamaki, Alfred V. Aho [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2002\n[2]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross, Kyuseok Shim, Mary F. Fernandez [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2002\n[3]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Daniel J. Rosenkrantz, Nick Koudas, Dan Suciu, Peter Scheuermann, Rajeev Rastogi, Jiawei Han, Kenneth A. Ross [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2001\n[4]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] S. Sudarshan, Charu C. Aggarwal, Mihalis Yannakakis, Alfons Kemper, Kenneth A. Ross, Sunita Sarawagi [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2000\n[5]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross, Beng Chin Ooi, Frank Neven [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2003\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 567,
+            "ground_truth": 1403,
+            "ground_answer": 2,
+            "options": [
+                2244,
+                1403
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Advanced XML data processing: guest editor's introduction [COL] authors [VAL] Karl Aberer [COL] venue [VAL] ACM SIGMOD Record [COL] year [VAL] 2001.0\n \nCandidate records:\n [1]  [COL] title [VAL] Guest editor's introduction [COL] authors [VAL] Karl Aberer [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2003\n[2]  [COL] title [VAL] Advanced XML Data Processing - Guest Editor's Introduction [COL] authors [VAL] Karl Aberer [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2001\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 612,
+            "ground_truth": 2035,
+            "ground_answer": 2,
+            "options": [
+                2043,
+                2035
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Sleepers and workaholics: caching strategies in mobile environments (extended version) [COL] authors [VAL] Daniel Barbar&#225;, Tomasz Imieli&#324;ski [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 1995.0\n \nCandidate records:\n [1]  [COL] title [VAL] Sleepers and Workaholics: Caching Strategies in Mobile Environments [COL] authors [VAL] Daniel Barbar?, Tomasz Imielinski [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1994\n[2]  [COL] title [VAL] Sleepers and Workaholics: Caching Strategies in Mobile Environments [COL] authors [VAL] Tomasz Imielinski, Daniel Barbar? [COL] venue [VAL] VLDB J. [COL] year [VAL] 1995\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 614,
+            "ground_truth": 1648,
+            "ground_answer": 1,
+            "options": [
+                1648,
+                1111
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] QuickStore: a high performance mapped object store [COL] authors [VAL] Seth J. White, David J. DeWitt [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 1995.0\n \nCandidate records:\n [1]  [COL] title [VAL] QuickStore: A High Performance Mapped Object Store [COL] authors [VAL] Seth J. White, David J. DeWitt [COL] venue [VAL] VLDB J. [COL] year [VAL] 1995\n[2]  [COL] title [VAL] QuickStore: A High Performance Mapped Object Store [COL] authors [VAL] David J. DeWitt, Seth J. White [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1994\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 615,
+            "ground_truth": 2434,
+            "ground_answer": 2,
+            "options": [
+                2525,
+                2434
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Estimating page fetches for index scans with finite LRU buffers [COL] authors [VAL] Arun Swami, K. Bernhard Schiefer [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 1995.0\n \nCandidate records:\n [1]  [COL] title [VAL] Estimating Page Fetches for Index Scans with Finite LRU Buffers [COL] authors [VAL] Arun N. Swami, K. Bernhard Schiefer [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1994\n[2]  [COL] title [VAL] Estimating Page Fetches for Index Scans with Finite LRU Buffers [COL] authors [VAL] K. Bernhard Schiefer, Arun N. Swami [COL] venue [VAL] VLDB J. [COL] year [VAL] 1995\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 649,
+            "ground_truth": 2601,
+            "ground_answer": 0,
+            "options": [
+                387,
+                2391,
+                726,
+                131,
+                958,
+                968
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Reminiscences on influential papers [COL] authors [VAL] Kenneth A. Ross [COL] venue [VAL] ACM SIGMOD Record [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross, Kyuseok Shim, Mary F. Fernandez [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2002\n[2]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross, Beng Chin Ooi, Frank Neven [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2003\n[3]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross, Anastassia Ailamaki, Alfred V. Aho [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2002\n[4]  [COL] title [VAL] Reminiscences an Influential Papers [COL] authors [VAL] Jeffrey F. Naughton, Minos N. Garofalakis, Kenneth A. Ross [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2003\n[5]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] S. Sudarshan, Charu C. Aggarwal, Mihalis Yannakakis, Alfons Kemper, Kenneth A. Ross, Sunita Sarawagi [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2000\n[6]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] James R. Hamilton, Limsoon Wong, Kenneth A. Ross, Laks V. S. Lakshmanan [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2001\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 687,
+            "ground_truth": 2040,
+            "ground_answer": 2,
+            "options": [
+                2555,
+                2040
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Statistical synopses for graph-structured XML databases [COL] authors [VAL] Neoklis Polyzotis, Minos Garofalakis [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] Structure and Value Synopses for XML Data Graphs [COL] authors [VAL] Neoklis Polyzotis, Minos N. Garofalakis [COL] venue [VAL] VLDB [COL] year [VAL] 2002\n[2]  [COL] title [VAL] Statistical synopses for graph-structured XML databases [COL] authors [VAL] Minos N. Garofalakis, Neoklis Polyzotis [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 709,
+            "ground_truth": 1170,
+            "ground_answer": 2,
+            "options": [
+                1584,
+                1170
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] RoadRunner: automatic data extraction from data-intensive web sites [COL] authors [VAL] Valter Crescenzi, Giansalvatore Mecca, Paolo Merialdo [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] RoadRunner: Towards Automatic Data Extraction from Large Web Sites [COL] authors [VAL] Giansalvatore Mecca, Valter Crescenzi, Paolo Merialdo [COL] venue [VAL] VLDB [COL] year [VAL] 2001\n[2]  [COL] title [VAL] RoadRunner: automatic data extraction from data-intensive web sites [COL] authors [VAL] Giansalvatore Mecca, Valter Crescenzi, Paolo Merialdo [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 722,
+            "ground_truth": 1756,
+            "ground_answer": 1,
+            "options": [
+                1756,
+                786
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Web caching for database applications with Oracle Web Cache [COL] authors [VAL] Jesse Anton, Lawrence Jacobs, Xiang Liu, Jordan Parker, Zheng Zeng, Tie Zhong [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] Web caching for database applications with Oracle Web Cache [COL] authors [VAL] Jordan Parker, Jesse Anton, Zheng Zeng, Lawrence Jacobs, Tie Zhong, Xiang Liu [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2002\n[2]  [COL] title [VAL] DBCache: database caching for web application servers [COL] authors [VAL] Sailesh Krishnamurthy, C. Mohan, Larry Brown, Hamid Pirahesh, Mehmet Altinel, Honguk Woo, Qiong Luo, Bruce G. Lindsay [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 723,
+            "ground_truth": 2206,
+            "ground_answer": 1,
+            "options": [
+                2206,
+                651
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Middle-tier database caching for e-business [COL] authors [VAL] Qiong Luo, Sailesh Krishnamurthy, C. Mohan, Hamid Pirahesh, Honguk Woo, Bruce G. Lindsay, Jeffrey F. Naughton [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] Middle-tier database caching for e-business [COL] authors [VAL] Hamid Pirahesh, C. Mohan, Jeffrey F. Naughton, Sailesh Krishnamurthy, Honguk Woo, Qiong Luo, Bruce G. Lindsay [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2002\n[2]  [COL] title [VAL] DBCache: Middle-tier Database Caching for Highly Scalable e-Business Architectures [COL] authors [VAL] C. Mohan, Sailesh Krishnamurthy, Mehmet Altinel, Christof Bornh?vd, Hamid Pirahesh, Berthold Reinwald [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2003\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 749,
+            "ground_truth": 188,
+            "ground_answer": 2,
+            "options": [
+                574,
+                188
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Cluster validity methods: part I [COL] authors [VAL] Maria Halkidi, Yannis Batistakis, Michalis Vazirgiannis [COL] venue [VAL] ACM SIGMOD Record [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] Clustering Validity Checking Methods: Part II [COL] authors [VAL] Michalis Vazirgiannis, Maria Halkidi, Yannis Batistakis [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2002\n[2]  [COL] title [VAL] Cluster Validity Methods: Part I [COL] authors [VAL] Michalis Vazirgiannis, Yannis Batistakis, Maria Halkidi [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 756,
+            "ground_truth": 1114,
+            "ground_answer": 1,
+            "options": [
+                1114,
+                130,
+                1388
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Database tuning: principles, experiments, and troubleshooting techniques (part II) [COL] authors [VAL] Dennis Shasha, Philippe Bonnet [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] Database tuning: principles, experiments, and troubleshooting techniques (part II) [COL] authors [VAL] Dennis Shasha, Philippe Bonnet [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2002\n[2]  [COL] title [VAL] Database Tuning: Principles, Experiments, and Troubleshooting Techniques [COL] authors [VAL] Philippe Bonnet, Dennis Shasha [COL] venue [VAL] VLDB [COL] year [VAL] 2002\n[3]  [COL] title [VAL] Database tuning: principles, experiments, and troubleshooting techniques (part I) [COL] authors [VAL] Dennis Shasha, Philippe Bonnet [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 761,
+            "ground_truth": 1451,
+            "ground_answer": 2,
+            "options": [
+                1932,
+                1451
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Querying and mining data streams: you only get one look a tutorial [COL] authors [VAL] Minos Garofalakis, Johannes Gehrke, Rajeev Rastogi [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] Querying and Mining Data Streams: You Only Get One Look [COL] authors [VAL] Minos N. Garofalakis, Johannes Gehrke [COL] venue [VAL] VLDB [COL] year [VAL] 2002\n[2]  [COL] title [VAL] Querying and mining data streams: you only get one look a tutorial [COL] authors [VAL] Minos N. Garofalakis, Rajeev Rastogi, Johannes Gehrke [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 762,
+            "ground_truth": 539,
+            "ground_answer": 2,
+            "options": [
+                1676,
+                539
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Tutorial: application servers and associated technologies [COL] authors [VAL] C. Mohan [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] Application Servers and Associated Technologies [COL] authors [VAL] C. Mohan [COL] venue [VAL] VLDB [COL] year [VAL] 2002\n[2]  [COL] title [VAL] Tutorial: application servers and associated technologies [COL] authors [VAL] C. Mohan [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 763,
+            "ground_truth": 1388,
+            "ground_answer": 3,
+            "options": [
+                1114,
+                130,
+                1388
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Database tuning: principles, experiments, and troubleshooting techniques (part I) [COL] authors [VAL] Dennis Shasha, Philippe Bonnet [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] Database tuning: principles, experiments, and troubleshooting techniques (part II) [COL] authors [VAL] Dennis Shasha, Philippe Bonnet [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2002\n[2]  [COL] title [VAL] Database Tuning: Principles, Experiments, and Troubleshooting Techniques [COL] authors [VAL] Philippe Bonnet, Dennis Shasha [COL] venue [VAL] VLDB [COL] year [VAL] 2002\n[3]  [COL] title [VAL] Database tuning: principles, experiments, and troubleshooting techniques (part I) [COL] authors [VAL] Dennis Shasha, Philippe Bonnet [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 783,
+            "ground_truth": 1390,
+            "ground_answer": 2,
+            "options": [
+                2022,
+                1390
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Aqua: A Fast Decision Support Systems Using Approximate Query Answers [COL] authors [VAL] Swarup Acharya, Phillip B. Gibbons, Viswanath Poosala [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1999.0\n \nCandidate records:\n [1]  [COL] title [VAL] The Aqua Approximate Query Answering System [COL] authors [VAL] Sridhar Ramaswamy, Swarup Acharya, Phillip B. Gibbons, Viswanath Poosala [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1999\n[2]  [COL] title [VAL] Aqua: A Fast Decision Support Systems Using Approximate Query Answers [COL] authors [VAL] Swarup Acharya, Phillip B. Gibbons, Viswanath Poosala [COL] venue [VAL] VLDB [COL] year [VAL] 1999\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 798,
+            "ground_truth": 1153,
+            "ground_answer": 1,
+            "options": [
+                1153,
+                364
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Database Architecture Optimized for the New Bottleneck: Memory Access [COL] authors [VAL] Peter A. Boncz, Stefan Manegold, Martin L. Kersten [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1999.0\n \nCandidate records:\n [1]  [COL] title [VAL] Database Architecture Optimized for the New Bottleneck: Memory Access [COL] authors [VAL] Stefan Manegold, Peter A. Boncz, Martin L. Kersten [COL] venue [VAL] VLDB [COL] year [VAL] 1999\n[2]  [COL] title [VAL] Optimizing database architecture for the new bottleneck: memory access [COL] authors [VAL] Peter A. Boncz, Stefan Manegold, Martin L. Kersten [COL] venue [VAL] VLDB J. [COL] year [VAL] 2000\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 829,
+            "ground_truth": 2297,
+            "ground_answer": 1,
+            "options": [
+                2297,
+                617
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] O-O, What Have They Done to DB2? [COL] authors [VAL] Michael J. Carey, Donald D. Chamberlin, Srinivasa Narayanan, Bennet Vance, Doug Doole, Serge Rielau, Richard Swagerman, Nelson Mendon&#231;a Mattos [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1999.0\n \nCandidate records:\n [1]  [COL] title [VAL] O-O, What Have They Done to DB2? [COL] authors [VAL] Bennet Vance, Richard Swagerman, Michael J. Carey, Srinivasa Narayanan, Nelson Mendon?a Mattos, Donald D. Chamberlin, Doug Doole, Serge Rielau [COL] venue [VAL] VLDB [COL] year [VAL] 1999\n[2]  [COL] title [VAL] O-O, What's Happening to DB2? [COL] authors [VAL] Richard Swagerman, Nelson Mendon?a Mattos, Michael J. Carey, Srinivasa Narayanan, Bennet Vance, Doug Doole, Serge Rielau, Donald D. Chamberlin [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1999\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 847,
+            "ground_truth": 263,
+            "ground_answer": 2,
+            "options": [
+                1434,
+                263
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Online Dynamic Reordering for Interactive Data Processing [COL] authors [VAL] Vijayshankar Raman, Bhaskaran Raman, Joseph M. Hellerstein [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1999.0\n \nCandidate records:\n [1]  [COL] title [VAL] Online dynamic reordering [COL] authors [VAL] Bhaskaran Raman, Joseph M. Hellerstein, Vijayshankar Raman [COL] venue [VAL] VLDB J. [COL] year [VAL] 2000\n[2]  [COL] title [VAL] Online Dynamic Reordering for Interactive Data Processing [COL] authors [VAL] Bhaskaran Raman, Joseph M. Hellerstein, Vijayshankar Raman [COL] venue [VAL] VLDB [COL] year [VAL] 1999\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 862,
+            "ground_truth": 1846,
+            "ground_answer": 1,
+            "options": [
+                1846,
+                1007
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Panel: Future Directions of Database Research - The VLDB Broadening Strategy, Part 2 [COL] authors [VAL] Michael L. Brodie [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 2000.0\n \nCandidate records:\n [1]  [COL] title [VAL] Panel: Future Directions of Database Research - The VLDB Broadening Strategy, Part 2 [COL] authors [VAL] Michael L. Brodie [COL] venue [VAL] VLDB [COL] year [VAL] 2000\n[2]  [COL] title [VAL] Panel: Future Directions of Database Research - The VLDB Broadening Strategy, Part 1 [COL] authors [VAL] Hans-J?rg Schek [COL] venue [VAL] VLDB [COL] year [VAL] 2000\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 879,
+            "ground_truth": 2114,
+            "ground_answer": 2,
+            "options": [
+                2462,
+                2114
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Efficiently Publishing Relational Data as XML Documents [COL] authors [VAL] Jayavel Shanmugasundaram, Eugene J. Shekita, Rimon Barr, Michael J. Carey, Bruce G. Lindsay, Hamid Pirahesh, Berthold Reinwald [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 2000.0\n \nCandidate records:\n [1]  [COL] title [VAL] Efficiently publishing relational data as XML documents [COL] authors [VAL] Bruce G. Lindsay, Hamid Pirahesh, Berthold Reinwald, Michael J. Carey, Rimon Barr, Jayavel Shanmugasundaram, Eugene J. Shekita [COL] venue [VAL] VLDB J. [COL] year [VAL] 2001\n[2]  [COL] title [VAL] Efficiently Publishing Relational Data as XML Documents [COL] authors [VAL] Berthold Reinwald, Jayavel Shanmugasundaram, Michael J. Carey, Eugene J. Shekita, Hamid Pirahesh, Bruce G. Lindsay, Rimon Barr [COL] venue [VAL] VLDB [COL] year [VAL] 2000\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 889,
+            "ground_truth": 2308,
+            "ground_answer": 1,
+            "options": [
+                2308,
+                718
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Approximate Query Processing Using Wavelets [COL] authors [VAL] Kaushik Chakrabarti, Minos N. Garofalakis, Rajeev Rastogi, Kyuseok Shim [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 2000.0\n \nCandidate records:\n [1]  [COL] title [VAL] Approximate Query Processing Using Wavelets [COL] authors [VAL] Kyuseok Shim, Kaushik Chakrabarti, Minos N. Garofalakis, Rajeev Rastogi [COL] venue [VAL] VLDB [COL] year [VAL] 2000\n[2]  [COL] title [VAL] Approximate query processing using wavelets [COL] authors [VAL] Rajeev Rastogi, Minos N. Garofalakis, Kyuseok Shim, Kaushik Chakrabarti [COL] venue [VAL] VLDB J. [COL] year [VAL] 2001\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 918,
+            "ground_truth": 2255,
+            "ground_answer": 1,
+            "options": [
+                2255,
+                2193
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] A formal perspective on the view selection problem [COL] authors [VAL] Rada Chirkova, Alon Y. Halevy, Dan Suciu [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] A formal perspective on the view selection problem [COL] authors [VAL] Rada Chirkova, Dan Suciu, Alon Y. Halevy [COL] venue [VAL] VLDB J. [COL] year [VAL] 2002\n[2]  [COL] title [VAL] A Formal Perspective on the View Selection Problem [COL] authors [VAL] Dan Suciu, Rada Chirkova, Alon Y. Halevy [COL] venue [VAL] VLDB [COL] year [VAL] 2001\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 927,
+            "ground_truth": 131,
+            "ground_answer": 4,
+            "options": [
+                387,
+                958,
+                575,
+                131,
+                653,
+                726,
+                2391
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Reminiscences on influential papers [COL] authors [VAL] Kenneth A. Ross [COL] venue [VAL] ACM SIGMOD Record [COL] year [VAL] 2003.0\n \nCandidate records:\n [1]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross, Kyuseok Shim, Mary F. Fernandez [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2002\n[2]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] S. Sudarshan, Charu C. Aggarwal, Mihalis Yannakakis, Alfons Kemper, Kenneth A. Ross, Sunita Sarawagi [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2000\n[3]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Theodore Johnson, Amr El Abbadi, Richard T. Snodgrass, Kenneth A. Ross [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2002\n[4]  [COL] title [VAL] Reminiscences an Influential Papers [COL] authors [VAL] Jeffrey F. Naughton, Minos N. Garofalakis, Kenneth A. Ross [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2003\n[5]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Jun Rao, Kenneth A. Ross, Johannes Gehrke [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2003\n[6]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross, Anastassia Ailamaki, Alfred V. Aho [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2002\n[7]  [COL] title [VAL] Reminiscences on Influential Papers [COL] authors [VAL] Kenneth A. Ross, Beng Chin Ooi, Frank Neven [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 2003\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 938,
+            "ground_truth": 1792,
+            "ground_answer": 2,
+            "options": [
+                2403,
+                1792
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Views in a large-scale XML repository [COL] authors [VAL] Vincent Aguilera, Sophie Cluet, Tova Milo, Pierangelo Veltri, Dan Vodislav [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] Views in a Large Scale XML Repository [COL] authors [VAL] Dan Vodislav, Sophie Cluet, Pierangelo Veltri [COL] venue [VAL] VLDB [COL] year [VAL] 2001\n[2]  [COL] title [VAL] Views in a large-scale XML repository [COL] authors [VAL] Vincent Aguilera, Dan Vodislav, Pierangelo Veltri, Sophie Cluet, Tova Milo [COL] venue [VAL] VLDB J. [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 939,
+            "ground_truth": 1553,
+            "ground_answer": 1,
+            "options": [
+                1553,
+                367
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Database indexing for large DNA and protein sequence collections [COL] authors [VAL] Ela Hunt, Malcolm P. Atkinson, Robert W. Irving [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] Database indexing for large DNA and protein sequence collections [COL] authors [VAL] Robert W. Irving, Malcolm P. Atkinson, Ela Hunt [COL] venue [VAL] VLDB J. [COL] year [VAL] 2002\n[2]  [COL] title [VAL] A Database Index to Large Biological Sequences [COL] authors [VAL] Robert W. Irving, Ela Hunt, Malcolm P. Atkinson [COL] venue [VAL] VLDB [COL] year [VAL] 2001\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 946,
+            "ground_truth": 2200,
+            "ground_answer": 1,
+            "options": [
+                2200,
+                1745
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] To Weave the Web [COL] authors [VAL] Paolo Atzeni, Giansalvatore Mecca, Paolo Merialdo [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1997.0\n \nCandidate records:\n [1]  [COL] title [VAL] To Weave the Web [COL] authors [VAL] Paolo Merialdo, Giansalvatore Mecca, Paolo Atzeni [COL] venue [VAL] VLDB [COL] year [VAL] 1997\n[2]  [COL] title [VAL] Semistructured und Structured Data in the Web: Going Back and Forth [COL] authors [VAL] Paolo Merialdo, Giansalvatore Mecca, Paolo Atzeni [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1997\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 980,
+            "ground_truth": 361,
+            "ground_answer": 2,
+            "options": [
+                2182,
+                361
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] DataBlitz: A High Performance Main-Memory Storage Manager [COL] authors [VAL] Jerry Baulier, Philip Bohannon, S. Gogate, S. Joshi, C. Gupta, A. Khivesera, Henry F. Korth, Peter McIlroy, J. Miller, P. P. S. Narayan, M. Nemeth, Rajeev Rastogi, Abraham Silberschatz, S. Sudarshan [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1998.0\n \nCandidate records:\n [1]  [COL] title [VAL] Dal?: A High Performance Main Memory Storage Manager [COL] authors [VAL] S. Sudarshan, H. V. Jagadish, Rajeev Rastogi, Abraham Silberschatz, Daniel F. Lieuwen [COL] venue [VAL] VLDB [COL] year [VAL] 1994\n[2]  [COL] title [VAL] DataBlitz: A High Performance Main-Memory Storage Manager [COL] authors [VAL] P. P. S. Narayan, S. Joshi, M. Nemeth, Abraham Silberschatz, Henry F. Korth, A. Khivesera, Jerry Baulier, S. Sudarshan, Philip Bohannon, Peter McIlroy, J. Miller, S. Gogate, Rajeev Rastogi, C. Gupta [COL] venue [VAL] VLDB [COL] year [VAL] 1998\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1019,
+            "ground_truth": 1051,
+            "ground_answer": 2,
+            "options": [
+                1218,
+                1051
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Clustering Categorical Data: An Approach Based on Dynamical Systems [COL] authors [VAL] David Gibson, Jon M. Kleinberg, Prabhakar Raghavan [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1998.0\n \nCandidate records:\n [1]  [COL] title [VAL] Clustering Categorical Data: An Approach Based on Dynamical Systems [COL] authors [VAL] David Gibson, Jon M. Kleinberg, Prabhakar Raghavan [COL] venue [VAL] VLDB J. [COL] year [VAL] 2000\n[2]  [COL] title [VAL] Clustering Categorical Data: An Approach Based on Dynamical Systems [COL] authors [VAL] Prabhakar Raghavan, David Gibson, Jon M. Kleinberg [COL] venue [VAL] VLDB [COL] year [VAL] 1998\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1030,
+            "ground_truth": 1196,
+            "ground_answer": 2,
+            "options": [
+                1752,
+                1196
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Integrating Reliable Memory in Databases [COL] authors [VAL] Wee Teck Ng, Peter M. Chen [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1997.0\n \nCandidate records:\n [1]  [COL] title [VAL] Integrating Reliable Memory in Databases [COL] authors [VAL] Peter M. Chen, Wee Teck Ng [COL] venue [VAL] VLDB J. [COL] year [VAL] 1998\n[2]  [COL] title [VAL] Integrating Reliable Memory in Databases [COL] authors [VAL] Peter M. Chen, Wee Teck Ng [COL] venue [VAL] VLDB [COL] year [VAL] 1997\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1032,
+            "ground_truth": 2119,
+            "ground_answer": 1,
+            "options": [
+                2119,
+                317
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Garbage Collection in Object Oriented Databases Using Transactional Cyclic Reference Counting [COL] authors [VAL] Srinivas Ashwin, Prasan Roy, S. Seshadri, Abraham Silberschatz, S. Sudarshan [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1997.0\n \nCandidate records:\n [1]  [COL] title [VAL] Garbage Collection in Object Oriented Databases Using Transactional Cyclic Reference Counting [COL] authors [VAL] S. Sudarshan, Prasan Roy, Abraham Silberschatz, S. Seshadri, Srinivas Ashwin [COL] venue [VAL] VLDB [COL] year [VAL] 1997\n[2]  [COL] title [VAL] Garbage Collection in Object-Oriented Databases Using Transactional Cyclic Reference Counting [COL] authors [VAL] S. Sudarshan, Prasan Roy, Abraham Silberschatz, Srinivas Ashwin, S. Seshadri [COL] venue [VAL] VLDB J. [COL] year [VAL] 1998\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1050,
+            "ground_truth": 640,
+            "ground_answer": 2,
+            "options": [
+                674,
+                640
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Reordering Query Execution in Tertiary Memory Databases [COL] authors [VAL] Sunita Sarawagi, Michael Stonebraker [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1996.0\n \nCandidate records:\n [1]  [COL] title [VAL] Query Processing in Tertiary Memory Databases [COL] authors [VAL] Sunita Sarawagi [COL] venue [VAL] VLDB [COL] year [VAL] 1995\n[2]  [COL] title [VAL] Reordering Query Execution in Tertiary Memory Databases [COL] authors [VAL] Michael Stonebraker, Sunita Sarawagi [COL] venue [VAL] VLDB [COL] year [VAL] 1996\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1064,
+            "ground_truth": 124,
+            "ground_answer": 2,
+            "options": [
+                1312,
+                124
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Resource Scheduling in Enhanced Pay-Per-View Continuous Media Databases [COL] authors [VAL] Minos N. Garofalakis, Banu &#214;zden, Abraham Silberschatz [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1997.0\n \nCandidate records:\n [1]  [COL] title [VAL] On Periodic Resource scheduling for Continuous-Media Databases [COL] authors [VAL] Minos N. Garofalakis, Banu ?zden, Abraham Silberschatz [COL] venue [VAL] VLDB J. [COL] year [VAL] 1998\n[2]  [COL] title [VAL] Resource Scheduling in Enhanced Pay-Per-View Continuous Media Databases [COL] authors [VAL] Banu ?zden, Minos N. Garofalakis, Abraham Silberschatz [COL] venue [VAL] VLDB [COL] year [VAL] 1997\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1084,
+            "ground_truth": 1467,
+            "ground_answer": 2,
+            "options": [
+                2451,
+                1467
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Fast Incremental Maintenance of Approximate Histograms [COL] authors [VAL] Phillip B. Gibbons, Yossi Matias, Viswanath Poosala [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1997.0\n \nCandidate records:\n [1]  [COL] title [VAL] Fast incremental maintenance of approximate histograms [COL] authors [VAL] Viswanath Poosala, Phillip B. Gibbons, Yossi Matias [COL] venue [VAL] ACM Trans. Database Syst. [COL] year [VAL] 2002\n[2]  [COL] title [VAL] Fast Incremental Maintenance of Approximate Histograms [COL] authors [VAL] Yossi Matias, Phillip B. Gibbons, Viswanath Poosala [COL] venue [VAL] VLDB [COL] year [VAL] 1997\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1097,
+            "ground_truth": 1631,
+            "ground_answer": 1,
+            "options": [
+                1631,
+                1089
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Optimization of Queries with User-defined Predicates [COL] authors [VAL] Surajit Chaudhuri, Kyuseok Shim [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1996.0\n \nCandidate records:\n [1]  [COL] title [VAL] Optimization of Queries with User-defined Predicates [COL] authors [VAL] Surajit Chaudhuri, Kyuseok Shim [COL] venue [VAL] VLDB [COL] year [VAL] 1996\n[2]  [COL] title [VAL] Optimization of Queries with User-Defined Predicates [COL] authors [VAL] Kyuseok Shim, Surajit Chaudhuri [COL] venue [VAL] ACM Trans. Database Syst. [COL] year [VAL] 1999\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1129,
+            "ground_truth": 413,
+            "ground_answer": 2,
+            "options": [
+                1632,
+                413
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] ZOO: A Desktop Experiment Management Environment [COL] authors [VAL] Yannis E. Ioannidis, Miron Livny, S. Gupta, Nagavamsi Ponnekanti [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1996.0\n \nCandidate records:\n [1]  [COL] title [VAL] ZOO: A Desktop Emperiment Management Environment [COL] authors [VAL] Anastassia Ailamaki, Andrew Therber, Yannis E. Ioannidis, Anand Narayanan, Miron Livny [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1997\n[2]  [COL] title [VAL] ZOO : A Desktop Experiment Management Environment [COL] authors [VAL] Miron Livny, Yannis E. Ioannidis, Nagavamsi Ponnekanti, Shivani Gupta [COL] venue [VAL] VLDB [COL] year [VAL] 1996\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1137,
+            "ground_truth": 1165,
+            "ground_answer": 1,
+            "options": [
+                1165,
+                303
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] TPC-D: The Challenges, Issues and Results [COL] authors [VAL] Ramesh Bhashyam [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1996.0\n \nCandidate records:\n [1]  [COL] title [VAL] TPC-D: The Challenges, Issues and Results [COL] authors [VAL] Ramesh Bhashyam [COL] venue [VAL] VLDB [COL] year [VAL] 1996\n[2]  [COL] title [VAL] TCP-D - The Challenges, Issues and Results [COL] authors [VAL] Ramesh Bhashyam [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1996\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1157,
+            "ground_truth": 2385,
+            "ground_answer": 2,
+            "options": [
+                2404,
+                2385
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Erratum-A database model for object dynamics [COL] authors [VAL] M. P. Papazoglou, B. J. Kr&#228;mer [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 1997.0\n \nCandidate records:\n [1]  [COL] title [VAL] A Database Model for Object Dynamics [COL] authors [VAL] Mike P. Papazoglou, Bernd J. Kr?mer [COL] venue [VAL] VLDB J. [COL] year [VAL] 1997\n[2]  [COL] title [VAL] Erratum: A Database Model for Object Dynamics [COL] authors [VAL] Mike P. Papazoglou, Bernd J. Kr?mer [COL] venue [VAL] VLDB J. [COL] year [VAL] 1997\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1163,
+            "ground_truth": 2404,
+            "ground_answer": 1,
+            "options": [
+                2404,
+                2385
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] A database model for object dynamics [COL] authors [VAL] M. P. Papazoglou, B. J. Kr&#228;mer [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 1997.0\n \nCandidate records:\n [1]  [COL] title [VAL] A Database Model for Object Dynamics [COL] authors [VAL] Mike P. Papazoglou, Bernd J. Kr?mer [COL] venue [VAL] VLDB J. [COL] year [VAL] 1997\n[2]  [COL] title [VAL] Erratum: A Database Model for Object Dynamics [COL] authors [VAL] Mike P. Papazoglou, Bernd J. Kr?mer [COL] venue [VAL] VLDB J. [COL] year [VAL] 1997\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1174,
+            "ground_truth": 1872,
+            "ground_answer": 1,
+            "options": [
+                1872,
+                430
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] The hB $^\\\\Pi$-tree: a multi-attribute index supporting concurrency, recovery and node consolidation [COL] authors [VAL] Georgios Evangelidis, David Lomet, Betty Salzberg [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 1997.0\n \nCandidate records:\n [1]  [COL] title [VAL] The hB-Pi-Tree: A Multi-Attribute Index Supporting Concurrency, Recovery and Node Consolidation [COL] authors [VAL] Betty Salzberg, David B. Lomet, Georgios Evangelidis [COL] venue [VAL] VLDB J. [COL] year [VAL] 1997\n[2]  [COL] title [VAL] The hBP-tree: A Modified hB-tree Supporting Concurrency, Recovery and Node Consolidation [COL] authors [VAL] Georgios Evangelidis, Betty Salzberg, David B. Lomet [COL] venue [VAL] VLDB [COL] year [VAL] 1995\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1182,
+            "ground_truth": 317,
+            "ground_answer": 2,
+            "options": [
+                2119,
+                317
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Garbage collection in object-oriented databases using transactional cyclic reference counting [COL] authors [VAL] P. Roy, S. Seshadri, A. Silberschatz, S. Sudarshan, S. Ashwin [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 1998.0\n \nCandidate records:\n [1]  [COL] title [VAL] Garbage Collection in Object Oriented Databases Using Transactional Cyclic Reference Counting [COL] authors [VAL] S. Sudarshan, Prasan Roy, Abraham Silberschatz, S. Seshadri, Srinivas Ashwin [COL] venue [VAL] VLDB [COL] year [VAL] 1997\n[2]  [COL] title [VAL] Garbage Collection in Object-Oriented Databases Using Transactional Cyclic Reference Counting [COL] authors [VAL] S. Sudarshan, Prasan Roy, Abraham Silberschatz, Srinivas Ashwin, S. Seshadri [COL] venue [VAL] VLDB J. [COL] year [VAL] 1998\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1183,
+            "ground_truth": 1752,
+            "ground_answer": 1,
+            "options": [
+                1752,
+                1196
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Integrating reliable memory in databases [COL] authors [VAL] Wee Teck Ng, Peter M. Chen [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 1998.0\n \nCandidate records:\n [1]  [COL] title [VAL] Integrating Reliable Memory in Databases [COL] authors [VAL] Peter M. Chen, Wee Teck Ng [COL] venue [VAL] VLDB J. [COL] year [VAL] 1998\n[2]  [COL] title [VAL] Integrating Reliable Memory in Databases [COL] authors [VAL] Peter M. Chen, Wee Teck Ng [COL] venue [VAL] VLDB [COL] year [VAL] 1997\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1208,
+            "ground_truth": 479,
+            "ground_answer": 2,
+            "options": [
+                1309,
+                479
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] The GMAP: a versatile tool for physical data independence [COL] authors [VAL] Odysseas G. Tsatalos, Marvin H. Solomon, Yannis E. Ioannidis [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 1996.0\n \nCandidate records:\n [1]  [COL] title [VAL] The GMAP: A Versatile Tool for Physical Data Independence [COL] authors [VAL] Marvin H. Solomon, Yannis E. Ioannidis, Odysseas G. Tsatalos [COL] venue [VAL] VLDB [COL] year [VAL] 1994\n[2]  [COL] title [VAL] The GMAP: A Versatile Tool for Physical Data Independence [COL] authors [VAL] Yannis E. Ioannidis, Marvin H. Solomon, Odysseas G. Tsatalos [COL] venue [VAL] VLDB J. [COL] year [VAL] 1996\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1209,
+            "ground_truth": 76,
+            "ground_answer": 2,
+            "options": [
+                99,
+                76
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Algebraic query optimisation for database programming languages [COL] authors [VAL] Alexandra Poulovassilis, Carol Small [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 1996.0\n \nCandidate records:\n [1]  [COL] title [VAL] Investigation of Algebraic Query Optimisation Techniques for Database Programming Languages [COL] authors [VAL] Alexandra Poulovassilis, Carol Small [COL] venue [VAL] VLDB [COL] year [VAL] 1994\n[2]  [COL] title [VAL] Algebraic Query Optimisation for Database Programming Languages [COL] authors [VAL] Carol Small, Alexandra Poulovassilis [COL] venue [VAL] VLDB J. [COL] year [VAL] 1996\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1225,
+            "ground_truth": 2151,
+            "ground_answer": 1,
+            "options": [
+                2151,
+                839
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Secure buffering in firm real-time database systems [COL] authors [VAL] Binto George, Jayant R. Haritsa [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2000.0\n \nCandidate records:\n [1]  [COL] title [VAL] Secure Bufering in Firm Real-Time Database Systems [COL] authors [VAL] Jayant R. Haritsa, Binto George [COL] venue [VAL] VLDB J. [COL] year [VAL] 2000\n[2]  [COL] title [VAL] Secure Buffering in Firm Real-Time Database Systems [COL] authors [VAL] Binto George, Jayant R. Haritsa [COL] venue [VAL] VLDB [COL] year [VAL] 1998\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1227,
+            "ground_truth": 1218,
+            "ground_answer": 1,
+            "options": [
+                1218,
+                1051
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Clustering categorical data: an approach based on dynamical systems [COL] authors [VAL] David Gibson, Jon Kleinberg, Prabhakar Raghavan [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2000.0\n \nCandidate records:\n [1]  [COL] title [VAL] Clustering Categorical Data: An Approach Based on Dynamical Systems [COL] authors [VAL] David Gibson, Jon M. Kleinberg, Prabhakar Raghavan [COL] venue [VAL] VLDB J. [COL] year [VAL] 2000\n[2]  [COL] title [VAL] Clustering Categorical Data: An Approach Based on Dynamical Systems [COL] authors [VAL] Prabhakar Raghavan, David Gibson, Jon M. Kleinberg [COL] venue [VAL] VLDB [COL] year [VAL] 1998\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1232,
+            "ground_truth": 1362,
+            "ground_answer": 2,
+            "options": [
+                1849,
+                1362
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] TIMBER: A native XML database [COL] authors [VAL] H. V. Jagadish, S. Al-Khalifa, A. Chapman, L. V. S. Lakshmanan, A. Nierman, S. Paparizos, J. M. Patel, D. Srivastava, N. Wiwatwattana, Y. Wu, C. Yu [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] TIMBER: A Native System for Querying XML [COL] authors [VAL] Laks V. S. Lakshmanan, Stelios Paparizos, Nuwee Wiwatwattana, Cong Yu, Jignesh M. Patel, H. V. Jagadish, Andrew Nierman, Divesh Srivastava, Adriane Chapman, Yuqing Wu, Shurug Al-Khalifa [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2003\n[2]  [COL] title [VAL] TIMBER: A native XML database [COL] authors [VAL] Andrew Nierman, Cong Yu, Jignesh M. Patel, Adriane Chapman, Nuwee Wiwatwattana, H. V. Jagadish, Yuqing Wu, Laks V. S. Lakshmanan, Divesh Srivastava, Shurug Al-Khalifa, Stelios Paparizos [COL] venue [VAL] VLDB J. [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1234,
+            "ground_truth": 175,
+            "ground_answer": 2,
+            "options": [
+                1468,
+                175
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Tree pattern query minimization [COL] authors [VAL] S. Amer-Yahia, S. Cho, L. V. S. Lakshmanan, D. Srivastava [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2002.0\n \nCandidate records:\n [1]  [COL] title [VAL] Minimization of Tree Pattern Queries [COL] authors [VAL] Sihem Amer-Yahia, Divesh Srivastava, Laks V. S. Lakshmanan, SungRan Cho [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2001\n[2]  [COL] title [VAL] Tree pattern query minimization [COL] authors [VAL] Divesh Srivastava, SungRan Cho, Laks V. S. Lakshmanan, Sihem Amer-Yahia [COL] venue [VAL] VLDB J. [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1240,
+            "ground_truth": 62,
+            "ground_answer": 2,
+            "options": [
+                2418,
+                62
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] PicoDMBS: Scaling Down Database Techniques for the Smartcard [COL] authors [VAL] Christophe Bobineau, Luc Bouganim, Philippe Pucheral, Patrick Valduriez [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 2000.0\n \nCandidate records:\n [1]  [COL] title [VAL] PicoDBMS: Scaling down database techniques for the smartcard [COL] authors [VAL] Patrick Valduriez, Philippe Pucheral, Christophe Bobineau, Luc Bouganim [COL] venue [VAL] VLDB J. [COL] year [VAL] 2001\n[2]  [COL] title [VAL] PicoDMBS: Scaling Down Database Techniques for the Smartcard [COL] authors [VAL] Luc Bouganim, Patrick Valduriez, Philippe Pucheral, Christophe Bobineau [COL] venue [VAL] VLDB [COL] year [VAL] 2000\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1247,
+            "ground_truth": 2252,
+            "ground_answer": 1,
+            "options": [
+                2252,
+                2058
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Building and Customizing Data-Intensive Web Sites Using Weave [COL] authors [VAL] Khaled Yagoub, Daniela Florescu, Val&#233;rie Issarny, Patrick Valduriez [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 2000.0\n \nCandidate records:\n [1]  [COL] title [VAL] Building and Customizing Data-Intensive Web Sites Using Weave [COL] authors [VAL] Val?rie Issarny, Patrick Valduriez, Khaled Yagoub, Daniela Florescu [COL] venue [VAL] VLDB [COL] year [VAL] 2000\n[2]  [COL] title [VAL] Caching Strategies for Data-Intensive Web Sites [COL] authors [VAL] Khaled Yagoub, Patrick Valduriez, Val?rie Issarny, Daniela Florescu [COL] venue [VAL] VLDB [COL] year [VAL] 2000\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1268,
+            "ground_truth": 364,
+            "ground_answer": 2,
+            "options": [
+                1153,
+                364
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Optimizing database architecture for the new bottleneck: memory access [COL] authors [VAL] Stefan Manegold, Peter A. Boncz, Martin L. Kersten [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2000.0\n \nCandidate records:\n [1]  [COL] title [VAL] Database Architecture Optimized for the New Bottleneck: Memory Access [COL] authors [VAL] Stefan Manegold, Peter A. Boncz, Martin L. Kersten [COL] venue [VAL] VLDB [COL] year [VAL] 1999\n[2]  [COL] title [VAL] Optimizing database architecture for the new bottleneck: memory access [COL] authors [VAL] Peter A. Boncz, Stefan Manegold, Martin L. Kersten [COL] venue [VAL] VLDB J. [COL] year [VAL] 2000\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1296,
+            "ground_truth": 2403,
+            "ground_answer": 1,
+            "options": [
+                2403,
+                1792
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Views in a Large Scale XML Repository [COL] authors [VAL] Sophie Cluet, Pierangelo Veltri, Dan Vodislav [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 2001.0\n \nCandidate records:\n [1]  [COL] title [VAL] Views in a Large Scale XML Repository [COL] authors [VAL] Dan Vodislav, Sophie Cluet, Pierangelo Veltri [COL] venue [VAL] VLDB [COL] year [VAL] 2001\n[2]  [COL] title [VAL] Views in a large-scale XML repository [COL] authors [VAL] Vincent Aguilera, Dan Vodislav, Pierangelo Veltri, Sophie Cluet, Tova Milo [COL] venue [VAL] VLDB J. [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1332,
+            "ground_truth": 2193,
+            "ground_answer": 2,
+            "options": [
+                2255,
+                2193
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] A Formal Perspective on the View Selection Problem [COL] authors [VAL] Rada Chirkova, Alon Y. Halevy, Dan Suciu [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 2001.0\n \nCandidate records:\n [1]  [COL] title [VAL] A formal perspective on the view selection problem [COL] authors [VAL] Rada Chirkova, Dan Suciu, Alon Y. Halevy [COL] venue [VAL] VLDB J. [COL] year [VAL] 2002\n[2]  [COL] title [VAL] A Formal Perspective on the View Selection Problem [COL] authors [VAL] Dan Suciu, Rada Chirkova, Alon Y. Halevy [COL] venue [VAL] VLDB [COL] year [VAL] 2001\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1409,
+            "ground_truth": 19,
+            "ground_answer": 2,
+            "options": [
+                1243,
+                19
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Lineage Tracing for General Data Warehouse Transformations [COL] authors [VAL] Yingwei Cui, Jennifer Widom [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 2001.0\n \nCandidate records:\n [1]  [COL] title [VAL] Lineage tracing for general data warehouse transformations [COL] authors [VAL] Jennifer Widom, Yingwei Cui [COL] venue [VAL] VLDB J. [COL] year [VAL] 2003\n[2]  [COL] title [VAL] Lineage Tracing for General Data Warehouse Transformations [COL] authors [VAL] Yingwei Cui, Jennifer Widom [COL] venue [VAL] VLDB [COL] year [VAL] 2001\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1410,
+            "ground_truth": 367,
+            "ground_answer": 2,
+            "options": [
+                1553,
+                367
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] A Database Index to Large Biological Sequences [COL] authors [VAL] Ela Hunt, Malcolm P. Atkinson, Robert W. Irving [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 2001.0\n \nCandidate records:\n [1]  [COL] title [VAL] Database indexing for large DNA and protein sequence collections [COL] authors [VAL] Robert W. Irving, Malcolm P. Atkinson, Ela Hunt [COL] venue [VAL] VLDB J. [COL] year [VAL] 2002\n[2]  [COL] title [VAL] A Database Index to Large Biological Sequences [COL] authors [VAL] Robert W. Irving, Ela Hunt, Malcolm P. Atkinson [COL] venue [VAL] VLDB [COL] year [VAL] 2001\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1432,
+            "ground_truth": 2182,
+            "ground_answer": 1,
+            "options": [
+                2182,
+                361
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Dali: A High Performance Main Memory Storage Manager [COL] authors [VAL] H. V. Jagadish, Daniel F. Lieuwen, Rajeev Rastogi, Abraham Silberschatz, S. Sudarshan [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1994.0\n \nCandidate records:\n [1]  [COL] title [VAL] Dal?: A High Performance Main Memory Storage Manager [COL] authors [VAL] S. Sudarshan, H. V. Jagadish, Rajeev Rastogi, Abraham Silberschatz, Daniel F. Lieuwen [COL] venue [VAL] VLDB [COL] year [VAL] 1994\n[2]  [COL] title [VAL] DataBlitz: A High Performance Main-Memory Storage Manager [COL] authors [VAL] P. P. S. Narayan, S. Joshi, M. Nemeth, Abraham Silberschatz, Henry F. Korth, A. Khivesera, Jerry Baulier, S. Sudarshan, Philip Bohannon, Peter McIlroy, J. Miller, S. Gogate, Rajeev Rastogi, C. Gupta [COL] venue [VAL] VLDB [COL] year [VAL] 1998\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1459,
+            "ground_truth": 459,
+            "ground_answer": 2,
+            "options": [
+                1366,
+                459
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Index Concurrency Control in Firm Real-Time Database Systems [COL] authors [VAL] Brajesh Goyal, Jayant R. Haritsa, S. Seshadri, V. Srinivasan [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1995.0\n \nCandidate records:\n [1]  [COL] title [VAL] Real-Time Index Concurrency Control [COL] authors [VAL] S. Seshadri, Jayant R. Haritsa [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1996\n[2]  [COL] title [VAL] Index Concurrency Control in Firm Real-Time Database Systems [COL] authors [VAL] Brajesh Goyal, S. Seshadri, V. Srinivasan, Jayant R. Haritsa [COL] venue [VAL] VLDB [COL] year [VAL] 1995\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1460,
+            "ground_truth": 388,
+            "ground_answer": 2,
+            "options": [
+                1565,
+                388
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] W3QS: A Query System for the World-Wide Web [COL] authors [VAL] David Konopnicki, Oded Shmueli [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1995.0\n \nCandidate records:\n [1]  [COL] title [VAL] Information Gathering in the World-Wide Web: The W3QL Query Language and the W3QS System [COL] authors [VAL] David Konopnicki, Oded Shmueli [COL] venue [VAL] ACM Trans. Database Syst. [COL] year [VAL] 1998\n[2]  [COL] title [VAL] W3QS: A Query System for the World-Wide Web [COL] authors [VAL] David Konopnicki, Oded Shmueli [COL] venue [VAL] VLDB [COL] year [VAL] 1995\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1476,
+            "ground_truth": 1757,
+            "ground_answer": 2,
+            "options": [
+                2018,
+                1757
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Using Formal Methods to Reason about Semantics-Based Decompositions of Transactions [COL] authors [VAL] Paul Ammann, Sushil Jajodia, Indrakshi Ray [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1995.0\n \nCandidate records:\n [1]  [COL] title [VAL] Applying Formal Methods to Semantic-Based Decomposition of Transactions [COL] authors [VAL] Paul Ammann, Indrakshi Ray, Sushil Jajodia [COL] venue [VAL] ACM Trans. Database Syst. [COL] year [VAL] 1997\n[2]  [COL] title [VAL] Using Formal Methods to Reason about Semantics-Based Decompositions of Transactions [COL] authors [VAL] Paul Ammann, Indrakshi Ray, Sushil Jajodia [COL] venue [VAL] VLDB [COL] year [VAL] 1995\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1565,
+            "ground_truth": 2602,
+            "ground_answer": 1,
+            "options": [
+                2602,
+                206
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] METU interoperable database system [COL] authors [VAL] A. Dogac, C. Dengi, E. Kilic, G. Ozhan, F. Ozcan, S. Nural, C. Evrendilek, U. Halici, B. Arpinar, P. Koksal, N. Kesim, S. Mancuhan [COL] venue [VAL] ACM SIGMOD Record [COL] year [VAL] 1995.0\n \nCandidate records:\n [1]  [COL] title [VAL] METU Interoperable Database System [COL] authors [VAL] Ebru Kilic, Pinar Koksal, Cem Evrendilek, Ugur Halici, Sema Mancuhan, N. Kesim, Asuman Dogac, Cevdet Dengi, Sena Nural, G?khan ?zhan, Fatma Ozcan, Ismailcem Budak Arpinar [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1995\n[2]  [COL] title [VAL] METU Interoperable Database System [COL] authors [VAL] Sema Mancuhan, Ismailcem Budak Arpinar, Fatma Ozcan, Pinar Koksal, Asuman Dogac, G?khan ?zhan, Cevdet Dengi, Ugur Halici, Cem Evrendilek, Sena Nural, Ebru Kilic [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1996\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1641,
+            "ground_truth": 1234,
+            "ground_answer": 1,
+            "options": [
+                1234,
+                404
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] XSB as an efficient deductive database engine [COL] authors [VAL] Konstantinos Sagonas, Terrance Swift, David S. Warren [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 1994.0\n \nCandidate records:\n [1]  [COL] title [VAL] XSB as an Efficient Deductive Database Engine [COL] authors [VAL] David Scott Warren, Konstantinos F. Sagonas, Terrance Swift [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1994\n[2]  [COL] title [VAL] XSB as a Deductive Database [COL] authors [VAL] Terrance Swift, Konstantinos F. Sagonas, David Scott Warren [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1994\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1645,
+            "ground_truth": 1111,
+            "ground_answer": 2,
+            "options": [
+                1648,
+                1111
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] QuickStore: a high performance mapped object store [COL] authors [VAL] Seth J. White, David J. DeWitt [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 1994.0\n \nCandidate records:\n [1]  [COL] title [VAL] QuickStore: A High Performance Mapped Object Store [COL] authors [VAL] Seth J. White, David J. DeWitt [COL] venue [VAL] VLDB J. [COL] year [VAL] 1995\n[2]  [COL] title [VAL] QuickStore: A High Performance Mapped Object Store [COL] authors [VAL] David J. DeWitt, Seth J. White [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1994\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1700,
+            "ground_truth": 1331,
+            "ground_answer": 2,
+            "options": [
+                1524,
+                1331
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] TSQL2 language specification [COL] authors [VAL] Richard Thomas Snodgrass, Ilsoo Ahn, Gadi Ariav, Don Batory, James Clifford, Curtis E. Dyreson, Ramez Elmasri, Fabio Grandi, Christian S. Jensen, Wolfgang K&#228;fer, Nick Kline, Krishna Kulkarni, T. Y. Cliff Leung, Nikos Lorentzos, John F. Roddick, Arie Segev, Michael D. Soo, Suryanarayana M. Sripada [COL] venue [VAL] ACM SIGMOD Record [COL] year [VAL] 1994.0\n \nCandidate records:\n [1]  [COL] title [VAL] A TSQL2 Tutorial [COL] authors [VAL] James Clifford, Ramez Elmasri, Michael D. Soo, Wolfgang K?fer, Nick Kline, Arie Segev, Suryanarayana M. Sripada, Fabio Grandi, John F. Roddick, Richard T. Snodgrass, Christian S. Jensen, Nikos A. Lorentzos, Ilsoo Ahn, Gad Ariav, Don S. Batory, T. Y. Cliff Leung, Curtis E. Dyreson, Krishna G. Kulkarni [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1994\n[2]  [COL] title [VAL] TSQL2 Language Specification [COL] authors [VAL] Wolfgang K?fer, Curtis E. Dyreson, Arie Segev, Krishna G. Kulkarni, Michael D. Soo, Don S. Batory, Ramez Elmasri, Nikos A. Lorentzos, Nick Kline, John F. Roddick, Gad Ariav, James Clifford, Richard T. Snodgrass, Suryanarayana M. Sripada, T. Y. Cliff Leung, Fabio Grandi, Ilsoo Ahn, Christian S. Jensen [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1994\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1711,
+            "ground_truth": 1036,
+            "ground_answer": 2,
+            "options": [
+                1240,
+                1036
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Automatic generation of production rules for integrity maintenance [COL] authors [VAL] Stefano Ceri, Piero Fraternali, Stefano Paraboschi, Letizia Tanca [COL] venue [VAL] ACM Transactions on Database Systems (TODS) [COL] year [VAL] 1994.0\n \nCandidate records:\n [1]  [COL] title [VAL] Addendum to Automatic Generation of Production Rules for Integrity Maintenance [COL] authors [VAL] Letizia Tanca, Stefano Paraboschi, Piero Fraternali, Stefano Ceri [COL] venue [VAL] ACM Trans. Database Syst. [COL] year [VAL] 1995\n[2]  [COL] title [VAL] Automatic Generation of Production Rules for Integrity Maintenance [COL] authors [VAL] Letizia Tanca, Stefano Ceri, Piero Fraternali, Stefano Paraboschi [COL] venue [VAL] ACM Trans. Database Syst. [COL] year [VAL] 1994\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1721,
+            "ground_truth": 2525,
+            "ground_answer": 1,
+            "options": [
+                2525,
+                2434
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Estimating page fetches for index scans with finite LRU buffers [COL] authors [VAL] Arun Swami, K. Bernhard Schiefer [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 1994.0\n \nCandidate records:\n [1]  [COL] title [VAL] Estimating Page Fetches for Index Scans with Finite LRU Buffers [COL] authors [VAL] Arun N. Swami, K. Bernhard Schiefer [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1994\n[2]  [COL] title [VAL] Estimating Page Fetches for Index Scans with Finite LRU Buffers [COL] authors [VAL] K. Bernhard Schiefer, Arun N. Swami [COL] venue [VAL] VLDB J. [COL] year [VAL] 1995\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1737,
+            "ground_truth": 2043,
+            "ground_answer": 1,
+            "options": [
+                2043,
+                2035
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Sleepers and workaholics: caching strategies in mobile environments [COL] authors [VAL] Daniel Barbar&#225;, Tomasz Imieli&#324;ski [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 1994.0\n \nCandidate records:\n [1]  [COL] title [VAL] Sleepers and Workaholics: Caching Strategies in Mobile Environments [COL] authors [VAL] Daniel Barbar?, Tomasz Imielinski [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1994\n[2]  [COL] title [VAL] Sleepers and Workaholics: Caching Strategies in Mobile Environments [COL] authors [VAL] Tomasz Imielinski, Daniel Barbar? [COL] venue [VAL] VLDB J. [COL] year [VAL] 1995\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1751,
+            "ground_truth": 778,
+            "ground_answer": 1,
+            "options": [
+                778,
+                656
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Inferring structure in semistructured data [COL] authors [VAL] Svetlozer Nestorov, Serge Abiteboul, Rajeev Motwani [COL] venue [VAL] ACM SIGMOD Record [COL] year [VAL] 1997.0\n \nCandidate records:\n [1]  [COL] title [VAL] Infering Structure in Semistructured Data [COL] authors [VAL] Rajeev Motwani, Serge Abiteboul, Svetlozar Nestorov [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1997\n[2]  [COL] title [VAL] Extracting Schema from Semistructured Data [COL] authors [VAL] Serge Abiteboul, Rajeev Motwani, Svetlozar Nestorov [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1998\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1814,
+            "ground_truth": 899,
+            "ground_answer": 2,
+            "options": [
+                1880,
+                899
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] DEVise: integrated querying and visual exploration of large datasets [COL] authors [VAL] M. Livny, R. Ramakrishnan, K. Beyer, G. Chen, D. Donjerkovic, S. Lawande, J. Myllymaki, K. Wenger [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 1997.0\n \nCandidate records:\n [1]  [COL] title [VAL] DEVise: Integrated Querying and Visual Exploration of Large Datasets (Demo Abstract) [COL] authors [VAL] Jussi Myllymaki, Shilpa Lawande, Donko Donjerkovic, Raghu Ramakrishnan, Guangshun Chen, Kevin S. Beyer, Miron Livny, R. Kent Wenger [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1997\n[2]  [COL] title [VAL] DEVise: Integrated Querying and Visualization of Large Datasets [COL] authors [VAL] Miron Livny, Raghu Ramakrishnan, Donko Donjerkovic, Shilpa Lawande, Jussi Myllymaki, Guangshun Chen, R. Kent Wenger, Kevin S. Beyer [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1997\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1852,
+            "ground_truth": 1880,
+            "ground_answer": 1,
+            "options": [
+                1880,
+                899
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] DEVise (demo abstract): integrated querying and visual exploration of large datasets [COL] authors [VAL] M. Livny, R. Ramakrishnan, K. Beyer, G. Chen, D. Donjerkovic, S. Lawande, J. Myllymaki, K. Wenger [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 1997.0\n \nCandidate records:\n [1]  [COL] title [VAL] DEVise: Integrated Querying and Visual Exploration of Large Datasets (Demo Abstract) [COL] authors [VAL] Jussi Myllymaki, Shilpa Lawande, Donko Donjerkovic, Raghu Ramakrishnan, Guangshun Chen, Kevin S. Beyer, Miron Livny, R. Kent Wenger [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1997\n[2]  [COL] title [VAL] DEVise: Integrated Querying and Visualization of Large Datasets [COL] authors [VAL] Miron Livny, Raghu Ramakrishnan, Donko Donjerkovic, Shilpa Lawande, Jussi Myllymaki, Guangshun Chen, R. Kent Wenger, Kevin S. Beyer [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1997\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1858,
+            "ground_truth": 1632,
+            "ground_answer": 1,
+            "options": [
+                1632,
+                413
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Zoo: a desktop experiment management environment [COL] authors [VAL] Yannis E. Ioannidis, Miron Livny, Anastassia Ailamaki, Anand Narayanan, Andrew Therber [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 1997.0\n \nCandidate records:\n [1]  [COL] title [VAL] ZOO: A Desktop Emperiment Management Environment [COL] authors [VAL] Anastassia Ailamaki, Andrew Therber, Yannis E. Ioannidis, Anand Narayanan, Miron Livny [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1997\n[2]  [COL] title [VAL] ZOO : A Desktop Experiment Management Environment [COL] authors [VAL] Miron Livny, Yannis E. Ioannidis, Nagavamsi Ponnekanti, Shivani Gupta [COL] venue [VAL] VLDB [COL] year [VAL] 1996\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1911,
+            "ground_truth": 303,
+            "ground_answer": 2,
+            "options": [
+                1165,
+                303
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] TPC-D-the challenges, issues and results [COL] authors [VAL] Ramesh Bhashyam [COL] venue [VAL] ACM SIGMOD Record [COL] year [VAL] 1996.0\n \nCandidate records:\n [1]  [COL] title [VAL] TPC-D: The Challenges, Issues and Results [COL] authors [VAL] Ramesh Bhashyam [COL] venue [VAL] VLDB [COL] year [VAL] 1996\n[2]  [COL] title [VAL] TCP-D - The Challenges, Issues and Results [COL] authors [VAL] Ramesh Bhashyam [COL] venue [VAL] SIGMOD Record [COL] year [VAL] 1996\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 1993,
+            "ground_truth": 443,
+            "ground_answer": 2,
+            "options": [
+                1931,
+                443
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Change detection in hierarchically structured information [COL] authors [VAL] Sudarshan S. Chawathe, Anand Rajaraman, Hector Garcia-Molina, Jennifer Widom [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 1996.0\n \nCandidate records:\n [1]  [COL] title [VAL] Meaningful Change Detection in Structured Data [COL] authors [VAL] Hector Garcia-Molina, Sudarshan S. Chawathe [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1997\n[2]  [COL] title [VAL] Change Detection in Hierarchically Structured Information [COL] authors [VAL] Jennifer Widom, Sudarshan S. Chawathe, Hector Garcia-Molina, Anand Rajaraman [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 1996\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2008,
+            "ground_truth": 1226,
+            "ground_answer": 2,
+            "options": [
+                2366,
+                1226
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] PIX: exact and approximate phrase matching in XML [COL] authors [VAL] Sihem Amer-Yahia, Mary Fern&#225;ndez, Divesh Srivastava, Yu Xu [COL] venue [VAL] International Conference on Management of Data [COL] year [VAL] 2003.0\n \nCandidate records:\n [1]  [COL] title [VAL] Phrase Matching in XML [COL] authors [VAL] Sihem Amer-Yahia, Mary F. Fernandez, Yu Xu, Divesh Srivastava [COL] venue [VAL] VLDB [COL] year [VAL] 2003\n[2]  [COL] title [VAL] PIX: Exact and Approximate Phrase Matching in XML [COL] authors [VAL] Yu Xu, Mary F. Fernandez, Sihem Amer-Yahia, Divesh Srivastava [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2003\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2104,
+            "ground_truth": 718,
+            "ground_answer": 2,
+            "options": [
+                2308,
+                718
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Approximate query processing using wavelets [COL] authors [VAL] Kaushik Chakrabarti, Minos Garofalakis, Rajeev Rastogi, Kyuseok Shim [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2001.0\n \nCandidate records:\n [1]  [COL] title [VAL] Approximate Query Processing Using Wavelets [COL] authors [VAL] Kyuseok Shim, Kaushik Chakrabarti, Minos N. Garofalakis, Rajeev Rastogi [COL] venue [VAL] VLDB [COL] year [VAL] 2000\n[2]  [COL] title [VAL] Approximate query processing using wavelets [COL] authors [VAL] Rajeev Rastogi, Minos N. Garofalakis, Kyuseok Shim, Kaushik Chakrabarti [COL] venue [VAL] VLDB J. [COL] year [VAL] 2001\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2107,
+            "ground_truth": 2462,
+            "ground_answer": 1,
+            "options": [
+                2462,
+                2114
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Efficiently publishing relational data as XML documents [COL] authors [VAL] Jayavel Shanmugasundaram, Eugene Shekita, Rimon Barr, Michael Carey, Bruce Lindsay, Hamid Pirahesh, Berthold Reinwald [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2001.0\n \nCandidate records:\n [1]  [COL] title [VAL] Efficiently publishing relational data as XML documents [COL] authors [VAL] Bruce G. Lindsay, Hamid Pirahesh, Berthold Reinwald, Michael J. Carey, Rimon Barr, Jayavel Shanmugasundaram, Eugene J. Shekita [COL] venue [VAL] VLDB J. [COL] year [VAL] 2001\n[2]  [COL] title [VAL] Efficiently Publishing Relational Data as XML Documents [COL] authors [VAL] Berthold Reinwald, Jayavel Shanmugasundaram, Michael J. Carey, Eugene J. Shekita, Hamid Pirahesh, Bruce G. Lindsay, Rimon Barr [COL] venue [VAL] VLDB [COL] year [VAL] 2000\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2145,
+            "ground_truth": 1946,
+            "ground_answer": 1,
+            "options": [
+                1946,
+                666,
+                2458
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Special issue on persistent object systems [COL] authors [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases%1995%%Special issue on persistent object systems The VLDB Journal &mdash; The International Journal on Very Large Data Bases 1995\n \nCandidate records:\n [1]  [COL] title [VAL] Title, Preface to the Special Issue on Persistent Object Systems [COL] authors [VAL] ? [COL] venue [VAL] VLDB J. [COL] year [VAL] 1995\n[2]  [COL] title [VAL] Title, Foreword, Preface to the Special Issue on Spatial Database Systems, Index Vol. 3 [COL] authors [VAL] ? [COL] venue [VAL] VLDB J. [COL] year [VAL] 1994\n[3]  [COL] title [VAL] Title, Foreword, Special Issue Editorial [COL] authors [VAL] ? [COL] venue [VAL] VLDB J. [COL] year [VAL] 1994\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2192,
+            "ground_truth": 259,
+            "ground_answer": 2,
+            "options": [
+                834,
+                259
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Composing Web services on the Semantic Web [COL] authors [VAL] Brahim Medjahed, Athman Bouguettaya, Ahmed K. Elmagarmid [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2003.0\n \nCandidate records:\n [1]  [COL] title [VAL] The Semantic Web: Semantics for Data on the Web [COL] authors [VAL] Vipul Kashyap, Stefan Decker [COL] venue [VAL] VLDB [COL] year [VAL] 2003\n[2]  [COL] title [VAL] Composing Web services on the Semantic Web [COL] authors [VAL] Athman Bouguettaya, Brahim Medjahed, Ahmed K. Elmagarmid [COL] venue [VAL] VLDB J. [COL] year [VAL] 2003\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2195,
+            "ground_truth": 1584,
+            "ground_answer": 1,
+            "options": [
+                1584,
+                1170
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] RoadRunner: Towards Automatic Data Extraction from Large Web Sites [COL] authors [VAL] Valter Crescenzi, Giansalvatore Mecca, Paolo Merialdo [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 2001.0\n \nCandidate records:\n [1]  [COL] title [VAL] RoadRunner: Towards Automatic Data Extraction from Large Web Sites [COL] authors [VAL] Giansalvatore Mecca, Valter Crescenzi, Paolo Merialdo [COL] venue [VAL] VLDB [COL] year [VAL] 2001\n[2]  [COL] title [VAL] RoadRunner: automatic data extraction from data-intensive web sites [COL] authors [VAL] Giansalvatore Mecca, Valter Crescenzi, Paolo Merialdo [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2247,
+            "ground_truth": 99,
+            "ground_answer": 1,
+            "options": [
+                99,
+                76
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Investigation of Algebraic Query Optimisation Techniques for Database Programming Languages [COL] authors [VAL] Alexandra Poulovassilis, Carol Small [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1994.0\n \nCandidate records:\n [1]  [COL] title [VAL] Investigation of Algebraic Query Optimisation Techniques for Database Programming Languages [COL] authors [VAL] Alexandra Poulovassilis, Carol Small [COL] venue [VAL] VLDB [COL] year [VAL] 1994\n[2]  [COL] title [VAL] Algebraic Query Optimisation for Database Programming Languages [COL] authors [VAL] Carol Small, Alexandra Poulovassilis [COL] venue [VAL] VLDB J. [COL] year [VAL] 1996\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2262,
+            "ground_truth": 1465,
+            "ground_answer": 1,
+            "options": [
+                1465,
+                90
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Fast and accurate text classification via multiple linear discriminant projections [COL] authors [VAL] Soumen Chakrabarti, Shourya Roy, Mahesh V. Soundalgekar [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2003.0\n \nCandidate records:\n [1]  [COL] title [VAL] Fast and accurate text classification via multiple linear discriminant projections pp [COL] authors [VAL] Shourya Roy, Mahesh V. Soundalgekar, Soumen Chakrabarti [COL] venue [VAL] VLDB J. [COL] year [VAL] 2003\n[2]  [COL] title [VAL] Fast and Accurate Text Classification via Multiple Linear Discriminant Projections [COL] authors [VAL] Mahesh V. Soundalgekar, Soumen Chakrabarti, Shourya Roy [COL] venue [VAL] VLDB [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2263,
+            "ground_truth": 1309,
+            "ground_answer": 1,
+            "options": [
+                1309,
+                479
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] The GMAP: A Versatile Tool for Physical Data Independence [COL] authors [VAL] Odysseas G. Tsatalos, Marvin H. Solomon, Yannis E. Ioannidis [COL] venue [VAL] Very Large Data Bases [COL] year [VAL] 1994.0\n \nCandidate records:\n [1]  [COL] title [VAL] The GMAP: A Versatile Tool for Physical Data Independence [COL] authors [VAL] Marvin H. Solomon, Yannis E. Ioannidis, Odysseas G. Tsatalos [COL] venue [VAL] VLDB [COL] year [VAL] 1994\n[2]  [COL] title [VAL] The GMAP: A Versatile Tool for Physical Data Independence [COL] authors [VAL] Yannis E. Ioannidis, Marvin H. Solomon, Odysseas G. Tsatalos [COL] venue [VAL] VLDB J. [COL] year [VAL] 1996\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2264,
+            "ground_truth": 665,
+            "ground_answer": 2,
+            "options": [
+                1400,
+                665,
+                1771
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Watermarking relational data: framework, algorithms and analysis [COL] authors [VAL] Rakesh Agrawal, Peter J. Haas, Jerry Kiernan [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2003.0\n \nCandidate records:\n [1]  [COL] title [VAL] A System for Watermarking Relational Databases [COL] authors [VAL] Peter J. Haas, Rakesh Agrawal, Jerry Kiernan [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2003\n[2]  [COL] title [VAL] Watermarking relational data: framework, algorithms and analysis [COL] authors [VAL] Peter J. Haas, Rakesh Agrawal, Jerry Kiernan [COL] venue [VAL] VLDB J. [COL] year [VAL] 2003\n[3]  [COL] title [VAL] Watermarking Relational Databases [COL] authors [VAL] Rakesh Agrawal, Jerry Kiernan [COL] venue [VAL] VLDB [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2268,
+            "ground_truth": 1686,
+            "ground_answer": 1,
+            "options": [
+                1686,
+                11
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] Aurora: a new model and architecture for data stream management [COL] authors [VAL] Daniel J. Abadi, Don Carney, Ugur &#199;etintemel, Mitch Cherniack, Christian Convey, Sangdon Lee, Michael Stonebraker, Nesime Tatbul, Stan Zdonik [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2003.0\n \nCandidate records:\n [1]  [COL] title [VAL] Aurora: a new model and architecture for data stream management [COL] authors [VAL] Christian Convey, Sangdon Lee, Ugur ?etintemel, Daniel J. Abadi, Michael Stonebraker, Mitch Cherniack, Donald Carney, Stanley B. Zdonik, Nesime Tatbul [COL] venue [VAL] VLDB J. [COL] year [VAL] 2003\n[2]  [COL] title [VAL] Aurora: A Data Stream Management System [COL] authors [VAL] Nesime Tatbul, Daniel J. Abadi, C. Erwin, Anurag Maskey, Mitch Cherniack, Alex Rasin, Christian Convey, A. Singer, Eduardo F. Galvez, R. Yan, Ugur ?etintemel, Ying Xing, Stanley B. Zdonik, Michael Stonebraker, Donald Carney, M. Hatoun [COL] venue [VAL] SIGMOD Conference [COL] year [VAL] 2003\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2286,
+            "ground_truth": 2511,
+            "ground_answer": 1,
+            "options": [
+                2511,
+                1658
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] RE-tree: an efficient index structure for regular expressions [COL] authors [VAL] Chee-Yong Chan, Minos Garofalakis, Rajeev Rastogi [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2003.0\n \nCandidate records:\n [1]  [COL] title [VAL] RE-tree: an efficient index structure for regular expressions [COL] authors [VAL] Chee Yong Chan, Minos N. Garofalakis, Rajeev Rastogi [COL] venue [VAL] VLDB J. [COL] year [VAL] 2003\n[2]  [COL] title [VAL] RE-Tree: An Efficient Index Structure for Regular Expressions [COL] authors [VAL] Rajeev Rastogi, Minos N. Garofalakis, Chee Yong Chan [COL] venue [VAL] VLDB [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        },
+        {
+            "query_id": 2288,
+            "ground_truth": 2338,
+            "ground_answer": 1,
+            "options": [
+                2338,
+                1492
+            ],
+            "prompt": "Select a record from the following candidates that refers to the same real-world entity as the given record. \nGiven entity record:  [COL] title [VAL] A case for fractured mirrors [COL] authors [VAL] Ravishankar Ramamurthy, David J. DeWitt, Qi Su [COL] venue [VAL] The VLDB Journal &mdash; The International Journal on Very Large Data Bases [COL] year [VAL] 2003.0\n \nCandidate records:\n [1]  [COL] title [VAL] A case for fractured mirrors [COL] authors [VAL] David J. DeWitt, Ravishankar Ramamurthy, Qi Su [COL] venue [VAL] VLDB J. [COL] year [VAL] 2003\n[2]  [COL] title [VAL] A Case for Fractured Mirrors [COL] authors [VAL] Ravishankar Ramamurthy, Qi Su, David J. DeWitt [COL] venue [VAL] VLDB [COL] year [VAL] 2002\n\nPlease respond in the correct format:\nThe output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"properties\": {\"answer\": {\"description\": \"The corresponding record number surrounded by \\\"[]\\\" or \\\"[0]\\\" if there is none.\", \"title\": \"Answer\", \"type\": \"string\"}, \"explanation\": {\"description\": \"A brief explanation of the answer.\", \"title\": \"Explanation\", \"type\": \"string\"}}, \"required\": [\"answer\", \"explanation\"]}\n```"
+        }
+    ]
+}
