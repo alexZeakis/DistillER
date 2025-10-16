@@ -1,5 +1,5 @@
 # DistillER
-DistillER: Ensembling and Fine-Tuning LLMs for SELECT Prompts in Entity Resolution
+DistillER: Knowledge Distillation in Entity Resolution with Large Language Models
 
 # Instructions
 
@@ -28,10 +28,4 @@ Datasets can be found [here](data/ccer/cleaned/).
 | ├─ Supervised Fine-Tuning (Q3) | [Experiments](scripts/matching/sft/README.md) | [Evaluations](scripts/evaluate/sft/README.md) | [Logs](log/matching/sft/) |
 | └─ Reinforcement Learning (Q4) | [Experiments](scripts/matching/rl/README.md) | [Evaluations](scripts/evaluate/rl/README.md) | [Logs](log/matching/rl/) |
 | **SotA (Q6)** | [Experiments](scripts/matching/sota/README.md) | [Evaluations](scripts/evaluate/sota/README.md) | [Logs](log/matching/sota/) |
-
-
-
-## Models
-You can find the fine-tuned version of Mistral [here](https://huggingface.co/alexZeakis/AvengER-mistral-v0.3/) and the fine-tuned version of Llama [here](https://huggingface.co/alexZeakis/AvengER-llama-3.1/).
-
 
