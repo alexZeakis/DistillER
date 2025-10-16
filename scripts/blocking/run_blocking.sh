@@ -3,14 +3,10 @@
 # List of directories
 directories=("D2" "D3" "D4" "D5" "D6" "D7" "D8" "D9" )
 
-#methods=("random" "sampled" "blocking_max" "blocking_top2" "clustering_kmeans" "clustering_hierarchical")
-methods=("clustering_hierarchical")
-
 # Loop over each directory and run the Python script
 for dir in "${directories[@]}"; do
     echo "Processing directory: $dir"
 
-<<xom
     python vectorization.py \
     --dataset "$dir" \
     --model "sgtrt5" \
@@ -26,17 +22,5 @@ for dir in "${directories[@]}"; do
     --emb_dir "../../log/blocking/embeddings/" \
     --device "cuda:1"  \
     --k 10
-xom
 
-    for method in "${methods[@]}"; do
-        python split_dataset.py \
-        --dataset "$dir" \
-        --in_dir "../../log/blocking/" \
-        --out_dir "../../data/ccer/cleaned/fine_tuning/$method/" \
-        --blocking_option "intersection"  \
-        --split_percent 0.1 \
-        --method "$method" \
-        --positive_ratio 0.75
-
-    done
 done

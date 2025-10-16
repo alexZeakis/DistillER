@@ -1,4 +1,4 @@
-To run Vectorization with S-GTR-T5, Blocking and Sampling, run:
-
-cd scripts/blocking/
+To run Vectorization with S-GTR-T5 and Blocking:
+```
 ./run_blocking.sh
+```
