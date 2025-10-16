@@ -11,7 +11,7 @@ for dir in "${directories[@]}"; do
     --dataset "$dir" \
     --out_file "../../../log/matching/baselines/pretrained/$dir.json"  \
     --in_dir "../../../data/ccer/cleaned/original/" \
-    --sample_file "../../../data/ccer/cleaned/fine_tuning/blocking/test/$dir.csv" \
+    --sample_file "../../../data/ccer/cleaned/fine_tuning/blocking_max/test/$dir.csv" \
     --seed 1924 \
     --serialization "DITTO" \
     --task_description "EXPLAIN"

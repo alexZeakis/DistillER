@@ -25,7 +25,7 @@ def read_sudowoodo_sota(path):
 ################### COMPARING PLMS - GENERALIZED ON TEST DATA #################
 
 # path2 = '../../../log/matching/disambiguation/'
-path = '../../../log/matching/llm/'
+path = '../../../log/matching/sft/llm/'
 df = pd.DataFrame()
 
 # df['RoBERTa-GT-UMC'] = prepare_plm_file(path2+'umc/roberta/ground/', 'final/')
