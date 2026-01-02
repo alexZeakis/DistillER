@@ -3,6 +3,8 @@
 # List of directories
 directories=("D2" "D3" "D4" "D5" "D6" "D7" "D8" "D9" )
 
+models=("llama3.1:latest" "qwen2.5:32b" )
+
 # Loop over each directory and run the Python script
 for dir in "${directories[@]}"; do
     echo "Processing directory: $dir"
@@ -16,12 +18,12 @@ for dir in "${directories[@]}"; do
     --serialization "DITTO" \
     --task_description "EXPLAIN"
 
-    python ../run_prompt.py \
-        --dataset "$dir" \
-        --model "llama3.1:latest" \
-        --in_file "../../../log/matching/baselines/pretrained/$dir.json" \
-        --out_file "../../../log/matching/baselines/pretrained/${dir}_responses.json" \
-        --endpoint "http://localhost:11435/v1"
-        #--token "ollama"
-        #--model "qwen3:8b" \
+    for model in "${models[@]}"; do
+        python ../run_prompt.py \
+            --dataset "$dir" \
+            --model "$model" \
+            --in_file "../../../log/matching/baselines/pretrained/$dir.json" \
+            --out_file "../../../log/matching/baselines/pretrained/${model}/${dir}_responses.json" \
+            --endpoint "http://localhost:11434/v1"
+    done
 done

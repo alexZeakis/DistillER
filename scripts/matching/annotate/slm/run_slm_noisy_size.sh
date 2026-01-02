@@ -26,16 +26,16 @@ for size in "${sizes[@]}"; do
             for seed in "${seeds[@]}"; do
                 echo "Transforming data for $dir with seed $seed"
     
-                python ../../slm/transform_data_plm.py \
+                python ../../sft/slm/transform_data_plm.py \
                     --dataset "$dir" \
                     --out_dir "../../../../log/matching/annotate/slm/size/$slm_model/${size}/data/$dir/"  \
                     --in_dir "../../../../data/ccer/cleaned/original/" \
-                    --sample_file "../../../../data/ccer/cleaned/fine_tuning/blocking/train/$dir.csv" \
+                    --sample_file "../../../../data/ccer/cleaned/fine_tuning/blocking_max/train/$dir.csv" \
                     --seed $seed \
                     --serialization "DITTO" \
                     --percentage ${size} \
                     --mode "train" \
-                    --response_file "../../../../log/matching/annotate/blocking/${noisy}/partial_responses/${dir}_${seed}_responses.json"
+                    --response_file "../../../../log/matching/annotate/llm/${noisy}/partial_responses/${dir}_${seed}_responses.json"
             done
         done
     
@@ -46,7 +46,7 @@ for size in "${sizes[@]}"; do
             --percentage 0.8
     
         # Step 3: Fine-tune the SLM model
-        python ../../slm/supervised_main.py \
+        python ../../sft/slm/supervised_main.py \
             --model_type "$slm_model" \
             --model_name_or_path "$slm_path" \
             --data_dir "../../../../log/matching/annotate/slm/size/$slm_model/${size}/data/" \
@@ -67,7 +67,7 @@ for size in "${sizes[@]}"; do
                 --dataset "$dir" \
                 --out_file "../../../../log/matching/annotate/slm/size/$slm_model/${size}/partial/${dir}_1924.json" \
                 --in_dir "../../../../data/ccer/cleaned/original/" \
-                --sample_file "../../../../data/ccer/cleaned/fine_tuning/blocking/train/$dir.csv" \
+                --sample_file "../../../../data/ccer/cleaned/fine_tuning/blocking_max/train/$dir.csv" \
                 --seed 1924 \
                 --serialization "DITTO" \
                 --task_description "EXPLAIN"

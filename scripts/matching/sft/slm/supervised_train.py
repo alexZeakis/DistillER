@@ -103,3 +103,12 @@ if __name__ == "__main__":
     training_time = t2-t1
 
     save_model(model, args.model_output_dir, tokenizer=tokenizer)
+    
+    log_file = os.path.join(args.log_dir, 'matching_supervised_dynamic.txt')
+    os.makedirs(os.path.dirname(log_file), exist_ok=True)
+    with open(log_file, 'a') as fout:
+        scores = {
+            'model_type': args.model_type,
+            'training_time': training_time,
+        }
+        fout.write(json.dumps(scores) + "\n")

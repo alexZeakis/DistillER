@@ -37,15 +37,19 @@ def plot_model_lines(series, output_pdf="slm_percentage.pdf"):
     plt.close()
 
 path = '../../../log/matching/annotate/slm/llm/'
-gt_path = '../../../log/matching/annotate/blocking/ground/partial/'
+path2 = '../../../log/matching/annotate/slm/ground/'
+gt_path = '../../../log/matching/annotate/llm/ground/partial/'
 df = pd.DataFrame()
-df['SMiniLM-8b'] = prepare_train_file(path+'sminilm/llama_8/', gt_path)
+df['SMiniLM-Ground'] = prepare_train_file(path2+'sminilm/', gt_path)
+# df['SMiniLM-8b'] = prepare_train_file(path+'sminilm/llama_8/', gt_path)
 df['SMiniLM-70b'] = prepare_train_file(path+'sminilm/llama_70/', gt_path)
-df['SMiniLM-14'] = prepare_train_file(path+'sminilm/qwen_14/', gt_path)
+# df['SMiniLM-14'] = prepare_train_file(path+'sminilm/qwen_14/', gt_path)
 df['SMiniLM-32'] = prepare_train_file(path+'sminilm/qwen_32/', gt_path)
-df['RoBERTa-8b'] = prepare_train_file(path+'roberta/llama_8/', gt_path)
+
+df['RoBERTa-Ground'] = prepare_train_file(path2+'roberta/', gt_path)
+# df['RoBERTa-8b'] = prepare_train_file(path+'roberta/llama_8/', gt_path)
 df['RoBERTa-70b'] = prepare_train_file(path+'roberta/llama_70/', gt_path)
-df['RoBERTa-14'] = prepare_train_file(path+'roberta/qwen_14/', gt_path)
+# df['RoBERTa-14'] = prepare_train_file(path+'roberta/qwen_14/', gt_path)
 df['RoBERTa-32'] = prepare_train_file(path+'roberta/qwen_32/', gt_path)
 
 df = prepare_df(df)
@@ -65,14 +69,3 @@ df = prepare_df(df)
 latex_code_2 = df.to_latex(index=True, escape=False, multirow=False)
 
 plot_model_lines(df.loc['Mean', :])
-
-path = '../../../log/matching/annotate/slm/llm/'
-path2 = '../../../log/matching/annotate/slm/ground/'
-df = pd.DataFrame()
-df['SMiniLM-Ground'] = prepare_train_file(path2+'sminilm/', gt_path)
-df['SMiniLM-32'] = prepare_train_file(path+'sminilm/qwen_32/', gt_path)
-df['RoBERTa-Ground'] = prepare_train_file(path2+'roberta/', gt_path)
-df['RoBERTa-32'] = prepare_train_file(path+'roberta/qwen_32/', gt_path)
-
-df = prepare_df(df)
-latex_code_3 = df.to_latex(index=True, escape=False, multirow=False)

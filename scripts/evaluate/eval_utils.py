@@ -4,32 +4,7 @@ import re
 import os
 import matplotlib.pyplot as plt
 
-def compute_f1_equality(y_true, y_pred):
-    """
-    Compute F1 score based on equality between two sequential lists.
-
-    Parameters:
-        y_true (list): Ground truth labels (any type).
-        y_pred (list): Predicted labels (any type).
-
-    Returns:
-        float: F1 score based on element-wise equality.
-    """
-    assert len(y_true) == len(y_pred), "Length of true and predicted lists must match"
-
-    tp = sum(yt == yp for yt, yp in zip(y_true, y_pred))
-    fp = sum(yt != yp for yt, yp in zip(y_true, y_pred))
-    fn = fp  # since every false prediction is also a missed correct label
-
-    if tp == 0:
-        return 0.0
-
-    precision = tp / (tp + fp)
-    recall = tp / (tp + fn)
-
-    return 2 * precision * recall / (precision + recall)
-
-
+    
 def compute_f1_score(y_true, y_pred):
     """
     Compute the F1 score for binary classification without using sklearn.
@@ -61,7 +36,7 @@ def compute_f1_score(y_true, y_pred):
     f1 = 2 * (precision * recall) / (precision + recall)
     return f1
 
-def calc_f1(true, preds):
+def calc_f1(true, preds, metric='f1'):
     if len(true) > 0:
         recall = len(true & preds) / len(true)
     if len(preds) > 0:
@@ -69,8 +44,14 @@ def calc_f1(true, preds):
     if len(true) > 0:
         if precision == recall == 0:
             return 0
+        
+        # print(precision, recall, 2 * precision * recall / (precision+recall))
+    if metric == 'f1':
         return 2 * precision * recall / (precision+recall)
-
+    elif metric == 'precision':
+        return precision
+    elif metric == 'recall':
+        return recall
 
 
 
@@ -146,7 +127,6 @@ def get_scores_from_json(path, measure=calc_f1):
         else:
             answer = 0 #TODO
         predictions.add((res['query_id'], answer)) #TODO
-            
     score = measure(ground_results, predictions)
     return dataset, score
 
@@ -295,35 +275,86 @@ def read_prompt_file(file, field='noise_answer'):
     return ans
 
 
-def prepare_train_file(path_pred, path_true):
+# def prepare_train_file(path_pred, path_true, metric='f1'):
+#     path_pred = path_pred + 'partial_noisy/'
+#     temp_scores = {}
+#     for file in os.listdir(path_pred):
+#         # if 'D2' not in file:
+#         #     continue
+#         dataset = file.split("_")[0]
+#         true = read_prompt_file(path_true+file, "ground_answer")
+#         pred = read_prompt_file(path_pred+file)
+        
+#         actual_true, actual_pred = [], []
+#         # actual_true_2, actual_pred_2 = [], []
+#         for qid, vals in pred.items():
+#             for val in vals:
+#                 actual_true.append(true[qid][0])
+#                 actual_pred.append(val)
+#                 # actual_true_2.append((qid, true[qid][0]))
+#                 # actual_pred_2.append((qid, val))
+#         f1 = compute_f1_equality(actual_true, actual_pred, metric)
+#         temp_scores[dataset] = f1
+#         # print("Ground:", actual_true_2)
+#         # print("Predictions: ", actual_pred_2)
+#     return pd.Series(temp_scores)
+
+def prepare_train_file(path_pred, path_true, metric='f1'):
     path_pred = path_pred + 'partial_noisy/'
     temp_scores = {}
     for file in os.listdir(path_pred):
-        # if 'D2' not in file:
+        # if 'D3' not in file:
         #     continue
         dataset = file.split("_")[0]
         true = read_prompt_file(path_true+file, "ground_answer")
         pred = read_prompt_file(path_pred+file)
         
-        actual_true, actual_pred = [], []
-        # actual_true_2, actual_pred_2 = [], []
+        actual_true, actual_pred = set(), set()
         for qid, vals in pred.items():
+            # if len(vals) > 0:
+            #     print(dataset, qid)
             for val in vals:
-                actual_true.append(true[qid][0])
-                actual_pred.append(val)
-                # actual_true_2.append((qid, true[qid][0]))
-                # actual_pred_2.append((qid, val))
-        f1 = compute_f1_equality(actual_true, actual_pred)
+                actual_true.add((qid, true[qid][0]))
+                actual_pred.add((qid, val))
+                
+        # print(actual_true, actual_pred)
+        f1 = calc_f1(actual_true, actual_pred, metric)
         temp_scores[dataset] = f1
-        # print("Ground:", actual_true_2)
-        # print("Predictions: ", actual_pred_2)
+        
     return pd.Series(temp_scores)
 
 
+def prepare_any(path_preds, path_true, metric='f1'):
+    total = {}
+    for path_pred in path_preds:
+        path_pred = path_pred + 'partial_noisy/'
+        temp_scores = {}
+        for file in os.listdir(path_pred):
+            dataset = file.split("_")[0]
+            if dataset not in total:
+                total[dataset] = {}
+                
+            true = read_prompt_file(path_true+file, "ground_answer")
+            pred = read_prompt_file(path_pred+file)
 
-
-
-
+            for qid, vals in pred.items():
+                for val in vals:
+                    if qid not in total[dataset]:
+                        total[dataset][qid] = {}
+                        total[dataset][qid]['true'] = true[qid][0] # add once
+                        total[dataset][qid]['pred'] = set()
+                    total[dataset][qid]['pred'].add(val)
+            
+    temp_scores = {}
+    for dataset, preds in total.items():
+        actual_true, actual_pred = set(), set()
+        for qid, vals in preds.items():
+            for val in vals['pred']:
+                actual_true.add((qid, vals['true']))
+                actual_pred.add((qid, val))
+        f1 = calc_f1(actual_true, actual_pred, metric)
+        temp_scores[dataset] = f1
+    return pd.Series(temp_scores)
 
 
 def prepare_plm_file_cardinality(path):
@@ -379,10 +410,10 @@ def find_json(text):
     return {}
 
     
-def get_inference_time(path):    
+def get_inference_time(path, tosum=True, checkfile=True):
     times = {}
     for file in os.listdir(path):
-        if 'responses' not in file:
+        if checkfile and 'responses' not in file:
             continue
         with open(path+file) as f:
             j = json.load(f)
@@ -390,7 +421,10 @@ def get_inference_time(path):
             times[case] = 0
             for res in j['responses']:
                 times[case] += res['time']
-    return pd.Series(times)
+    if tosum:
+        return float(pd.Series(times).sum())
+    else:
+        return times
 
 def get_plm_training_time(path):
     times = 0
@@ -405,11 +439,48 @@ def get_plm_testing_time(path):
     with open(path+'log/matching_supervised_dynamic.txt') as f:
         for line in f:
             j = json.loads(line)
-            times += j['testing_time']
+            if 'testing_time' in j: #testing
+                times += j['testing_time']
+    return times
+
+def get_plm_student_time(path):
+    times = {}
+    with open(path+'log/matching_supervised_dynamic.txt') as f:
+        for line in f:
+            j = json.loads(line)
+            if 'testing_time' in j: #testing
+                times[j['data_name']] = j['testing_time']
+            else:
+                times['train'] = j['training_time']
     return times
     
+def get_llm_training_time(path):
+    with open(path+'train_log.json') as f:
+        j = json.load(f)
+        return j['Training time (seconds)']
+    
+def get_llm_testing_time(path, tosum=True):
+    times = {}
+    dpath = path+'test_responses/'
+    for file in os.listdir(dpath):
+        with open(dpath+file) as f:
+            j = json.load(f)
+            d = j['settings']['dataset']
+            times[d] = 0
+            for response in j['responses']:
+                times[d] += response['time']
+    if tosum:
+        total_time = sum([val for val in times.values()])
+        return total_time
+    else:
+        return times
 
+def get_llm_time(path):
+    return get_llm_training_time(path) + get_llm_testing_time(path)
 
+def get_plm_time(path):
+    return get_plm_training_time(path) + get_plm_testing_time(path)
+        
 def create_plot_comparison(total_df_test):
     colors = {
         "UMC": "blue",

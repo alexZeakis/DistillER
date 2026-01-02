@@ -30,7 +30,7 @@ for i in "${!models[@]}"; do
                 --dataset "$dir" \
                 --out_file "../../../../log/matching/annotate/llm/$out_dir/partial/${dir}_${seed}.json" \
                 --in_dir "../../../../data/ccer/cleaned/original/" \
-                --sample_file "../../../../data/ccer/cleaned/fine_tuning/blocking/train/$dir.csv" \
+                --sample_file "../../../../data/ccer/cleaned/fine_tuning/blocking_max/train/$dir.csv" \
                 --seed $seed \
                 --serialization "DITTO" \
                 --task_description "EXPLAIN"

@@ -10,6 +10,8 @@ def read_sota(path, case, metric='f1'):
     with open(path) as f:
         for line in f:
             j = json.loads(line)
+            if metric not in j:
+                continue
             scores[j[case]] = j[metric]
     return pd.Series(scores)
 
@@ -24,31 +26,21 @@ def read_sudowoodo_sota(path):
 
 ################### COMPARING PLMS - GENERALIZED ON TEST DATA #################
 
-# path2 = '../../../log/matching/disambiguation/'
 path = '../../../log/matching/sft/llm/'
 df = pd.DataFrame()
 
-# df['RoBERTa-GT-UMC'] = prepare_plm_file(path2+'umc/roberta/ground/', 'final/')
 df['DistillER-SFT/LLM'] = prepare_ft_file(path+'qwen_32/test_responses/')
 df['DistillER-SFT/SLM'] = prepare_ft_file(path+'roberta/qwen_32/test_responses/')
 
-df['AvengER'] = prepare_ft_file(path+'ground/test_responses/')
 df['ComEM'] = prepare_comem_file('../../../log/matching/sota/ComEM/responses/SELECT/',
-                                 gt_dir='../../../log/matching/baselines/pretrained/')
+                                 gt_dir='../../../log/matching/baselines/pretrained/llama3.1:8b/')
 
-# df['ComEM-wo GT'] = prepare_comem_file('../../../log/matching/sota/ComEM/responses/SELECT/')
-
-# df['Unicorn-PT'] = read_sota('../../../log/matching/sota/Unicorn_PT.jsonl', 'data')
 df['ZeroER'] = read_sota('../../../log/matching/sota/zeroer/scores.jsonl', 'dataset')
 df['CollaborEM'] = read_sota('../../../log/matching/sota/CollaborEM.txt', 'case', 'test_f1')
 
 df['SudoWoodo'] = read_sudowoodo_sota('../../../log/matching/sota/sudowoodo/sudowoodo.txt')
 df['HierGAT'] = read_sota('../../../log/matching/sota/HierGAT.jsonl', 'data_name')
-df['Unicorn'] = read_sota('../../../log/matching/sota/Unicorn.jsonl', 'data')
-
-
-
-
+df['Unicorn'] = read_sota('../../../log/matching/sota/Unicorn.jsonl', 'dataset')
 
 df = prepare_df(df)
 

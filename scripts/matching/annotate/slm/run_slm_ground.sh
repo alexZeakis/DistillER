@@ -22,11 +22,11 @@ for i in "${!slm_models[@]}"; do
         for seed in "${seeds[@]}"; do
             echo "Transforming data for $dir with seed $seed"
 
-            python ../../slm/transform_data_plm.py \
+            python ../../sft/slm/transform_data_plm.py \
                 --dataset "$dir" \
                 --out_dir "../../../../log/matching/annotate/slm/ground/$slm_model/data/$dir/"  \
                 --in_dir "../../../../data/ccer/cleaned/original/" \
-                --sample_file "../../../../data/ccer/cleaned/fine_tuning/blocking/train/$dir.csv" \
+                --sample_file "../../../../data/ccer/cleaned/fine_tuning/blocking_max/train/$dir.csv" \
                 --seed $seed \
                 --serialization "DITTO" \
                 --percentage 0.8 \
@@ -41,7 +41,7 @@ for i in "${!slm_models[@]}"; do
         --percentage 0.8
 
     # Step 3: Fine-tune model
-    python ../../slm/supervised_main.py \
+    python ../../sft/slm/supervised_main.py \
         --model_type "$slm_model" \
         --model_name_or_path "$slm_path" \
         --data_dir "../../../../log/matching/annotate/slm/ground/$slm_model/data/" \
@@ -63,7 +63,7 @@ for i in "${!slm_models[@]}"; do
             --dataset "$dir" \
             --out_file "../../../../log/matching/annotate/slm/ground/$slm_model/partial/${dir}_1924.json" \
             --in_dir "../../../../data/ccer/cleaned/original/" \
-            --sample_file "../../../../data/ccer/cleaned/fine_tuning/blocking/train/$dir.csv" \
+            --sample_file "../../../../data/ccer/cleaned/fine_tuning/blocking_max/train/$dir.csv" \
             --seed 1924 \
             --serialization "DITTO" \
             --task_description "EXPLAIN"

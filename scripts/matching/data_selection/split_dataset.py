@@ -22,6 +22,7 @@ if __name__ == '__main__':
                                                        ],
                         default='blocking', help='Sampling method.')
     parser.add_argument('--positive_ratio', type=float, default=0.75, help='Ratio for positive, if method=blocking.')
+    parser.add_argument('--no_bins', type=int, default=11, help='Number of bins for histogram')
 
     # Parse the arguments
     args = parser.parse_args()
@@ -58,7 +59,7 @@ if __name__ == '__main__':
     elif args.method in ['clustering_kmeans', 'clustering_hierarchical']:
         df['Similarity'] = 1 / (df['Similarity'] + 1.0)
         # Define bin edges
-        bins = np.linspace(0, 1, 11)
+        bins = np.linspace(0, 1, args.no_bins)
         def to_hist_vector(x):
             counts, _ = np.histogram(x, bins=bins)
             return counts
@@ -68,7 +69,7 @@ if __name__ == '__main__':
         
         # Convert to DataFrame
         vectors_df = pd.DataFrame(vectors.tolist(), index=vectors.index)
-        vectors_df.columns = [f"bin{i}" for i in range(1, 11)]
+        vectors_df.columns = [f"bin{i}" for i in range(1, args.no_bins)]
         
         # Perform clustering (2 clusters)
         if args.method == 'clustering_kmeans':
